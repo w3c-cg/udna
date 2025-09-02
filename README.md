@@ -1,6 +1,6 @@
 # Universal DID-Native Addressing (UDNA) Community Group
 
-[![W3C Community Group](https://www.w3.org/community/src/templates/wordpress/StoryTeller/img/cglogo.png)](https://www.w3.org/community/udna/)
+[![W3C Community Group](https://cdn.pixabay.com/photo/2022/12/03/23/00/cyber-brain-7633488_1280.jpg)](https://www.w3.org/community/udna/)
 
 ## Summary
 
