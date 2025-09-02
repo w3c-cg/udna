@@ -115,7 +115,7 @@ The UDNA Community Group is open to all individuals and organizations interested
 - **Miro/Mural**: Collaborative architecture diagrams and workflows
 
 **💬 Communication Channels**
-- **Mailing List**: [public-udna@w3.org](mailto:public-udna@w3.org) - Primary discussion forum
+- **Mailing List**: [public-udna@w3.org](mailto:public-did-native-addr-request@w3.org) - Primary discussion forum
 - **GitHub Discussions**: Technical discussions and community Q&A
 - **IRC/Matrix**: Real-time chat during working sessions
 - **Discord/Slack**: Informal community discussions (links in mailing list)
@@ -218,7 +218,7 @@ To ensure global participation, we rotate meeting times and provide:
 
 ## Contact Information
 
-- **📧 General Inquiries**: [public-udna@w3.org](mailto:public-udna@w3.org)
+- **📧 General Inquiries**: [public-udna@w3.org](mailto:public-did-native-addr-request@w3.org)
 - **💻 Technical Issues**: [GitHub Issues](https://github.com/w3c-udna/specifications/issues)
 - **📱 Community Chat**: Links available in welcome email after joining
 - **🌐 Website**: [https://www.w3.org/community/udna/](https://www.w3.org/community/udna/)
