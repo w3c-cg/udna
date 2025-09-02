@@ -79,7 +79,7 @@ UDNA represents a fundamental architectural shift from location-based to identit
 
 The UDNA Community Group is open to all individuals and organizations interested in advancing identity-native networking technologies. To participate:
 
-1. **Join the W3C Community Group**: [Sign up here](https://www.w3.org/community/udna/)
+1. **Join the W3C Community Group**: [Sign up here](https://www.w3.org/community/did-native-addr/)
 2. **Review the Charter**: Understand our mission, scope, and working methods
 3. **Introduce Yourself**: Share your background and interests on our mailing list
 4. **Contribute**: Participate in discussions, review specifications, or contribute code
