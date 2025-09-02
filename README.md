@@ -221,7 +221,7 @@ To ensure global participation, we rotate meeting times and provide:
 - **📧 General Inquiries**: [public-did-native-addr-request@w3.org](mailto:public-did-native-addr-request@w3.org)
 - **💻 Technical Issues**: [GitHub Issues](https://github.com/w3c-udna/specifications/issues)
 - **📱 Community Chat**: Links available in welcome email after joining
-- **🌐 Website**: [https://www.w3.org/community/udna/](https://www.w3.org/community/udna/)
+- **🌐 Website**: [https://www.w3.org/community/did-native-addr/](https://www.w3.org/community/did-native-addr/)
 
 ---
 
