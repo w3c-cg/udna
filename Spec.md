@@ -1170,7 +1170,7 @@ base64char = ALPHA / DIGIT / "+" / "/" / "="
 - [ ] Standards compliance testing
 - [ ] Protocol version negotiation
 - [ ] Graceful degradation
-
+-
 ---
 
 **Document Status**: This specification is a working draft and subject to change. Implementation feedback and security reviews are welcomed.
