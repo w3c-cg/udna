@@ -1176,8 +1176,8 @@ base64char = ALPHA / DIGIT / "+" / "/" / "="
 **Document Status**: This specification is a working draft and subject to change. Implementation feedback and security reviews are welcomed.
 
 **Contact Information**: 
-- Sirraya Labs: [contact@sirraya.io]
-- Specification Issues: [https://github.com/sirraya-labs/udna-spec]
-- Security Reports: [security@sirraya.io]
+- Sirraya Labs: [contact@sirraya.org]
+- Specification Issues: [https://github.com/w3c-cg/udna]
+- Security Reports: [security@sirraya.org]
 
 **Acknowledgments**: This work builds upon decades of research in distributed systems, cryptography, and decentralized identity. Special thanks to the W3C DID Working Group, IETF community, and the broader decentralized web ecosystem.
