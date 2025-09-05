@@ -1414,24 +1414,27 @@ class UniversalDidNativeAddressing:
 async def demo():
     """Demonstration of the optimized UDNA system"""
     print("Starting UDNA performance demonstration...")
+    print("=" * 55)
     
     # Initialize system
     udna = UniversalDidNativeAddressing()
     key_method = OptimizedDidKeyMethod()
-    web_method = None
     
     try:
         # Generate test DIDs
+        print("\n1. GENERATING TEST DIDs")
+        print("-" * 30)
         test_dids = []
         for i in range(10):
             did, private_key = key_method.generate()
             test_dids.append((did, private_key))
-            print(f"Generated DID {i+1}: {did}")
+            print(f"  DID {i+1:2d}: {did}")
         
         # Create addresses
-        print("\nCreating UDNA addresses...")
+        print("\n\n2. CREATING UDNA ADDRESSES")
+        print("-" * 30)
         addresses = []
-        for did, private_key in test_dids:
+        for i, (did, private_key) in enumerate(test_dids):
             address = await udna.create_address(
                 did, private_key,
                 facet_id=0x01,
@@ -1439,26 +1442,39 @@ async def demo():
                 flags=1
             )
             addresses.append(address)
-            print(f"Created address: {base58.b58encode(address.encode()).decode()[:50]}...")
+            encoded_addr = base58.b58encode(address.encode()).decode()
+            print(f"  Address {i+1:2d}: {encoded_addr[:25]}...{encoded_addr[-25:]}")
         
         # Verify addresses
-        print("\nVerifying addresses...")
-        for address in addresses:
+        print("\n\n3. VERIFYING ADDRESSES")
+        print("-" * 30)
+        for i, address in enumerate(addresses):
             is_valid = await udna.verify_address(address)
-            print(f"Address valid: {is_valid}")
+            status = "✓ VALID" if is_valid else "✗ INVALID"
+            print(f"  Address {i+1:2d}: {status}")
         
         # Find addresses
-        print("\nFinding addresses by DID...")
-        for did, _ in test_dids[:3]:
+        print("\n\n4. FINDING ADDRESSES BY DID")
+        print("-" * 30)
+        for i, (did, _) in enumerate(test_dids[:3]):
             found = await udna.find_addresses(did)
-            print(f"Found {len(found)} addresses for {did}")
+            print(f"  DID {i+1}: Found {len(found):2d} addresses")
+            for j, addr in enumerate(found):
+                encoded_addr = base58.b58encode(addr.encode()).decode()
+                print(f"        Address {j+1}: {encoded_addr[:20]}...")
         
         # Show performance stats
-        print("\nPerformance statistics:")
+        print("\n\n5. PERFORMANCE STATISTICS")
+        print("-" * 30)
         stats = udna.get_performance_stats()
-        print(f"Memory usage: {stats['system']['memory_mb']:.2f} MB")
-        print(f"Cache hit rate: {stats['resolver']['hit_rate']:.3f}")
-        print(f"Total operations: {sum(stats['system']['counters'].values())}")
+        print(f"  • Memory Usage:      {stats['system']['memory_mb']:6.2f} MB")
+        print(f"  • Cache Hit Rate:    {stats['resolver']['hit_rate']:6.3f}")
+        print(f"  • DID Operations:    {stats['system']['counters']['did_ops']:6d}")
+        print(f"  • Address Operations: {stats['system']['counters']['addr_ops']:6d}")
+        print(f"  • Total Operations:   {sum(stats['system']['counters'].values()):6d}")
+        
+        print("\n" + "=" * 55)
+        print("Demonstration completed successfully!")
         
     finally:
         # Clean up

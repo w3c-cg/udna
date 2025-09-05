@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirraya UDNA: Enterprise Global Scenario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f0f23, #1a1a3e);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #2563eb, #7c3aed);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .author {
+            font-size: 1rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .scenario-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.2);
+        }
+        
+        .scenario-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+        
+        .comparison-container {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .old-system {
+            background: linear-gradient(135deg, #dc2626, #7f1d1d);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .new-system {
+            background: linear-gradient(135deg, #059669, #065f46);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .system-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        
+        .old-system .feature-list li::before {
+            background: #fca5a5;
+        }
+        
+        .new-system .feature-list li::before {
+            background: #6ee7b7;
+        }
+        
+        .network-visualization {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .network-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #60a5fa;
+        }
+        
+        .node {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .node:hover {
+            transform: scale(1.2);
+            z-index: 10;
+        }
+        
+        .device-node {
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+        }
+        
+        .user-node {
+            background: linear-gradient(45deg, #8b5cf6, #6d28d9);
+        }
+        
+        .server-node {
+            background: linear-gradient(45deg, #10b981, #059669);
+        }
+        
+        .connection {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            opacity: 0.6;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #60a5fa;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        
+        .implementation-timeline {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-left: 3px solid #60a5fa;
+            background: rgba(255,255,255,0.02);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .timeline-phase {
+            font-weight: 700;
+            color: #60a5fa;
+            min-width: 100px;
+        }
+        
+        .demo-section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .demo-button {
+            background: linear-gradient(45deg, #2563eb, #7c3aed);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .demo-output {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid #334155;
+            min-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .success { color: #10b981; }
+        .warning { color: #f59e0b; }
+        .info { color: #3b82f6; }
+        .error { color: #ef4444; }
+        
+        @media (max-width: 768px) {
+            .scenario-grid,
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sirraya UDNA</h1>
+        <div class="subtitle">Universal DID-Native Addressing: Transforming Enterprise Communications</div>
+        <div class="author">By Amir Hameed Mir, Founder - Sirraya Labs</div>
+    </div>
+
+    <div class="container">
+        <div class="comparison-container">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">The Paradigm Shift</h2>
+            <div class="comparison-grid">
+                <div class="old-system">
+                    <div class="system-title">IP-Based Addressing (Current)</div>
+                    <ul class="feature-list">
+                        <li>Location-dependent addressing</li>
+                        <li>Complex NAT traversal</li>
+                        <li>VPN dependency for remote access</li>
+                        <li>Firewall configuration nightmares</li>
+                        <li>IP address management overhead</li>
+                        <li>Limited mobility support</li>
+                        <li>Security through obscurity</li>
+                        <li>Single points of failure</li>
+                    </ul>
+                </div>
+                
+                <div class="new-system">
+                    <div class="system-title">UDNA Identity-Based (Future)</div>
+                    <ul class="feature-list">
+                        <li>Identity-first addressing</li>
+                        <li>Direct peer-to-peer routing</li>
+                        <li>Zero-configuration networking</li>
+                        <li>Cryptographic security built-in</li>
+                        <li>Self-managing addresses</li>
+                        <li>Seamless device mobility</li>
+                        <li>End-to-end authentication</li>
+                        <li>Distributed resilience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="scenario-grid">
+            <div class="scenario-card">
+                <div class="scenario-title">Global Enterprise Challenge</div>
+                <p>MegaCorp operates across 47 countries with:</p>
+                <ul style="margin: 1rem 0; list-style-position: inside;">
+                    <li>125,000 employees</li>
+                    <li>2.3 million IoT devices</li>
+                    <li>847 office locations</li>
+                    <li>Complex VPN infrastructure</li>
+                    <li>$23M annual networking costs</li>
+                </ul>
+                <p>Current pain points include device management complexity, security vulnerabilities, and inability to seamlessly connect distributed teams and IoT networks.</p>
+            </div>
+
+            <div class="scenario-card">
+                <div class="scenario-title">UDNA Transformation</div>
+                <p>With Sirraya UDNA deployment:</p>
+                <ul style="margin: 1rem 0; list-style-position: inside;">
+                    <li>Every device gets cryptographic identity</li>
+                    <li>Direct device-to-device communication</li>
+                    <li>Automatic network discovery</li>
+                    <li>Zero-trust security by default</li>
+                    <li>78% reduction in network costs</li>
+                </ul>
+                <p>Result: A self-organizing, secure network where devices communicate directly by identity, eliminating traditional networking complexity.</p>
+            </div>
+        </div>
+
+        <div class="network-visualization" id="networkViz">
+            <div class="network-title">UDNA Network Topology</div>
+            <!-- Network nodes will be dynamically placed here -->
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">99.97%</span>
+                <div class="stat-label">Network Uptime</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">23ms</span>
+                <div class="stat-label">Average Latency</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">78%</span>
+                <div class="stat-label">Cost Reduction</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2.3M</span>
+                <div class="stat-label">Connected Devices</div>
+            </div>
+        </div>
+
+        <div class="implementation-timeline">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Enterprise Adoption Phases</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-phase">Phase 1</div>
+                <div>
+                    <strong>Pilot Deployment (Months 1-3)</strong><br>
+                    Deploy UDNA in single office location with 100 devices. Test identity generation, address creation, and basic peer-to-peer communication.
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-phase">Phase 2</div>
+                <div>
+                    <strong>Regional Expansion (Months 4-8)</strong><br>
+                    Roll out to 5 regional offices. Implement key rotation, device mobility, and cross-office communication patterns.
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-phase">Phase 3</div>
+                <div>
+                    <strong>IoT Integration (Months 9-12)</strong><br>
+                    Connect IoT devices, industrial sensors, and edge computing nodes. Implement automated device discovery and management.
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-phase">Phase 4</div>
+                <div>
+                    <strong>Global Deployment (Months 13-18)</strong><br>
+                    Full enterprise rollout with advanced features: predictive routing, AI-driven optimization, and blockchain integration.
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 style="margin-bottom: 1rem;">Interactive UDNA Demonstration</h2>
+            <p style="margin-bottom: 1rem;">Experience how UDNA transforms device communication:</p>
+            
+            <div>
+                <button class="demo-button" onclick="simulateDeviceRegistration()">Register New Device</button>
+                <button class="demo-button" onclick="simulateDirectCommunication()">Direct P2P Communication</button>
+                <button class="demo-button" onclick="simulateKeyRotation()">Rotate Device Keys</button>
+                <button class="demo-button" onclick="simulateGlobalRouting()">Global Route Discovery</button>
+            </div>
+            
+            <div class="demo-output" id="demoOutput">
+                <div class="info">Welcome to Sirraya UDNA Demo Console</div>
+                <div class="info">Click buttons above to simulate enterprise scenarios...</div>
+                <div style="margin-top: 1rem;">
+                    <div class="warning">Current Network Status:</div>
+                    <div>• Active UDNA Nodes: <span id="activeNodes">0</span></div>
+                    <div>• P2P Connections: <span id="p2pConnections">0</span></div>
+                    <div>• Network Health: <span class="success">Optimal</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scenario-card" style="grid-column: 1 / -1; margin-top: 2rem;">
+            <div class="scenario-title">Enterprise Benefits Realized</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
+                <div>
+                    <h4 style="color: #60a5fa; margin-bottom: 1rem;">Operational Improvements</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Eliminated VPN complexity and costs</li>
+                        <li>Automatic device discovery and onboarding</li>
+                        <li>Real-time network optimization</li>
+                        <li>Simplified remote work connectivity</li>
+                        <li>Reduced IT support tickets by 67%</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #60a5fa; margin-bottom: 1rem;">Security Enhancements</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>End-to-end cryptographic authentication</li>
+                        <li>Zero-trust network architecture</li>
+                        <li>Automatic key rotation and management</li>
+                        <li>Elimination of IP-based attacks</li>
+                        <li>Compliance with global security standards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px;">
+            <h2 style="margin-bottom: 1rem;">The Future is Identity-Native</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                Sirraya UDNA represents the next evolution of networking - from location-based IP addressing to 
+                identity-native communication. By combining DIDs, cryptographic addressing, and intelligent routing, 
+                enterprises can build networks that are more secure, efficient, and resilient than ever before.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Network visualization setup
+        function createNetworkVisualization() {
+            const viz = document.getElementById('networkViz');
+            const width = viz.offsetWidth;
+            const height = 400;
+            
+            // Clear existing content except title
+            viz.innerHTML = '<div class="network-title">UDNA Network Topology</div>';
+            
+            // Create nodes
+            const nodes = [
+                {id: 'user1', type: 'user', x: 100, y: 150, label: 'CEO\nTokyo'},
+                {id: 'user2', type: 'user', x: 300, y: 100, label: 'CTO\nLondon'},
+                {id: 'user3', type: 'user', x: 500, y: 200, label: 'Dev\nSF'},
+                {id: 'server1', type: 'server', x: 200, y: 250, label: 'Cloud\nAsia'},
+                {id: 'server2', type: 'server', x: 400, y: 300, label: 'Edge\nEU'},
+                {id: 'device1', type: 'device', x: 150, y: 350, label: 'IoT\nSensor'},
+                {id: 'device2', type: 'device', x: 350, y: 50, label: 'Mobile\nDevice'},
+                {id: 'device3', type: 'device', x: 450, y: 150, label: 'Smart\nCamera'}
+            ];
+            
+            const connections = [
+                {from: 'user1', to: 'user2'},
+                {from: 'user2', to: 'user3'},
+                {from: 'user1', to: 'server1'},
+                {from: 'user3', to: 'server2'},
+                {from: 'device1', to: 'server1'},
+                {from: 'device2', to: 'user2'},
+                {from: 'device3', to: 'user3'}
+            ];
+            
+            // Draw connections
+            connections.forEach(conn => {
+                const fromNode = nodes.find(n => n.id === conn.from);
+                const toNode = nodes.find(n => n.id === conn.to);
+                
+                const line = document.createElement('div');
+                line.className = 'connection';
+                
+                const dx = toNode.x - fromNode.x;
+                const dy = toNode.y - fromNode.y;
+                const length = Math.sqrt(dx*dx + dy*dy);
+                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+                
+                line.style.width = `${length}px`;
+                line.style.left = `${fromNode.x + 30}px`;
+                line.style.top = `${fromNode.y + 30}px`;
+                line.style.transform = `rotate(${angle}deg)`;
+                line.style.transformOrigin = '0 50%';
+                
+                viz.appendChild(line);
+            });
+            
+            // Draw nodes
+            nodes.forEach(node => {
+                const nodeEl = document.createElement('div');
+                nodeEl.className = `node ${node.type}-node`;
+                nodeEl.style.left = `${node.x}px`;
+                nodeEl.style.top = `${node.y}px`;
+                nodeEl.innerHTML = node.label;
+                nodeEl.title = `UDNA: did:key:${node.id}...`;
+                viz.appendChild(nodeEl);
+            });
+        }
+        
+        // Demo functions
+        let deviceCount = 0;
+        let connectionCount = 0;
+        
+        function addToConsole(message, type = 'info') {
+            const output = document.getElementById('demoOutput');
+            const div = document.createElement('div');
+            div.className = type;
+            div.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            output.appendChild(div);
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        function updateStats() {
+            document.getElementById('activeNodes').textContent = deviceCount;
+            document.getElementById('p2pConnections').textContent = connectionCount;
+        }
+        
+        function simulateDeviceRegistration() {
+            deviceCount++;
+            const deviceId = `device_${deviceCount}`;
+            addToConsole(`Generating cryptographic identity for ${deviceId}...`, 'info');
+            
+            setTimeout(() => {
+                addToConsole(`✓ DID created: did:key:z6Mk${Math.random().toString(36).substring(2, 15)}...`, 'success');
+                addToConsole(`✓ UDNA address generated: ${Math.random().toString(36).substring(2, 8).toUpperCase()}...`, 'success');
+                addToConsole(`✓ Device registered in network`, 'success');
+                updateStats();
+            }, 1000);
+        }
+        
+        function simulateDirectCommunication() {
+            if (deviceCount < 2) {
+                addToConsole('Register at least 2 devices first!', 'warning');
+                return;
+            }
+            
+            connectionCount++;
+            addToConsole('Initiating direct P2P connection...', 'info');
+            addToConsole('Resolving UDNA address to network route...', 'info');
+            
+            setTimeout(() => {
+                addToConsole('✓ Cryptographic handshake completed', 'success');
+                addToConsole('✓ Secure channel established', 'success');
+                addToConsole(`✓ Data transfer initiated (${Math.floor(Math.random() * 100)}ms latency)`, 'success');
+                updateStats();
+            }, 1500);
+        }
+        
+        function simulateKeyRotation() {
+            if (deviceCount === 0) {
+                addToConsole('Register a device first!', 'warning');
+                return;
+            }
+            
+            addToConsole('Initiating automated key rotation...', 'info');
+            addToConsole('Generating new key pair...', 'info');
+            
+            setTimeout(() => {
+                addToConsole('✓ New keys generated and signed', 'success');
+                addToConsole('✓ Rotation proof created', 'success');
+                addToConsole('✓ Network updated with new identity', 'success');
+                addToConsole('All connections migrated seamlessly', 'success');
+            }, 2000);
+        }
+        
+        function simulateGlobalRouting() {
+            addToConsole('Discovering optimal global route...', 'info');
+            addToConsole('Analyzing network topology...', 'info');
+            
+            setTimeout(() => {
+                const routes = ['Tokyo → Singapore → London', 'SF → Seattle → Frankfurt', 'Mumbai → Dubai → Stockholm'];
+                const route = routes[Math.floor(Math.random() * routes.length)];
+                addToConsole(`✓ Optimal route found: ${route}`, 'success');
+                addToConsole(`✓ Expected latency: ${20 + Math.floor(Math.random() * 30)}ms`, 'success');
+                addToConsole('✓ Route established via UDNA protocol', 'success');
+            }, 1800);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createNetworkVisualization();
+            updateStats();
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', createNetworkVisualization);
+    </script>
+</body>
+</html>
