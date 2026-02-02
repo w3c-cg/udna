@@ -3,1150 +3,1252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DID-Enhanced Network Addressing (DENA): A Practical Identity Layer for Web Applications</title>
-    <meta name="description" content="An explainer for exploring DID-Enhanced Network Addressing (DENA) - a practical approach to integrating Decentralized Identifiers into application-layer networking.">
+    <title>UDNA: Universal DID Native Addressing • W3C Community Group</title>
+    <meta name="description" content="Universal DID Native Addressing (UDNA) - A W3C Community Group exploring decentralized identity addressing standards.">
     
-    <!-- Open Graph for better sharing -->
-    <meta property="og:title" content="DENA: DID-Enhanced Network Addressing">
-    <meta property="og:description" content="Exploring application-layer identity integration with W3C Decentralized Identifiers">
-    <meta property="og:type" content="website">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --primary-color: #005a9c;
-            --primary-light: #4d8bc8;
-            --secondary-color: #4caf50;
-            --accent-color: #ff9800;
-            --warning-color: #f44336;
-            --light-bg: #f0f7ff;
-            --medium-bg: #f8f9fa;
-            --border-color: #dee2e6;
-            --text-color: #212529;
-            --text-light: #6c757d;
-        }
-        
+        /* Reset & Base */
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-            line-height: 1.7;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            color: var(--text-color);
-            background: white;
+
+        :root {
+            /* Colors */
+            --primary: #0056ff;
+            --primary-dark: #0041c4;
+            --secondary: #00c7b7;
+            --accent: #8a2be2;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --text-tertiary: #888;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #f1f3f4;
+            --border: #e0e0e0;
+            --success: #00a854;
+            --warning: #ff9500;
+            --error: #ff3b30;
+            
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'Source Code Pro', monospace;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            
+            /* Layout */
+            --sidebar-width: 280px;
+            --header-height: 64px;
+            --content-width: 800px;
+            --toc-width: 220px;
+            
+            /* Effects */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+            
+            /* Border radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #4d8aff;
+                --primary-dark: #7aa7ff;
+                --text-primary: #ffffff;
+                --text-secondary: #b0b0b0;
+                --text-tertiary: #888;
+                --bg-primary: #1a1a1a;
+                --bg-secondary: #2d2d2d;
+                --bg-tertiary: #3d3d3d;
+                --border: #404040;
+            }
+        }
+
+        /* Base Styles */
+        html {
             font-size: 16px;
+            scroll-behavior: smooth;
         }
-        
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            line-height: 1.3;
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-        }
-        
-        h1 {
-            color: var(--primary-color);
-            font-size: 2.8em;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 0.3em;
-            margin-top: 0;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            font-size: 2em;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.3em;
-        }
-        
-        h3 {
-            color: var(--text-color);
-            font-size: 1.5em;
-        }
-        
-        h4 {
-            color: var(--text-light);
-            font-size: 1.2em;
-        }
-        
-        p {
-            margin: 1em 0;
-        }
-        
-        /* Layout Components */
-        .header-info {
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
             display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 2em;
-            flex-wrap: wrap;
-            gap: 2em;
+            min-height: 100vh;
         }
-        
-        .meta-info {
-            background: var(--medium-bg);
-            padding: 1.5em;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 300px;
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
         }
-        
-        .participate-box {
-            background: var(--light-bg);
-            padding: 1.5em;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            flex: 1;
-            min-width: 300px;
+
+        .sidebar-header {
+            padding: var(--space-lg);
+            border-bottom: 1px solid var(--border);
         }
-        
-        .authors {
-            background: var(--medium-bg);
-            padding: 1.5em;
-            border-radius: 8px;
-            margin: 2em 0;
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
         }
-        
-        /* TOC */
-        .toc {
-            background: var(--medium-bg);
-            padding: 2em;
-            border-radius: 10px;
-            margin: 2em 0;
-            border: 1px solid var(--border-color);
+
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
         }
-        
-        .toc ul {
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .brand-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-left: 40px;
+        }
+
+        .nav-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .nav-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-tertiary);
+            padding: 0 var(--space-lg);
+            margin-bottom: var(--space-sm);
+        }
+
+        .nav-items {
             list-style: none;
-            padding-left: 1em;
-            margin: 0.5em 0;
         }
-        
-        .toc li {
-            margin: 0.5em 0;
+
+        .nav-item {
+            margin-bottom: 2px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-lg);
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            transition: all 0.2s ease;
+            font-size: 0.9375rem;
             position: relative;
         }
-        
-        .toc li:before {
-            content: "›";
-            color: var(--primary-color);
-            position: absolute;
-            left: -1em;
+
+        .nav-link:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
         }
-        
-        .toc a {
+
+        .nav-link.active {
+            background: linear-gradient(90deg, rgba(0, 86, 255, 0.1), transparent);
+            color: var(--primary);
+            font-weight: 500;
+            border-right: 3px solid var(--primary);
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+        }
+
+        .nav-link.active .nav-icon {
+            opacity: 1;
+        }
+
+        .status-badge {
+            margin-left: auto;
+            padding: 2px 8px;
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-tertiary);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            height: var(--header-height);
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 var(--space-xl);
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .top-bar {
+                background: rgba(26, 26, 26, 0.8);
+            }
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a {
+            color: var(--text-secondary);
             text-decoration: none;
-            color: var(--primary-color);
-            transition: color 0.2s;
         }
-        
-        .toc a:hover {
-            color: var(--primary-light);
-            text-decoration: underline;
+
+        .breadcrumb a:hover {
+            color: var(--primary);
         }
-        
-        /* Content Boxes */
-        .box {
-            padding: 1.5em;
-            border-radius: 8px;
-            margin: 2em 0;
-            border-left: 4px solid;
+
+        .breadcrumb-separator {
+            opacity: 0.5;
         }
-        
-        .goal-box {
-            background: #f1f8e9;
-            border-left-color: var(--secondary-color);
+
+        .doc-actions {
+            display: flex;
+            gap: var(--space-sm);
         }
-        
-        .non-goal-box {
-            background: #fff3e0;
-            border-left-color: var(--accent-color);
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
-        
-        .highlight-box {
-            background: #e3f2fd;
-            border-left-color: var(--primary-color);
+
+        .btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--text-tertiary);
         }
-        
-        .warning-box {
-            background: #ffebee;
-            border-left-color: var(--warning-color);
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
         }
-        
-        .use-case-box {
-            background: #f3e5f5;
-            border-left-color: #9c27b0;
-            margin: 1.5em 0;
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
-        
+
+        /* Content Area */
+        .content-container {
+            flex: 1;
+            display: flex;
+            max-width: calc(var(--content-width) + var(--toc-width));
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 var(--space-xl);
+        }
+
+        .article {
+            flex: 1;
+            max-width: var(--content-width);
+            padding: var(--space-2xl) 0;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-sm);
+            border-bottom: 2px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: var(--space-lg);
+            margin-bottom: var(--space-sm);
+            color: var(--text-secondary);
+        }
+
+        p, li {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Content Cards */
+        .card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .card-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(0, 86, 255, 0.05), rgba(0, 199, 183, 0.05));
+            border-color: rgba(0, 86, 255, 0.2);
+        }
+
+        .warning-card {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.05), rgba(255, 107, 53, 0.05));
+            border-color: rgba(255, 149, 0, 0.2);
+        }
+
         /* Code Blocks */
         pre {
-            background: #f8f9fa;
-            padding: 1.5em;
-            border-radius: 8px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
             overflow-x: auto;
-            border: 1px solid var(--border-color);
-            margin: 1.5em 0;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            font-size: 0.9em;
-            line-height: 1.5;
+            border: 1px solid var(--border);
         }
-        
+
         code {
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            background: #f8f9fa;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-            font-size: 0.9em;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            background: var(--bg-tertiary);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
         }
-        
-        /* Diagrams and Visuals */
-        .diagram-container {
-            text-align: center;
-            margin: 3em 0;
-            padding: 2em;
-            background: white;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+        pre code {
+            background: none;
+            padding: 0;
         }
-        
-        .diagram-title {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 1em;
-            font-size: 1.2em;
-        }
-        
-        .diagram-caption {
-            font-style: italic;
-            color: var(--text-light);
-            margin-top: 1em;
-            font-size: 0.9em;
-        }
-        
-        /* SVG Diagram Styling */
-        .dena-diagram {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .dena-layer {
-            fill: #e3f2fd;
-            stroke: var(--primary-color);
-            stroke-width: 2;
-        }
-        
-        .dena-flow {
-            stroke: var(--secondary-color);
-            stroke-width: 2;
-            fill: none;
-            marker-end: url(#arrowhead);
-        }
-        
-        .dena-node {
-            fill: white;
-            stroke: var(--primary-color);
-            stroke-width: 1.5;
-            rx: 5;
-        }
-        
-        .dena-text {
-            font-family: inherit;
-            font-size: 14px;
-            fill: var(--text-color);
-        }
-        
+
         /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2em 0;
-            font-size: 0.95em;
+            margin: var(--space-lg) 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border);
         }
-        
+
         th, td {
-            padding: 1em;
-            border: 1px solid var(--border-color);
+            padding: var(--space-md);
+            border: 1px solid var(--border);
             text-align: left;
         }
-        
+
         th {
-            background: var(--light-bg);
+            background: var(--bg-tertiary);
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
-        
+
         tr:nth-child(even) {
-            background: var(--medium-bg);
+            background: var(--bg-secondary);
         }
-        
-        /* Lists */
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
+
+        /* Comparison Table */
+        .comparison-table {
+            background: var(--bg-primary);
         }
-        
-        li {
-            margin: 0.5em 0;
+
+        .comparison-table th:first-child {
+            width: 200px;
         }
-        
-        /* Footer */
-        footer {
-            margin-top: 4em;
-            padding-top: 2em;
-            border-top: 2px solid var(--border-color);
-            color: var(--text-light);
-            font-size: 0.9em;
+
+        .good {
+            color: var(--success);
+            font-weight: 600;
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-                font-size: 15px;
-            }
-            
-            h1 {
-                font-size: 2.2em;
-            }
-            
-            h2 {
-                font-size: 1.8em;
-            }
-            
-            .header-info {
-                flex-direction: column;
-            }
-            
-            .meta-info, .participate-box {
-                min-width: 100%;
-            }
+
+        .bad {
+            color: var(--error);
+            font-weight: 600;
         }
-        
-        /* Interactive Elements */
-        a {
-            color: var(--primary-color);
+
+        .partial {
+            color: var(--warning);
+            font-weight: 600;
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            width: var(--toc-width);
+            position: sticky;
+            top: calc(var(--header-height) + var(--space-xl));
+            height: fit-content;
+            margin-left: var(--space-xl);
+            padding-top: var(--space-xl);
+        }
+
+        .toc {
+            border-left: 3px solid var(--border);
+            padding-left: var(--space-lg);
+        }
+
+        .toc-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-md);
+        }
+
+        .toc-items {
+            list-style: none;
+        }
+
+        .toc-item {
+            margin-bottom: var(--space-sm);
+        }
+
+        .toc-link {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
             text-decoration: none;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 4px 0;
         }
-        
-        a:hover {
-            text-decoration: underline;
+
+        .toc-link:hover {
+            color: var(--primary);
         }
-        
-        .button {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.5em 1em;
-            border-radius: 4px;
-            text-decoration: none;
+
+        .toc-link.active {
+            color: var(--primary);
             font-weight: 500;
-            transition: background 0.2s;
+            transform: translateX(4px);
         }
-        
-        .button:hover {
-            background: var(--primary-light);
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: var(--space-xl) 0;
+            margin-top: var(--space-2xl);
+        }
+
+        .footer-content {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-xl);
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .toc-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+        }
+
+        /* Utility Classes */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: var(--space-sm);
+            vertical-align: middle;
+        }
+
+        .badge-blue {
+            background: rgba(0, 86, 255, 0.1);
+            color: var(--primary);
+        }
+
+        .badge-green {
+            background: rgba(0, 168, 84, 0.1);
+            color: var(--success);
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin: 0 var(--space-sm) var(--space-sm) 0;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>DID-Enhanced Network Addressing (DENA)</h1>
-        <p><strong>A Practical Identity Layer for Web Applications</strong></p>
-        
-        <div class="header-info">
-            <div class="meta-info">
-                <h3>Document Information</h3>
-                <p><strong>Status:</strong> Community Draft</p>
-                <p><strong>Version:</strong> 0.9</p>
-                <p><strong>Date:</strong> February 2026</p>
-                <p><strong>Audience:</strong> Web developers, identity architects, standards participants</p>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <div class="brand-logo">U</div>
+                <div class="brand-title">UDNA</div>
             </div>
-            
-            <div class="participate-box">
-                <h3>Participate & Contribute</h3>
-                <p>This is a living document. We welcome your feedback:</p>
-                <ul>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/w3c/udna-cg">W3C UDNA CG</a></li>
-                    <li><strong>Mailing List:</strong> <a href="mailto:public-udna@w3.org">public-udna@w3.org</a></li>
-                    <li><strong>W3C Group:</strong> <a href="https://www.w3.org/community/udna/">Join UDNA CG</a></li>
-                </ul>
-            </div>
+            <div class="brand-subtitle">Universal DID Native Addressing</div>
         </div>
-    </header>
-    
-    <div class="authors">
-        <h3>Authors & Contributors</h3>
-        <ul>
-            <li><strong>Primary Author:</strong> Amir Hameed Mir (Sirraya Labs)</li>
-            <li><strong>Contributors:</strong> [Open for community contributions]</li>
-            <li><strong>Reviewers:</strong> W3C Credentials CG, DID WG participants</li>
-        </ul>
-        <p><em>This document follows the <a href="https://www.w3.org/TR/explainer-explainer/">W3C Explainer Guidelines</a> and invites broad community participation.</em></p>
-    </div>
-    
-    <div class="toc">
-        <h2>Table of Contents</h2>
-        <ul>
-            <li><a href="#abstract">1. Abstract</a></li>
-            <li><a href="#introduction">2. Introduction</a></li>
-            <li><a href="#problem">3. The Identity Problem Space</a>
-                <ul>
-                    <li><a href="#current-challenges">3.1 Current Challenges</a></li>
-                    <li><a href="#use-cases">3.2 Motivating Use Cases</a></li>
-                    <li><a href="#goals">3.3 Goals</a></li>
-                    <li><a href="#non-goals">3.4 Non-goals</a></li>
-                </ul>
-            </li>
-            <li><a href="#dena-approach">4. The DENA Approach</a>
-                <ul>
-                    <li><a href="#architecture">4.1 Architectural Overview</a></li>
-                    <li><a href="#core-concepts">4.2 Core Concepts</a></li>
-                    <li><a href="#technical-spec">4.3 Technical Specifications</a></li>
-                </ul>
-            </li>
-            <li><a href="#implementation">5. Implementation Strategy</a>
-                <ul>
-                    <li><a href="#patterns">5.1 Integration Patterns</a></li>
-                    <li><a href="#roadmap">5.2 Development Roadmap</a></li>
-                </ul>
-            </li>
-            <li><a href="#comparison">6. Comparison & Alternatives</a></li>
-            <li><a href="#considerations">7. Critical Considerations</a></li>
-            <li><a href="#next-steps">8. Next Steps & Community</a></li>
-            <li><a href="#references">9. References</a></li>
-        </ul>
-    </div>
 
-    <section id="abstract">
-        <h2>1. Abstract</h2>
-        <div class="highlight-box">
-            <p><strong>DENA (DID-Enhanced Network Addressing)</strong> is a practical framework for integrating W3C Decentralized Identifiers (DIDs) into application-layer networking. Unlike traditional approaches that treat identity as an afterthought, DENA positions identity as a first-class component of network communication.</p>
-            
-            <p>The framework enables:</p>
-            <ul>
-                <li><strong>DID-based addressing</strong> of services and resources</li>
-                <li><strong>Secure, privacy-preserving communication</strong> between applications</li>
-                <li><strong>Dynamic service discovery</strong> through DID documents</li>
-                <li><strong>Backward-compatible integration</strong> with existing web infrastructure</li>
+        <div class="nav-section">
+            <div class="nav-title">Getting Started</div>
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="#overview" class="nav-link active">
+                        <span class="nav-icon">📘</span>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#why-udna" class="nav-link">
+                        <span class="nav-icon">🎯</span>
+                        <span>Why UDNA?</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#quick-start" class="nav-link">
+                        <span class="nav-icon">⚡</span>
+                        <span>Quick Start</span>
+                    </a>
+                </li>
             </ul>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">Concepts</div>
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="#architecture" class="nav-link">
+                        <span class="nav-icon">🏗️</span>
+                        <span>Architecture</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#addressing" class="nav-link">
+                        <span class="nav-icon">📍</span>
+                        <span>DID Addressing</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resolution" class="nav-link">
+                        <span class="nav-icon">🔍</span>
+                        <span>Resolution Layer</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#messaging" class="nav-link">
+                        <span class="nav-icon">💬</span>
+                        <span>Secure Messaging</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">Specifications</div>
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="#core-spec" class="nav-link">
+                        <span class="nav-icon">📄</span>
+                        <span>Core Specification</span>
+                        <span class="status-badge">Draft</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#extensions" class="nav-link">
+                        <span class="nav-icon">🔧</span>
+                        <span>Extensions</span>
+                        <span class="status-badge">Proposal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#apis" class="nav-link">
+                        <span class="nav-icon">🔌</span>
+                        <span>APIs & SDKs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">Community</div>
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="https://www.w3.org/groups/cg/did-native-addr/" class="nav-link" target="_blank">
+                        <span class="nav-icon">🌐</span>
+                        <span>W3C Group</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/w3c-cg" class="nav-link" target="_blank">
+                        <span class="nav-icon">💻</span>
+                        <span>GitHub</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contributing" class="nav-link">
+                        <span class="nav-icon">🤝</span>
+                        <span>Contributing</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="breadcrumb">
+                <a href="https://www.w3.org/">W3C</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="https://www.w3.org/community/">Community</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="https://www.w3.org/groups/cg/did-native-addr/">DID Native Addressing</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>Explainer</span>
+            </div>
             
-            <p>DENA operates at the application layer, requiring no changes to underlying network protocols while providing measurable improvements in security, privacy, and developer experience.</p>
+            <div class="doc-actions">
+                <button class="btn" onclick="window.print()">
+                    <span>🖨️</span> Print
+                </button>
+                <button class="btn" onclick="toggleTheme()">
+                    <span>🌓</span> Theme
+                </button>
+                <a href="https://github.com/w3c-cg/udna" class="btn btn-primary" target="_blank">
+                    <span>⭐</span> Star on GitHub
+                </a>
+            </div>
         </div>
-    </section>
 
-    <section id="introduction">
-        <h2>2. Introduction</h2>
-        
-        <div class="diagram-container">
-            <div class="diagram-title">The Web's Missing Identity Layer</div>
-            <svg class="dena-diagram" width="800" height="300" viewBox="0 0 800 300">
-                <!-- Current Architecture -->
-                <rect x="50" y="50" width="200" height="200" class="dena-node"/>
-                <text x="150" y="90" class="dena-text" text-anchor="middle" font-weight="600">Today's Web</text>
-                
-                <!-- Fragmented components -->
-                <rect x="70" y="110" width="160" height="30" fill="#ffcdd2" stroke="#f44336"/>
-                <text x="150" y="130" class="dena-text" text-anchor="middle" font-size="12">OAuth Providers</text>
-                
-                <rect x="70" y="150" width="160" height="30" fill="#c8e6c9" stroke="#4caf50"/>
-                <text x="150" y="170" class="dena-text" text-anchor="middle" font-size="12">API Keys</text>
-                
-                <rect x="70" y="190" width="160" height="30" fill="#bbdefb" stroke="#2196f3"/>
-                <text x="150" y="210" class="dena-text" text-anchor="middle" font-size="12">Cookies/Sessions</text>
-                
-                <!-- Arrow -->
-                <path d="M250 150 L350 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-                
-                <!-- DENA Architecture -->
-                <rect x="400" y="50" width="200" height="200" class="dena-layer"/>
-                <text x="500" y="90" class="dena-text" text-anchor="middle" font-weight="600">With DENA</text>
-                
-                <!-- Unified DENA layer -->
-                <rect x="420" y="120" width="160" height="60" class="dena-node"/>
-                <text x="500" y="155" class="dena-text" text-anchor="middle" font-weight="600">DENA Layer</text>
-                <text x="500" y="175" class="dena-text" text-anchor="middle" font-size="12">DID-based Identity & Messaging</text>
-                
-                <!-- Apps on top -->
-                <rect x="450" y="50" width="100" height="40" fill="#e1bee7" stroke="#9c27b0"/>
-                <text x="500" y="75" class="dena-text" text-anchor="middle" font-size="12">Applications</text>
-                
-                <!-- Network below -->
-                <rect x="450" y="210" width="100" height="40" fill="#ffecb3" stroke="#ffc107"/>
-                <text x="500" y="235" class="dena-text" text-anchor="middle" font-size="12">Network Layer</text>
-                
-                <!-- Connectors -->
-                <path d="M500 90 L500 120" stroke="#666" stroke-width="1" stroke-dasharray="4"/>
-                <path d="M500 180 L500 210" stroke="#666" stroke-width="1" stroke-dasharray="4"/>
-                
-                <defs>
-                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                        <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-                    </marker>
-                </defs>
-            </svg>
-            <p class="diagram-caption">Figure 1: Transition from fragmented authentication systems to a unified DENA identity layer</p>
-        </div>
-        
-        <p>The modern web was built without a native identity layer. While protocols like OAuth and OpenID Connect added authentication capabilities, they operate as <strong>bolt-on solutions</strong> rather than integrated components. This has led to:</p>
-        
-        <ul>
-            <li><strong>Fragmentation:</strong> Every application implements identity differently</li>
-            <li><strong>Centralization:</strong> Power concentrated in a few identity providers</li>
-            <li><strong>Complexity:</strong> Developers spend months building auth systems</li>
-            <li><strong>Privacy risks:</strong> Users are tracked across services</li>
-        </ul>
-        
-        <p><strong>DENA proposes a different approach:</strong> What if identity was built into how applications communicate, rather than added on top? What if services could discover and authenticate each other as easily as browsers navigate to websites?</p>
-        
-        <p>This explainer explores a practical path forward using existing W3C standards, particularly <strong>Decentralized Identifiers (DIDs)</strong>, to create an identity-aware application layer.</p>
-    </section>
+        <!-- Content Container -->
+        <div class="content-container">
+            <!-- Article -->
+            <article class="article">
+                <!-- Header -->
+                <header class="fade-in">
+                    <h1>Universal DID Native Addressing (UDNA)</h1>
+                    <p class="lead" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                        A universal addressing layer for the decentralized web, built on W3C Decentralized Identifiers.
+                        Enabling secure, privacy-preserving communication between any entity on the internet.
+                    </p>
+                    
+                    <div style="display: flex; gap: var(--space-md); margin-bottom: var(--space-xl);">
+                        <span class="badge badge-blue">W3C Community Group</span>
+                        <span class="badge badge-green">Active Development</span>
+                        <span class="badge">Version 0.9</span>
+                    </div>
+                </header>
 
-    <section id="problem">
-        <h2>3. The Identity Problem Space</h2>
-        
-        <h3 id="current-challenges">3.1 Current Challenges</h3>
-        
-        <div class="warning-box">
-            <h4>The Authentication Burden</h4>
-            <p>A 2024 developer survey found that <strong>43% of developers</strong> consider authentication/authorization their biggest pain point. The average enterprise application spends <strong>6-9 months</strong> initially and <strong>20% of ongoing maintenance</strong> on identity-related code.</p>
-        </div>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Stakeholder</th>
-                    <th>Pain Points</th>
-                    <th>Impact</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>End Users</strong></td>
-                    <td>
-                        <ul style="margin: 0; padding-left: 1em;">
-                            <li>Password fatigue (100+ accounts average)</li>
-                            <li>Privacy erosion across services</li>
-                            <li>Account recovery nightmares</li>
-                            <li>Vendor lock-in</li>
-                        </ul>
-                    </td>
-                    <td>Poor UX, security risks, loss of control</td>
-                </tr>
-                <tr>
-                    <td><strong>Developers</strong></td>
-                    <td>
-                        <ul style="margin: 0; padding-left: 1em;">
-                            <li>Complex auth implementations</li>
-                            <li>Multiple standards to support</li>
-                            <li>Security maintenance burden</li>
-                            <li>Service integration complexity</li>
-                        </ul>
-                    </td>
-                    <td>Slow development, security gaps, high costs</td>
-                </tr>
-                <tr>
-                    <td><strong>Enterprises</strong></td>
-                    <td>
-                        <ul style="margin: 0; padding-left: 1em;">
-                            <li>Compliance complexity (GDPR, CCPA, etc.)</li>
-                            <li>Vendor dependence risks</li>
-                            <li>Integration costs</li>
-                            <li>Audit and governance challenges</li>
-                        </ul>
-                    </td>
-                    <td>Regulatory risk, operational inefficiency</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h3 id="use-cases">3.2 Motivating Use Cases</h3>
-        
-        <div class="use-case-box">
-            <h4>Use Case 1: Healthcare Data Portability</h4>
-            <p><strong>Scenario:</strong> A patient needs to share medical records between their primary care provider, specialist, and pharmacy.</p>
-            <p><strong>Current Reality:</strong> Each provider has separate login systems. Records are shared via fax, email, or proprietary portals with inconsistent security.</p>
-            <p><strong>DENA Solution:</strong> Patient authenticates once with their DID. Each healthcare provider's system discovers the patient's DID document to find authorized data endpoints. Records are shared via encrypted DENA messages with fine-grained access controls.</p>
-        </div>
-        
-        <div class="use-case-box">
-            <h4>Use Case 2: IoT Service Mesh</h4>
-            <p><strong>Scenario:</strong> Smart home devices (thermostat, lights, security cameras) need to communicate securely with each other and with cloud services.</p>
-            <p><strong>Current Reality:</strong> Each manufacturer uses proprietary protocols. Integration requires complex bridges with security vulnerabilities.</p>
-            <p><strong>DENA Solution:</strong> Each device has a DID. Services discover device capabilities through DID documents. Communication uses standard DENA protocols with end-to-end encryption.</p>
-        </div>
-        
-        <div class="use-case-box">
-            <h4>Use Case 3: Cross-Platform Developer Tools</h4>
-            <p><strong>Scenario:</strong> A developer wants their CI/CD system to deploy to cloud platforms, notify team chat, and update project management tools.</p>
-            <p><strong>Current Reality:</strong> Each service requires separate API keys with different auth mechanisms. Keys must be manually rotated and secured.</p>
-            <p><strong>DENA Solution:</strong> CI/CD system uses a service DID. Target services grant capabilities to that DID. All communication is authenticated and encrypted without separate key management.</p>
-        </div>
-        
-        <h3 id="goals">3.3 Goals</h3>
-        
-        <div class="goal-box">
-            <h4>Goal 1: User Sovereignty</h4>
-            <p>Users control their digital identity without mandatory intermediaries. Provide privacy-preserving authentication with user-controlled data sharing.</p>
-            <p><strong>Success Metric:</strong> Users can authenticate without creating service-specific accounts</p>
-        </div>
-        
-        <div class="goal-box">
-            <h4>Goal 2: Developer Simplicity</h4>
-            <p>Reduce identity integration from months to days. Provide standardized libraries and clear migration paths.</p>
-            <p><strong>Success Metric:</strong> 90% reduction in lines of code for authentication</p>
-        </div>
-        
-        <div class="goal-box">
-            <h4>Goal 3: Enterprise Ready</h4>
-            <p>Support compliance requirements, audit trails, and integration with existing enterprise identity systems.</p>
-            <p><strong>Success Metric:</strong> Compatible with existing IAM systems within 6 months</p>
-        </div>
-        
-        <div class="goal-box">
-            <h4>Goal 4: Performance & Scale</h4>
-            <p>Add minimal overhead to application communication. Support millions of concurrent authentications.</p>
-            <p><strong>Success Metric:</strong> &lt;100ms authentication, &lt;5ms message verification</p>
-        </div>
-        
-        <h3 id="non-goals">3.4 Non-goals</h3>
-        
-        <div class="non-goal-box">
-            <h4>Non-goal 1: Replace HTTP/TCP/IP</h4>
-            <p>DENA operates at the application layer, not transport or network layers. It enhances existing protocols rather than replacing them.</p>
-        </div>
-        
-        <div class="non-goal-box">
-            <h4>Non-goal 2: Mandate Blockchain</h4>
-            <p>While some DID methods use blockchain, DENA is blockchain-agnostic. did:web and did:key are fully supported without blockchain.</p>
-        </div>
-        
-        <div class="non-goal-box">
-            <h4>Non-goal 3: Solve Legal Identity</h4>
-            <p>DENA focuses on digital identity for application communication. Binding to legal identity (KYC) is out of scope.</p>
-        </div>
-        
-        <div class="non-goal-box">
-            <h4>Non-goal 4: Browser Modification (Phase 1)</h4>
-            <p>Initial implementation uses JavaScript libraries. Browser-native support may be explored later based on adoption.</p>
-        </div>
-    </section>
+                <!-- Overview -->
+                <section id="overview" class="fade-in">
+                    <h2>Overview</h2>
+                    
+                    <div class="card highlight-card">
+                        <div class="card-header">
+                            <div class="card-icon">💡</div>
+                            <div class="card-title">The Vision</div>
+                        </div>
+                        <p>Universal DID Native Addressing (UDNA) provides a standardized way to use Decentralized Identifiers (DIDs) as universal addresses for resources, services, and entities on the internet. Think of it as DNS for the decentralized web, but with built-in security, privacy, and identity.</p>
+                        
+                        <p>Just as URLs made resources addressable on the web, UDNA makes <em>entities and their capabilities</em> addressable in the decentralized ecosystem.</p>
+                    </div>
 
-    <section id="dena-approach">
-        <h2>4. The DENA Approach</h2>
-        
-        <div class="diagram-container">
-            <div class="diagram-title">DENA Architecture: The Identity Layer</div>
-            <svg class="dena-diagram" width="800" height="400" viewBox="0 0 800 400">
-                <!-- Layered Architecture -->
-                <rect x="100" y="50" width="600" height="300" fill="none" stroke="#ccc" stroke-width="1"/>
-                
-                <!-- Application Layer -->
-                <rect x="150" y="80" width="500" height="60" class="dena-node"/>
-                <text x="400" y="115" class="dena-text" text-anchor="middle" font-weight="600" font-size="16">Application Layer</text>
-                <text x="400" y="135" class="dena-text" text-anchor="middle" font-size="12">Web Apps, Mobile Apps, Services</text>
-                
-                <!-- DENA Layer -->
-                <rect x="200" y="160" width="400" height="80" class="dena-layer"/>
-                <text x="400" y="195" class="dena-text" text-anchor="middle" font-weight="600" font-size="16">DENA Identity Layer</text>
-                
-                <!-- DENA Components -->
-                <g transform="translate(220, 170)">
-                    <rect width="90" height="30" fill="#e1f5fe" stroke="#03a9f4"/>
-                    <text x="45" y="20" class="dena-text" text-anchor="middle" font-size="10">DID Resolution</text>
-                </g>
-                
-                <g transform="translate(320, 170)">
-                    <rect width="90" height="30" fill="#f3e5f5" stroke="#9c27b0"/>
-                    <text x="45" y="20" class="dena-text" text-anchor="middle" font-size="10">Service Discovery</text>
-                </g>
-                
-                <g transform="translate(420, 170)">
-                    <rect width="90" height="30" fill="#e8f5e9" stroke="#4caf50"/>
-                    <text x="45" y="20" class="dena-text" text-anchor="middle" font-size="10">Secure Messaging</text>
-                </g>
-                
-                <g transform="translate(520, 170)">
-                    <rect width="90" height="30" fill="#fff3e0" stroke="#ff9800"/>
-                    <text x="45" y="20" class="dena-text" text-anchor="middle" font-size="10">Auth & Capabilities</text>
-                </g>
-                
-                <!-- Transport Layer -->
-                <rect x="250" y="260" width="300" height="60" fill="#f5f5f5" stroke="#666"/>
-                <text x="400" y="295" class="dena-text" text-anchor="middle" font-weight="600" font-size="16">Transport Layer</text>
-                <text x="400" y="315" class="dena-text" text-anchor="middle" font-size="12">HTTP, WebSockets, WebRTC</text>
-                
-                <!-- Connections -->
-                <path d="M400 140 L400 160" stroke="#666" stroke-width="2" stroke-dasharray="4"/>
-                <path d="M400 240 L400 260" stroke="#666" stroke-width="2" stroke-dasharray="4"/>
-                
-                <!-- DIDComm Flow -->
-                <path d="M500 200 Q550 180 600 140" class="dena-flow"/>
-                <path d="M300 200 Q250 180 200 140" class="dena-flow"/>
-                
-                <text x="600" y="130" class="dena-text" text-anchor="end" font-size="11">DIDComm Messages</text>
-                <text x="200" y="130" class="dena-text" text-anchor="start" font-size="11">Service Discovery</text>
-                
-                <defs>
-                    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                        <polygon points="0 0, 10 3.5, 0 7" fill="#4caf50"/>
-                    </marker>
-                </defs>
-            </svg>
-            <p class="diagram-caption">Figure 2: DENA operates as an identity layer between applications and transport protocols</p>
-        </div>
-        
-        <h3 id="architecture">4.1 Architectural Overview</h3>
-        
-        <p>DENA introduces an <strong>identity layer</strong> that sits between applications and transport protocols. This layer provides four core capabilities:</p>
-        
-        <ol>
-            <li><strong>DID Resolution:</strong> Map DIDs to current endpoints and keys</li>
-            <li><strong>Service Discovery:</strong> Find what services a DID offers</li>
-            <li><strong>Secure Messaging:</strong> End-to-end encrypted communication</li>
-            <li><strong>Capability Management:</strong> Fine-grained access control</li>
-        </ol>
-        
-        <h3 id="core-concepts">4.2 Core Concepts</h3>
-        
-        <h4>DID-Based Addressing</h4>
-        <p>DENA extends the DID concept to address not just people, but services, APIs, and resources:</p>
-        
-        <pre><code>// DENA addressing examples
-dena://did:web:api.example.com/services/chat
-dena://did:key:z6Mkf5rGM.../api/v1/users
-dena://did:ion:example:123456/notifications</code></pre>
-        
-        <p>The <code>dena://</code> URI scheme (conceptual) indicates DENA-enhanced addressing, though initial implementations may use HTTPS with DID headers.</p>
-        
-        <h4>Enhanced DID Document</h4>
-        <p>DENA extends DID documents with service discovery capabilities:</p>
-        
-        <pre><code>{
-  "@context": [
-    "https://www.w3.org/ns/did/v1",
-    "https://dena.dev/contexts/v1"
-  ],
-  "id": "did:web:api.example.com",
-  "service": [
-    {
-      "id": "#chat-service",
-      "type": "DenaMessagingEndpoint",
-      "serviceEndpoint": "https://api.example.com/dena/chat",
-      "supportedProtocols": ["dena-messaging-1.0", "didcomm/v2"],
-      "capabilities": ["send-message", "create-channel"]
-    },
-    {
-      "id": "#data-api",
-      "type": "DenaHttpEndpoint", 
-      "serviceEndpoint": "https://api.example.com/dena/api",
-      "methods": ["GET", "POST", "PUT"],
-      "authentication": ["#key-1"],
-      "rateLimit": "1000/hour"
-    }
-  ],
-  "denaMetadata": {
-    "version": "1.0",
-    "cacheTtl": 3600,
-    "priorityEndpoints": ["us-east", "eu-west"]
-  }
+                    <h3>Core Principles</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">🔐</div>
+                                <div class="card-title">Security First</div>
+                            </div>
+                            <p>End-to-end encryption and cryptographic verification built into the addressing layer.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">🤝</div>
+                                <div class="card-title">Interoperable</div>
+                            </div>
+                            <p>Works with existing W3C standards (DID, VC) and integrates with current web infrastructure.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">⚡</div>
+                                <div class="card-title">Performant</div>
+                            </div>
+                            <p>Designed for real-world use with sub-100ms resolution and minimal overhead.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Why UDNA -->
+                <section id="why-udna" class="fade-in">
+                    <h2>Why UDNA?</h2>
+                    
+                    <p>The current web has a fundamental problem: identity and addressing are separate concerns. This leads to:</p>
+                    
+                    <ul>
+                        <li><strong>Fragmented Authentication:</strong> Every service implements auth differently</li>
+                        <li><strong>Privacy Erosion:</strong> Users are tracked across services via opaque identifiers</li>
+                        <li><strong>Service Discovery:</strong> No standard way for services to find and authenticate each other</li>
+                        <li><strong>Vendor Lock-in:</strong> Dependence on centralized identity providers</li>
+                    </ul>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">🎯</div>
+                            <div class="card-title">The UDNA Solution</div>
+                        </div>
+                        <p>UDNA solves these problems by making identity <em>native</em> to addressing. When you address a resource with UDNA, you're also specifying how to authenticate and communicate with it.</p>
+                        
+                        <pre><code>// Traditional Web
+https://api.example.com/user/123
+
+// UDNA Addressing
+udna://did:web:api.example.com/services/user#123
+// or
+udna://did:key:z6Mkf5rGM.../api/v1/users/123</code></pre>
+                        
+                        <p>The UDNA address contains everything needed to securely communicate with the resource: its identity (DID), service endpoint, and authentication method.</p>
+                    </div>
+                </section>
+
+                <!-- Comparison -->
+                <section id="comparison" class="fade-in">
+                    <h2>Comparison with Existing Work</h2>
+                    
+                    <p>UDNA builds upon and integrates with existing standards while filling crucial gaps:</p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Technology</th>
+                                <th>Scope</th>
+                                <th>Addressing</th>
+                                <th>Messaging</th>
+                                <th>Service Discovery</th>
+                                <th>Integration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>W3C DIDs</strong></td>
+                                <td>Identity only</td>
+                                <td class="partial">Basic</td>
+                                <td class="bad">None</td>
+                                <td class="partial">Via DID docs</td>
+                                <td class="partial">Low-level</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DIDComm</strong></td>
+                                <td>Messaging only</td>
+                                <td class="partial">Via DIDs</td>
+                                <td class="good">Excellent</td>
+                                <td class="bad">None</td>
+                                <td class="partial">Protocol-level</td>
+                            </tr>
+                            <tr>
+                                <td><strong>OAuth/OpenID</strong></td>
+                                <td>Authentication</td>
+                                <td class="bad">Opaque</td>
+                                <td class="bad">None</td>
+                                <td class="bad">None</td>
+                                <td class="good">Widely adopted</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ActivityPub</strong></td>
+                                <td>Social networking</td>
+                                <td class="partial">Web-based</td>
+                                <td class="good">Built-in</td>
+                                <td class="partial">Federation</td>
+                                <td class="partial">Niche</td>
+                            </tr>
+                            <tr>
+                                <td><strong>UDNA (Proposed)</strong></td>
+                                <td>Universal addressing</td>
+                                <td class="good">Native DIDs</td>
+                                <td class="good">DIDComm-based</td>
+                                <td class="good">Built-in</td>
+                                <td class="good">Layered</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="card warning-card">
+                        <div class="card-header">
+                            <div class="card-icon">⚠️</div>
+                            <div class="card-title">Key Differentiator</div>
+                        </div>
+                        <p><strong>UDNA is not a replacement for DIDComm or DIDs.</strong> It's a <em>higher-level abstraction</em> that combines these technologies into a complete addressing solution. Think of it as the "TCP/IP" layer that sits above the "Ethernet" of DIDs and DIDComm.</p>
+                        
+                        <p>This layered approach ensures UDNA can evolve independently while benefiting from improvements in underlying standards.</p>
+                    </div>
+                </section>
+
+                <!-- Architecture -->
+                <section id="architecture" class="fade-in">
+                    <h2>Architecture</h2>
+                    
+                    <h3>Core Components</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">📍</div>
+                                <div class="card-title">Addressing Layer</div>
+                            </div>
+                            <p>Standardized UDNA URI format that embeds DIDs and service paths</p>
+                            <div style="margin-top: var(--space-md);">
+                                <span class="chip">udna://</span>
+                                <span class="chip">did:method</span>
+                                <span class="chip">path/resource</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">🔍</div>
+                                <div class="card-title">Resolution Layer</div>
+                            </div>
+                            <p>Multi-tier resolution system with caching and fallback strategies</p>
+                            <div style="margin-top: var(--space-md);">
+                                <span class="chip">Local Cache</span>
+                                <span class="chip">P2P Cache</span>
+                                <span class="chip">Authoritative</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">💬</div>
+                                <div class="card-title">Messaging Layer</div>
+                            </div>
+                            <p>Secure communication built on DIDComm v2 with extensions</p>
+                            <div style="margin-top: var(--space-md);">
+                                <span class="chip">E2E Encryption</span>
+                                <span class="chip">Forward Secrecy</span>
+                                <span class="chip">Multi-transport</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Extension Model</h3>
+                    <p>UDNA follows a minimal core + extensions model:</p>
+                    
+                    <pre><code>// Core UDNA (required)
+{
+  "id": "udna:core",
+  "spec": "https://udna.dev/spec/core",
+  "version": "1.0"
+}
+
+// Extensions (optional)
+{
+  "extensions": [
+    "https://udna.dev/ext/gateway",
+    "https://udna.dev/ext/batch",
+    "https://udna.dev/ext/legacy"
+  ]
 }</code></pre>
-        
-        <h4>Key Management with Passkeys</h4>
-        
-        <div class="highlight-box">
-            <h4>Solving the Key Management Problem</h4>
-            <p>DENA leverages <strong>WebAuthn/Passkeys</strong> as the primary user onboarding mechanism:</p>
-            <ul>
-                <li>Users authenticate with biometrics or device pins</li>
-                <li>Private keys stay on user devices (never leave)</li>
-                <li>Cross-device sync via cloud providers (optional)</li>
-                <li>Recovery through social or enterprise mechanisms</li>
-            </ul>
-            <p>This bridges the gap between security and usability that has plagued previous decentralized identity attempts.</p>
-        </div>
-        
-        <h3 id="technical-spec">4.3 Technical Specifications</h3>
-        
-        <h4>Performance Targets</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>Operation</th>
-                    <th>Target Latency</th>
-                    <th>Mechanism</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>DID Resolution (cached)</td>
-                    <td>&lt; 10ms</td>
-                    <td>Local resolver with LRU cache</td>
-                    <td>Achieved in PoC</td>
-                </tr>
-                <tr>
-                    <td>DID Resolution (network)</td>
-                    <td>&lt; 200ms</td>
-                    <td>Parallel resolver queries</td>
-                    <td>In progress</td>
-                </tr>
-                <tr>
-                    <td>Authentication</td>
-                    <td>&lt; 100ms</td>
-                    <td>JWT-style DID Auth</td>
-                    <td>Achieved</td>
-                </tr>
-                <tr>
-                    <td>Message Signing (Ed25519)</td>
-                    <td>&lt; 5ms</td>
-                    <td>WebCrypto API</td>
-                    <td>Achieved</td>
-                </tr>
-                <tr>
-                    <td>Message Verification</td>
-                    <td>&lt; 5ms</td>
-                    <td>Batch verification</td>
-                    <td>Achieved</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h4>Resolution Architecture</h4>
-        <p>Three-tier resolution system for performance and resilience:</p>
-        
-        <pre><code>// Resolution priority
-1. Local Cache (LRU, 10MB, 1-hour TTL)
-2. P2P Cache (Distributed among peers)
-3. Authoritative Resolvers (did:web HTTP, did:key local, etc.)
+                    
+                    <p>This ensures the core remains simple and stable while allowing innovation through extensions.</p>
+                </section>
 
-// Fallback strategy
-primaryResolver → secondaryResolver → cachedStaleData → error</code></pre>
-    </section>
+                <!-- Quick Start -->
+                <section id="quick-start" class="fade-in">
+                    <h2>Quick Start</h2>
+                    
+                    <h3>Installation</h3>
+                    <pre><code># Using npm
+npm install @udna/core @udna/client
 
-    <section id="implementation">
-        <h2>5. Implementation Strategy</h2>
-        
-        <h3 id="patterns">5.1 Integration Patterns</h3>
-        
-        <div class="diagram-container">
-            <div class="diagram-title">DENA Integration Patterns</div>
-            <svg class="dena-diagram" width="800" height="300" viewBox="0 0 800 300">
-                <!-- Pattern 1 -->
-                <g transform="translate(50, 50)">
-                    <rect width="200" height="100" class="dena-node"/>
-                    <text x="100" y="30" class="dena-text" text-anchor="middle" font-weight="600">Pattern 1</text>
-                    <text x="100" y="50" class="dena-text" text-anchor="middle" font-size="14">DID-Enhanced OAuth</text>
-                    <text x="100" y="80" class="dena-text" text-anchor="middle" font-size="12">Add DID claims to OAuth tokens</text>
-                </g>
-                
-                <!-- Pattern 2 -->
-                <g transform="translate(300, 50)">
-                    <rect width="200" height="100" class="dena-node"/>
-                    <text x="100" y="30" class="dena-text" text-anchor="middle" font-weight="600">Pattern 2</text>
-                    <text x="100" y="50" class="dena-text" text-anchor="middle" font-size="14">Pure DENA</text>
-                    <text x="100" y="80" class="dena-text" text-anchor="middle" font-size="12">Full DID-based auth & messaging</text>
-                </g>
-                
-                <!-- Pattern 3 -->
-                <g transform="translate(550, 50)">
-                    <rect width="200" height="100" class="dena-node"/>
-                    <text x="100" y="30" class="dena-text" text-anchor="middle" font-weight="600">Pattern 3</text>
-                    <text x="100" y="50" class="dena-text" text-anchor="middle" font-size="14">Gateway Pattern</text>
-                    <text x="100" y="80" class="dena-text" text-anchor="middle" font-size="12">Translate between DENA and legacy</text>
-                </g>
-                
-                <!-- Migration Path -->
-                <path d="M150 150 L150 200 L650 200 L650 150" stroke="#666" stroke-width="2" fill="none"/>
-                <text x="400" y="190" class="dena-text" text-anchor="middle" font-size="12">Migration Path: Start with Pattern 1 → Evaluate → Move to Pattern 2</text>
-                
-                <!-- Use Case Labels -->
-                <text x="150" y="240" class="dena-text" text-anchor="middle" font-size="11">Existing OAuth Systems</text>
-                <text x="400" y="240" class="dena-text" text-anchor="middle" font-size="11">New Applications</text>
-                <text x="650" y="240" class="dena-text" text-anchor="middle" font-size="11">Enterprise Integration</text>
-            </svg>
-            <p class="diagram-caption">Figure 3: Three implementation patterns supporting gradual adoption</p>
-        </div>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Pattern</th>
-                    <th>Description</th>
-                    <th>Implementation Effort</th>
-                    <th>Best For</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Pattern 1: DID-Enhanced OAuth</strong></td>
-                    <td>Add DID claims to existing OAuth/OpenID Connect flows</td>
-                    <td>Low (days)</td>
-                    <td>Existing applications, gradual migration</td>
-                </tr>
-                <tr>
-                    <td><strong>Pattern 2: Pure DENA</strong></td>
-                    <td>Full DID-based authentication and messaging</td>
-                    <td>Medium (weeks)</td>
-                    <td>New applications, maximum privacy</td>
-                </tr>
-                <tr>
-                    <td><strong>Pattern 3: Gateway Pattern</strong></td>
-                    <td>DENA gateway translates between DENA and legacy systems</td>
-                    <td>Medium (weeks)</td>
-                    <td>Enterprises, legacy system integration</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h3 id="roadmap">5.2 Development Roadmap</h3>
-        
-        <div class="highlight-box">
-            <h4>Phase 1: Foundation (Months 1-3)</h4>
-            <ul>
-                <li>✅ JavaScript/TypeScript SDK (v0.1)</li>
-                <li>✅ DID resolution service</li>
-                <li>✅ Basic DIDComm messaging</li>
-                <li>🔲 Documentation and tutorials</li>
-                <li>🔲 Security audit</li>
-            </ul>
-        </div>
-        
-        <div class="highlight-box">
-            <h4>Phase 2: Ecosystem (Months 4-6)</h4>
-            <ul>
-                <li>🔲 Framework integrations (React, Vue, Angular)</li>
-                <li>🔲 Backend SDKs (Node.js, Python, Go)</li>
-                <li>🔲 Mobile SDKs (iOS, Android)</li>
-                <li>🔲 Developer portal</li>
-                <li>🔲 Performance optimization</li>
-            </ul>
-        </div>
-        
-        <div class="highlight-box">
-            <h4>Phase 3: Standardization (Months 7-12)</h4>
-            <ul>
-                <li>🔲 W3C Community Group specification</li>
-                <li>🔲 Interoperability testing</li>
-                <li>🔲 Enterprise features (SSO, directory sync)</li>
-                <li>🔲 Production deployments</li>
-            </ul>
-        </div>
-    </section>
+# Using yarn
+yarn add @udna/core @udna/client
 
-    <section id="comparison">
-        <h2>6. Comparison & Alternatives</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Approach</th>
-                    <th>User Control</th>
-                    <th>Privacy</th>
-                    <th>Developer Experience</th>
-                    <th>Enterprise Readiness</th>
-                    <th>Why DENA Differs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Traditional OAuth/OpenID</strong></td>
-                    <td>❌ Low (Provider-controlled)</td>
-                    <td>❌ Poor (Tracking across sites)</td>
-                    <td>⚠️ Medium (Complex but documented)</td>
-                    <td>✅ High (Widely adopted)</td>
-                    <td>Centralized, privacy-invasive</td>
-                </tr>
-                <tr>
-                    <td><strong>WebAuthn/Passkeys</strong></td>
-                    <td>✅ High (User device)</td>
-                    <td>✅ Good (No tracking)</td>
-                    <td>⚠️ Medium (New APIs to learn)</td>
-                    <td>⚠️ Medium (Growing adoption)</td>
-                    <td>Authentication only, no identity layer</td>
-                </tr>
-                <tr>
-                    <td><strong>Proprietary (Google/Apple)</strong></td>
-                    <td>❌ Very Low (Vendor lock-in)</td>
-                    <td>❌ Very Poor (Complete tracking)</td>
-                    <td>✅ High (Simple integration)</td>
-                    <td>⚠️ Medium (Vendor dependence)</td>
-                    <td>Vendor lock-in, privacy concerns</td>
-                </tr>
-                <tr>
-                    <td><strong>ActivityPub/Matrix</strong></td>
-                    <td>✅ High (Decentralized)</td>
-                    <td>✅ Good (Depending on implementation)</td>
-                    <td>❌ Low (Protocol complexity)</td>
-                    <td>❌ Low (Limited enterprise use)</td>
-                    <td>Different problem space (social/chat)</td>
-                </tr>
-                <tr>
-                    <td><strong>DENA (Proposed)</strong></td>
-                    <td>✅ High (User-controlled)</td>
-                    <td>✅ High (Privacy by design)</td>
-                    <td>✅ High (Simple libraries)</td>
-                    <td>✅ High (Enterprise features)</td>
-                    <td>Integrated identity layer, practical adoption</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h3>Why Not These Alternatives?</h3>
-        
-        <div class="non-goal-box">
-            <h4>OAuth 3.0 / GNAP?</h4>
-            <p>While Grant Negotiation and Authorization Protocol (GNAP) improves on OAuth 2.x, it still assumes centralized authorization servers and doesn't solve service discovery or peer-to-peer communication.</p>
-        </div>
-        
-        <div class="non-goal-box">
-            <h4>Existing DID Libraries?</h4>
-            <p>Current DID libraries (diddkit, ION SDK, etc.) provide low-level building blocks but don't offer integrated application-layer solutions. DENA builds on these libraries to create complete solutions.</p>
-        </div>
-    </section>
+# Using CDN
+&lt;script src="https://unpkg.com/@udna/client"&gt;&lt;/script&gt;</code></pre>
 
-    <section id="considerations">
-        <h2>7. Critical Considerations</h2>
-        
-        <div class="warning-box">
-            <h3>⚠️ Critical Challenge: Key Recovery</h3>
-            <p>The biggest usability challenge for decentralized identity is key recovery. DENA addresses this through:</p>
-            <ul>
-                <li><strong>Social Recovery:</strong> Trusted contacts can help restore access</li>
-                <li><strong>Enterprise Recovery:</strong> Organizational controls for employee accounts</li>
-                <li><strong>Hardware Backup:</strong> Physical security keys as backup</li>
-                <li><strong>Gradual Migration:</strong> Maintain legacy recovery during transition</li>
-            </ul>
-        </div>
-        
-        <h3>Accessibility Considerations</h3>
-        <ul>
-            <li><strong>Screen Reader Support:</strong> All DENA interfaces must be fully accessible</li>
-            <li><strong>Cognitive Load:</strong> Key management must be understandable</li>
-            <li><strong>Error Messages:</strong> Clear, actionable error recovery flows</li>
-            <li><strong>Internationalization:</strong> Full Unicode support in identifiers</li>
-        </ul>
-        
-        <h3>Privacy by Design</h3>
-        <ul>
-            <li><strong>Pairwise DIDs:</strong> Different identifier per relationship</li>
-            <li><strong>Zero-Knowledge Proofs:</strong> Selective disclosure of attributes</li>
-            <li><strong>Data Minimization:</strong> Only request necessary information</li>
-            <li><strong>GDPR Compliance:</strong> Right to deletion, data portability</li>
-        </ul>
-        
-        <h3>Security Considerations</h3>
-        <ul>
-            <li><strong>Cryptographic Agility:</strong> Ability to upgrade algorithms</li>
-            <li><strong>Phishing Resistance:</strong> UX patterns that prevent credential theft</li>
-            <li><strong>Audit Trails:</strong> Comprehensive logging for security incidents</li>
-            <li><strong>Rate Limiting:</strong> Built-in protection against abuse</li>
-        </ul>
-        
-        <h3>Performance Considerations</h3>
-        <ul>
-            <li><strong>Caching Strategy:</strong> Multi-level caching for DID documents</li>
-            <li><strong>Connection Pooling:</strong> Reuse authenticated connections</li>
-            <li><strong>Batch Operations:</strong> Verify multiple signatures together</li>
-            <li><strong>Progressive Enhancement:</strong> Fallback to traditional auth if needed</li>
-        </ul>
-    </section>
+                    <h3>Basic Usage</h3>
+                    <pre><code>import { UDNAClient } from '@udna/client';
 
-    <section id="next-steps">
-        <h2>8. Next Steps & Community</h2>
-        
-        <div class="highlight-box">
-            <h3>Join the Exploration</h3>
-            <p>DENA is an open exploration, not a finished specification. We need diverse perspectives to shape this work:</p>
+// Initialize client
+const client = new UDNAClient({
+  did: 'did:key:z6Mkf5rGM...',
+  resolver: 'https://resolver.udna.dev'
+});
+
+// Resolve a UDNA address
+const endpoint = await client.resolve(
+  'udna://did:web:api.example.com/services/chat'
+);
+
+// Send a secure message
+const response = await client.sendMessage({
+  to: endpoint,
+  type: 'text/plain',
+  body: 'Hello UDNA!'
+});</code></pre>
+
+                    <h3>Integration Examples</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">🌐</div>
+                                <div class="card-title">Web App</div>
+                            </div>
+                            <pre style="margin: 0; font-size: 0.75rem;"><code>// React component
+useUDNA({ did: userDID });</code></pre>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">📱</div>
+                                <div class="card-title">Mobile</div>
+                            </div>
+                            <pre style="margin: 0; font-size: 0.75rem;"><code>// Swift/iOS
+let client = UDNAClient(did: did)</code></pre>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon">🖥️</div>
+                                <div class="card-title">Backend</div>
+                            </div>
+                            <pre style="margin: 0; font-size: 0.75rem;"><code># Python
+from udna import Client
+client = Client(did=did)</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contributing -->
+                <section id="contributing" class="fade-in">
+                    <h2>Contributing</h2>
+                    
+                    <p>UDNA is developed openly in the W3C Community Group. We welcome contributions from:</p>
+                    
+                    <ul>
+                        <li><strong>Developers:</strong> Implement UDNA in different languages and frameworks</li>
+                        <li><strong>Researchers:</strong> Explore novel use cases and security models</li>
+                        <li><strong>Standards Experts:</strong> Help with specification development and alignment</li>
+                        <li><strong>Product Teams:</strong> Pilot UDNA in real applications</li>
+                    </ul>
+
+                    <div class="card highlight-card">
+                        <div class="card-header">
+                            <div class="card-icon">🚀</div>
+                            <div class="card-title">Get Involved</div>
+                        </div>
+                        <p style="margin-bottom: var(--space-md);">Join the W3C Community Group to participate in discussions and development:</p>
+                        
+                        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                            <a href="https://www.w3.org/groups/cg/did-native-addr/" class="btn" target="_blank">
+                                <span>🌐</span> W3C Group
+                            </a>
+                            <a href="https://github.com/w3c-cg/udna" class="btn" target="_blank">
+                                <span>💻</span> GitHub Repo
+                            </a>
+                            <a href="mailto:public-did-native-addr@w3.org" class="btn">
+                                <span>📧</span> Mailing List
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-links">
+                            <a href="https://www.w3.org/Consortium/Legal/ipr-notice" class="footer-link" target="_blank">Legal</a>
+                            <a href="https://www.w3.org/Consortium/Legal/copyright-documents" class="footer-link" target="_blank">Copyright</a>
+                            <a href="https://www.w3.org/Consortium/Legal/privacy-statement" class="footer-link" target="_blank">Privacy</a>
+                            <a href="https://www.w3.org/Help/site" class="footer-link" target="_blank">Help</a>
+                        </div>
+                        <div class="copyright">
+                            © 2026 W3C®. Published by the UDNA Community Group
+                        </div>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- Table of Contents (Right Sidebar) -->
+            <aside class="toc-container">
+                <div class="toc">
+                    <div class="toc-title">On This Page</div>
+                    <ul class="toc-items">
+                        <li class="toc-item"><a href="#overview" class="toc-link">Overview</a></li>
+                        <li class="toc-item"><a href="#why-udna" class="toc-link">Why UDNA?</a></li>
+                        <li class="toc-item"><a href="#comparison" class="toc-link">Comparison</a></li>
+                        <li class="toc-item"><a href="#architecture" class="toc-link">Architecture</a></li>
+                        <li class="toc-item"><a href="#quick-start" class="toc-link">Quick Start</a></li>
+                        <li class="toc-item"><a href="#contributing" class="toc-link">Contributing</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        // Table of Contents highlighting
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function highlightTOC() {
+            let scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    tocLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC();
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; margin-top: 1em;">
-                <div style="background: white; padding: 1em; border-radius: 6px; border: 1px solid var(--border-color);">
-                    <h4 style="margin-top: 0;">For Developers</h4>
-                    <ul>
-                        <li>Try the early PoC</li>
-                        <li>Share integration challenges</li>
-                        <li>Contribute to SDKs</li>
-                    </ul>
-                </div>
-                
-                <div style="background: white; padding: 1em; border-radius: 6px; border: 1px solid var(--border-color);">
-                    <h4 style="margin-top: 0;">For Standards Participants</h4>
-                    <ul>
-                        <li>Review alignment with W3C specs</li>
-                        <li>Identify gaps and overlaps</li>
-                        <li>Help with standardization path</li>
-                    </ul>
-                </div>
-                
-                <div style="background: white; padding: 1em; border-radius: 6px; border: 1px solid var(--border-color);">
-                    <h4 style="margin-top: 0;">For Enterprises</h4>
-                    <ul>
-                        <li>Share use case requirements</li>
-                        <li>Participate in pilot programs</li>
-                        <li>Provide compliance feedback</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <h3>Immediate Actions</h3>
-        <ol>
-            <li><strong>Review this explainer</strong> and provide feedback via GitHub issues</li>
-            <li><strong>Join the W3C UDNA Community Group</strong> to participate in discussions</li>
-            <li><strong>Share your identity challenges</strong> - what problems are you facing?</li>
-            <li><strong>Experiment with early prototypes</strong> and share your experiences</li>
-        </ol>
-        
-        <h3>Success Metrics</h3>
-        <p>We'll consider this exploration successful if:</p>
-        <ul>
-            <li>10+ organizations participate in the Community Group</li>
-            <li>3+ production pilot deployments within 12 months</li>
-            <li>90%+ developer satisfaction in early usability testing</li>
-            <li>Clear path to W3C standardization emerges</li>
-        </ul>
-    </section>
+            // Store preference
+            localStorage.setItem('theme', newTheme);
+        }
 
-    <section id="references">
-        <h2>9. References</h2>
-        
-        <h3>Standards & Specifications</h3>
-        <ul>
-            <li>W3C. "Decentralized Identifiers (DIDs) v1.0." W3C Recommendation, 2022. <a href="https://www.w3.org/TR/did-core/">https://www.w3.org/TR/did-core/</a></li>
-            <li>W3C. "Verifiable Credentials Data Model v1.1." W3C Recommendation, 2022. <a href="https://www.w3.org/TR/vc-data-model/">https://www.w3.org/TR/vc-data-model/</a></li>
-            <li>DIF. "DIDComm Messaging v2.0." Decentralized Identity Foundation, 2021. <a href="https://identity.foundation/didcomm-messaging/spec/">https://identity.foundation/didcomm-messaging/spec/</a></li>
-            <li>W3C. "Web Authentication: An API for accessing Public Key Credentials." W3C Recommendation, 2021. <a href="https://www.w3.org/TR/webauthn-2/">https://www.w3.org/TR/webauthn-2/</a></li>
-            <li>IETF. "OAuth 2.1 Authorization Framework." Internet-Draft, 2024. <a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/">https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/</a></li>
-        </ul>
-        
-        <h3>Related Work & Inspiration</h3>
-        <ul>
-            <li>ActivityPub Protocol. W3C Recommendation, 2018.</li>
-            <li>Matrix Protocol. Matrix.org Foundation.</li>
-            <li>Solid Project. "Solid Protocol." Inrupt, 2022.</li>
-            <li>Web5. TBD (Jack Dorsey). Conceptual framework.</li>
-        </ul>
-        
-        <h3>Acknowledgements</h3>
-        <p>Thanks to the W3C Credentials Community Group for foundational discussions, the W3C DID Working Group for their standards work, and all early reviewers who provided feedback on this document.</p>
-        
-        <p><em>Special thanks to the W3C Technical Architecture Group for their explainer guidelines that shaped this document.</em></p>
-    </section>
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
 
-    <footer>
-        <p><strong>DID-Enhanced Network Addressing (DENA) Explainer</strong> | Version 0.9 | February 2026</p>
-        <p>This document follows the <a href="https://www.w3.org/TR/explainer-explainer/">W3C Explainer Guidelines</a> and is intended to facilitate community discussion.</p>
-        <p>Feedback and contributions welcome through the <a href="https://www.w3.org/community/udna/">W3C UDNA Community Group</a>.</p>
-        <p style="margin-top: 1em; font-size: 0.8em; color: var(--text-light);">
-            The concepts described are exploratory and subject to change based on community feedback. 
-            This is not a formal W3C specification but a starting point for discussion.
-        </p>
-    </footer>
+        // Navigation highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuToggle = document.createElement('button');
+        mobileMenuToggle.innerHTML = '☰';
+        mobileMenuToggle.className = 'btn';
+        mobileMenuToggle.style.position = 'fixed';
+        mobileMenuToggle.style.top = '10px';
+        mobileMenuToggle.style.left = '10px';
+        mobileMenuToggle.style.zIndex = '1000';
+        mobileMenuToggle.style.display = 'none';
+        mobileMenuToggle.onclick = () => document.querySelector('.sidebar').classList.toggle('active');
+        document.body.appendChild(mobileMenuToggle);
+
+        // Show mobile menu toggle on small screens
+        function checkMobile() {
+            if (window.innerWidth <= 1024) {
+                mobileMenuToggle.style.display = 'flex';
+            } else {
+                mobileMenuToggle.style.display = 'none';
+                document.querySelector('.sidebar').classList.remove('active');
+            }
+        }
+
+        window.addEventListener('resize', checkMobile);
+        checkMobile();
+
+        // Print styles
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @media print {
+                .sidebar, .top-bar, .toc-container, .footer, .btn {
+                    display: none !important;
+                }
+                .main-content {
+                    margin-left: 0 !important;
+                }
+                .article {
+                    max-width: 100% !important;
+                    padding: 0 !important;
+                }
+                .card {
+                    break-inside: avoid;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
