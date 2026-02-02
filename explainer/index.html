@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Application-Layer Identity Integration with DIDs</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #005a9c;
+        }
+        h1 {
+            border-bottom: 2px solid #005a9c;
+            padding-bottom: 10px;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .authors {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .participate {
+            background: #f9f9f9;
+            border-left: 4px solid #005a9c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .toc {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .goal, .non-goal {
+            margin: 10px 0;
+            padding-left: 10px;
+            border-left: 3px solid #005a9c;
+        }
+        .goal {
+            border-color: #4caf50;
+        }
+        .non-goal {
+            border-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exploring Application-Layer Identity Integration with DIDs</h1>
+    
+    <div class="authors">
+        <h2>Authors:</h2>
+        <ul>
+            <li>Amir Hameed Mir (Sirraya Labs)</li>
+            <li>[Inviting other contributors from the community]</li>
+        </ul>
+    </div>
+    
+    <div class="participate">
+        <h2>Participate</h2>
+        <ul>
+            <li><a href="https://github.com/w3c/udna-cg/issues">Issue tracker (to be created in UDNA CG)</a></li>
+            <li><a href="https://lists.w3.org/Archives/Public/public-udna/">Discussion forum: public-udna@w3.org</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#problem">User-Facing Problem</a>
+                <ul>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#non-goals">Non-goals</a></li>
+                </ul>
+            </li>
+            <li><a href="#approach">Proposed Approach</a></li>
+            <li><a href="#alternatives">Alternatives Considered</a></li>
+            <li><a href="#considerations">Accessibility, Internationalization, Privacy, and Security Considerations</a></li>
+            <li><a href="#feedback">Stakeholder Feedback / Opposition</a></li>
+            <li><a href="#acknowledgements">References & Acknowledgements</a></li>
+        </ul>
+    </div>
+
+    <h2 id="introduction">Introduction</h2>
+    <p>Modern web applications face significant challenges with identity management, authentication, and secure communication between services. This document explores how W3C Decentralized Identifiers (DIDs) might be integrated into application-layer networking to address these challenges while maintaining compatibility with existing web infrastructure.</p>
+    <p>We're seeking community input on problem definition, use cases, and potential approaches before proposing any specific solutions.</p>
+
+    <h2 id="problem">User-Facing Problem</h2>
+    <p>End users experience several identity-related problems when using web applications:</p>
+    <ul>
+        <li><strong>Password fatigue:</strong> Users must remember and manage numerous passwords across different services</li>
+        <li><strong>Privacy erosion:</strong> Services can track users across different applications and contexts</li>
+        <li><strong>Security fragmentation:</strong> Different applications implement authentication differently, creating inconsistent security experiences</li>
+        <li><strong>Account recovery challenges:</strong> Users lose access when email accounts or phone numbers change</li>
+    </ul>
+    
+    <p>Application developers face complementary problems:</p>
+    <ul>
+        <li><strong>Authentication complexity:</strong> Implementing secure authentication requires significant expertise and ongoing maintenance</li>
+        <li><strong>Dependency risks:</strong> Reliance on third-party identity providers creates single points of failure</li>
+        <li><strong>Interoperability gaps:</strong> Applications cannot securely communicate without shared identity infrastructure</li>
+        <li><strong>User experience fragmentation:</strong> Different authentication flows across applications confuse users</li>
+    </ul>
+
+    <h3 id="goals">Goals</h3>
+    <div class="goal">
+        <strong>Goal 1:</strong> Enable users to control their digital identity across applications without centralized intermediaries
+    </div>
+    <div class="goal">
+        <strong>Goal 2:</strong> Allow applications to securely authenticate users and services using open standards
+    </div>
+    <div class="goal">
+        <strong>Goal 3:</strong> Enable privacy-preserving communication between applications and services
+    </div>
+    <div class="goal">
+        <strong>Goal 4:</strong> Maintain backward compatibility with existing web infrastructure
+    </div>
+    <div class="goal">
+        <strong>Goal 5:</strong> Provide practical migration paths for existing applications
+    </div>
+
+    <h3 id="non-goals">Non-goals</h3>
+    <div class="non-goal">
+        <strong>Non-goal 1:</strong> Replacing IP addresses or DNS infrastructure
+    </div>
+    <div class="non-goal">
+        <strong>Non-goal 2:</strong> Creating a new transport-layer protocol
+    </div>
+    <div class="non-goal">
+        <strong>Non-goal 3:</strong> Requiring browser vendors to implement specific features (initially)
+    </div>
+    <div class="non-goal">
+        <strong>Non-goal 4:</strong> Solving all identity problems across all contexts
+    </div>
+
+    <h2 id="approach">Proposed Approach</h2>
+    <p>We've been exploring several <strong>potential approaches</strong> and seek community feedback on their viability:</p>
+    
+    <h3>Option A: DID-Based Authentication Enhancement</h3>
+    <p>Extending existing authentication mechanisms (OAuth, OpenID Connect) with DID support:</p>
+    <pre><code>// Conceptual example - not a proposal
+async function authenticateWithDID(did, options) {
+    // Resolve DID to get authentication endpoints
+    const didDocument = await resolveDID(did);
+    const authEndpoint = findAuthEndpoint(didDocument);
+    
+    // Perform authentication flow
+    return await performDIDAuth(authEndpoint, options);
+}</code></pre>
+
+    <h3>Option B: Application-Layer DID Addressing</h3>
+    <p>Using DIDs as application-layer addresses for secure messaging and API calls:</p>
+    <pre><code>// Conceptual example - exploring patterns
+const message = {
+    to: 'did:web:api.example.com:services:chat',
+    from: 'did:web:client.example.com:users:alice',
+    body: 'Hello World',
+    // Cryptographic signatures would be required
+};</code></pre>
+
+    <h3>Option C: Hybrid Approach</h3>
+    <p>Combining existing authentication with DID-enhanced features gradually.</p>
+
+    <h3>Key Questions for Community Discussion:</h3>
+    <ul>
+        <li>Which integration patterns provide the best balance of security and usability?</li>
+        <li>How can we ensure backward compatibility during transition?</li>
+        <li>What existing standards (DIDComm, VC-DATA-MODEL) should we build upon?</li>
+        <li>What performance considerations are most important for adoption?</li>
+        <li>How do we address key management challenges for end users?</li>
+    </ul>
+
+    <h2 id="alternatives">Alternatives Considered</h2>
+    
+    <h3>Alternative 1: WebAuthn-Only Approach</h3>
+    <p>Using WebAuthn for authentication without DIDs. This provides strong authentication but doesn't solve identity portability or service-to-service authentication challenges.</p>
+    
+    <h3>Alternative 2: OAuth 2.1 with Extensions</h3>
+    <p>Extending OAuth 2.1 with new grant types and claims. This builds on familiar infrastructure but may not provide the same level of user control as decentralized approaches.</p>
+    
+    <h3>Alternative 3: Proprietary Identity Systems</h3>
+    <p>Many platforms offer proprietary identity solutions (Sign in with Apple, Google Identity Services). These provide good user experience but create vendor lock-in and centralization.</p>
+    
+    <h3>Open Questions:</h3>
+    <ul>
+        <li>Should we focus on incremental improvements to existing systems?</li>
+        <li>Is now the right time for more fundamental changes to web identity?</li>
+        <li>How do we balance innovation with practical deployment concerns?</li>
+    </ul>
+
+    <h2 id="considerations">Accessibility, Internationalization, Privacy, and Security Considerations</h2>
+    
+    <h3>Accessibility</h3>
+    <p>Any solution must consider users with disabilities. Key questions:</p>
+    <ul>
+        <li>How do users with cognitive disabilities manage cryptographic keys?</li>
+        <li>Are authentication flows compatible with screen readers and other assistive technologies?</li>
+        <li>How do we prevent excluding users with limited technical proficiency?</li>
+    </ul>
+    
+    <h3>Internationalization</h3>
+    <p>Identity systems must work globally:</p>
+    <ul>
+        <li>How do different legal jurisdictions affect identity verification?</li>
+        <li>What localization challenges exist for recovery mechanisms?</li>
+        <li>How do we handle diverse naming conventions and identification documents?</li>
+    </ul>
+    
+    <h3>Privacy</h3>
+    <p>Core to the decentralized identity vision:</p>
+    <ul>
+        <li>How do we prevent correlation across different services?</li>
+        <li>What data minimization principles should guide design?</li>
+        <li>How do users exercise rights like deletion and portability?</li>
+    </ul>
+    
+    <h3>Security</h3>
+    <p>Critical for identity systems:</p>
+    <ul>
+        <li>How do we handle key recovery without compromising security?</li>
+        <li>What are the attack surfaces for application-layer identity?</li>
+        <li>How do we prevent phishing and social engineering attacks?</li>
+    </ul>
+
+    <h2 id="feedback">Stakeholder Feedback / Opposition</h2>
+    <p><em>This section will be populated based on community discussion in the UDNA CG.</em></p>
+    <ul>
+        <li><strong>W3C DID Working Group:</strong> No formal position yet - early discussions initiated</li>
+        <li><strong>Browser vendors:</strong> No signals - proposal is at application layer initially</li>
+        <li><strong>Application developers:</strong> Mixed interest - some excited about potential, others concerned about complexity</li>
+        <li><strong>Identity providers:</strong> No formal feedback yet</li>
+    </ul>
+
+    <h2 id="acknowledgements">References & Acknowledgements</h2>
+    
+    <h3>References</h3>
+    <ul>
+        <li>W3C. "Decentralized Identifiers (DIDs) v1.0." 2022.</li>
+        <li>W3C. "Verifiable Credentials Data Model v1.1." 2022.</li>
+        <li>DIF. "DIDComm Messaging v2.0." 2021.</li>
+        <li>IETF. "The OAuth 2.1 Authorization Framework." 2024.</li>
+    </ul>
+    
+    <h3>Acknowledgements</h3>
+    <p>Thanks to early reviewers in the Credentials Community Group for initial feedback, and to the W3C TAG for their explainer guidance. We look forward to broader community participation through the UDNA Community Group.</p>
+    
+    <p><em>This is a living document. Please contribute to the discussion in the UDNA Community Group.</em></p>
+</body>
+</html>
