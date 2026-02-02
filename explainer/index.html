@@ -3,651 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DID-Enhanced Network Addressing (DENA): Exploring Application-Layer Identity Integration</title>
+    <title>Exploring Application-Layer Identity Integration with DIDs</title>
     <style>
-        :root {
-            --primary-color: #005a9c;
-            --secondary-color: #4caf50;
-            --accent-color: #ff9800;
-            --light-bg: #f0f7ff;
-            --border-color: #ddd;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Segoe UI Emoji', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             color: #333;
-            background: #fff;
         }
-        
-        header {
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+        h1, h2, h3 {
+            color: #005a9c;
         }
-        
         h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            border-bottom: 2px solid #005a9c;
+            padding-bottom: 10px;
         }
-        
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-            margin-top: 40px;
-        }
-        
-        h3 {
-            color: #555;
-            margin-top: 25px;
-        }
-        
-        .authors {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
-        
-        .participate {
-            background: #f9f9f9;
-            border-left: 4px solid var(--primary-color);
-            padding: 20px;
-            margin: 25px 0;
-        }
-        
-        .toc {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-            border: 1px solid var(--border-color);
-        }
-        
-        .toc ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        
-        .toc li {
-            margin: 8px 0;
-        }
-        
-        .goal, .non-goal {
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 5px solid;
-        }
-        
-        .goal {
-            border-color: var(--secondary-color);
-            background: #f1f8e9;
-        }
-        
-        .non-goal {
-            border-color: var(--accent-color);
-            background: #fff3e0;
-        }
-        
         pre {
             background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 15px;
+            border-radius: 5px;
             overflow-x: auto;
-            border: 1px solid var(--border-color);
-            margin: 20px 0;
         }
-        
         code {
             background: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
+            padding: 2px 4px;
+            border-radius: 3px;
         }
-        
-        .diagram {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-        
-        .diagram img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .caption {
-            font-style: italic;
-            color: #666;
-            margin-top: 10px;
-            font-size: 0.9em;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            margin: 30px 0;
-            background: #000;
-            border-radius: 8px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            text-align: left;
-        }
-        
-        .comparison-table th {
-            background: var(--light-bg);
-            font-weight: 600;
-        }
-        
-        .highlight-box {
-            background: #e8f5e9;
-            border: 2px solid var(--secondary-color);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
-        
-        .warning-box {
-            background: #ffebee;
-            border: 2px solid #f44336;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
-        
-        .use-case {
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 8px;
+        .authors {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 5px;
             margin: 20px 0;
-            border-left: 4px solid var(--primary-color);
         }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .diagram, .use-case, .highlight-box, .warning-box {
-                padding: 15px;
-            }
+        .participate {
+            background: #f9f9f9;
+            border-left: 4px solid #005a9c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .toc {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .goal, .non-goal {
+            margin: 10px 0;
+            padding-left: 10px;
+            border-left: 3px solid #005a9c;
+        }
+        .goal {
+            border-color: #4caf50;
+        }
+        .non-goal {
+            border-color: #ff9800;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>DID-Enhanced Network Addressing (DENA): Exploring Application-Layer Identity Integration</h1>
-        <p><strong>An explainer for exploring practical integration of Decentralized Identifiers (DIDs) into application-layer networking</strong></p>
-    </header>
+    <h1>Exploring Application-Layer Identity Integration with DIDs</h1>
     
     <div class="authors">
         <h2>Authors:</h2>
         <ul>
             <li>Amir Hameed Mir (Sirraya Labs)</li>
-            <li><em>[Inviting contributions from W3C UDNA Community Group participants]</em></li>
+            <li>[Inviting other contributors from the community]</li>
         </ul>
     </div>
     
     <div class="participate">
         <h2>Participate</h2>
         <ul>
-            <li><strong>GitHub Issues:</strong> <a href="https://github.com/w3c/udna-cg/issues">https://github.com/w3c/udna-cg/issues</a></li>
-            <li><strong>Mailing List:</strong> <a href="mailto:public-udna@w3.org">public-udna@w3.org</a></li>
-            <li><strong>W3C UDNA CG:</strong> <a href="https://www.w3.org/community/udna/">Join the Community Group</a></li>
+            <li><a href="https://github.com/w3c/udna-cg/issues">Issue tracker (to be created in UDNA CG)</a></li>
+            <li><a href="https://lists.w3.org/Archives/Public/public-udna/">Discussion forum: public-udna@w3.org</a></li>
         </ul>
     </div>
     
     <div class="toc">
         <h2>Table of Contents</h2>
         <ul>
-            <li><a href="#introduction">1. Introduction</a></li>
-            <li><a href="#problem">2. User-Facing Problem</a>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#problem">User-Facing Problem</a>
                 <ul>
-                    <li><a href="#goals">2.1 Goals</a></li>
-                    <li><a href="#non-goals">2.2 Non-goals</a></li>
-                    <li><a href="#use-cases">2.3 Motivating Use Cases</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#non-goals">Non-goals</a></li>
                 </ul>
             </li>
-            <li><a href="#approach">3. Proposed Approach</a>
-                <ul>
-                    <li><a href="#dena-overview">3.1 DENA Overview</a></li>
-                    <li><a href="#core-concepts">3.2 Core Concepts</a></li>
-                    <li><a href="#integration-patterns">3.3 Integration Patterns</a></li>
-                </ul>
-            </li>
-            <li><a href="#alternatives">4. Alternatives Considered</a></li>
-            <li><a href="#considerations">5. Accessibility, Internationalization, Privacy, and Security Considerations</a></li>
-            <li><a href="#implementation">6. Implementation Exploration</a></li>
-            <li><a href="#stakeholders">7. Stakeholder Feedback</a></li>
-            <li><a href="#acknowledgements">8. References & Acknowledgements</a></li>
+            <li><a href="#approach">Proposed Approach</a></li>
+            <li><a href="#alternatives">Alternatives Considered</a></li>
+            <li><a href="#considerations">Accessibility, Internationalization, Privacy, and Security Considerations</a></li>
+            <li><a href="#feedback">Stakeholder Feedback / Opposition</a></li>
+            <li><a href="#acknowledgements">References & Acknowledgements</a></li>
         </ul>
     </div>
 
-    <h2 id="introduction">1. Introduction</h2>
-    
-    <div class="diagram">
-        <!-- Placeholder for architectural diagram -->
-        <div style="width: 100%; height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5em;">
-            [Diagram: Current vs DENA-enabled architecture]
-        </div>
-        <p class="caption">Figure 1: Transition from fragmented authentication to DENA-enabled identity layer</p>
-    </div>
-    
-    <p>Modern web applications struggle with <strong>fragmented identity management</strong>, relying on multiple authentication systems that create security gaps, poor user experience, and privacy concerns. This explainer explores how W3C Decentralized Identifiers (DIDs) could be integrated into application-layer networking through an approach we're calling <strong>DID-Enhanced Network Addressing (DENA)</strong>.</p>
-    
-    <p>DENA focuses on <strong>practical, incremental adoption</strong> rather than revolutionary changes. We're seeking community feedback on whether this approach addresses real problems and how it might evolve through W3C standardization.</p>
+    <h2 id="introduction">Introduction</h2>
+    <p>Modern web applications face significant challenges with identity management, authentication, and secure communication between services. This document explores how W3C Decentralized Identifiers (DIDs) might be integrated into application-layer networking to address these challenges while maintaining compatibility with existing web infrastructure.</p>
+    <p>We're seeking community input on problem definition, use cases, and potential approaches before proposing any specific solutions.</p>
 
-    <h2 id="problem">2. User-Facing Problem</h2>
-    
-    <div class="highlight-box">
-        <h3>💡 The Core Problem</h3>
-        <p>Users and developers face fragmented identity systems that are insecure, inconvenient, and privacy-invasive. There's no standardized way for applications to securely communicate using decentralized identities.</p>
-    </div>
-    
-    <h3>For End Users:</h3>
+    <h2 id="problem">User-Facing Problem</h2>
+    <p>End users experience several identity-related problems when using web applications:</p>
     <ul>
-        <li><strong>Password Hell:</strong> Average user manages 100+ passwords</li>
-        <li><strong>Privacy Erosion:</strong> Services track users across applications</li>
-        <li><strong>Account Lock-in:</strong> Can't move identity between services</li>
-        <li><strong>Recovery Nightmares:</strong> Lose access when email/phone changes</li>
+        <li><strong>Password fatigue:</strong> Users must remember and manage numerous passwords across different services</li>
+        <li><strong>Privacy erosion:</strong> Services can track users across different applications and contexts</li>
+        <li><strong>Security fragmentation:</strong> Different applications implement authentication differently, creating inconsistent security experiences</li>
+        <li><strong>Account recovery challenges:</strong> Users lose access when email accounts or phone numbers change</li>
     </ul>
     
-    <h3>For Developers:</h3>
+    <p>Application developers face complementary problems:</p>
     <ul>
-        <li><strong>Authentication Complexity:</strong> Months spent on auth systems</li>
-        <li><strong>Vendor Lock-in:</strong> Dependent on Google/Apple/Microsoft auth</li>
-        <li><strong>Service Communication:</strong> No standard way for apps to talk securely</li>
-        <li><strong>Compliance Burden:</strong> Different regulations per region</li>
+        <li><strong>Authentication complexity:</strong> Implementing secure authentication requires significant expertise and ongoing maintenance</li>
+        <li><strong>Dependency risks:</strong> Reliance on third-party identity providers creates single points of failure</li>
+        <li><strong>Interoperability gaps:</strong> Applications cannot securely communicate without shared identity infrastructure</li>
+        <li><strong>User experience fragmentation:</strong> Different authentication flows across applications confuse users</li>
     </ul>
 
-    <h3 id="use-cases">Motivating Use Cases</h3>
-    
-    <div class="use-case">
-        <h4>Use Case 1: Cross-Application Single Sign-On</h4>
-        <p>A user logs into their healthcare portal and wants to securely share records with their insurance app and pharmacy app without creating new accounts.</p>
-        <p><strong>Current pain:</strong> Create 3 separate accounts, share passwords or use insecure links</p>
-        <p><strong>DENA potential:</strong> One DID authenticates to all three services with permission controls</p>
+    <h3 id="goals">Goals</h3>
+    <div class="goal">
+        <strong>Goal 1:</strong> Enable users to control their digital identity across applications without centralized intermediaries
     </div>
-    
-    <div class="use-case">
-        <h4>Use Case 2: Service-to-Service Communication</h4>
-        <p>A weather app wants to send severe alerts to a user's smart home system and calendar app.</p>
-        <p><strong>Current pain:</strong> No standard way for services to discover and authenticate each other</p>
-        <p><strong>DENA potential:</strong> Services use DIDs to find and securely message each other</p>
+    <div class="goal">
+        <strong>Goal 2:</strong> Allow applications to securely authenticate users and services using open standards
     </div>
-    
-    <div class="use-case">
-        <h4>Use Case 3: Privacy-Preserving Analytics</h4>
-        <p>Multiple research institutions want to collaborate on data without exposing individual user identities.</p>
-        <p><strong>Current pain:</strong> Either share raw data or build complex anonymization</p>
-        <p><strong>DENA potential:</strong> Pairwise DIDs prevent correlation while allowing verification</p>
+    <div class="goal">
+        <strong>Goal 3:</strong> Enable privacy-preserving communication between applications and services
+    </div>
+    <div class="goal">
+        <strong>Goal 4:</strong> Maintain backward compatibility with existing web infrastructure
+    </div>
+    <div class="goal">
+        <strong>Goal 5:</strong> Provide practical migration paths for existing applications
     </div>
 
-    <h3 id="goals">2.1 Goals</h3>
-    
-    <div class="goal">
-        <strong>Goal 1: User Control & Privacy</strong>
-        <p>Users should control their digital identity without centralized intermediaries, with built-in privacy protections.</p>
-    </div>
-    
-    <div class="goal">
-        <strong>Goal 2: Developer Simplicity</strong>
-        <p>Make identity integration as simple as including a JavaScript library, not building complex auth systems.</p>
-    </div>
-    
-    <div class="goal">
-        <strong>Goal 3: Backward Compatibility</strong>
-        <p>Work alongside existing systems (OAuth, cookies) with clear migration paths.</p>
-    </div>
-    
-    <div class="goal">
-        <strong>Goal 4: Performance</strong>
-        <p>Add minimal latency (target: &lt;100ms for auth, &lt;5ms for message verification).</p>
-    </div>
-    
-    <div class="goal">
-        <strong>Goal 5: Standards-Based</strong>
-        <p>Build on W3C DIDs, Verifiable Credentials, and existing web standards.</p>
-    </div>
-
-    <h3 id="non-goals">2.2 Non-goals</h3>
-    
+    <h3 id="non-goals">Non-goals</h3>
     <div class="non-goal">
-        <strong>Non-goal 1: Replace IP or DNS</strong>
-        <p>DENA works at application layer, not network layer.</p>
+        <strong>Non-goal 1:</strong> Replacing IP addresses or DNS infrastructure
     </div>
-    
     <div class="non-goal">
-        <strong>Non-goal 2: New Browser APIs (initially)</strong>
-        <p>Start with JavaScript libraries, consider native integration later.</p>
+        <strong>Non-goal 2:</strong> Creating a new transport-layer protocol
     </div>
-    
     <div class="non-goal">
-        <strong>Non-goal 3: Solve All Identity Problems</strong>
-        <p>Focus on application-layer identity, not legal identity or KYC.</p>
+        <strong>Non-goal 3:</strong> Requiring browser vendors to implement specific features (initially)
     </div>
-    
     <div class="non-goal">
-        <strong>Non-goal 4: Require Blockchain</strong>
-        <p>Support DID methods like did:web and did:key that don't need blockchain.</p>
+        <strong>Non-goal 4:</strong> Solving all identity problems across all contexts
     </div>
 
-    <h2 id="approach">3. Proposed Approach</h2>
+    <h2 id="approach">Proposed Approach</h2>
+    <p>We've been exploring several <strong>potential approaches</strong> and seek community feedback on their viability:</p>
     
-    <div class="video-container">
-        <!-- Placeholder for animated explainer video -->
-        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; font-size: 1.2em;">
-            [Animated Video: How DENA Works - 2-3 minute overview]
-        </div>
-    </div>
-    <p class="caption">Video: Conceptual overview of DENA architecture and workflow</p>
-
-    <h3 id="dena-overview">3.1 DENA Overview</h3>
+    <h3>Option A: DID-Based Authentication Enhancement</h3>
+    <p>Extending existing authentication mechanisms (OAuth, OpenID Connect) with DID support:</p>
+    <pre><code>// Conceptual example - not a proposal
+async function authenticateWithDID(did, options) {
+    // Resolve DID to get authentication endpoints
+    const didDocument = await resolveDID(did);
+    const authEndpoint = findAuthEndpoint(didDocument);
     
-    <div class="diagram">
-        <!-- Placeholder for DENA architecture diagram -->
-        <div style="width: 100%; height: 400px; background: #f0f0f0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px;">
-            <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <h4 style="margin-top: 0;">Today's Web</h4>
-                <ul style="font-size: 0.9em;">
-                    <li>Fragmented auth systems</li>
-                    <li>Centralized identity providers</li>
-                    <li>No service discovery</li>
-                    <li>Privacy concerns</li>
-                </ul>
-            </div>
-            <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <h4 style="margin-top: 0;">With DENA</h4>
-                <ul style="font-size: 0.9em;">
-                    <li>Unified DID-based auth</li>
-                    <li>User-controlled identity</li>
-                    <li>Service discovery via DIDs</li>
-                    <li>Privacy by design</li>
-                </ul>
-            </div>
-        </div>
-        <p class="caption">Figure 2: DENA architectural approach vs current web identity</p>
-    </div>
-
-    <h3 id="core-concepts">3.2 Core Concepts</h3>
-    
-    <h4>1. DID as Application Address</h4>
-    <p>Instead of just identifying users, DIDs can address services and APIs:</p>
-    
-    <pre><code>// DID addressing example
-const chatService = 'did:web:api.example.com:services:chat';
-const userProfile = 'did:web:social.example.com:users:alice#profile';
-const paymentAPI = 'did:web:pay.example.com:apis:v2';</code></pre>
-    
-    <h4>2. Service Discovery via DID Documents</h4>
-    <p>DID documents describe what services are available and how to access them:</p>
-    
-    <pre><code>// Example DID document with services
-{
-  "id": "did:web:api.example.com",
-  "service": [
-    {
-      "id": "#chat-api",
-      "type": "DENAHttpEndpoint",
-      "serviceEndpoint": "https://api.example.com/chat",
-      "supportedProtocols": ["DENA-Messaging-v1", "DIDComm-v2"]
-    },
-    {
-      "id": "#auth-endpoint",
-      "type": "DENAAuthEndpoint", 
-      "serviceEndpoint": "https://auth.example.com/did"
-    }
-  ]
+    // Perform authentication flow
+    return await performDIDAuth(authEndpoint, options);
 }</code></pre>
-    
-    <h4>3. Secure Messaging with DIDComm</h4>
-    <p>Building on DIDComm v2 for end-to-end encrypted messaging:</p>
-    
-    <div class="diagram">
-        <!-- Placeholder for messaging flow diagram -->
-        <div style="width: 100%; height: 200px; background: linear-gradient(90deg, #a1c4fd, #c2e9fb); display: flex; align-items: center; justify-content: center; color: #333;">
-            [Diagram: DIDComm messaging flow between apps]
-        </div>
-        <p class="caption">Figure 3: Secure message flow using DIDs and DIDComm</p>
-    </div>
 
-    <h3 id="integration-patterns">3.3 Integration Patterns</h3>
-    
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Pattern</th>
-                <th>Description</th>
-                <th>When to Use</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>1. DID-Enhanced OAuth</strong></td>
-                <td>Add DID support to existing OAuth flows</td>
-                <td>Gradual migration, existing OAuth systems</td>
-            </tr>
-            <tr>
-                <td><strong>2. Pure DENA</strong></td>
-                <td>Full DID-based authentication and messaging</td>
-                <td>New applications, maximum privacy</td>
-            </tr>
-            <tr>
-                <td><strong>3. Gateway Pattern</strong></td>
-                <td>DENA gateway translates between systems</td>
-                <td>Enterprise, legacy system integration</td>
-            </tr>
-            <tr>
-                <td><strong>4. Hybrid Approach</strong></td>
-                <td>Mix traditional and DENA auth</td>
-                <td>Transition periods, user choice</td>
-            </tr>
-        </tbody>
-    </table>
+    <h3>Option B: Application-Layer DID Addressing</h3>
+    <p>Using DIDs as application-layer addresses for secure messaging and API calls:</p>
+    <pre><code>// Conceptual example - exploring patterns
+const message = {
+    to: 'did:web:api.example.com:services:chat',
+    from: 'did:web:client.example.com:users:alice',
+    body: 'Hello World',
+    // Cryptographic signatures would be required
+};</code></pre>
 
-    <h2 id="alternatives">4. Alternatives Considered</h2>
-    
-    <h3>Alternative 1: Extend OAuth 2.1/OpenID Connect</h3>
-    <p><strong>Why not chosen as primary:</strong> Still relies on centralized identity providers, doesn't solve user control or service-to-service communication.</p>
-    
-    <h3>Alternative 2: WebAuthn Everywhere</h3>
-    <p><strong>Why not chosen as primary:</strong> Excellent for authentication but doesn't provide portable identity or service discovery capabilities.</p>
-    
-    <h3>Alternative 3: Existing Decentralized Protocols (ActivityPub, Matrix)</h3>
-    <p><strong>Why not chosen as primary:</strong> These solve different problems (social networking, chat) rather than general application identity layer.</p>
-    
-    <h3>Alternative 4: Do Nothing (Current Ecosystem)</h3>
-    <p><strong>Why not chosen:</strong> Current fragmentation causes real security, privacy, and developer experience problems that users and developers complain about daily.</p>
+    <h3>Option C: Hybrid Approach</h3>
+    <p>Combining existing authentication with DID-enhanced features gradually.</p>
 
-    <h2 id="considerations">5. Accessibility, Internationalization, Privacy, and Security Considerations</h2>
+    <h3>Key Questions for Community Discussion:</h3>
+    <ul>
+        <li>Which integration patterns provide the best balance of security and usability?</li>
+        <li>How can we ensure backward compatibility during transition?</li>
+        <li>What existing standards (DIDComm, VC-DATA-MODEL) should we build upon?</li>
+        <li>What performance considerations are most important for adoption?</li>
+        <li>How do we address key management challenges for end users?</li>
+    </ul>
+
+    <h2 id="alternatives">Alternatives Considered</h2>
     
-    <div class="warning-box">
-        <h3>⚠️ Critical Consideration: Key Management</h3>
-        <p>How do non-technical users manage cryptographic keys? DENA must consider:</p>
-        <ul>
-            <li>Hardware security keys (Yubikey, etc.)</li>
-            <li>Cloud key management services</li>
-            <li>Social recovery mechanisms</li>
-            <li>Emergency access procedures</li>
-        </ul>
-    </div>
+    <h3>Alternative 1: WebAuthn-Only Approach</h3>
+    <p>Using WebAuthn for authentication without DIDs. This provides strong authentication but doesn't solve identity portability or service-to-service authentication challenges.</p>
+    
+    <h3>Alternative 2: OAuth 2.1 with Extensions</h3>
+    <p>Extending OAuth 2.1 with new grant types and claims. This builds on familiar infrastructure but may not provide the same level of user control as decentralized approaches.</p>
+    
+    <h3>Alternative 3: Proprietary Identity Systems</h3>
+    <p>Many platforms offer proprietary identity solutions (Sign in with Apple, Google Identity Services). These provide good user experience but create vendor lock-in and centralization.</p>
+    
+    <h3>Open Questions:</h3>
+    <ul>
+        <li>Should we focus on incremental improvements to existing systems?</li>
+        <li>Is now the right time for more fundamental changes to web identity?</li>
+        <li>How do we balance innovation with practical deployment concerns?</li>
+    </ul>
+
+    <h2 id="considerations">Accessibility, Internationalization, Privacy, and Security Considerations</h2>
     
     <h3>Accessibility</h3>
+    <p>Any solution must consider users with disabilities. Key questions:</p>
     <ul>
-        <li><strong>Screen Reader Support:</strong> All DENA UIs must work with assistive technologies</li>
-        <li><strong>Cognitive Load:</strong> Key management must be understandable by non-experts</li>
-        <li><strong>Error Recovery:</strong> Clear, simple recovery flows for lost credentials</li>
+        <li>How do users with cognitive disabilities manage cryptographic keys?</li>
+        <li>Are authentication flows compatible with screen readers and other assistive technologies?</li>
+        <li>How do we prevent excluding users with limited technical proficiency?</li>
     </ul>
     
     <h3>Internationalization</h3>
+    <p>Identity systems must work globally:</p>
     <ul>
-        <li><strong>Name Systems:</strong> Support for non-Latin scripts in identifiers</li>
-        <li><strong>Legal Identity:</strong> Different countries have different identity requirements</li>
-        <li><strong>Time Zones:</strong> Timestamp handling for global systems</li>
+        <li>How do different legal jurisdictions affect identity verification?</li>
+        <li>What localization challenges exist for recovery mechanisms?</li>
+        <li>How do we handle diverse naming conventions and identification documents?</li>
     </ul>
     
     <h3>Privacy</h3>
+    <p>Core to the decentralized identity vision:</p>
     <ul>
-        <li><strong>Pairwise DIDs:</strong> Different DIDs per relationship to prevent correlation</li>
-        <li><strong>Data Minimization:</strong> Only request necessary identity attributes</li>
-        <li><strong>GDPR Compliance:</strong> Right to deletion, data portability</li>
+        <li>How do we prevent correlation across different services?</li>
+        <li>What data minimization principles should guide design?</li>
+        <li>How do users exercise rights like deletion and portability?</li>
     </ul>
     
     <h3>Security</h3>
+    <p>Critical for identity systems:</p>
     <ul>
-        <li><strong>Cryptographic Agility:</strong> Ability to upgrade algorithms as needed</li>
-        <li><strong>Phishing Protection:</strong> UX patterns that prevent credential theft</li>
-        <li><strong>Audit Logging:</strong> Comprehensive logs for security incidents</li>
+        <li>How do we handle key recovery without compromising security?</li>
+        <li>What are the attack surfaces for application-layer identity?</li>
+        <li>How do we prevent phishing and social engineering attacks?</li>
     </ul>
 
-    <h2 id="implementation">6. Implementation Exploration</h2>
-    
-    <div class="diagram">
-        <!-- Placeholder for implementation timeline -->
-        <div style="width: 100%; height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
-            <div style="text-align: center;">
-                <h3>Prototype Development Timeline</h3>
-                <p>[Timeline visualization showing PoC → Alpha → Beta → Production]</p>
-            </div>
-        </div>
-        <p class="caption">Figure 4: Proposed implementation and testing roadmap</p>
-    </div>
-    
-    <h3>Prototype Code Examples</h3>
-    
-    <pre><code>// Simple DENA client usage
-import { DENAClient } from '@dena/sdk';
-
-const client = new DENAClient({
-  did: 'did:web:example.com:users:alice',
-  resolver: 'https://resolver.dena.dev'
-});
-
-// Authenticate to a service
-await client.authenticate('did:web:service.example.com');
-
-// Send a secure message
-const response = await client.sendMessage({
-  to: 'did:web:service.example.com:api',
-  type: 'data-request',
-  body: { query: 'user-profile' }
-});</code></pre>
-    
-    <h3>Performance Targets</h3>
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Operation</th>
-                <th>Target</th>
-                <th>Current PoC</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>DID Resolution (cached)</td>
-                <td>&lt; 10ms</td>
-                <td>5ms</td>
-            </tr>
-            <tr>
-                <td>Authentication</td>
-                <td>&lt; 100ms</td>
-                <td>75ms</td>
-            </tr>
-            <tr>
-                <td>Message Signing</td>
-                <td>&lt; 5ms</td>
-                <td>2ms</td>
-            </tr>
-            <tr>
-                <td>Message Verification</td>
-                <td>&lt; 5ms</td>
-                <td>3ms</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2 id="stakeholders">7. Stakeholder Feedback</h2>
-    
-    <p><em>This section documents feedback from various stakeholders as we engage with the community.</em></p>
-    
-    <h3>Early Feedback Received</h3>
+    <h2 id="feedback">Stakeholder Feedback / Opposition</h2>
+    <p><em>This section will be populated based on community discussion in the UDNA CG.</em></p>
     <ul>
-        <li><strong>W3C DID WG:</strong> "Interested in application-layer use cases for DIDs"</li>
-        <li><strong>Developers:</strong> "Simplify auth but don't break existing systems"</li>
-        <li><strong>Security Researchers:</strong> "Key management is critical challenge"</li>
-    </ul>
-    
-    <h3>Open Questions for Community</h3>
-    <ul>
-        <li>Should DENA start as a W3C Community Group deliverable?</li>
-        <li>What existing systems should have priority integration?</li>
-        <li>How do we balance innovation with web compatibility?</li>
-        <li>What certification/audit requirements are needed?</li>
+        <li><strong>W3C DID Working Group:</strong> No formal position yet - early discussions initiated</li>
+        <li><strong>Browser vendors:</strong> No signals - proposal is at application layer initially</li>
+        <li><strong>Application developers:</strong> Mixed interest - some excited about potential, others concerned about complexity</li>
+        <li><strong>Identity providers:</strong> No formal feedback yet</li>
     </ul>
 
-    <h2 id="acknowledgements">8. References & Acknowledgements</h2>
+    <h2 id="acknowledgements">References & Acknowledgements</h2>
     
     <h3>References</h3>
     <ul>
-        <li>W3C. "Decentralized Identifiers (DIDs) v1.0." W3C Recommendation, 2022.</li>
-        <li>W3C. "Verifiable Credentials Data Model v1.1." W3C Recommendation, 2022.</li>
-        <li>DIF. "DIDComm Messaging v2.0." Decentralized Identity Foundation, 2021.</li>
-        <li>IETF. "OAuth 2.1 Authorization Framework." Internet-Draft, 2024.</li>
-        <li>W3C. "Web Authentication: An API for accessing Public Key Credentials." W3C Recommendation, 2021.</li>
+        <li>W3C. "Decentralized Identifiers (DIDs) v1.0." 2022.</li>
+        <li>W3C. "Verifiable Credentials Data Model v1.1." 2022.</li>
+        <li>DIF. "DIDComm Messaging v2.0." 2021.</li>
+        <li>IETF. "The OAuth 2.1 Authorization Framework." 2024.</li>
     </ul>
     
     <h3>Acknowledgements</h3>
-    <p>Thanks to the W3C Credentials Community Group for early discussions, the W3C DID Working Group for foundational standards work, and all participants in the UDNA Community Group exploration.</p>
+    <p>Thanks to early reviewers in the Credentials Community Group for initial feedback, and to the W3C TAG for their explainer guidance. We look forward to broader community participation through the UDNA Community Group.</p>
     
-    <div class="highlight-box">
-        <h3>💬 Next Steps & Community Invitation</h3>
-        <p>This is a living document. We invite you to:</p>
-        <ol>
-            <li><strong>Join the discussion:</strong> public-udna@w3.org</li>
-            <li><strong>Review and comment:</strong> GitHub issues for specific feedback</li>
-            <li><strong>Share use cases:</strong> What identity problems are you facing?</li>
-            <li><strong>Collaborate on prototypes:</strong> Join implementation efforts</li>
-        </ol>
-        <p><strong>Together, we can explore whether DENA addresses real needs and how it might evolve through open standards.</strong></p>
-    </div>
-    
-    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border-color); color: #666; font-size: 0.9em;">
-        <p>Last updated: February 2026 | This document follows the <a href="https://www.w3.org/TR/explainer-explainer/">W3C Explainer Guidelines</a></p>
-        <p>Feedback and contributions welcome through the W3C UDNA Community Group.</p>
-    </footer>
+    <p><em>This is a living document. Please contribute to the discussion in the UDNA Community Group.</em></p>
 </body>
 </html>
