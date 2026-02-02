@@ -24,7 +24,7 @@
 
         :root {
             /* Modern Color Palette */
-            --primary: #0d0d0e;
+            --primary: #2563eb;
             --primary-dark: #1d4ed8;
             --primary-light: #3b82f6;
             --secondary: #06d6a0;
@@ -508,6 +508,100 @@
             line-height: 1.6;
         }
 
+        /* Hero Section - Updated with black background */
+        .hero {
+            background: #000000;
+            border-radius: var(--radius-xl);
+            padding: var(--space-12);
+            margin: var(--space-12) 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(6, 214, 160, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto var(--space-8);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto var(--space-8);
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            margin-top: var(--space-8);
+        }
+
+        .hero-btn {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+            padding: 12px 24px;
+            transition: all var(--transition-base);
+        }
+
+        .hero-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+        }
+
+        .hero-btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
         /* Cards */
         .card {
             background: var(--bg-card);
@@ -953,63 +1047,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: var(--radius-xl);
-            padding: var(--space-12);
-            margin: var(--space-12) 0;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.1;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: var(--space-4);
-            position: relative;
-        }
-
-        .hero-description {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto var(--space-8);
-            position: relative;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: var(--space-4);
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-btn {
-            background: white;
-            color: var(--primary);
-            border: none;
-            font-weight: 600;
-        }
-
-        .hero-btn:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-2px);
-        }
-
         /* Responsive */
         @media (max-width: 1200px) {
             .toc-container {
@@ -1270,22 +1307,28 @@
         <div class="content-container">
             <!-- Article -->
             <article class="article">
-                <!-- Hero Section -->
+                <!-- Hero Section - Updated -->
                 <div class="hero">
-                    <h1 class="hero-title">Universal DID Native Addressing</h1>
-                    <p class="hero-description">
-                        A universal addressing layer for the decentralized web, built on W3C Decentralized Identifiers.
-                        Enabling secure, privacy-preserving communication between any entity.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#quick-start" class="btn hero-btn">
-                            <i class="fas fa-bolt"></i>
-                            Get Started
-                        </a>
-                        <a href="https://www.w3.org/groups/cg/did-native-addr/" class="btn glass" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            Join W3C Group
-                        </a>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Universal DID Native Addressing</h1>
+                        <p class="hero-subtitle">
+                            A universal addressing layer for the decentralized web, built on W3C Decentralized Identifiers.
+                        </p>
+                        <p class="hero-description">
+                            Enabling secure, privacy-preserving communication between any entity on the internet.
+                            UDNA provides a standardized way to use DIDs as universal addresses for resources, 
+                            services, and identities across the web.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#quick-start" class="btn hero-btn hero-btn-primary">
+                                <i class="fas fa-bolt"></i>
+                                Get Started
+                            </a>
+                            <a href="https://www.w3.org/groups/cg/did-native-addr/" class="btn hero-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Join W3C Group
+                            </a>
+                        </div>
                     </div>
                 </div>
 
