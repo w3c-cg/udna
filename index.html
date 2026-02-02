@@ -9,7 +9,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         /* Reset & Base */
@@ -20,70 +23,94 @@
         }
 
         :root {
-            /* Colors */
-            --primary: #0056ff;
-            --primary-dark: #0041c4;
-            --secondary: #00c7b7;
-            --accent: #8a2be2;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666;
-            --text-tertiary: #888;
+            /* Modern Color Palette */
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #06d6a0;
+            --accent: #8b5cf6;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+            
+            /* Neutrals */
             --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --bg-tertiary: #f1f3f4;
-            --border: #e0e0e0;
-            --success: #00a854;
-            --warning: #ff9500;
-            --error: #ff3b30;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            
+            /* Text */
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #64748b;
+            --text-light: #94a3b8;
             
             /* Typography */
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'Source Code Pro', monospace;
+            --font-mono: 'Source Code Pro', 'SF Mono', Monaco, monospace;
             
             /* Spacing */
-            --space-xs: 0.25rem;
-            --space-sm: 0.5rem;
-            --space-md: 1rem;
-            --space-lg: 1.5rem;
-            --space-xl: 2rem;
-            --space-2xl: 3rem;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
             
             /* Layout */
             --sidebar-width: 280px;
             --header-height: 64px;
             --content-width: 800px;
-            --toc-width: 220px;
+            --toc-width: 240px;
             
             /* Effects */
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             
             /* Border radius */
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            
+            /* Transitions */
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Dark mode */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --primary: #4d8aff;
-                --primary-dark: #7aa7ff;
-                --text-primary: #ffffff;
-                --text-secondary: #b0b0b0;
-                --text-tertiary: #888;
-                --bg-primary: #1a1a1a;
-                --bg-secondary: #2d2d2d;
-                --bg-tertiary: #3d3d3d;
-                --border: #404040;
-            }
+        /* Dark theme */
+        [data-theme="dark"] {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #60a5fa;
+            --secondary: #34d399;
+            --accent: #a78bfa;
+            
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --bg-card: #1e293b;
+            --border: #334155;
+            --border-light: #475569;
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #94a3b8;
+            --text-light: #64748b;
         }
 
         /* Base Styles */
         html {
             font-size: 16px;
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -93,12 +120,32 @@
             background: var(--bg-primary);
             display: flex;
             min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-tertiary);
         }
 
         /* Sidebar */
         .sidebar {
             width: var(--sidebar-width);
-            background: var(--bg-secondary);
+            background: var(--bg-primary);
             border-right: 1px solid var(--border);
             height: 100vh;
             position: fixed;
@@ -107,58 +154,79 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-base);
         }
 
         .sidebar-header {
-            padding: var(--space-lg);
+            padding: var(--space-8) var(--space-6);
             border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--bg-primary);
+            z-index: 10;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-md);
+            gap: var(--space-4);
+            margin-bottom: var(--space-2);
         }
 
-        .brand-logo {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: var(--radius-sm);
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
+            font-size: 1.25rem;
             font-weight: 700;
-            font-size: 18px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .brand-text {
+            flex: 1;
         }
 
         .brand-title {
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-primary);
+            line-height: 1.2;
         }
 
         .brand-subtitle {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            margin-left: 40px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            letter-spacing: 0.05em;
         }
 
         .nav-section {
-            margin-bottom: var(--space-xl);
+            padding: var(--space-6);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .nav-title {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
             color: var(--text-tertiary);
-            padding: 0 var(--space-lg);
-            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .nav-title i {
+            font-size: 0.875rem;
+            opacity: 0.7;
         }
 
         .nav-items {
@@ -172,49 +240,74 @@
         .nav-link {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-lg);
+            gap: var(--space-3);
+            padding: var(--space-3) var(--space-4);
             color: var(--text-secondary);
             text-decoration: none;
-            border-radius: 0 var(--radius-md) var(--radius-md) 0;
-            transition: all 0.2s ease;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
             font-size: 0.9375rem;
+            font-weight: 500;
             position: relative;
         }
 
         .nav-link:hover {
             background: var(--bg-tertiary);
             color: var(--text-primary);
+            transform: translateX(2px);
         }
 
         .nav-link.active {
-            background: linear-gradient(90deg, rgba(0, 86, 255, 0.1), transparent);
+            background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), transparent);
             color: var(--primary);
-            font-weight: 500;
-            border-right: 3px solid var(--primary);
+            font-weight: 600;
+        }
+
+        .nav-link.active::before {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 60%;
+            background: var(--primary);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
         }
 
         .nav-icon {
             width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0.7;
+            text-align: center;
+            font-size: 0.875rem;
+            opacity: 0.8;
         }
 
         .nav-link.active .nav-icon {
             opacity: 1;
+            color: var(--primary);
         }
 
         .status-badge {
             margin-left: auto;
             padding: 2px 8px;
             background: var(--bg-tertiary);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 500;
+            border-radius: 12px;
+            font-size: 0.6875rem;
+            font-weight: 600;
             color: var(--text-tertiary);
+            border: 1px solid var(--border);
+        }
+
+        .status-badge.draft {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+
+        .status-badge.proposal {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--accent);
+            border-color: rgba(139, 92, 246, 0.2);
         }
 
         /* Main Content */
@@ -226,6 +319,7 @@
             flex-direction: column;
         }
 
+        /* Top Bar */
         .top-bar {
             height: var(--header-height);
             background: var(--bg-primary);
@@ -233,31 +327,31 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 var(--space-xl);
+            padding: 0 var(--space-8);
             position: sticky;
             top: 0;
-            z-index: 90;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
+            z-index: 900;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.85);
+            transition: all var(--transition-base);
         }
 
-        @media (prefers-color-scheme: dark) {
-            .top-bar {
-                background: rgba(26, 26, 26, 0.8);
-            }
+        [data-theme="dark"] .top-bar {
+            background: rgba(15, 23, 42, 0.85);
         }
 
         .breadcrumb {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--space-2);
             font-size: 0.875rem;
-            color: var(--text-secondary);
+            color: var(--text-tertiary);
         }
 
         .breadcrumb a {
             color: var(--text-secondary);
             text-decoration: none;
+            transition: color var(--transition-fast);
         }
 
         .breadcrumb a:hover {
@@ -266,32 +360,41 @@
 
         .breadcrumb-separator {
             opacity: 0.5;
+            color: var(--text-light);
         }
 
         .doc-actions {
             display: flex;
-            gap: var(--space-sm);
+            gap: var(--space-2);
+            align-items: center;
         }
 
         .btn {
             padding: 8px 16px;
             border-radius: var(--radius-md);
             border: 1px solid var(--border);
-            background: var(--bg-primary);
+            background: var(--bg-card);
             color: var(--text-primary);
             font-family: var(--font-sans);
             font-size: 0.875rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all var(--transition-fast);
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            text-decoration: none;
         }
 
         .btn:hover {
-            background: var(--bg-secondary);
+            background: var(--bg-tertiary);
             border-color: var(--text-tertiary);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn:active {
+            transform: translateY(0);
         }
 
         .btn-primary {
@@ -305,159 +408,337 @@
             border-color: var(--primary-dark);
         }
 
-        /* Content Area */
+        .btn-icon {
+            padding: 8px;
+            width: 36px;
+            height: 36px;
+            justify-content: center;
+        }
+
+        /* Content Container */
         .content-container {
             flex: 1;
             display: flex;
             max-width: calc(var(--content-width) + var(--toc-width));
             margin: 0 auto;
             width: 100%;
-            padding: 0 var(--space-xl);
+            padding: 0 var(--space-8);
         }
 
+        /* Article */
         .article {
             flex: 1;
             max-width: var(--content-width);
-            padding: var(--space-2xl) 0;
+            padding: var(--space-16) 0;
+            animation: fadeInUp var(--transition-slow);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Typography */
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: var(--space-lg);
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-6);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            letter-spacing: -0.02em;
         }
 
         h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-top: var(--space-2xl);
-            margin-bottom: var(--space-lg);
-            padding-bottom: var(--space-sm);
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-top: var(--space-16);
+            margin-bottom: var(--space-8);
+            padding-bottom: var(--space-4);
             border-bottom: 2px solid var(--border);
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 600;
-            margin-top: var(--space-xl);
-            margin-bottom: var(--space-md);
+            margin-top: var(--space-12);
+            margin-bottom: var(--space-6);
+            color: var(--text-primary);
         }
 
         h4 {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-top: var(--space-lg);
-            margin-bottom: var(--space-sm);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-4);
             color: var(--text-secondary);
         }
 
-        p, li {
-            margin-bottom: var(--space-md);
+        p {
+            margin-bottom: var(--space-6);
             color: var(--text-secondary);
             line-height: 1.7;
+            font-size: 1.0625rem;
         }
 
-        /* Content Cards */
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-tertiary);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Cards */
         .card {
-            background: var(--bg-secondary);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin: var(--space-lg) 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            margin: var(--space-8) 0;
             border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
         }
 
         .card-header {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-md);
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
         }
 
         .card-icon {
-            width: 24px;
-            height: 24px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
+            color: white;
+            font-size: 1.125rem;
+            box-shadow: var(--shadow-md);
         }
 
         .card-title {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--text-primary);
         }
 
+        .card-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            margin-top: 2px;
+        }
+
         .highlight-card {
-            background: linear-gradient(135deg, rgba(0, 86, 255, 0.05), rgba(0, 199, 183, 0.05));
-            border-color: rgba(0, 86, 255, 0.2);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(6, 214, 160, 0.05));
+            border-color: rgba(37, 99, 235, 0.2);
         }
 
         .warning-card {
-            background: linear-gradient(135deg, rgba(255, 149, 0, 0.05), rgba(255, 107, 53, 0.05));
-            border-color: rgba(255, 149, 0, 0.2);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(239, 68, 68, 0.05));
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+
+        .success-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(6, 214, 160, 0.05));
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            border: 1px solid var(--border);
+            transition: all var(--transition-base);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: var(--space-4);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
 
         /* Code Blocks */
         pre {
-            background: var(--bg-tertiary);
-            border-radius: var(--radius-md);
-            padding: var(--space-lg);
-            margin: var(--space-lg) 0;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            margin: var(--space-8) 0;
             overflow-x: auto;
             border: 1px solid var(--border);
+            position: relative;
+        }
+
+        pre::before {
+            content: 'Code';
+            position: absolute;
+            top: 0;
+            right: var(--space-6);
+            background: var(--bg-tertiary);
+            color: var(--text-tertiary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            letter-spacing: 0.05em;
         }
 
         code {
             font-family: var(--font-mono);
-            font-size: 0.875rem;
+            font-size: 0.9375rem;
             background: var(--bg-tertiary);
-            padding: 2px 6px;
+            padding: 2px 8px;
             border-radius: var(--radius-sm);
             color: var(--text-primary);
+            font-weight: 500;
         }
 
         pre code {
             background: none;
             padding: 0;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .code-block {
+            position: relative;
+        }
+
+        .code-copy {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .code-copy:hover {
+            background: var(--bg-secondary);
+            color: var(--primary);
         }
 
         /* Tables */
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin: var(--space-lg) 0;
-            border-radius: var(--radius-md);
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: var(--space-8) 0;
+            border-radius: var(--radius-lg);
             overflow: hidden;
             border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
         }
 
         th, td {
-            padding: var(--space-md);
-            border: 1px solid var(--border);
+            padding: var(--space-6);
+            border-bottom: 1px solid var(--border);
             text-align: left;
         }
 
         th {
-            background: var(--bg-tertiary);
+            background: var(--bg-secondary);
             font-weight: 600;
             color: var(--text-primary);
+            font-size: 0.9375rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        tr:nth-child(even) {
-            background: var(--bg-secondary);
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: var(--bg-tertiary);
         }
 
         /* Comparison Table */
         .comparison-table {
-            background: var(--bg-primary);
+            background: var(--bg-card);
         }
 
         .comparison-table th:first-child {
@@ -469,9 +750,8 @@
             font-weight: 600;
         }
 
-        .bad {
-            color: var(--error);
-            font-weight: 600;
+        .good::before {
+            content: '✓ ';
         }
 
         .partial {
@@ -479,28 +759,45 @@
             font-weight: 600;
         }
 
+        .bad {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .bad::before {
+            content: '✗ ';
+        }
+
         /* Table of Contents */
         .toc-container {
             width: var(--toc-width);
             position: sticky;
-            top: calc(var(--header-height) + var(--space-xl));
+            top: calc(var(--header-height) + var(--space-8));
             height: fit-content;
-            margin-left: var(--space-xl);
-            padding-top: var(--space-xl);
+            margin-left: var(--space-8);
+            padding-top: var(--space-8);
         }
 
         .toc {
-            border-left: 3px solid var(--border);
-            padding-left: var(--space-lg);
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: calc(var(--header-height) + var(--space-8));
         }
 
         .toc-title {
             font-size: 0.875rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
             color: var(--text-tertiary);
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
         }
 
         .toc-items {
@@ -508,34 +805,52 @@
         }
 
         .toc-item {
-            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-2);
+            position: relative;
         }
 
         .toc-link {
             font-size: 0.875rem;
             color: var(--text-secondary);
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all var(--transition-fast);
             display: block;
-            padding: 4px 0;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-sm);
+            position: relative;
         }
 
         .toc-link:hover {
+            background: var(--bg-tertiary);
             color: var(--primary);
+            padding-left: var(--space-6);
         }
 
         .toc-link.active {
             color: var(--primary);
-            font-weight: 500;
-            transform: translateX(4px);
+            font-weight: 600;
+            background: var(--bg-tertiary);
+            padding-left: var(--space-6);
+        }
+
+        .toc-link.active::before {
+            content: '';
+            position: absolute;
+            left: var(--space-3);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
         }
 
         /* Footer */
         .footer {
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
-            padding: var(--space-xl) 0;
-            margin-top: var(--space-2xl);
+            padding: var(--space-12) 0;
+            margin-top: var(--space-16);
         }
 
         .footer-content {
@@ -544,17 +859,42 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-8);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+
+        .footer-logo {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
         }
 
         .footer-links {
             display: flex;
-            gap: var(--space-xl);
+            gap: var(--space-8);
+            align-items: center;
         }
 
         .footer-link {
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.875rem;
+            transition: color var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .footer-link:hover {
@@ -564,6 +904,110 @@
         .copyright {
             color: var(--text-tertiary);
             font-size: 0.875rem;
+            text-align: center;
+            width: 100%;
+            margin-top: var(--space-8);
+        }
+
+        /* Badges & Chips */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: var(--space-2);
+            vertical-align: middle;
+            gap: 4px;
+        }
+
+        .badge-primary {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin: 0 var(--space-2) var(--space-2) 0;
+            gap: 4px;
+            border: 1px solid var(--border);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: var(--radius-xl);
+            padding: var(--space-12);
+            margin: var(--space-12) 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            position: relative;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto var(--space-8);
+            position: relative;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            font-weight: 600;
+        }
+
+        .hero-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
         }
 
         /* Responsive */
@@ -576,7 +1020,6 @@
         @media (max-width: 1024px) {
             .sidebar {
                 transform: translateX(-100%);
-                transition: transform 0.3s ease;
             }
             
             .sidebar.active {
@@ -587,56 +1030,79 @@
                 margin-left: 0;
             }
             
-            .mobile-menu-toggle {
-                display: flex;
+            .content-container {
+                padding: 0 var(--space-6);
+            }
+            
+            .hero {
+                padding: var(--space-8);
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .content-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .top-bar {
+                padding: 0 var(--space-4);
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-6);
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: var(--space-4);
             }
         }
 
         /* Utility Classes */
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: var(--space-sm);
-            vertical-align: middle;
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .badge-blue {
-            background: rgba(0, 86, 255, 0.1);
-            color: var(--primary);
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .badge-green {
-            background: rgba(0, 168, 84, 0.1);
-            color: var(--success);
+        [data-theme="dark"] .glass {
+            background: rgba(0, 0, 0, 0.2);
         }
 
-        .chip {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 12px;
-            background: var(--bg-tertiary);
-            border-radius: 20px;
-            font-size: 0.875rem;
-            margin: 0 var(--space-sm) var(--space-sm) 0;
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
         }
 
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease forwards;
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -645,30 +1111,37 @@
     <nav class="sidebar">
         <div class="sidebar-header">
             <div class="brand">
-                <div class="brand-logo">U</div>
-                <div class="brand-title">UDNA</div>
+                <div class="brand-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="brand-text">
+                    <div class="brand-title">UDNA</div>
+                    <div class="brand-subtitle">Universal DID Native Addressing</div>
+                </div>
             </div>
-            <div class="brand-subtitle">Universal DID Native Addressing</div>
         </div>
 
         <div class="nav-section">
-            <div class="nav-title">Getting Started</div>
+            <div class="nav-title">
+                <i class="fas fa-rocket"></i>
+                Getting Started
+            </div>
             <ul class="nav-items">
                 <li class="nav-item">
                     <a href="#overview" class="nav-link active">
-                        <span class="nav-icon">📘</span>
+                        <span class="nav-icon"><i class="fas fa-book"></i></span>
                         <span>Overview</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#why-udna" class="nav-link">
-                        <span class="nav-icon">🎯</span>
+                        <span class="nav-icon"><i class="fas fa-bullseye"></i></span>
                         <span>Why UDNA?</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#quick-start" class="nav-link">
-                        <span class="nav-icon">⚡</span>
+                        <span class="nav-icon"><i class="fas fa-bolt"></i></span>
                         <span>Quick Start</span>
                     </a>
                 </li>
@@ -676,29 +1149,32 @@
         </div>
 
         <div class="nav-section">
-            <div class="nav-title">Concepts</div>
+            <div class="nav-title">
+                <i class="fas fa-cube"></i>
+                Concepts
+            </div>
             <ul class="nav-items">
                 <li class="nav-item">
                     <a href="#architecture" class="nav-link">
-                        <span class="nav-icon">🏗️</span>
+                        <span class="nav-icon"><i class="fas fa-sitemap"></i></span>
                         <span>Architecture</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#addressing" class="nav-link">
-                        <span class="nav-icon">📍</span>
+                        <span class="nav-icon"><i class="fas fa-map-marker-alt"></i></span>
                         <span>DID Addressing</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#resolution" class="nav-link">
-                        <span class="nav-icon">🔍</span>
+                        <span class="nav-icon"><i class="fas fa-search"></i></span>
                         <span>Resolution Layer</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#messaging" class="nav-link">
-                        <span class="nav-icon">💬</span>
+                        <span class="nav-icon"><i class="fas fa-comments"></i></span>
                         <span>Secure Messaging</span>
                     </a>
                 </li>
@@ -706,25 +1182,28 @@
         </div>
 
         <div class="nav-section">
-            <div class="nav-title">Specifications</div>
+            <div class="nav-title">
+                <i class="fas fa-file-alt"></i>
+                Specifications
+            </div>
             <ul class="nav-items">
                 <li class="nav-item">
                     <a href="#core-spec" class="nav-link">
-                        <span class="nav-icon">📄</span>
+                        <span class="nav-icon"><i class="fas fa-code"></i></span>
                         <span>Core Specification</span>
-                        <span class="status-badge">Draft</span>
+                        <span class="status-badge draft">Draft</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#extensions" class="nav-link">
-                        <span class="nav-icon">🔧</span>
+                        <span class="nav-icon"><i class="fas fa-puzzle-piece"></i></span>
                         <span>Extensions</span>
-                        <span class="status-badge">Proposal</span>
+                        <span class="status-badge proposal">Proposal</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#apis" class="nav-link">
-                        <span class="nav-icon">🔌</span>
+                        <span class="nav-icon"><i class="fas fa-plug"></i></span>
                         <span>APIs & SDKs</span>
                     </a>
                 </li>
@@ -732,23 +1211,26 @@
         </div>
 
         <div class="nav-section">
-            <div class="nav-title">Community</div>
+            <div class="nav-title">
+                <i class="fas fa-users"></i>
+                Community
+            </div>
             <ul class="nav-items">
                 <li class="nav-item">
                     <a href="https://www.w3.org/groups/cg/did-native-addr/" class="nav-link" target="_blank">
-                        <span class="nav-icon">🌐</span>
+                        <span class="nav-icon"><i class="fas fa-globe"></i></span>
                         <span>W3C Group</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="https://github.com/w3c-cg" class="nav-link" target="_blank">
-                        <span class="nav-icon">💻</span>
+                        <span class="nav-icon"><i class="fab fa-github"></i></span>
                         <span>GitHub</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#contributing" class="nav-link">
-                        <span class="nav-icon">🤝</span>
+                        <span class="nav-icon"><i class="fas fa-handshake"></i></span>
                         <span>Contributing</span>
                     </a>
                 </li>
@@ -761,7 +1243,7 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="breadcrumb">
-                <a href="https://www.w3.org/">W3C</a>
+                <a href="https://www.w3.org/"><i class="fas fa-home"></i> W3C</a>
                 <span class="breadcrumb-separator">/</span>
                 <a href="https://www.w3.org/community/">Community</a>
                 <span class="breadcrumb-separator">/</span>
@@ -771,14 +1253,15 @@
             </div>
             
             <div class="doc-actions">
-                <button class="btn" onclick="window.print()">
-                    <span>🖨️</span> Print
+                <button class="btn btn-icon" onclick="window.print()" title="Print">
+                    <i class="fas fa-print"></i>
                 </button>
-                <button class="btn" onclick="toggleTheme()">
-                    <span>🌓</span> Theme
+                <button class="btn btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
                 </button>
                 <a href="https://github.com/w3c-cg/udna" class="btn btn-primary" target="_blank">
-                    <span>⭐</span> Star on GitHub
+                    <i class="fab fa-github"></i>
+                    Star on GitHub
                 </a>
             </div>
         </div>
@@ -787,65 +1270,74 @@
         <div class="content-container">
             <!-- Article -->
             <article class="article">
-                <!-- Header -->
-                <header class="fade-in">
-                    <h1>Universal DID Native Addressing (UDNA)</h1>
-                    <p class="lead" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <h1 class="hero-title">Universal DID Native Addressing</h1>
+                    <p class="hero-description">
                         A universal addressing layer for the decentralized web, built on W3C Decentralized Identifiers.
-                        Enabling secure, privacy-preserving communication between any entity on the internet.
+                        Enabling secure, privacy-preserving communication between any entity.
                     </p>
-                    
-                    <div style="display: flex; gap: var(--space-md); margin-bottom: var(--space-xl);">
-                        <span class="badge badge-blue">W3C Community Group</span>
-                        <span class="badge badge-green">Active Development</span>
-                        <span class="badge">Version 0.9</span>
+                    <div class="hero-actions">
+                        <a href="#quick-start" class="btn hero-btn">
+                            <i class="fas fa-bolt"></i>
+                            Get Started
+                        </a>
+                        <a href="https://www.w3.org/groups/cg/did-native-addr/" class="btn glass" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Join W3C Group
+                        </a>
                     </div>
-                </header>
+                </div>
 
                 <!-- Overview -->
-                <section id="overview" class="fade-in">
+                <section id="overview" class="animate-on-scroll">
                     <h2>Overview</h2>
                     
                     <div class="card highlight-card">
                         <div class="card-header">
-                            <div class="card-icon">💡</div>
-                            <div class="card-title">The Vision</div>
+                            <div class="card-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">The Vision</div>
+                                <div class="card-subtitle">Making Identity Native to Addressing</div>
+                            </div>
                         </div>
                         <p>Universal DID Native Addressing (UDNA) provides a standardized way to use Decentralized Identifiers (DIDs) as universal addresses for resources, services, and entities on the internet. Think of it as DNS for the decentralized web, but with built-in security, privacy, and identity.</p>
                         
                         <p>Just as URLs made resources addressable on the web, UDNA makes <em>entities and their capabilities</em> addressable in the decentralized ecosystem.</p>
                     </div>
 
-                    <h3>Core Principles</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">🔐</div>
-                                <div class="card-title">Security First</div>
+                    <h3>Core Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
                             </div>
-                            <p>End-to-end encryption and cryptographic verification built into the addressing layer.</p>
+                            <h4 class="feature-title">Security First</h4>
+                            <p class="feature-description">End-to-end encryption and cryptographic verification built into the addressing layer with zero-trust principles.</p>
                         </div>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">🤝</div>
-                                <div class="card-title">Interoperable</div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
                             </div>
-                            <p>Works with existing W3C standards (DID, VC) and integrates with current web infrastructure.</p>
+                            <h4 class="feature-title">Full Interoperability</h4>
+                            <p class="feature-description">Works with existing W3C standards (DID, VC) and integrates seamlessly with current web infrastructure.</p>
                         </div>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">⚡</div>
-                                <div class="card-title">Performant</div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-tachometer-alt"></i>
                             </div>
-                            <p>Designed for real-world use with sub-100ms resolution and minimal overhead.</p>
+                            <h4 class="feature-title">High Performance</h4>
+                            <p class="feature-description">Designed for real-world use with sub-100ms resolution, caching layers, and minimal overhead.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Why UDNA -->
-                <section id="why-udna" class="fade-in">
+                <section id="why-udna" class="animate-on-scroll">
                     <h2>Why UDNA?</h2>
                     
                     <p>The current web has a fundamental problem: identity and addressing are separate concerns. This leads to:</p>
@@ -857,30 +1349,41 @@
                         <li><strong>Vendor Lock-in:</strong> Dependence on centralized identity providers</li>
                     </ul>
 
-                    <div class="card">
+                    <div class="card success-card">
                         <div class="card-header">
-                            <div class="card-icon">🎯</div>
-                            <div class="card-title">The UDNA Solution</div>
+                            <div class="card-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">The UDNA Solution</div>
+                                <div class="card-subtitle">Unified Addressing with Built-in Identity</div>
+                            </div>
                         </div>
                         <p>UDNA solves these problems by making identity <em>native</em> to addressing. When you address a resource with UDNA, you're also specifying how to authenticate and communicate with it.</p>
                         
-                        <pre><code>// Traditional Web
+                        <div class="code-block">
+                            <button class="code-copy" onclick="copyCode(this)">
+                                <i class="far fa-copy"></i>
+                                Copy
+                            </button>
+                            <pre><code>// Traditional Web Addressing
 https://api.example.com/user/123
 
 // UDNA Addressing
 udna://did:web:api.example.com/services/user#123
 // or
 udna://did:key:z6Mkf5rGM.../api/v1/users/123</code></pre>
+                        </div>
                         
                         <p>The UDNA address contains everything needed to securely communicate with the resource: its identity (DID), service endpoint, and authentication method.</p>
                     </div>
                 </section>
 
                 <!-- Comparison -->
-                <section id="comparison" class="fade-in">
-                    <h2>Comparison with Existing Work</h2>
+                <section id="comparison" class="animate-on-scroll">
+                    <h2>Comparison with Existing Standards</h2>
                     
-                    <p>UDNA builds upon and integrates with existing standards while filling crucial gaps:</p>
+                    <p>UDNA builds upon and integrates with existing standards while filling crucial gaps in the ecosystem:</p>
 
                     <table class="comparison-table">
                         <thead>
@@ -890,7 +1393,7 @@ udna://did:key:z6Mkf5rGM.../api/v1/users/123</code></pre>
                                 <th>Addressing</th>
                                 <th>Messaging</th>
                                 <th>Service Discovery</th>
-                                <th>Integration</th>
+                                <th>Enterprise Ready</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -900,147 +1403,185 @@ udna://did:key:z6Mkf5rGM.../api/v1/users/123</code></pre>
                                 <td class="partial">Basic</td>
                                 <td class="bad">None</td>
                                 <td class="partial">Via DID docs</td>
-                                <td class="partial">Low-level</td>
+                                <td class="partial">Limited</td>
                             </tr>
                             <tr>
-                                <td><strong>DIDComm</strong></td>
-                                <td>Messaging only</td>
+                                <td><strong>DIDComm v2</strong></td>
+                                <td>Messaging protocol</td>
                                 <td class="partial">Via DIDs</td>
                                 <td class="good">Excellent</td>
                                 <td class="bad">None</td>
-                                <td class="partial">Protocol-level</td>
+                                <td class="partial">Evolving</td>
                             </tr>
                             <tr>
-                                <td><strong>OAuth/OpenID</strong></td>
+                                <td><strong>OAuth 2.1 / OpenID</strong></td>
                                 <td>Authentication</td>
-                                <td class="bad">Opaque</td>
+                                <td class="bad">Opaque tokens</td>
                                 <td class="bad">None</td>
                                 <td class="bad">None</td>
                                 <td class="good">Widely adopted</td>
                             </tr>
                             <tr>
                                 <td><strong>ActivityPub</strong></td>
-                                <td>Social networking</td>
+                                <td>Social federation</td>
                                 <td class="partial">Web-based</td>
                                 <td class="good">Built-in</td>
                                 <td class="partial">Federation</td>
-                                <td class="partial">Niche</td>
+                                <td class="bad">Limited</td>
                             </tr>
                             <tr>
-                                <td><strong>UDNA (Proposed)</strong></td>
+                                <td><strong>Matrix Protocol</strong></td>
+                                <td>Real-time comms</td>
+                                <td class="partial">User IDs</td>
+                                <td class="good">Excellent</td>
+                                <td class="partial">Room-based</td>
+                                <td class="partial">Growing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>UDNA</strong></td>
                                 <td>Universal addressing</td>
                                 <td class="good">Native DIDs</td>
                                 <td class="good">DIDComm-based</td>
                                 <td class="good">Built-in</td>
-                                <td class="good">Layered</td>
+                                <td class="good">Designed for</td>
                             </tr>
                         </tbody>
                     </table>
 
                     <div class="card warning-card">
                         <div class="card-header">
-                            <div class="card-icon">⚠️</div>
-                            <div class="card-title">Key Differentiator</div>
+                            <div class="card-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Key Differentiator</div>
+                                <div class="card-subtitle">Complements, Doesn't Replace</div>
+                            </div>
                         </div>
-                        <p><strong>UDNA is not a replacement for DIDComm or DIDs.</strong> It's a <em>higher-level abstraction</em> that combines these technologies into a complete addressing solution. Think of it as the "TCP/IP" layer that sits above the "Ethernet" of DIDs and DIDComm.</p>
+                        <p><strong>UDNA is not a replacement for DIDComm, DIDs, or any existing protocol.</strong> It's a <em>higher-level abstraction</em> that combines these technologies into a complete addressing solution.</p>
                         
-                        <p>This layered approach ensures UDNA can evolve independently while benefiting from improvements in underlying standards.</p>
+                        <p>Think of it as the "TCP/IP" layer that sits above the "Ethernet" of DIDs and DIDComm. This layered approach ensures UDNA can evolve independently while benefiting from improvements in underlying standards.</p>
                     </div>
                 </section>
 
                 <!-- Architecture -->
-                <section id="architecture" class="fade-in">
+                <section id="architecture" class="animate-on-scroll">
                     <h2>Architecture</h2>
                     
                     <h3>Core Components</h3>
                     
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">📍</div>
-                                <div class="card-title">Addressing Layer</div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <p>Standardized UDNA URI format that embeds DIDs and service paths</p>
-                            <div style="margin-top: var(--space-md);">
-                                <span class="chip">udna://</span>
-                                <span class="chip">did:method</span>
-                                <span class="chip">path/resource</span>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">🔍</div>
-                                <div class="card-title">Resolution Layer</div>
-                            </div>
-                            <p>Multi-tier resolution system with caching and fallback strategies</p>
-                            <div style="margin-top: var(--space-md);">
-                                <span class="chip">Local Cache</span>
-                                <span class="chip">P2P Cache</span>
-                                <span class="chip">Authoritative</span>
+                            <h4 class="feature-title">Addressing Layer</h4>
+                            <p class="feature-description">Standardized UDNA URI format that embeds DIDs and service paths with versioning support.</p>
+                            <div style="margin-top: var(--space-4);">
+                                <span class="chip"><i class="fas fa-link"></i> udna://</span>
+                                <span class="chip"><i class="fas fa-id-card"></i> did:method</span>
+                                <span class="chip"><i class="fas fa-code-branch"></i> path/resource</span>
                             </div>
                         </div>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">💬</div>
-                                <div class="card-title">Messaging Layer</div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
                             </div>
-                            <p>Secure communication built on DIDComm v2 with extensions</p>
-                            <div style="margin-top: var(--space-md);">
-                                <span class="chip">E2E Encryption</span>
-                                <span class="chip">Forward Secrecy</span>
-                                <span class="chip">Multi-transport</span>
+                            <h4 class="feature-title">Resolution Layer</h4>
+                            <p class="feature-description">Multi-tier resolution system with intelligent caching, fallback strategies, and performance optimization.</p>
+                            <div style="margin-top: var(--space-4);">
+                                <span class="chip"><i class="fas fa-database"></i> Local Cache</span>
+                                <span class="chip"><i class="fas fa-network-wired"></i> P2P Cache</span>
+                                <span class="chip"><i class="fas fa-server"></i> Authoritative</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4 class="feature-title">Messaging Layer</h4>
+                            <p class="feature-description">Secure communication built on DIDComm v2 with extensions for different transport protocols.</p>
+                            <div style="margin-top: var(--space-4);">
+                                <span class="chip"><i class="fas fa-lock"></i> E2E Encryption</span>
+                                <span class="chip"><i class="fas fa-forward"></i> Forward Secrecy</span>
+                                <span class="chip"><i class="fas fa-exchange-alt"></i> Multi-transport</span>
                             </div>
                         </div>
                     </div>
 
                     <h3>Extension Model</h3>
-                    <p>UDNA follows a minimal core + extensions model:</p>
+                    <p>UDNA follows a minimal core + extensions model to ensure stability while enabling innovation:</p>
                     
-                    <pre><code>// Core UDNA (required)
+                    <div class="code-block">
+                        <button class="code-copy" onclick="copyCode(this)">
+                            <i class="far fa-copy"></i>
+                            Copy
+                        </button>
+                        <pre><code>// Core UDNA Specification (required)
 {
   "id": "udna:core",
-  "spec": "https://udna.dev/spec/core",
-  "version": "1.0"
+  "spec": "https://spec.udna.dev/core/v1",
+  "version": "1.0.0",
+  "features": ["addressing", "resolution", "authentication"]
 }
 
-// Extensions (optional)
+// Optional Extensions
 {
   "extensions": [
-    "https://udna.dev/ext/gateway",
-    "https://udna.dev/ext/batch",
-    "https://udna.dev/ext/legacy"
+    "https://spec.udna.dev/ext/gateway#v1",
+    "https://spec.udna.dev/ext/batch-operations#v1",
+    "https://spec.udna.dev/ext/legacy-bridge#v1",
+    "https://spec.udna.dev/ext/performance#v1"
   ]
 }</code></pre>
+                    </div>
                     
-                    <p>This ensures the core remains simple and stable while allowing innovation through extensions.</p>
+                    <p>This architecture ensures the core remains simple and stable while allowing innovation through extensions. Extensions can add new capabilities without breaking existing implementations.</p>
                 </section>
 
                 <!-- Quick Start -->
-                <section id="quick-start" class="fade-in">
+                <section id="quick-start" class="animate-on-scroll">
                     <h2>Quick Start</h2>
                     
                     <h3>Installation</h3>
-                    <pre><code># Using npm
+                    <div class="code-block">
+                        <button class="code-copy" onclick="copyCode(this)">
+                            <i class="far fa-copy"></i>
+                            Copy
+                        </button>
+                        <pre><code># Using npm
 npm install @udna/core @udna/client
 
 # Using yarn
 yarn add @udna/core @udna/client
 
-# Using CDN
-&lt;script src="https://unpkg.com/@udna/client"&gt;&lt;/script&gt;</code></pre>
+# Using pnpm
+pnpm add @udna/core @udna/client
+
+# Browser (CDN)
+&lt;script src="https://unpkg.com/@udna/client@latest/dist/browser.min.js"&gt;&lt;/script&gt;</code></pre>
+                    </div>
 
                     <h3>Basic Usage</h3>
-                    <pre><code>import { UDNAClient } from '@udna/client';
+                    <div class="code-block">
+                        <button class="code-copy" onclick="copyCode(this)">
+                            <i class="far fa-copy"></i>
+                            Copy
+                        </button>
+                        <pre><code>import { UDNAClient } from '@udna/client';
 
-// Initialize client
+// Initialize client with your DID
 const client = new UDNAClient({
-  did: 'did:key:z6Mkf5rGM...',
-  resolver: 'https://resolver.udna.dev'
+  did: 'did:key:z6Mkf5rGMontZ2S6qpnYLAJ3NjBhqXjJcFkNxTvNM7pAqkPc',
+  resolver: {
+    endpoints: ['https://resolver.udna.dev', 'https://resolver.w3c.dev'],
+    cacheTtl: 3600
+  }
 });
 
-// Resolve a UDNA address
+// Resolve a UDNA address to get endpoint information
 const endpoint = await client.resolve(
   'udna://did:web:api.example.com/services/chat'
 );
@@ -1048,71 +1589,118 @@ const endpoint = await client.resolve(
 // Send a secure message
 const response = await client.sendMessage({
   to: endpoint,
-  type: 'text/plain',
-  body: 'Hello UDNA!'
-});</code></pre>
+  type: 'application/json',
+  body: JSON.stringify({ message: 'Hello UDNA!' }),
+  headers: {
+    'x-request-id': crypto.randomUUID()
+  }
+});
 
-                    <h3>Integration Examples</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">🌐</div>
-                                <div class="card-title">Web App</div>
+console.log('Response:', response);</code></pre>
+                    </div>
+
+                    <h3>Framework Integrations</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fab fa-react"></i>
                             </div>
-                            <pre style="margin: 0; font-size: 0.75rem;"><code>// React component
-useUDNA({ did: userDID });</code></pre>
+                            <h4 class="feature-title">React</h4>
+                            <div class="code-block" style="margin: var(--space-4) 0 0; padding: var(--space-4);">
+                                <code>npm install @udna/react</code>
+                            </div>
                         </div>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">📱</div>
-                                <div class="card-title">Mobile</div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fab fa-vuejs"></i>
                             </div>
-                            <pre style="margin: 0; font-size: 0.75rem;"><code>// Swift/iOS
-let client = UDNAClient(did: did)</code></pre>
+                            <h4 class="feature-title">Vue.js</h4>
+                            <div class="code-block" style="margin: var(--space-4) 0 0; padding: var(--space-4);">
+                                <code>npm install @udna/vue</code>
+                            </div>
                         </div>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-icon">🖥️</div>
-                                <div class="card-title">Backend</div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fab fa-node-js"></i>
                             </div>
-                            <pre style="margin: 0; font-size: 0.75rem;"><code># Python
-from udna import Client
-client = Client(did=did)</code></pre>
+                            <h4 class="feature-title">Node.js</h4>
+                            <div class="code-block" style="margin: var(--space-4) 0 0; padding: var(--space-4);">
+                                <code>npm install @udna/server</code>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Contributing -->
-                <section id="contributing" class="fade-in">
+                <section id="contributing" class="animate-on-scroll">
                     <h2>Contributing</h2>
                     
                     <p>UDNA is developed openly in the W3C Community Group. We welcome contributions from:</p>
                     
-                    <ul>
-                        <li><strong>Developers:</strong> Implement UDNA in different languages and frameworks</li>
-                        <li><strong>Researchers:</strong> Explore novel use cases and security models</li>
-                        <li><strong>Standards Experts:</strong> Help with specification development and alignment</li>
-                        <li><strong>Product Teams:</strong> Pilot UDNA in real applications</li>
-                    </ul>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="feature-title">Developers</h4>
+                            <p class="feature-description">Implement UDNA in different languages and frameworks, contribute to SDKs, and build tooling.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4 class="feature-title">Researchers</h4>
+                            <p class="feature-description">Explore novel use cases, security models, and performance optimizations for decentralized addressing.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h4 class="feature-title">Standards Experts</h4>
+                            <p class="feature-description">Help with specification development, alignment with W3C standards, and interoperability testing.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4 class="feature-title">Product Teams</h4>
+                            <p class="feature-description">Pilot UDNA in real applications, provide feedback from production use, and share implementation experiences.</p>
+                        </div>
+                    </div>
 
                     <div class="card highlight-card">
                         <div class="card-header">
-                            <div class="card-icon">🚀</div>
-                            <div class="card-title">Get Involved</div>
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Get Involved Today</div>
+                                <div class="card-subtitle">Join the W3C Community Group</div>
+                            </div>
                         </div>
-                        <p style="margin-bottom: var(--space-md);">Join the W3C Community Group to participate in discussions and development:</p>
+                        <p style="margin-bottom: var(--space-6);">Join the W3C Community Group to participate in discussions, review specifications, and contribute to the future of decentralized addressing:</p>
                         
-                        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-                            <a href="https://www.w3.org/groups/cg/did-native-addr/" class="btn" target="_blank">
-                                <span>🌐</span> W3C Group
+                        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+                            <a href="https://www.w3.org/groups/cg/did-native-addr/" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                W3C Group Page
                             </a>
                             <a href="https://github.com/w3c-cg/udna" class="btn" target="_blank">
-                                <span>💻</span> GitHub Repo
+                                <i class="fab fa-github"></i>
+                                GitHub Repository
                             </a>
                             <a href="mailto:public-did-native-addr@w3.org" class="btn">
-                                <span>📧</span> Mailing List
+                                <i class="fas fa-envelope"></i>
+                                Mailing List
+                            </a>
+                            <a href="https://github.com/w3c-cg/udna/issues" class="btn" target="_blank">
+                                <i class="fas fa-bug"></i>
+                                Report Issues
                             </a>
                         </div>
                     </div>
@@ -1121,23 +1709,50 @@ client = Client(did=did)</code></pre>
                 <!-- Footer -->
                 <footer class="footer">
                     <div class="footer-content">
+                        <div class="footer-brand">
+                            <div class="footer-logo">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--text-primary);">UDNA</div>
+                                <div style="font-size: 0.75rem; color: var(--text-tertiary);">Universal DID Native Addressing</div>
+                            </div>
+                        </div>
+                        
                         <div class="footer-links">
-                            <a href="https://www.w3.org/Consortium/Legal/ipr-notice" class="footer-link" target="_blank">Legal</a>
-                            <a href="https://www.w3.org/Consortium/Legal/copyright-documents" class="footer-link" target="_blank">Copyright</a>
-                            <a href="https://www.w3.org/Consortium/Legal/privacy-statement" class="footer-link" target="_blank">Privacy</a>
-                            <a href="https://www.w3.org/Help/site" class="footer-link" target="_blank">Help</a>
+                            <a href="https://www.w3.org/Consortium/Legal/ipr-notice" class="footer-link" target="_blank">
+                                <i class="fas fa-balance-scale"></i>
+                                Legal
+                            </a>
+                            <a href="https://www.w3.org/Consortium/Legal/copyright-documents" class="footer-link" target="_blank">
+                                <i class="far fa-copyright"></i>
+                                Copyright
+                            </a>
+                            <a href="https://www.w3.org/Consortium/Legal/privacy-statement" class="footer-link" target="_blank">
+                                <i class="fas fa-user-shield"></i>
+                                Privacy
+                            </a>
+                            <a href="https://www.w3.org/Help/site" class="footer-link" target="_blank">
+                                <i class="fas fa-question-circle"></i>
+                                Help
+                            </a>
                         </div>
-                        <div class="copyright">
-                            © 2026 W3C®. Published by the UDNA Community Group
-                        </div>
+                    </div>
+                    <div class="copyright">
+                        © 2026 World Wide Web Consortium (W3C®). Published by the UDNA Community Group.
+                        <br>
+                        <small style="font-size: 0.75rem; opacity: 0.7;">This is a Community Group Draft and does not represent W3C consensus.</small>
                     </div>
                 </footer>
             </article>
 
-            <!-- Table of Contents (Right Sidebar) -->
+            <!-- Table of Contents -->
             <aside class="toc-container">
                 <div class="toc">
-                    <div class="toc-title">On This Page</div>
+                    <div class="toc-title">
+                        <i class="fas fa-list-ol"></i>
+                        Contents
+                    </div>
                     <ul class="toc-items">
                         <li class="toc-item"><a href="#overview" class="toc-link">Overview</a></li>
                         <li class="toc-item"><a href="#why-udna" class="toc-link">Why UDNA?</a></li>
@@ -1155,28 +1770,47 @@ client = Client(did=did)</code></pre>
         // Table of Contents highlighting
         const tocLinks = document.querySelectorAll('.toc-link');
         const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-        function highlightTOC() {
+        function highlightActiveSection() {
             let scrollPosition = window.scrollY + 100;
 
+            // Reset all active states
+            tocLinks.forEach(link => link.classList.remove('active'));
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Find current section
+            let currentSection = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 const sectionId = section.getAttribute('id');
 
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    tocLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
+                    currentSection = sectionId;
                 }
             });
+
+            // Set active states
+            if (currentSection) {
+                // Update TOC
+                tocLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Update nav (only for main sections)
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
         }
 
-        window.addEventListener('scroll', highlightTOC);
-        highlightTOC();
+        window.addEventListener('scroll', highlightActiveSection);
+        highlightActiveSection();
 
         // Theme toggle
         function toggleTheme() {
@@ -1185,34 +1819,79 @@ client = Client(did=did)</code></pre>
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', newTheme);
             
+            // Update icon
+            const themeIcon = document.querySelector('.fa-moon');
+            if (newTheme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+            
             // Store preference
-            localStorage.setItem('theme', newTheme);
+            localStorage.setItem('udna-theme', newTheme);
         }
 
         // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
+        const savedTheme = localStorage.getItem('udna-theme');
         if (savedTheme) {
             document.documentElement.setAttribute('data-theme', savedTheme);
+            const themeIcon = document.querySelector('.fa-moon');
+            if (savedTheme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            }
         }
 
-        // Navigation highlighting
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
+        // Copy code functionality
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-block').querySelector('code');
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                button.style.background = 'var(--success)';
+                button.style.color = 'white';
+                button.style.borderColor = 'var(--success)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
             });
-        });
+        }
 
-        // Mobile menu toggle (if needed)
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+
+        // Mobile menu toggle
         const mobileMenuToggle = document.createElement('button');
-        mobileMenuToggle.innerHTML = '☰';
-        mobileMenuToggle.className = 'btn';
+        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        mobileMenuToggle.className = 'btn btn-primary';
         mobileMenuToggle.style.position = 'fixed';
-        mobileMenuToggle.style.top = '10px';
-        mobileMenuToggle.style.left = '10px';
+        mobileMenuToggle.style.bottom = '20px';
+        mobileMenuToggle.style.right = '20px';
         mobileMenuToggle.style.zIndex = '1000';
         mobileMenuToggle.style.display = 'none';
+        mobileMenuToggle.style.width = '50px';
+        mobileMenuToggle.style.height = '50px';
+        mobileMenuToggle.style.borderRadius = '50%';
+        mobileMenuToggle.style.justifyContent = 'center';
         mobileMenuToggle.onclick = () => document.querySelector('.sidebar').classList.toggle('active');
         document.body.appendChild(mobileMenuToggle);
 
@@ -1229,26 +1908,84 @@ client = Client(did=did)</code></pre>
         window.addEventListener('resize', checkMobile);
         checkMobile();
 
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile sidebar if open
+                    if (window.innerWidth <= 1024) {
+                        document.querySelector('.sidebar').classList.remove('active');
+                    }
+                }
+            });
+        });
+
         // Print styles
-        const style = document.createElement('style');
-        style.innerHTML = `
+        const printStyle = document.createElement('style');
+        printStyle.innerHTML = `
             @media print {
-                .sidebar, .top-bar, .toc-container, .footer, .btn {
+                .sidebar, .top-bar, .toc-container, .footer, 
+                .btn, .code-copy, .hero, .mobile-menu-toggle {
                     display: none !important;
                 }
+                
                 .main-content {
                     margin-left: 0 !important;
                 }
+                
                 .article {
                     max-width: 100% !important;
                     padding: 0 !important;
                 }
+                
                 .card {
                     break-inside: avoid;
+                    box-shadow: none !important;
+                    border: 1px solid #ddd !important;
+                }
+                
+                pre {
+                    background: #f5f5f5 !important;
+                    border: 1px solid #ddd !important;
+                }
+                
+                h1, h2, h3 {
+                    color: #000 !important;
+                }
+                
+                .text-gradient {
+                    background: none !important;
+                    -webkit-text-fill-color: #000 !important;
+                    color: #000 !important;
                 }
             }
         `;
-        document.head.appendChild(style);
+        document.head.appendChild(printStyle);
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add loading animation
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // Initialize all animations
+            animateOnScroll();
+        });
     </script>
 </body>
 </html>
