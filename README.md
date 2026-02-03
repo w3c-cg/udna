@@ -1,234 +1,458 @@
-# Universal DID-Native Addressing (UDNA) Community Group
 
-[![W3C Community Group](https://cdn.pixabay.com/photo/2020/10/14/08/20/security-5653681_1280.jpg)](https://www.w3.org/community/udna/)
+# Universal DID-Native Addressing (UDNA)
 
-## Summary
+<div align="center">
 
-The **Universal DID-Native Addressing (UDNA) Community Group** is advancing the next generation of Internet architecture through identity-native networking protocols. We are developing a comprehensive framework that treats Decentralized Identifiers (DIDs) as first-class network primitives, enabling secure, private, and self-sovereign digital communications at global scale.
+![UDNA Banner](https://img.shields.io/badge/UDNA-Universal%20DID--Native%20Addressing-0066cc?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMmMtLjYzIDAtMS4xOS4zNS0xLjQ5Ljg4TDAgMjJoMjQuMDAxYy0uOTItNS41Ny0zLjU0LTEwLjI5LTcuNjg1LTEzLjItLjY3LS4zNS0xLjUxLjEtMS44Ni43Ny0uMzUuNjcuMSAxLjUxLjc3IDEuODZDMTkuNTUgMTEuNyAyMS43IDE1LjkyIDIyIDIySDUuNkw2LjUgMTZIMThsMi4zMi0zLjI2Yy42NC0uOTIuMS0yLjE5LS44OC0yLjY4bC0zLjc2LTEuODgtMS42Ny0zLjI5Yy0uMjktLjYtLjg5LS45OS0xLjU3LS44M2gtLjAyYy0uNjkuMTUtMS4yMi42OS0xLjM4IDEuMzZMOS4yNSA5aC0uMDJjLS42NS4wOS0xLjE3LjU4LTEuMjUgMS4yM0w2IDIwLjkyIDEuMTIgMTZjLS42MS0uNjEtLjU0LTEuNjQuMTUtMi4yM2w0LjgtNC44Yy42Mi0uNjIgMS42NC0uNTYgMi4yMi4xNWwxLjI4IDEuNTQgMS4wMi0xLjU0Yy42NC0uOTYgMS45MS0xLjI2IDIuODctLjYybDEuNjcgMS4xIDMuMzItLjgzYzEuMTItLjI4IDIuMjguMTIgMy4wOC45M2wxLjUgMS41Yy42Mi42MiAxLjY0LjU2IDIuMjItLjE1bC40NS0uNDVjLjYyLS42Mi41Ni0xLjY0LS4xNS0yLjIybC0yLjQ3LTIuNDctLjIyLS4yMmMtLjk5LS45OS0yLjM0LTEuMzYtMy42Mi0xLjAybC0zLjU3Ljg5LTIuNS0zLjc2Yy0uNS0uNzUtMS40Mi0xLjE2LTIuMzItLjk1aC0uMDJjLS44OS4yLTEuNTQuODUtMS43NSAxLjc0TDMuMzQgNC4xMmMtLjUuNzUtLjA1IDEuNjkuNyAyLjE5bDQuOCAyLjRMMTIgMTkuMWwxLjA0LTIuMTIgMS41NCAxLjAzYy45OC42NSAyLjI1LjQyIDIuOS0uNTZsMi4zNi0zLjM2Yy42NS0uOTguNDItMi4yNS0uNTYtMi45bC0xLjg0LTEuMjQgMi40LTIuNGMuNTgtLjU4LjU4LTEuNTQgMC0yLjEyLS41OC0uNTgtMS41NC0uNTgtMi4xMiAwbC00Ljk1IDQuOTVjLS41OC41OC0uNTggMS41NCAwIDIuMTIuNTguNTggMS41NC41OCAyLjEyIDBsLjU4LS41OCAxLjA2IDIuMTIgMS41NC0zLjA4Yy4yNS0uNS43NS0uODQgMS4zMS0uODRoNC44MmMuNTcgMCAxLjA4LjM0IDEuMzMuODRsMS42NiAzLjMyYy41Ljk5LS4wNyAyLjE4LTEuMDYgMi42OGwtNS42MiAyLjgxYy0uNDguMjQtMS4wNC4zNi0xLjYuMzZoLTEuMDJjLS41NiAwLTEuMTItLjEyLTEuNi0uMzZsLTUuNjItMi44MWMtLjk5LS41LTEuNTYtMS42OS0xLjA2LTIuNjhsMS42Ni0zLjMyYy4yNS0uNS43NS0uODQgMS4zMy0uODRoNC44MmMuNTYgMCAxLjA2LjM0IDEuMzEuODRsMS41NCAzLjA4LjU4LS41OGMuNTgtLjU4IDEuNTQtLjU4IDIuMTIgMCAuNTguNTguNTggMS41NCAwIDIuMTJsLTQuOTUgNC45NWMtLjU4LjU4LTEuNTQuNTgtMi4xMiAwLS41OC0uNTgtLjU4LTEuNTQgMC0yLjEybDIuNC0yLjQtMS44NC0xLjI0Yy0uOTgtLjY1LTIuMjUtLjQyLTIuOS41NmwtMi4zNiAzLjM2Yy0uNjUuOTgtLjQyIDIuMjUuNTYgMi45bDEuNTQgMS4wMyAxLjA0LTIuMTIgMy4wNi02LjEyIDQuOCAyLjRjLjc1LjUgMS42OS4wNSAyLjE5LS43bDEuMjItMi40NGMuMi0uODkuODUtMS41NCAxLjc0LTEuNzVoLjAyYy45LS4yMSAxLjgyLjIgMi4zMi45NWwyLjUgMy43NiAzLjU3LS44OWMxLjI4LS4zMiAyLjYzLjAzIDMuNjIgMS4wMmwuMjIuMjIgMi40NyAyLjQ3Yy43MS43MS43NyAxLjYuMTUgMi4yMmwtLjQ1LjQ1Yy0uNTguNTgtMS42LjQ3LTIuMjItLjE1bC0xLjUtMS41Yy0uOC0uOC0xLjk2LTEuMjEtMy4wOC0uOTNsLTMuMzIuODMtMS42Ny0xLjFjLS45Ni0uNjQtMi4yMy0uMzQtMi44Ny42MmwtMS4wMiAxLjU0LTEuMjgtMS41NGMtLjU4LS43MS0xLjYtLjc3LTIuMjItLjE1bC00LjggNC44Yy0uNjkuNTktLjc2IDEuNjItLjE1IDIuMjNMNiAyMC45MiA3Ljk4IDkuMzhjLjA4LS42NS42LTEuMTQgMS4yNS0xLjIzaC4wMkM5Ljg5IDggMTAuNDIgNy40NiAxMS4xIDcuMzFsLjAyLjdjLjE2LS42Ny42OS0xLjIxIDEuMzgtMS4zNmgwYy42OC0uMTYgMS4yOC4yMyAxLjU3LjgzbDEuNjcgMy4yOSAzLjc2IDEuODhjLjk4LjQ5IDEuNTIgMS43Ni44OCAyLjY4TDE4IDE2SDYuNUw1LjYgMjJIMjJsLTEwLjUxLTE5LjEyYy0uMy0uNTMtLjg2LS44OC0xLjQ5LS44OHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=)
+![W3C Community Group](https://img.shields.io/badge/W3C-Community%20Group-005a9c?style=for-the-badge&logo=w3c&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active%20Development-27ae60?style=for-the-badge&logo=git&logoColor=white)
 
-### Mission
+**Building the identity-native Internet. A paradigm shift from location-based to identity-based networking.**
 
-To explore, develop, and promote Universal DID-Native Addressing (UDNA)—a paradigm-shifting framework that makes cryptographic identity the foundational addressing mechanism for network protocols. UDNA enables identity-native communication, privacy-preserving routing, and secure self-sovereign interactions across decentralized systems, laying the foundation for a more secure, private, and equitable Internet.
+[![Join W3C Group](https://img.shields.io/badge/Join-W3C%20Community%20Group-0066cc?style=for-the-badge&logo=w3c&logoColor=white)](https://www.w3.org/community/udna/)
+[![GitHub Stars](https://img.shields.io/github/stars/w3c-udna/udna?style=for-the-badge&logo=github&logoColor=white)](https://github.com/w3c-udna/udna/stargazers)
+[![Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/w3c-udna/udna/discussions)
+[![License](https://img.shields.io/badge/License-Apache%202.0-ff69b4?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
 
-### The Problem
+</div>
 
-Current Internet infrastructure suffers from fundamental architectural limitations rooted in its 1970s origins:
+## Table of Contents
 
-- **Location-based addressing**: IP addresses describe where services are, not what they are
-- **Centralized trust dependencies**: DNS hierarchies and certificate authorities create single points of failure
-- **Privacy by accident**: Network protocols leak metadata and enable surveillance by default
-- **Bolt-on security**: Security mechanisms added as afterthoughts rather than foundational principles
+- [Overview](#overview)
+- [Why UDNA?](#why-udna)
+- [Architecture](#architecture)
+- [Key Features](#key-features)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Documentation](#documentation)
+- [Community](#community)
+- [License](#license)
 
-### The Solution
+## Overview
 
-UDNA represents a fundamental architectural shift from location-based to identity-based networking:
+**Universal DID-Native Addressing (UDNA)** is a next-generation networking protocol that makes cryptographic identity the foundational addressing mechanism for all digital communication.
 
-- **Cryptographic verifiability**: Every network endpoint is identified by a cryptographically verifiable DID
-- **Global uniqueness**: No centralized coordination required for address creation
-- **Privacy by design**: Pairwise and rotating identifiers prevent correlation and tracking
-- **Self-sovereign control**: Individuals and organizations control their own network identities
+UDNA represents a fundamental architectural shift from traditional **location-based addressing** (IP addresses, URLs) to **identity-based addressing** using W3C Decentralized Identifiers (DIDs). This enables secure, private, and self-sovereign communication at global scale.
 
-## Scope
+### The Vision
 
-### Core Focus Areas
+> "To create an Internet where identity is native to addressing, not an afterthought."
 
-**🔐 Protocol Specifications**
-- DID-native network addressing formats and wire protocols
-- Cryptographic handshake and authentication mechanisms
-- Key rotation, revocation, and recovery protocols
+| Traditional Internet | UDNA Internet |
+|---------------------|---------------|
+| **Location-based** (IP addresses) | **Identity-based** (DIDs) |
+| **Bolt-on security** (TLS, VPNs) | **Built-in security** (cryptographic identity) |
+| **Privacy by accident** | **Privacy by design** |
+| **Centralized coordination** (DNS, CAs) | **Decentralized operation** |
 
-**🌐 Network Integration**
-- Integration with existing Internet protocols (TCP/IP, HTTP, TLS)
-- Distributed resolution networks and DHT-based discovery
-- NAT traversal and relay contract mechanisms
+## Why UDNA?
 
-**🔒 Security & Privacy**
-- Zero-trust and capability-based access control models
-- Privacy-preserving communication with traffic analysis resistance
-- Anti-abuse mechanisms and Sybil attack resistance
+### The Problem with Current Internet Architecture
 
-**⚡ Performance & Scalability**
-- Sub-50μs DID resolution and <2ms handshake latency
-- Scalable overlay networks supporting millions of participants
-- Efficient binary encodings and compression techniques
+<table>
+<tr>
+<th width="50%">Current Limitations</th>
+<th width="50%">UDNA Solution</th>
+</tr>
+<tr>
+<td>
 
-**🔗 Interoperability**
-- DIDComm v2 compatibility and messaging facets
-- Legacy system integration and migration pathways
-- Cross-platform identity management standards
+- **Fragmented identity systems** across services
+- **Centralized trust dependencies** (CAs, DNS)
+- **Metadata leakage** and surveillance risks
+- **Complex authentication** requiring separate systems
+- **Vendor lock-in** to specific identity providers
+- **No standard way** for services to discover each other
 
-## Expected Outcomes
+</td>
+<td>
 
-### Technical Deliverables
+- **Unified identity layer** using W3C DIDs
+- **Decentralized trust** via cryptographic verification
+- **Privacy-preserving** with pairwise identifiers
+- **Native authentication** built into addressing
+- **Self-sovereign control** over digital identity
+- **Built-in service discovery** through DID documents
 
-- **📋 UDNA Core Specification**: Comprehensive protocol specification with wire formats, security models, and implementation guidelines
-- **🏗️ Reference Architecture**: Complete architectural framework with integration patterns and deployment models
-- **💻 Reference Implementation**: Open-source implementation in Rust with performance benchmarks and security audits
-- **🔄 Interoperability Guidelines**: Standards for integrating UDNA with existing protocols and applications
+</td>
+</tr>
+</table>
 
-### Community Outcomes
+### Real-World Impact
 
-- **👥 Developer Ecosystem**: Active community of developers building UDNA-enabled applications and services
-- **🎓 Educational Resources**: Documentation, tutorials, and training materials for implementing identity-native networking
-- **🤝 Industry Collaboration**: Partnerships with technology vendors, cloud providers, and standards organizations
-- **🔬 Research Advancement**: Academic research into cryptographic networking, privacy-preserving protocols, and decentralized systems
+| Use Case | Traditional Approach | UDNA Approach |
+|----------|-------------------|---------------|
+| **Healthcare** | Separate logins per provider, faxed records | Single DID, encrypted record sharing |
+| **IoT Networks** | Proprietary protocols, cloud dependencies | Device-to-device secure communication |
+| **Enterprise APIs** | API keys, OAuth tokens, complex auth | DID-based addressing with fine-grained capabilities |
+| **Financial Services** | KYC duplication, siloed identity systems | Portable verifiable credentials |
 
-## Participants
+## Architecture
 
-### How to Join
+### Core Components
 
-The UDNA Community Group is open to all individuals and organizations interested in advancing identity-native networking technologies. To participate:
+```mermaid
+graph TB
+    A[Applications] --> B[UDNA Layer]
+    B --> C{Transport Layer}
+    C --> D[TCP/IP]
+    
+    subgraph "UDNA Layer"
+        B1[Addressing]
+        B2[Resolution]
+        B3[Messaging]
+        B4[Security]
+        
+        B1 --> B2
+        B2 --> B3
+        B3 --> B4
+    end
+    
+    style B fill:#0066cc,stroke:#fff,stroke-width:2px
+    style B1 fill:#00b894,stroke:#fff
+    style B2 fill:#9b59b6,stroke:#fff
+    style B3 fill:#f39c12,stroke:#fff
+    style B4 fill:#e74c3c,stroke:#fff
+```
 
-1. **Join the W3C Community Group**: [Sign up here](https://www.w3.org/community/did-native-addr/)
-2. **Review the Charter**: Understand our mission, scope, and working methods
-3. **Introduce Yourself**: Share your background and interests on our mailing list
-4. **Contribute**: Participate in discussions, review specifications, or contribute code
+### 1. **Addressing Layer**
+- **UDNA URI Format**: `udna://did:method/path#fragment`
+- **DID Integration**: Native support for all W3C DID methods
+- **Service Discovery**: Embedded in DID documents
+- **Capability URLs**: Fine-grained access control
 
-### Participant Categories
+### 2. **Resolution Layer**
+- **Multi-tier caching**: Local → P2P → Authoritative
+- **Performance targets**: <10ms cached, <200ms network
+- **Fallback strategies**: Graceful degradation
+- **Load balancing**: Intelligent endpoint selection
 
-**🏢 Organizations**
-- Technology companies building decentralized applications
-- Cloud and infrastructure providers
-- Academic and research institutions
-- Standards organizations and consortiums
+### 3. **Messaging Layer**
+- **DIDComm v2 integration**: End-to-end encrypted messaging
+- **Multi-transport support**: HTTP, WebSockets, WebRTC
+- **Forward secrecy**: Session key rotation
+- **Message queuing**: Reliable delivery guarantees
 
-**👨‍💻 Individual Contributors**
-- Protocol developers and cryptographic engineers
-- Security researchers and analysts
-- Application developers and system architects
-- Privacy advocates and digital rights experts
+### 4. **Security Layer**
+- **Zero-trust model**: Verify everything
+- **Capability-based access**: Fine-grained permissions
+- **Privacy preservation**: Pairwise DIDs, correlation resistance
+- **Audit logging**: Comprehensive security monitoring
 
-**🎯 Areas of Expertise**
-- Decentralized identity and self-sovereign identity
-- Network protocols and distributed systems
-- Cryptography and information security
-- Privacy-enhancing technologies
-- Blockchain and web3 technologies
+## Key Features
 
-## Tools
+### **Security First**
 
-### Development Infrastructure
+| Feature | Description | Status |
+|---------|-------------|--------|
+| **End-to-End Encryption** | All communications encrypted by default | ![Implemented](https://img.shields.io/badge/✅%20Implemented-27ae60) |
+| **Cryptographic Verification** | Every message and endpoint verified | ![Implemented](https://img.shields.io/badge/✅%20Implemented-27ae60) |
+| **Forward Secrecy** | Session keys rotated regularly | ![Implemented](https://img.shields.io/badge/✅%20Implemented-27ae60) |
+| **Zero-Trust Model** | No implicit trust, everything verified | ![In Progress](https://img.shields.io/badge/🚧%20In%20Progress-f39c12) |
 
-**📊 Project Management**
-- **GitHub**: Source code, issue tracking, and project coordination
-- **W3C Tracker**: Formal specification tracking and action items
-- **Miro/Mural**: Collaborative architecture diagrams and workflows
+### **High Performance**
+- **Sub-50μs resolution** for cached DIDs
+- **<2ms handshake** latency
+- **Millions of concurrent** connections
+- **Efficient binary protocols** for low bandwidth
 
-**💬 Communication Channels**
-- **Mailing List**: [public-did-native-addr-request@w3.org](mailto:public-did-native-addr-request@w3.org) - Primary discussion forum
-- **GitHub Discussions**: Technical discussions and community Q&A
-- **IRC/Matrix**: Real-time chat during working sessions
-- **Discord/Slack**: Informal community discussions (links in mailing list)
+### **Interoperability**
+- **W3C DID Core 1.0** compliant
+- **DIDComm v2** messaging support
+- **Legacy protocol** bridges (HTTP, WebSocket)
+- **Multiple DID method** support (`did:key`, `did:web`, `did:ion`)
 
-**🛠️ Development Tools**
-- **Specification Tools**: ReSpec for W3C-compatible specifications
-- **Implementation Languages**: Rust (reference), with bindings for JavaScript, Go, Python
-- **Testing Framework**: Interoperability test suites and conformance testing
-- **Security Analysis**: Tamarin prover integration for formal verification
-
-**📚 Documentation Platform**
-- **GitHub Pages**: Technical documentation and API references
-- **W3C Wiki**: Meeting notes, working drafts, and collaborative editing
-- **MDBook**: Comprehensive implementation guides and tutorials
-
-### Technical Resources
-
-**🔬 Research Tools**
-- Access to cryptographic analysis tools and formal verification systems
-- Performance benchmarking infrastructure across cloud providers
-- Security audit resources and penetration testing capabilities
-
-**🏗️ Reference Implementation**
-- Complete Rust implementation with comprehensive test coverage
-- Docker containers for easy development environment setup
-- CI/CD pipelines ensuring code quality and security
-
-**📖 Specification Framework**
-- W3C-compatible specification templates and validation tools
-- Automated specification generation from reference implementation
-- Version control and change management for protocol evolution
-
-## Calendar
-
-### Regular Meetings
-
-**📅 Weekly Working Sessions**
-- **Time**: Tuesdays, 15:00 UTC (rotating to accommodate global participation)
-- **Duration**: 90 minutes
-- **Format**: Video conference with screen sharing and collaborative editing
-- **Focus**: Technical specifications, implementation progress, and issue resolution
-
-**🗓️ Monthly Community Calls**
-- **Time**: First Thursday of each month, 18:00 UTC
-- **Duration**: 60 minutes
-- **Format**: Public webinar with Q&A session
-- **Focus**: Project updates, community showcases, and strategic discussions
-
-**📋 Quarterly Planning Sessions**
-- **Time**: March, June, September, December
-- **Duration**: Half-day intensive sessions
-- **Format**: In-person when possible, hybrid otherwise
-- **Focus**: Roadmap planning, milestone reviews, and community feedback
-
-### Special Events
-
-**🎤 Conference Presentations**
-- Internet Identity Workshop (IIW)
-- Rebooting the Web of Trust (RWOT)
-- Decentralized Web Summit
-- W3C Technical Plenary and Advisory Committee (TPAC)
-
-**🏆 Hackathons and Developer Events**
-- Quarterly UDNA hackathons with prizes and mentorship
-- Developer workshops at major conferences
-- University partnerships for student projects
-- Open source contribution sprints
-
-**📝 Specification Milestones**
-- Public review periods for major specification releases
-- Interoperability testing events with multiple implementations
-- Security review sessions with external auditors
-- Implementation feedback sessions with early adopters
-
-### Time Zone Considerations
-
-To ensure global participation, we rotate meeting times and provide:
-- **Multiple time slot options** for regular meetings
-- **Recorded sessions** for asynchronous participation
-- **Regional coordination calls** for specific geographic areas
-- **Asynchronous collaboration tools** for non-real-time contributions
+### **Scalability**
+- **Distributed resolution** networks
+- **Peer-to-peer caching** layers
+- **Horizontal scaling** architecture
+- **Global deployment** ready
 
 ## Getting Started
 
-### For Newcomers
+### Quick Start
 
-1. **📖 Read the Introduction**: Review our [UDNA whitepaper](https://github.com/sirraya-labs/udna-whitepaper) for technical background
-2. **🎯 Identify Your Interest**: Determine which aspects of UDNA align with your expertise and goals
-3. **👥 Join the Community**: Sign up for the W3C Community Group and introduce yourself
-4. **💻 Try the Code**: Clone our reference implementation and run the examples
-5. **🤝 Start Contributing**: Pick up a "good first issue" or join a working group
+```bash
+# 1. Clone the repository
+git clone https://github.com/w3c-udna/udna.git
+cd udna
 
-### For Experienced Contributors
+# 2. Install dependencies
+npm install
+# or
+yarn install
 
-1. **🔬 Deep Dive**: Study the complete technical specifications and implementation details
-2. **🏗️ Architecture Review**: Contribute to architectural discussions and design decisions
-3. **⚡ Performance Analysis**: Help optimize protocols and implementations for production use
-4. **🔐 Security Audit**: Review cryptographic implementations and threat models
-5. **📋 Specification Writing**: Contribute to formal W3C specifications and standards
+# 3. Run the development server
+npm run dev
+# or
+yarn dev
 
-## Contact Information
+# 4. Open your browser
+# http://localhost:3000
+```
 
-- **📧 General Inquiries**: [public-did-native-addr-request@w3.org](mailto:public-did-native-addr-request@w3.org)
-- **💻 Technical Issues**: [GitHub Issues](https://github.com/w3c-udna/specifications/issues)
-- **📱 Community Chat**: Links available in welcome email after joining
-- **🌐 Website**: [https://www.w3.org/community/did-native-addr/](https://www.w3.org/community/did-native-addr/)
+### Installation Options
+
+<details>
+<summary><strong>Package Managers</strong></summary>
+
+```bash
+# NPM
+npm install @udna/core @udna/client
+
+# Yarn
+yarn add @udna/core @udna/client
+
+# PNPM
+pnpm add @udna/core @udna/client
+```
+
+</details>
+
+<details>
+<summary><strong>Browser (CDN)</strong></summary>
+
+```html
+<script src="https://unpkg.com/@udna/client@latest/dist/browser.min.js"></script>
+<script>
+  // UDNA is now available as window.UDNA
+  const client = new UDNA.Client({ /* config */ });
+</script>
+```
+
+</details>
+
+<details>
+<summary><strong>Docker</strong></summary>
+
+```bash
+# Pull the latest image
+docker pull ghcr.io/w3c-udna/udna:latest
+
+# Run the container
+docker run -p 3000:3000 ghcr.io/w3c-udna/udna:latest
+```
+
+</details>
+
+### Basic Usage Example
+
+```javascript
+import { UDNAClient } from '@udna/client';
+
+// Initialize client
+const client = new UDNAClient({
+  did: 'did:key:z6Mkf5rGMontZ2S6qpnYLAJ3NjBhqXjJcFkNxTvNM7pAqkPc',
+  resolver: {
+    endpoints: ['https://resolver.udna.dev'],
+    cacheTtl: 3600
+  }
+});
+
+// Resolve a UDNA address
+const endpoint = await client.resolve(
+  'udna://did:web:api.example.com/services/chat'
+);
+
+// Send a secure message
+const response = await client.sendMessage({
+  to: endpoint,
+  type: 'application/json',
+  body: { message: 'Hello UDNA!' }
+});
+
+console.log('Response:', response);
+```
+
+### Framework Integrations
+
+| Framework | Package | Status | Documentation |
+|-----------|---------|--------|---------------|
+| **React** | `@udna/react` | ![Stable](https://img.shields.io/badge/✅%20Stable-27ae60) | [Docs](https://udna.dev/docs/react) |
+| **Vue.js** | `@udna/vue` | ![Stable](https://img.shields.io/badge/✅%20Stable-27ae60) | [Docs](https://udna.dev/docs/vue) |
+| **Angular** | `@udna/angular` | ![Beta](https://img.shields.io/badge/🚧%20Beta-f39c12) | [Docs](https://udna.dev/docs/angular) |
+| **Node.js** | `@udna/server` | ![Stable](https://img.shields.io/badge/✅%20Stable-27ae60) | [Docs](https://udna.dev/docs/node) |
+| **Python** | `udna-py` | ![Alpha](https://img.shields.io/badge/⚡%20Alpha-9b59b6) | [Docs](https://udna.dev/docs/python) |
+| **Go** | `go-udna` | ![Alpha](https://img.shields.io/badge/⚡%20Alpha-9b59b6) | [Docs](https://udna.dev/docs/go) |
+
+## Contributing
+
+We welcome contributions from everyone! Here's how you can help:
+
+### Ways to Contribute
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+#### **Report Bugs**
+Found an issue? Let us know!
+
+[![Report Bug](https://img.shields.io/badge/Report-Bug-e74c3c?style=for-the-badge&logo=bug&logoColor=white)](https://github.com/w3c-udna/udna/issues/new?template=bug_report.md)
+
+</td>
+<td width="33%" align="center">
+
+#### **Suggest Features**
+Have an idea? Share it with us!
+
+[![Request Feature](https://img.shields.io/badge/Request-Feature-9b59b6?style=for-the-badge&logo=lightbulb&logoColor=white)](https://github.com/w3c-udna/udna/issues/new?template=feature_request.md)
+
+</td>
+<td width="33%" align="center">
+
+#### **Write Documentation**
+Help improve our docs!
+
+[![Improve Docs](https://img.shields.io/badge/Improve-Docs-3498db?style=for-the-badge&logo=readme&logoColor=white)](https://github.com/w3c-udna/documentation)
+
+</td>
+</tr>
+</table>
+
+### Development Workflow
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Make your changes**
+4. **Commit your changes**
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+5. **Push to your branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+6. **Open a Pull Request**
+
+### Code Standards
+
+- **TypeScript** for all new code
+- **ESLint** and **Prettier** for code quality
+- **100% test coverage** for critical paths
+- **Semantic commits** following Conventional Commits
+- **Documentation** for all public APIs
+
+### Good First Issues
+
+Looking for a place to start? Check out these issues:
+
+[![Good First Issues](https://img.shields.io/github/issues/w3c-udna/udna/good%20first%20issue?color=27ae60&label=Good%20First%20Issues&style=for-the-badge&logo=github&logoColor=white)](https://github.com/w3c-udna/udna/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+
+## Documentation
+
+### Comprehensive Guides
+
+| Document | Description | Link |
+|----------|-------------|------|
+| **Architecture Guide** | Complete architectural overview | [View](https://udna.dev/docs/architecture) |
+| **API Reference** | Complete API documentation | [View](https://udna.dev/docs/api) |
+| **Getting Started** | Step-by-step setup guide | [View](https://udna.dev/docs/getting-started) |
+| **Security Guide** | Security best practices | [View](https://udna.dev/docs/security) |
+| **Performance Guide** | Optimization techniques | [View](https://udna.dev/docs/performance) |
+
+### Specification Documents
+
+| Specification | Status | Version | Links |
+|---------------|--------|---------|-------|
+| **UDNA Core** | ![Draft](https://img.shields.io/badge/🚧%20Draft-f39c12) | v0.9 | [Spec](https://udna.dev/spec/core) • [GitHub](https://github.com/w3c-udna/specifications) |
+| **UDNA Addressing** | ![Draft](https://img.shields.io/badge/🚧%20Draft-f39c12) | v0.8 | [Spec](https://udna.dev/spec/addressing) |
+| **UDNA Resolution** | ![Draft](https://img.shields.io/badge/🚧%20Draft-f39c12) | v0.7 | [Spec](https://udna.dev/spec/resolution) |
+| **UDNA Messaging** | ![Draft](https://img.shields.io/badge/🚧%20Draft-f39c12) | v0.8 | [Spec](https://udna.dev/spec/messaging) |
+
+### Tutorials & Examples
+
+| Tutorial | Level | Description |
+|----------|-------|-------------|
+| **Build a Secure Chat App** | Beginner | End-to-end encrypted messaging |
+| **Enterprise API Gateway** | Intermediate | DID-based API authentication |
+| **IoT Device Network** | Advanced | Device-to-device communication |
+| **Migration from OAuth** | Intermediate | Transition guide for existing systems |
+
+## Community
+
+### Join the Conversation
+
+| Platform | Purpose | Link |
+|----------|---------|------|
+| **Mailing List** | Official discussions | [Join](mailto:public-did-native-addr-request@w3.org) |
+| **GitHub Discussions** | Technical Q&A | [Join](https://github.com/w3c-udna/udna/discussions) |
+| **Twitter** | Announcements | [Follow](https://twitter.com/udna_project) |
+| **Blog** | Articles & updates | [Read](https://udna.dev/blog) |
+
+### Meetings & Events
+
+#### **Weekly Working Sessions**
+- **When**: Every Tuesday, 15:00 UTC
+- **Where**: [Video Conference](https://meet.google.com/xxx-xxxx-xxx)
+- **Agenda**: [GitHub Wiki](https://github.com/w3c-udna/udna/wiki/Meetings)
+
+#### **Monthly Community Calls**
+- **When**: First Thursday of each month, 18:00 UTC
+- **Where**: [Live Stream](https://youtube.com/c/UDNAProject)
+- **Recordings**: [YouTube Playlist](https://youtube.com/playlist?list=...)
+
+### Upcoming Events
+
+| Event | Date | Location | Description |
+|-------|------|----------|-------------|
+| **Internet Identity Workshop** | April 2026 | Online | Workshop on decentralized identity |
+| **W3C TPAC 2026** | September 2026 | Montréal | W3C annual conference |
+| **UDNA Hackathon** | June 2026 | Global | Build UDNA-powered applications |
+
+### Project Governance
+
+UDNA follows the **W3C Community Group Process**:
+
+- **Consensus-based decision making**
+- **Transparent process** with public records
+- **Inclusive participation** from all stakeholders
+- **IPR protection** under W3C Patent Policy
+
+## License
+
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
+
+### Third-Party Licenses
+
+This project includes and depends on the following third-party software:
+
+| Software | License | Purpose |
+|----------|---------|---------|
+| **libsodium** | ISC License | Cryptography primitives |
+| **DID Core** | W3C Software License | DID specifications |
+| **DIDComm v2** | Apache 2.0 | Messaging protocol |
+
+### Commercial Use
+
+UDNA is **free for commercial use** under the Apache 2.0 license. Organizations can:
+
+- Use UDNA in proprietary products
+- Offer UDNA-based commercial services
+- Modify and redistribute UDNA code
+- Patent improvements (with patent grant)
 
 ---
 
-**Universal DID-Native Addressing is more than a protocol—it's a foundation for a more secure, private, and equitable digital future. Join us in building the next generation of Internet infrastructure.**
+<div align="center">
 
-[![Join the Community](https://img.shields.io/badge/Join-W3C%20Community%20Group-blue?style=for-the-badge)](https://www.w3.org/community/udna/)
-[![GitHub](https://img.shields.io/badge/GitHub-Source%20Code-black?style=for-the-badge&logo=github)](https://github.com/w3c-udna)
-[![Specification](https://img.shields.io/badge/Read-Specification-green?style=for-the-badge)](https://w3c-udna.github.io/specifications/)
+## Supported By
 
-*The future of networking is identity-native. The future is UDNA.*
+[![W3C](https://img.shields.io/badge/W3C-Member-005a9c?style=for-the-badge&logo=w3c&logoColor=white)](https://www.w3.org)
+[![Linux Foundation](https://img.shields.io/badge/Linux%20Foundation-Member-f5f5f5?style=for-the-badge&logo=linuxfoundation&logoColor=black)](https://www.linuxfoundation.org)
+[![DIF](https://img.shields.io/badge/DIF-Member-0066cc?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTEyIDdjLTIuNzYgMC01IDIuMjQtNSA1czIuMjQgNSA1IDUgNS0yLjI0IDUtNS0yLjI0LTUtNS01em0wIDhjLTEuNjYgMC0zLTEuMzQtMy0zczEuMzQtMyAzLTMgMyAxLjM0IDMgMy0xLjM0IDMtMyAzem0wLTVjLS41NSAwLTEtLjQ1LTEtMXMuNDUtMSAxLTEgMSAuNDUgMSAxLS40NSAxLTEgMXoiIGZpbGw9IiMwMDY2Y2MiLz48L3N2Zz4=)](https://identity.foundation)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=w3c-udna/udna&type=Date)](https://star-history.com/#w3c-udna/udna&Date)
+
+**Universal DID-Native Addressing is more than a protocol—it's a foundation for a more secure, private, and equitable digital future.**
+
+[![Join W3C Group](https://img.shields.io/badge/Join%20the%20Revolution-Universal%20DID--Native%20Addressing-0066cc?style=for-the-badge&logo=rocket&logoColor=white)](https://www.w3.org/community/udna/)
+
+</div>
+```
+
