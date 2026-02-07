@@ -1,10 +1,7 @@
 # Universal DID-Native Addressing (UDNA): Technical Specification
 
-**Document Version:** 1.1  
-**Standards Track:** Informational  
-**Category:** Network Protocol  
-**Author:** Amir Hameed Mir (Sirraya Labs)  
-**Contributors:** AI-Assisted Technical Expansion  
+**Document Version:** 1.1   
+**Author:** Amir Hameed Mir (Sirraya Labs)
 **Date:** August 28, 2025  
 **Status:** Draft Specification  
 
