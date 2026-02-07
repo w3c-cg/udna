@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/dilithium-2023/v1"
+  ],
+  "id": "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU",
+  "controller": [
+    "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU"
+  ],
+  "verification_method": [
+    {
+      "id": "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU#keys-1",
+      "type": "Dilithium5VerificationKey2023",
+      "controller": "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU",
+      "publicKeyMultibase": "zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU"
+    }
+  ],
+  "authentication": [
+    "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU#keys-1"
+  ],
+  "assertion_method": [
+    "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU#keys-1"
+  ],
+  "capability_invocation": [
+    "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU#keys-1"
+  ],
+  "capability_delegation": [
+    "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU#keys-1"
+  ],
+  "service": [
+    {
+      "id": "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU#linked-domain",
+      "type": "LinkedDomains",
+      "service_endpoint": "https://example.com"
+    }
+  ]
+}

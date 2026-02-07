@@ -1,0 +1,68 @@
+{
+  "technical_specifications": {
+    "api_endpoints": {
+      "did_creation": "QuantumSafeIdentity::new() -> DID + keys",
+      "key_generation": "Dilithium5::keypair() -> (PK, SK)",
+      "signing": "Dilithium5::sign(SK, message) -> signature",
+      "vc_issuance": "identity.issue_credential(subject, claims) -> VC",
+      "verification": "Dilithium5::verify(PK, message, signature) -> bool",
+      "vp_creation": "identity.create_verifiable_presentation(credentials) -> VP"
+    },
+    "cryptographic_primitives": {
+      "hash_function": "SHA3-512 (FIPS 202)",
+      "random_number_generation": "CSPRNG",
+      "signature_scheme": "Dilithium5"
+    },
+    "deployment_considerations": {
+      "key_management": "Use hardware security modules (HSM) for production",
+      "revocation": "Implement CRL/OCSP or use status lists",
+      "scalability": "Supports millions of credentials with linear scaling",
+      "storage": "Keys should be stored securely, signatures can be public"
+    },
+    "generated": "2026-02-06T16:04:39.404320400+00:00",
+    "interoperability": {
+      "compatible_with": [
+        "All W3C VC/DID verifiers",
+        "SpruceID",
+        "MATTR",
+        "Transmute",
+        "Microsoft Entra",
+        "IBM Verify Credentials"
+      ],
+      "export_formats": [
+        "W3C VC",
+        "W3C DID Document",
+        "Raw keys"
+      ],
+      "input_formats": [
+        "JSON",
+        "UTF-8 text",
+        "binary data"
+      ],
+      "output_formats": [
+        "JSON-LD",
+        "Base64URL",
+        "hex",
+        "binary"
+      ]
+    },
+    "performance_characteristics": {
+      "key_generation": "~10-50ms (varies by hardware)",
+      "memory_usage": {
+        "documents": "~1-5KB (JSON)",
+        "keys": "~7.5KB (PK: 2.5KB, SK: 4.8KB)",
+        "signatures": "~4.5KB"
+      },
+      "signing_time": "~5-20ms",
+      "verification_time": "~2-10ms"
+    },
+    "security_parameters": {
+      "classical_security": "> 2^256 classical operations",
+      "module_rank": 5,
+      "quantum_security": "> 2^128 quantum operations",
+      "security_level": 5,
+      "side_channel_resistance": "Constant-time implementation"
+    },
+    "system_overview": "Quantum-Safe W3C Verifiable Credentials and DIDs using Dilithium5"
+  }
+}

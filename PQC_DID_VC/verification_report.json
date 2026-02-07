@@ -1,0 +1,49 @@
+{
+  "verification_report": {
+    "cryptographic_system": "Dilithium5 (NIST PQC Standard)",
+    "generated": "2026-02-06T16:04:39.401778200+00:00",
+    "key_sizes": {
+      "public_key_bytes": 2592,
+      "secret_key_bytes": 4864,
+      "signature_bytes": 4595
+    },
+    "quantum_safety": {
+      "algorithm": "Dilithium5",
+      "estimated_quantum_security": "> 2^128 operations",
+      "nist_status": "Standardized (FIPS 203)",
+      "quantum_resistance": "Secure against quantum computer attacks",
+      "security_level": "Level 5 (Highest)"
+    },
+    "standards_compliance": {
+      "jose": "RFC 7515",
+      "multibase": "draft-multiformats-multibase",
+      "w3c_did": "v1.0",
+      "w3c_vc": "v1.1"
+    },
+    "verifiable_credential": {
+      "credential_types": [
+        "VerifiableCredential",
+        "UniversityDegreeCredential"
+      ],
+      "expires": "2027-02-06T16:04:39.373315300+00:00",
+      "id": "urn:uuid:f693f594-bbb2-4738-b7d4-855cc8f60ae1",
+      "issued": "2026-02-06T16:04:39.373315300+00:00",
+      "issuer": "did:dilithium:zHbNyuesOaF7iI0lGahijKbyotsZDlbp8vzwSHaXjcy4",
+      "signature_algorithm": "Dilithium5Signature2023",
+      "signature_length_bytes": 4595,
+      "subject": "did:dilithium:zIcw7BBc2PwfjB85CWjJIq9YMdadDwj3OxAQyWzOopfU"
+    },
+    "verifiable_presentation": {
+      "challenge": "authentication",
+      "signature_algorithm": "Dilithium5Signature2023",
+      "signature_length_bytes": 4595
+    },
+    "verification_instructions": {
+      "step_1": "Extract proof.proof_value (Base64URL encoded)",
+      "step_2": "Decode to get raw Dilithium5 signature",
+      "step_3": "Canonicalize JSON-LD document",
+      "step_4": "Verify using Dilithium5.verify() with issuer's public key",
+      "step_5": "Check all fields match expected values"
+    }
+  }
+}
