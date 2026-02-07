@@ -6,226 +6,226 @@
 ![Status](https://img.shields.io/badge/Status-Proposed%20Standard%20(Pre--Development)-3498db?style=for-the-badge)
 ![W3C](https://img.shields.io/badge/W3C-Community%20Group%20Proposal-005a9c?style=for-the-badge)
 
-**A Paradigm Shift: From Location-Based to Identity-Based Networking**
+**The Architecture Revolution: From Network Locations to Sovereign Identity**
 
-*Rethinking Internet Architecture for the Age of Decentralized Identity*
+*Reconstructing Digital Interaction Through Cryptographic Addressing*
 
-[![Explore Concept](https://img.shields.io/badge/Explore-UDNA%20Concept%20Paper-blue?style=for-the-badge&logo=readme)](CONCEPT.md)
-[![Join Discussion](https://img.shields.io/badge/Join-W3C%20Discussion%20Group-0066cc?style=for-the-badge)](https://www.w3.org/community/udna/)
-[![View Roadmap](https://img.shields.io/badge/View-Development%20Roadmap-27ae60?style=for-the-badge)](ROADMAP.md)
+[![Concept Architecture](https://img.shields.io/badge/Architecture-Concept%20Whitepaper-blue?style=for-the-badge&logo=readme)](CONCEPT.md)
+[![Technical Specification](https://img.shields.io/badge/Technical-Specification%20Draft-0066cc?style=for-the-badge&logo=gitbook)](specs/)
+[![Research Roadmap](https://img.shields.io/badge/Research-Development%20Trajectory-27ae60?style=for-the-badge&logo=roadmap)](ROADMAP.md)
 
 </div>
 
 ---
 
-## 🧭 Navigation Panel
+## Navigation Matrix
 
 <div align="center">
 
-| **Overview** | **Architecture** | **Use Cases** | **Development** | **Get Involved** |
+| **Foundation** | **Architecture** | **Implementation** | **Ecosystem** | **Engagement** |
 |:---:|:---:|:---:|:---:|:---:|
-| [🔍 **Executive Summary**](#executive-summary)<br>[🎯 **The Problem**](#the-core-problem)<br>[💡 **The Solution**](#the-udna-solution) | [🏗️ **Architecture**](#architectural-vision)<br>[⚙️ **How It Works**](#how-it-works)<br>[📊 **Comparison**](#comparative-analysis) | [🏥 **Healthcare**](#healthcare--medical)<br>[🏢 **Enterprise**](#enterprise--api)<br>[🔗 **IoT**](#iot--devices)<br>[💰 **Finance**](#financial-services) | [📈 **Roadmap**](#development-roadmap)<br>[⚡ **Milestones**](#key-milestones)<br>[🔬 **Research**](#research-areas) | [👥 **Community**](#community--governance)<br>[💻 **Contribute**](#contribution-paths)<br>[📚 **Resources**](#resources--learning) |
+| [**Executive Synthesis**](#executive-synthesis)<br>[**Problem Analysis**](#the-architectural-imperative)<br>[**Solution Architecture**](#the-udna-paradigm) | [**System Architecture**](#architectural-framework)<br>[**Operational Mechanics**](#operational-mechanics)<br>[**Comparative Analysis**](#comparative-analysis) | [**Development Pathway**](#development-pathway)<br>[**Integration Strategy**](#integration-strategy)<br>[**Performance Targets**](#performance-targets) | [**Healthcare Transformation**](#healthcare-transformation)<br>[**Enterprise Evolution**](#enterprise-evolution)<br>[**IoT Revolution**](#iot-revolution) | [**Governance Framework**](#governance-framework)<br>[**Contribution Vectors**](#contribution-vectors)<br>[**Knowledge Repository**](#knowledge-repository) |
 
 </div>
 
 ---
 
-## 🔍 Executive Summary
+## Executive Synthesis
 
-**Universal DID-Native Addressing (UDNA)** is a proposed architectural framework that fundamentally reimagines internet addressing by making **Decentralized Identifiers (DIDs)** the primary addressing mechanism instead of IP addresses and URLs.
+**Universal DID-Native Addressing (UDNA)** represents a fundamental architectural reconstruction of digital addressing, establishing **Decentralized Identifiers (DIDs)** as the primary addressing primitive, supplanting location-based IP addresses and URLs with cryptographic identity.
 
-### Key Insight
+### Core Proposition
 
-> "The internet was built around **where things are**, not **who or what they are**. UDNA proposes to invert this paradigm, creating a world where identity is native to the network, not bolted on afterward."
+> "The current internet architecture centers on **where information resides** rather than **what entity it represents**. UDNA inverts this paradigm, embedding identity as a first-class construct within the network fabric."
 
-### At a Glance
+### Architectural Contrast
 
 <div align="center">
 
-| **Aspect** | **Current Internet** | **UDNA Vision** | **Impact** |
-|------------|----------------------|-----------------|------------|
-| **Addressing** | IP addresses (location) | DIDs (identity) | Services move, identity stays |
-| **Security** | TLS, VPNs (add-on) | Built-in cryptography | No man-in-the-middle possible |
-| **Discovery** | DNS (centralized) | DID documents (decentralized) | Direct, verifiable discovery |
-| **Privacy** | IP correlation | Pairwise pseudonymous DIDs | Reduced metadata leakage |
+| **Dimension** | **Contemporary Internet** | **UDNA Architecture** | **Architectural Impact** |
+|---------------|---------------------------|-----------------------|--------------------------|
+| **Addressing Primitive** | IP addresses (geographic location) | DIDs (cryptographic identity) | Services become mobile, identity persists |
+| **Security Model** | TLS/SSL (layered security) | Embedded cryptographic verification | Elimination of man-in-the-middle vectors |
+| **Discovery Protocol** | DNS (hierarchical resolution) | DID document resolution (decentralized) | Direct, verifiable service discovery |
+| **Privacy Architecture** | IP correlation vulnerability | Pairwise pseudonymous identifiers | Systemic metadata leakage reduction |
 
 </div>
 
-### The Evolution Path
+### Evolutionary Trajectory
 
 ```
-Traditional Internet (1980s-2020s)        UDNA Internet (Future)
-      ↓                                           ↓
-[IP Addresses] → [DNS Names] → [URLs]    [DIDs] → [Verifiable Services]
-      ↓                                           ↓
-Location-centric                          Identity-centric
-"Go to this server"                       "Talk to this entity"
+Legacy Internet Architecture (1980s-Present)    UDNA Architecture (Future State)
+      ↓                                                  ↓
+[IP Addresses] → [DNS Names] → [URLs]          [DIDs] → [Verifiable Services]
+      ↓                                                  ↓
+Location-centric addressing                 Identity-centric addressing
+"Connect to this server"                   "Communicate with this entity"
 ```
 
 ---
 
-## 🎯 The Core Problem
+## The Architectural Imperative
 
-### Why Current Addressing Falls Short
+### Systemic Limitations of Current Addressing
 
-<div class="problem-grid">
+<div class="analysis-matrix">
 <table>
 <tr>
-<th width="33%">Technical Limitations</th>
-<th width="33%">Security Challenges</th>
-<th width="33%">User Experience Issues</th>
+<th width="33%">Technical Constraints</th>
+<th width="33%">Security Vulnerabilities</th>
+<th width="33%">User Experience Deficiencies</th>
 </tr>
 <tr>
 <td>
 
-**📍 Location Binding**
-- Services tied to specific servers
-- Breaking changes on migration
-- CDN and load balancer complexity
+**Location Binding**
+- Services anchored to physical infrastructure
+- Architectural fragility during migration
+- Complexity from CDNs and load balancers
 
-**🔗 Protocol Fragmentation**
-- HTTP, WebSocket, gRPC, etc.
-- Different auth for each
-- Port/protocol management
+**Protocol Fragmentation**
+- Disparate protocols (HTTP, WebSocket, gRPC)
+- Inconsistent authentication models
+- Port and protocol management overhead
 
-**📡 Infrastructure Dependency**
-- DNS hierarchies
-- Certificate Authorities
-- Cloud provider lock-in
+**Infrastructure Dependencies**
+- Centralized DNS hierarchies
+- Certificate Authority monopolies
+- Cloud provider architectural lock-in
 
 </td>
 <td>
 
-**🔓 Trust Delegation**
-- CAs as single points of failure
-- DNS poisoning attacks
+**Delegated Trust Model**
+- Certificate Authorities as single points of failure
+- DNS poisoning and cache injection attacks
 - BGP hijacking vulnerabilities
 
-**👁️ Surveillance Surface**
-- IP address tracking
-- Metadata correlation
-- Geographic restrictions
+**Surveillance Architecture**
+- IP address tracking and correlation
+- Metadata collection surface area
+- Geographic restriction mechanisms
 
-**🔗 Attack Vectors**
-- Man-in-the-middle
-- Phishing (similar URLs)
-- DDoS amplification
+**Attack Surface Expansion**
+- Man-in-the-middle interception points
+- Phishing through URL obfuscation
+- DDoS amplification vulnerabilities
 
 </td>
 <td>
 
-**🔑 Password Fatigue**
-- Multiple logins per service
-- Password managers as workarounds
-- 2FA complexity
+**Authentication Fatigue**
+- Repeated authentication across services
+- Password managers as compensatory systems
+- Multi-factor authentication complexity
 
-**📱 Device Proliferation**
-- Separate identities per device
-- Sync and backup challenges
-- Cross-device auth friction
+**Device Proliferation Complexity**
+- Separate identities per device ecosystem
+- Synchronization and backup challenges
+- Cross-device authentication friction
 
-**🌍 Cross-Service Silos**
-- No portable reputation
-- Re-verification everywhere
-- Data duplication
+**Service Silos**
+- Absence of portable reputation systems
+- Repeated identity verification cycles
+- Systemic data duplication
 
 </td>
 </tr>
 </table>
 </div>
 
-### The Identity Crisis of the Modern Internet
+### The Identity Crisis in Digital Architecture
 
-1. **We address places, not people** - IPs point to servers, not entities
-2. **We authenticate repeatedly** - Every service needs separate proof
-3. **We trust intermediaries** - CAs, DNS providers, identity brokers
-4. **We leak metadata constantly** - IPs reveal location and correlation
-5. **We can't move services easily** - URLs break when infrastructure changes
+1. **We address infrastructure, not entities** - IPs reference machines, not principals
+2. **We authenticate redundantly** - Each service requires independent proof
+3. **We trust intermediaries by necessity** - CAs, DNS providers, identity brokers
+4. **We leak metadata architecturally** - IPs expose location and enable correlation
+5. **We cannot migrate services transparently** - URLs fracture when infrastructure evolves
 
 ---
 
-## 💡 The UDNA Solution
+## The UDNA Paradigm
 
-### Core Principle: Identity as Address
+### Fundamental Principle: Identity as Address
 
-Instead of `https://api.example.com/user/data`, UDNA enables:
+Transitioning from `https://api.service-provider.com/user/profile` to:
 ```
-udna://did:web:alice.example/personal/profile
-udna://did:key:z6Mk...9pAqkPc/services/chat
+udna://did:web:user.example/personal/profile
+udna://did:key:z6Mk...9pAqkPc/services/communication
 udna://did:ion:abc...xyz/api/v1/documents
 ```
 
-### Key Innovations
+### Architectural Innovations
 
 <div align="center">
 
-| **Innovation** | **Description** | **Benefit** |
-|----------------|-----------------|-------------|
-| **Identity-First Routing** | Network routes based on cryptographic identity, not location | Services can move without breaking addresses |
-| **Built-in Authentication** | Every address includes proof of identity | No separate auth steps needed |
-| **Capability-Based Security** | Fine-grained permissions encoded in URLs | Least-privilege access by default |
-| **Privacy-Preserving Design** | Pairwise DIDs prevent correlation | Metadata minimized at protocol level |
-| **Decentralized Resolution** | DID methods replace DNS | No central points of failure |
+| **Innovation** | **Technical Description** | **Systemic Benefit** |
+|----------------|---------------------------|----------------------|
+| **Identity-First Routing** | Network routing based on cryptographic identity rather than location | Transparent service mobility without address disruption |
+| **Embedded Authentication** | Identity verification integrated into addressing layer | Elimination of separate authentication protocols |
+| **Capability-Based Authorization** | Fine-grained permissions encoded within address structure | Least-privilege access as default architectural principle |
+| **Privacy-Preserving Architecture** | Pairwise DIDs preventing correlation across contexts | Metadata minimization at protocol level |
+| **Decentralized Resolution** | DID method resolution replacing centralized DNS | Elimination of single points of failure |
 
 </div>
 
-### The Technical Foundation
+### Technical Foundation
 
-UDNA builds on established standards:
+UDNA constructs upon established standards:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    UDNA Architecture Stack                   │
+│                   UDNA Architectural Stack                   │
 ├─────────────────────────────────────────────────────────────┤
-│  🎯 UDNA Protocol Layer                                      │
-│  • Identity-based addressing                                │
-│  • Capability URLs                                         │
-│  • Service discovery                                       │
+│  UDNA Protocol Layer                                        │
+│  • Identity-native addressing                               │
+│  • Capability-based URL semantics                          │
+│  • Decentralized service discovery                         │
 ├─────────────────────────────────────────────────────────────┤
-│  🔐 W3C DID Core 1.0 + DIDComm v2                           │
+│  W3C DID Core 1.0 + DIDComm v2 Foundation                  │
 │  • Decentralized Identifiers                               │
-│  • DID Documents                                           │
-│  • DID Resolution                                          │
+│  • DID Document structure                                  │
+│  • DID Resolution protocol                                 │
 ├─────────────────────────────────────────────────────────────┤
-│  🏗️ Existing Transport Layer                                │
-│  • HTTP/3, WebSocket, WebRTC                              │
-│  • TLS 1.3, Noise Protocol                                │
-│  • QUIC, libp2p                                           │
+│  Existing Transport Infrastructure                          │
+│  • HTTP/3, WebSocket, WebRTC                               │
+│  • TLS 1.3, Noise Protocol Framework                      │
+│  • QUIC, libp2p transport layers                          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🏗️ Architectural Vision
+## Architectural Framework
 
-### Layered Architecture
+### Layered System Architecture
 
 ```mermaid
 graph TB
     subgraph "Application Layer"
-        A1[Web Apps]
-        A2[Mobile Apps]
-        A3[IoT Devices]
-        A4[APIs & Services]
+        A1[Web Applications]
+        A2[Mobile Applications]
+        A3[IoT Device Ecosystems]
+        A4[API Service Meshes]
     end
     
     subgraph "UDNA Protocol Layer"
-        B1[UDNA Addressing<br/>udna://did:method/path]
-        B2[DID Resolution<br/>Multi-method support]
-        B3[Capability System<br/>Fine-grained permissions]
-        B4[Service Discovery<br/>Via DID documents]
+        B1[UDNA Addressing Schema<br/>udna://did:method/path]
+        B2[DID Resolution Infrastructure<br/>Multi-method support]
+        B3[Capability System Architecture<br/>Fine-grained authorization]
+        B4[Service Discovery Protocol<br/>Via DID document endpoints]
     end
     
     subgraph "Identity Layer"
-        C1[W3C DIDs<br/>did:key, did:web, did:ion]
-        C2[DID Documents<br/>Public keys, services]
-        C3[Verifiable Credentials<br/>Selective disclosure]
+        C1[W3C DID Standard<br/>did:key, did:web, did:ion]
+        C2[DID Document Structure<br/>Public keys, service endpoints]
+        C3[Verifiable Credentials<br/>Selective disclosure framework]
     end
     
     subgraph "Transport Layer"
-        D1[HTTP/3, WebSocket]
-        D2[WebRTC, libp2p]
-        D3[TLS 1.3, Noise]
+        D1[HTTP/3, WebSocket Protocols]
+        D2[WebRTC, libp2p Transports]
+        D3[TLS 1.3, Noise Security]
     end
     
     A1 --> B1
@@ -245,217 +245,217 @@ graph TB
 
 ### Core Components
 
-#### 1. **UDNA Addressing Scheme**
+#### 1. **UDNA Addressing Schema**
 ```
 udna://{did}/{path}?{query}#{fragment}
        ↑      ↑        ↑         ↑
     Protocol  Identity Resource  Capability
                ↑
-          e.g., did:web:alice.example
+          e.g., did:web:user.example
                 did:key:z6Mk...9pAqkPc
                 did:ion:abc...xyz
 ```
 
-#### 2. **DID Resolution Network**
-- **Local Cache**: ~1ms resolution for known DIDs
-- **Peer Cache**: Distributed P2P resolution
-- **Method Resolvers**: Pluggable DID method support
-- **Fallback Chains**: Multiple resolution strategies
+#### 2. **DID Resolution Infrastructure**
+- **Local Resolution Cache**: Sub-millisecond resolution for known DIDs
+- **Peer-to-Peer Resolution**: Distributed resolution network
+- **Pluggable Method Resolvers**: Extensible DID method support
+- **Resolution Fallback Chains**: Multi-strategy resolution pathways
 
-#### 3. **Capability System**
+#### 3. **Capability Architecture**
 ```json
 {
-  "capability": "udna://did:web:bob.example/data/read",
-  "issuer": "did:web:alice.example",
-  "audience": "did:web:api.example",
-  "expires": "2024-12-31T23:59:59Z",
-  "actions": ["read"],
+  "capability": "udna://did:web:principal.example/data/read",
+  "issuer": "did:web:authority.example",
+  "audience": "did:web:service.example",
+  "expiration": "2024-12-31T23:59:59Z",
+  "authorized_actions": ["read"],
   "constraints": {
-    "quota": 1000,
-    "time_window": "9am-5pm"
+    "access_quota": 1000,
+    "temporal_window": "9:00-17:00"
   }
 }
 ```
 
-#### 4. **Service Discovery**
-DID documents become service registries:
+#### 4. **Service Discovery Protocol**
+DID documents function as service registries:
 ```json
 {
-  "id": "did:web:service.example",
+  "id": "did:web:service-provider.example",
   "service": [{
-    "id": "#chat",
+    "id": "#messaging",
     "type": "MessagingService",
-    "serviceEndpoint": "udna://did:web:service.example/chat"
+    "serviceEndpoint": "udna://did:web:service-provider.example/messaging"
   }, {
     "id": "#storage",
     "type": "StorageService", 
-    "serviceEndpoint": "udna://did:web:service.example/storage"
+    "serviceEndpoint": "udna://did:web:service-provider.example/storage"
   }]
 }
 ```
 
 ---
 
-## 🔮 Use Cases & Impact
+## Transformation Vectors
 
-### Healthcare & Medical
-**Problem**: Patient data siloed across providers, fax machines still in use, breach risks high.
+### Healthcare Transformation
+**Current State**: Patient data fragmented across providers, legacy communication systems, systemic breach risks.
 
-**UDNA Solution**: 
-- Each patient has a master DID
-- Providers get capability tokens for specific data
-- Emergency access via break-glass capabilities
-- Audit trail built into addressing layer
+**UDNA Architecture**: 
+- Each patient maintains a sovereign DID
+- Providers receive capability tokens for specific data segments
+- Emergency access via cryptographic break-glass mechanisms
+- Immutable audit trails embedded within addressing layer
 
-**Impact**: 
-- 90% reduction in data breaches
-- Instant access to complete medical history
-- Patients control who sees what data
+**Transformational Impact**: 
+- 90% reduction in data breach surface
+- Immediate access to comprehensive medical history
+- Patient-controlled data disclosure policies
 
-### Enterprise & API
-**Problem**: API sprawl, key management nightmares, audit complexity.
+### Enterprise Evolution
+**Current State**: API proliferation, credential management complexity, audit trail inadequacy.
 
-**UDNA Solution**:
-- Services addressed by DIDs, not URLs
-- Automatic service discovery
-- Capability-based access control
-- Cryptographic audit trails
+**UDNA Architecture**:
+- Services addressed cryptographically rather than by location
+- Automated service dependency discovery
+- Capability-based access control with immediate revocation
+- Cryptographic audit trails with non-repudiation
 
-**Impact**:
-- Eliminate API key management
-- Automatic service dependency mapping
-- Fine-grained permission revocation
+**Transformational Impact**:
+- Elimination of API key management overhead
+- Automated service dependency mapping
+- Granular permission revocation in milliseconds
 
-### IoT & Devices
-**Problem**: Devices tied to manufacturer clouds, no direct communication, privacy concerns.
+### IoT Revolution
+**Current State**: Devices tethered to manufacturer clouds, absence of direct communication, pervasive privacy concerns.
 
-**UDNA Solution**:
-- Each device has a DID
-- Device-to-device encrypted communication
-- No cloud dependency for local operations
-- Owner-controlled access policies
+**UDNA Architecture**:
+- Each device possesses a cryptographic identity
+- Device-to-device encrypted communication channels
+- Cloud-independent local operation capabilities
+- Owner-controlled access policy enforcement
 
-**Impact**:
-- Local operations without internet
-- No data sent to manufacturer clouds
-- Direct owner-to-device control
+**Transformational Impact**:
+- Local operations without external dependencies
+- Elimination of data transmission to manufacturer clouds
+- Direct cryptographic control between owner and device
 
-### Financial Services
-**Problem**: KYC repeated at every institution, slow transfers, fraud detection reactive.
+### Financial Services Evolution
+**Current State**: Repeated KYC verification, settlement latency, reactive fraud detection.
 
-**UDNA Solution**:
-- Portable verifiable credentials
-- DID-based account addressing
-- Real-time fraud detection at protocol level
+**UDNA Architecture**:
+- Portable verifiable credential frameworks
+- DID-based account addressing systems
+- Real-time fraud detection at protocol layer
 - Privacy-preserving transaction validation
 
-**Impact**:
-- Instant account portability
-- Reduced fraud losses
-- Global compliance interoperability
+**Transformational Impact**:
+- Instant account portability across institutions
+- Significant reduction in fraud-related losses
+- Global regulatory compliance interoperability
 
 ---
 
-## 🔄 How It Works
+## Operational Mechanics
 
-### Step-by-Step Communication Flow
+### Communication Protocol Flow
 
 ```mermaid
 sequenceDiagram
-    participant A as Alice's App
-    participant R as Resolver
-    participant B as Bob's Service
-    participant D as DID Document
+    participant A as Client Application
+    participant R as Resolution Service
+    participant S as Service Endpoint
+    participant D as DID Document Registry
     
-    Note over A,B: 1. Address Resolution
-    A->>R: Resolve udna://did:web:bob.example/api
-    R->>D: Fetch DID Document for bob.example
-    D-->>R: Return with service endpoints
-    R-->>A: Return verified endpoints
+    Note over A,S: Phase 1: Address Resolution
+    A->>R: Resolve udna://did:web:service.example/api
+    R->>D: Fetch DID Document for service.example
+    D-->>R: Return service endpoint descriptors
+    R-->>A: Return verified endpoint metadata
     
-    Note over A,B: 2. Capability Validation
-    A->>B: Request with capability token
-    B->>B: Validate token cryptographically
-    B-->>A: Accept/Reject based on capability
+    Note over A,S: Phase 2: Capability Validation
+    A->>S: Request with capability token
+    S->>S: Cryptographic token validation
+    S-->>A: Acceptance/Rejection based on capability scope
     
-    Note over A,B: 3. Secure Communication
-    A->>B: Encrypted message via DIDComm
-    B->>A: Encrypted response
-    A->>B: Capability revocation (if needed)
+    Note over A,S: Phase 3: Secure Communication
+    A->>S: Encrypted payload via DIDComm
+    S->>A: Encrypted response
+    A->>S: Capability revocation (when required)
 ```
 
-### Real-World Example: Medical Record Sharing
+### Clinical Implementation: Medical Record Ecosystem
 
-1. **Patient Alice** creates a DID: `did:key:zAlice123`
-2. **Hospital** gets capability: `udna://did:key:zAlice123/records/read?expires=2024-12-31`
-3. **Specialist** requests specific record: `udna://did:key:zAlice123/lab-results/2024-05`
-4. **Alice** grants temporary access: `udna://did:key:zAlice123/lab-results/2024-05?duration=24h`
-5. **System** automatically revokes after 24 hours
+1. **Patient Principal** establishes sovereign DID: `did:key:zPatient123`
+2. **Healthcare Institution** receives capability: `udna://did:key:zPatient123/records/read?expires=2024-12-31`
+3. **Specialist Practitioner** requests specific data: `udna://did:key:zPatient123/laboratory/2024-05`
+4. **Patient** authorizes temporal access: `udna://did:key:zPatient123/laboratory/2024-05?duration=24h`
+5. **System Architecture** automatically revokes access post-duration
 
-### Migration Path for Existing Systems
+### Migration Framework for Existing Systems
 
 ```
-Phase 1: Dual Support
-Existing: https://api.example.com/users/123
-UDNA:    udna://did:web:api.example/users/123
-         ↑
-      Both work simultaneously
+Phase 1: Dual Protocol Support
+Legacy: https://api.service.com/users/123
+UDNA:  udna://did:web:api.service.com/users/123
+        ↑
+     Coexistence with graceful degradation
 
-Phase 2: UDNA-First
-Primary: udna://did:web:api.example/users/123
-Fallback: Legacy URL for compatibility
+Phase 2: UDNA-Primary Architecture
+Primary: udna://did:web:api.service.com/users/123
+Fallback: Legacy URL for compatibility layer
 
-Phase 3: UDNA-Only
-Only: udna://did:web:api.example/users/123
-      ↑
-    Simplified infrastructure
+Phase 3: UDNA-Native Implementation
+Exclusive: udna://did:web:api.service.com/users/123
+           ↑
+        Simplified infrastructure topology
 ```
 
 ---
 
-## 📊 Comparative Analysis
+## Comparative Analysis
 
-### Protocol Comparison Matrix
+### Protocol Analysis Matrix
 
 <div align="center">
 
-| **Feature** | **Traditional Web** | **OAuth 2.0** | **UDNA** | **Advantage** |
-|-------------|---------------------|---------------|----------|---------------|
-| **Addressing** | URLs (location) | URLs + tokens | DIDs (identity) | Services can move |
-| **Authentication** | Cookies, API keys | Access tokens | Built-in to address | No separate auth flow |
-| **Authorization** | ACLs, RBAC | Scopes | Capability URLs | Fine-grained, revocable |
-| **Discovery** | DNS, WSDL | Manual config | DID documents | Automatic, verifiable |
-| **Privacy** | IP tracking | Token correlation | Pairwise DIDs | Metadata minimized |
-| **Portability** | Vendor lock-in | Limited | Full self-sovereignty | Take identity anywhere |
-| **Auditability** | Log analysis | Token logs | Cryptographic proof | Tamper-evident |
+| **Architectural Dimension** | **Traditional Web Architecture** | **OAuth 2.0 Framework** | **UDNA Architecture** | **Architectural Advantage** |
+|-----------------------------|----------------------------------|-------------------------|-----------------------|-----------------------------|
+| **Addressing Primitive** | URLs (location-based) | URLs with token parameters | DIDs (identity-based) | Service mobility without address disruption |
+| **Authentication Mechanism** | Cookies, API keys | Access tokens | Identity-embedded addressing | Elimination of separate authentication protocols |
+| **Authorization Framework** | ACLs, RBAC systems | OAuth scopes | Capability-based URL semantics | Fine-grained, immediately revocable permissions |
+| **Discovery Protocol** | DNS, WSDL specifications | Manual configuration | DID document resolution | Automated, cryptographically verifiable discovery |
+| **Privacy Architecture** | IP tracking vulnerabilities | Token correlation risks | Pairwise pseudonymous DIDs | Systemic metadata minimization |
+| **Portability Characteristic** | Vendor architectural lock-in | Limited portability | Full cryptographic sovereignty | Identity preservation across ecosystem boundaries |
+| **Auditability Framework** | Log analysis systems | Token audit logs | Cryptographic proof chains | Tamper-evident audit trails |
 
 </div>
 
 ### Performance Characteristics
 
-| **Metric** | **Current Web** | **UDNA Target** | **Improvement** |
-|------------|-----------------|-----------------|-----------------|
-| **Auth latency** | 100-500ms (OAuth flow) | 1-10ms (built-in) | 10-50x faster |
-| **Resolution** | 20-200ms (DNS + TLS) | 1-50ms (cached DID) | 2-20x faster |
-| **Connection setup** | 3 RTTs (TCP+TLS) | 1-2 RTTs (0-RTT capable) | 33-66% faster |
-| **Revocation** | Minutes-hours | Milliseconds | 1000x faster |
+| **Performance Metric** | **Contemporary Web** | **UDNA Target Performance** | **Performance Improvement** |
+|------------------------|----------------------|-----------------------------|-----------------------------|
+| **Authentication Latency** | 100-500ms (OAuth flow) | 1-10ms (architecture-embedded) | 10-50x performance increase |
+| **Resolution Latency** | 20-200ms (DNS + TLS negotiation) | 1-50ms (cached DID resolution) | 2-20x resolution acceleration |
+| **Connection Establishment** | 3 RTTs (TCP+TLS handshake) | 1-2 RTTs (0-RTT capable) | 33-66% reduction in setup time |
+| **Revocation Latency** | Minutes to hours propagation | Millisecond propagation | 1000x acceleration in revocation |
 
-### Security Comparison
+### Security Architecture Comparison
 
 ```mermaid
 graph LR
-    subgraph "Traditional Security"
-        A[Request] --> B[DNS Lookup]
-        B --> C[TLS Handshake]
-        C --> D[Server Auth]
-        D --> E[Application Auth]
-        E --> F[Access Control]
-        F --> G[Response]
+    subgraph "Traditional Security Architecture"
+        A[Client Request] --> B[DNS Resolution]
+        B --> C[TLS Handshake Protocol]
+        C --> D[Server Authentication]
+        D --> E[Application Authentication]
+        E --> F[Access Control Evaluation]
+        F --> G[Service Response]
     end
     
-    subgraph "UDNA Security"
+    subgraph "UDNA Security Architecture"
         H[UDNA Request] --> I[Identity Verification]
-        I --> J[Capability Check]
+        I --> J[Capability Evaluation]
         J --> K[Encrypted Response]
     end
     
@@ -475,9 +475,9 @@ graph LR
 
 ---
 
-## 🛣️ Development Path
+## Development Pathway
 
-### Development Roadmap
+### Development Trajectory
 
 ```mermaid
 gantt
@@ -485,253 +485,253 @@ gantt
     dateFormat  YYYY-MM
     axisFormat  %Y
     
-    section Phase 1: Specification
-    Core Spec Draft        :2024-01, 6M
-    Addressing RFC         :2024-03, 4M
-    Security Model         :2024-05, 4M
+    section Phase 1: Specification Development
+    Core Specification Draft        :2024-01, 6M
+    Addressing RFC Formulation      :2024-03, 4M
+    Security Model Specification   :2024-05, 4M
     
     section Phase 2: Reference Implementation
-    UDNA Resolver         :2024-07, 5M
-    Client Libraries      :2024-09, 6M
-    Test Suite            :2024-11, 4M
+    UDNA Resolution Engine         :2024-07, 5M
+    Client Library Development     :2024-09, 6M
+    Comprehensive Test Suite       :2024-11, 4M
     
-    section Phase 3: Ecosystem
-    Browser Integration   :2025-01, 8M
-    Cloud Provider Adoption :2025-05, 12M
-    Production Deployments :2025-09, 9M
+    section Phase 3: Ecosystem Development
+    Browser Integration Protocol   :2025-01, 8M
+    Cloud Provider Adoption        :2025-05, 12M
+    Production Deployment          :2025-09, 9M
     
-    section Phase 4: Standards
-    IETF Submission       :2026-01, 6M
-    W3C Standardization   :2026-07, 18M
-    Industry Certification :2027-01, 12M
+    section Phase 4: Standardization Pathway
+    IETF RFC Submission           :2026-01, 6M
+    W3C Standardization Track     :2026-07, 18M
+    Industry Certification        :2027-01, 12M
 ```
 
-### Key Milestones
+### Critical Milestones
 
-#### Q1-Q2 2024: Foundation
-- ✅ Concept paper published
+#### Q1-Q2 2024: Foundation Establishment
+- ✅ Conceptual framework publication
 - ⏳ W3C Community Group formation
 - 🔄 Initial specification drafts
-- 📚 Educational materials
+- 📚 Educational resource development
 
-#### Q3-Q4 2024: Prototyping
-- 🔬 Reference resolver implementation
-- 🧪 Test networks
-- 📊 Performance benchmarking
-- 🔐 Security audits
+#### Q3-Q4 2024: Prototype Development
+- 🔬 Reference resolution implementation
+- 🧪 Test network deployment
+- 📊 Performance benchmark establishment
+- 🔐 Security audit completion
 
-#### 2025: Early Adoption
-- 🚀 First production pilots
-- 🔌 Browser extension
-- 📱 Mobile SDKs
-- 🌍 Global test network
+#### 2025: Early Ecosystem Adoption
+- 🚀 Initial production deployments
+- 🔌 Browser extension development
+- 📱 Mobile SDK releases
+- 🌍 Global test network deployment
 
-#### 2026-2027: Standardization
+#### 2026-2027: Standardization Pathway
 - 📜 IETF RFC submission
-- 🏛️ W3C Recommendation track
+- 🏛️ W3C Recommendation progression
 - 🏢 Enterprise adoption programs
-- 🔧 Tooling ecosystem maturity
+- 🔧 Tooling ecosystem maturation
 
-### Research Areas
+### Research Domains
 
-1. **Performance Optimization**
-   - Zero-knowledge capability proofs
-   - Caching strategies for DID resolution
-   - Network-layer optimizations
+1. **Performance Optimization Research**
+   - Zero-knowledge capability proof systems
+   - DID resolution caching strategies
+   - Network-layer optimization protocols
 
-2. **Security Analysis**
-   - Formal protocol verification
-   - Quantum resistance planning
-   - Side-channel attack prevention
+2. **Security Analysis Research**
+   - Formal protocol verification frameworks
+   - Quantum-resistant cryptographic migration
+   - Side-channel attack mitigation strategies
 
-3. **Interoperability**
-   - Legacy system bridges
-   - Protocol translation layers
-   - Standard compliance testing
+3. **Interoperability Research**
+   - Legacy system bridging protocols
+   - Protocol translation layer architecture
+   - Standards compliance verification frameworks
 
-4. **Scalability**
-   - Distributed resolution networks
-   - Sharding strategies
-   - Load balancing approaches
+4. **Scalability Research**
+   - Distributed resolution network architecture
+   - Data sharding strategies
+   - Load balancing architectural approaches
 
 ---
 
-## 🤝 Get Involved
+## Engagement Framework
 
-### Community & Governance
+### Governance Architecture
 
-UDNA follows an open, collaborative development model inspired by successful open-source projects:
+UDNA implements an open, collaborative governance model informed by successful open-source ecosystems:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   UDNA Governance Structure              │
+│                   UDNA Governance Architecture          │
 ├─────────────────────────────────────────────────────────┤
-│  👑 Steering Committee                                  │
-│  • Technical direction                                 │
-│  • Specification approval                              │
-│  • Conflict resolution                                │
+│  Steering Committee                                    │
+│  • Technical direction formulation                     │
+│  • Specification approval governance                   │
+│  • Conflict resolution framework                       │
 ├─────────────────────────────────────────────────────────┤
-│  🛠️ Working Groups                                      │
-│  • Specification WG                                   │
-│  • Implementation WG                                  │
-│  • Security WG                                       │
-│  • Outreach WG                                       │
+│  Working Group Structure                               │
+│  • Specification Working Group                        │
+│  • Implementation Working Group                       │
+│  • Security Working Group                             │
+│  • Ecosystem Development Working Group                │
 ├─────────────────────────────────────────────────────────┤
-│  👥 General Contributors                                │
-│  • Code contributions                                 │
-│  • Documentation                                      │
-│  • Testing & feedback                                │
+│  Contributor Community                                 │
+│  • Code contribution ecosystem                         │
+│  • Documentation development                          │
+│  • Testing and feedback systems                       │
 └─────────────────────────────────────────────────────────┘
 ```
 
-### Contribution Paths
+### Contribution Pathways
 
 <div align="center">
 
-| **Role** | **Skills Needed** | **Time Commitment** | **Get Started** |
-|----------|-------------------|---------------------|-----------------|
-| **🧠 Researcher** | Cryptography, networking | Flexible | Review research papers |
-| **💻 Developer** | Rust/Go/JS, protocols | 5-10 hrs/week | Pick a good-first-issue |
-| **📖 Technical Writer** | Documentation, tutorials | 2-5 hrs/week | Improve existing docs |
-| **🔬 Tester** | QA, security testing | 2-8 hrs/week | Test prototypes |
-| **🌍 Evangelist** | Community building | 2-10 hrs/week | Write blog posts |
+| **Contribution Role** | **Required Expertise** | **Time Commitment** | **Engagement Pathway** |
+|-----------------------|------------------------|---------------------|------------------------|
+| **Research Scientist** | Cryptographic systems, network architecture | Flexible schedule | Review research publications |
+| **Systems Architect** | Rust/Go/JavaScript, protocol design | 5-10 hours weekly | Select implementation priorities |
+| **Technical Author** | Documentation architecture, tutorial design | 2-5 hours weekly | Enhance existing documentation |
+| **Security Researcher** | Security analysis, testing frameworks | 2-8 hours weekly | Conduct security evaluations |
+| **Ecosystem Developer** | Community development, advocacy | 2-10 hours weekly | Develop educational content |
 
 </div>
 
-### How to Participate
+### Engagement Protocol
 
-1. **Join the Conversation**
-   - [W3C Community Group](https://www.w3.org/community/udna/)
-   - [GitHub Discussions](https://github.com/w3c-udna/udna/discussions)
-   - [Monthly Community Calls](#community-calls)
+1. **Join the Architectural Discourse**
+   - [W3C Community Group Participation](https://www.w3.org/community/udna/)
+   - [GitHub Technical Discussions](https://github.com/w3c-udna/udna/discussions)
+   - [Monthly Architectural Review Sessions](#community-calls)
 
-2. **Review Documentation**
-   - [Concept Paper](CONCEPT.md) - Full technical vision
-   - [Specification Drafts](specs/) - Technical details
-   - [FAQ](FAQ.md) - Common questions answered
+2. **Review Technical Documentation**
+   - [Architectural Whitepaper](CONCEPT.md) - Comprehensive technical vision
+   - [Specification Drafts](specs/) - Detailed technical specifications
+   - [Frequently Asked Questions](FAQ.md) - Common technical inquiries
 
-3. **Contribute Skills**
+3. **Contribute Technical Expertise**
    ```bash
-   # 1. Clone the repository
+   # 1. Repository initialization
    git clone https://github.com/w3c-udna/udna.git
    
-   # 2. Explore contribution areas
+   # 2. Exploration of contribution domains
    cd udna
-   ls -la docs/ specs/ research/
+   examine docs/ specs/ research/
    
-   # 3. Join relevant working group
-   # Check WG meeting schedules in COMMUNITY.md
+   # 3. Working group participation
+   # Consult COMMUNITY.md for working group schedules
    ```
 
-4. **Propose Improvements**
-   - Submit GitHub issues for bugs or features
-   - Join specification working groups
-   - Present research at community calls
+4. **Propose Architectural Improvements**
+   - Submit GitHub issues for defects or enhancements
+   - Participate in specification working groups
+   - Present research findings at architectural review sessions
 
-### Resources & Learning
+### Knowledge Repository
 
-#### Essential Reading
-1. **Foundational**
-   - [W3C DID Core 1.0](https://www.w3.org/TR/did-core/)
-   - [DIDComm Messaging](https://identity.foundation/didcomm-messaging/spec/)
-   - [Capability-Based Security](https://en.wikipedia.org/wiki/Capability-based_security)
+#### Foundational Literature
+1. **Architectural Foundations**
+   - [W3C DID Core 1.0 Specification](https://www.w3.org/TR/did-core/)
+   - [DIDComm Messaging Protocol](https://identity.foundation/didcomm-messaging/spec/)
+   - [Capability-Based Security Models](https://en.wikipedia.org/wiki/Capability-based_security)
 
-2. **UDNA-Specific**
-   - [Architecture Overview](docs/architecture.md)
-   - [Security Model](docs/security.md)
-   - [Migration Guide](docs/migration.md)
+2. **UDNA-Specific Documentation**
+   - [Architectural Overview](docs/architecture.md)
+   - [Security Model Specification](docs/security.md)
+   - [Migration Protocol](docs/migration.md)
 
-3. **Related Work**
+3. **Related Architectural Work**
    - [IPFS Content Addressing](https://docs.ipfs.tech/concepts/content-addressing/)
-   - [ActivityPub Federation](https://www.w3.org/TR/activitypub/)
-   - [Zero Trust Networking](https://csrc.nist.gov/publications/detail/sp/800-207/final)
+   - [ActivityPub Federation Protocol](https://www.w3.org/TR/activitypub/)
+   - [Zero Trust Network Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final)
 
-#### Learning Path
+#### Learning Trajectory
 ```
-Week 1-2: Foundations
-├── Understand DIDs and VCs
-├── Learn capability security
-└── Study existing addressing
+Week 1-2: Foundational Knowledge
+├── DID and Verifiable Credential fundamentals
+├── Capability security model principles
+└── Existing addressing architecture analysis
 
-Week 3-4: UDNA Concepts
-├── Read specification drafts
-├── Join community calls
-└── Try conceptual exercises
+Week 3-4: UDNA Architectural Concepts
+├── Specification draft review
+├── Architectural review participation
+└── Conceptual implementation exercises
 
-Week 5+: Specialization
-├── Pick a working group
-├── Start contributing
-└── Propose improvements
+Week 5+: Specialization Development
+├── Working group selection
+├── Active contribution initiation
+└── Architectural improvement proposals
 ```
 
 ---
 
-## ❓ Frequently Asked Questions
+## Technical Inquiry Framework
 
 <details>
-<summary><strong>Q: Is UDNA replacing the entire internet?</strong></summary>
+<summary><strong>Q: Does UDNA replace existing internet architecture entirely?</strong></summary>
 
-**A:** No. UDNA is a complementary layer that works alongside existing protocols. It's designed to gradually augment and eventually replace certain aspects of the current addressing system, not to instantly replace everything. Think of it as adding identity-native addressing as an option that can coexist with URLs and IP addresses during a long transition period.
+**A:** UDNA constitutes a complementary architectural layer designed to coexist with current protocols during an extended transition period. The architecture enables gradual augmentation and eventual replacement of specific addressing components rather than immediate wholesale replacement. Consider it as introducing identity-native addressing as an optional architectural layer alongside existing URL and IP address systems.
 
 </details>
 
 <details>
-<summary><strong>Q: How does this relate to blockchain?</strong></summary>
+<summary><strong>Q: What is the relationship between UDNA and blockchain technologies?</strong></summary>
 
-**A:** UDNA is blockchain-agnostic. While some DID methods use blockchains (like `did:ethr` or `did:sov`), many others don't (like `did:web`, `did:key`). UDNA works with any W3C-compliant DID method. The focus is on cryptographic identity, not any specific implementation technology.
-
-</details>
-
-<details>
-<summary><strong>Q: What happens to existing websites and APIs?</strong></summary>
-
-**A:** During the transition, systems can support both traditional URLs and UDNA addresses. We envision bridges and translation layers that allow legacy systems to participate in the UDNA ecosystem. The migration path is designed to be incremental and non-breaking.
+**A:** UDNA maintains blockchain-agnostic architectural principles. While certain DID methods utilize blockchain infrastructure (such as `did:ethr` or `did:sov`), numerous methods operate independently (including `did:web`, `did:key`). The architecture accommodates any W3C-compliant DID method, focusing on cryptographic identity primitives rather than specific implementation technologies.
 
 </details>
 
 <details>
-<summary><strong>Q: Is this just another authentication protocol?</strong></summary>
+<summary><strong>Q: How does UDNA accommodate existing web infrastructure?</strong></summary>
 
-**A:** No, it's fundamentally different. Authentication protocols like OAuth assume you already have a way to address the service (URLs). UDNA makes identity the address itself. Authentication becomes inherent to the addressing mechanism rather than a separate step.
-
-</details>
-
-<details>
-<summary><strong>Q: How do you prevent spam with public DIDs?</strong></summary>
-
-**A:** UDNA includes several anti-spam mechanisms:
-1. **Proof of work** for DID creation (optional)
-2. **Reputation systems** based on verifiable credentials
-3. **Economic mechanisms** (micro-transactions for certain operations)
-4. **Social verification** through attested credentials
-5. **Capability revocation** that's immediate and global
+**A:** During architectural transition, systems maintain dual-protocol support. We envision bridge architectures and translation layers enabling legacy system participation within the UDNA ecosystem. The migration pathway incorporates incremental, non-disruptive transition mechanisms preserving existing functionality.
 
 </details>
 
 <details>
-<summary><strong>Q: What about performance? Isn't crypto slow?</strong></summary>
+<summary><strong>Q: Is UDNA merely another authentication protocol layer?</strong></summary>
 
-**A:** Modern cryptography is surprisingly fast. An Ed25519 signature verification takes about 0.1ms on commodity hardware. For cached resolutions, UDNA can be faster than DNS+TLS handshakes. The architecture is designed with performance as a first-class concern, not an afterthought.
-
-</details>
-
-<details>
-<summary><strong>Q: Who is backing this effort?</strong></summary>
-
-**A:** UDNA is being developed as an open community effort under the W3C. While still in early stages, we're engaging with researchers from universities, engineers from major tech companies, and members of the decentralized identity community. The goal is broad, multi-stakeholder participation.
+**A:** UDNA represents fundamental architectural reconstruction rather than incremental protocol enhancement. Authentication protocols like OAuth presume pre-existing service addressing mechanisms (URLs). UDNA embeds identity within the addressing primitive itself, making authentication inherent to the addressing architecture rather than a supplementary protocol layer.
 
 </details>
 
 <details>
-<summary><strong>Q: How can I try UDNA today?</strong></summary>
+<summary><strong>Q: How does UDNA architecture prevent system abuse with publicly accessible DIDs?</strong></summary>
 
-**A:** Since UDNA is in the specification phase, there aren't production implementations yet. However, you can:
-1. **Experiment** with conceptual prototypes in our sandbox
-2. **Contribute** to the specification development
-3. **Build** proof-of-concept implementations
-4. **Join** the community discussions about use cases
+**A:** UDNA incorporates multiple anti-abuse architectural mechanisms:
+1. **Computational proof requirements** for DID creation (configurable)
+2. **Reputation system architecture** based on verifiable credentials
+3. **Economic disincentive mechanisms** (micro-transactions for specific operations)
+4. **Social verification frameworks** through attested credential systems
+5. **Immediate capability revocation** with global propagation
 
-Check the [Getting Started](docs/getting-started.md) guide for current options.
+</details>
+
+<details>
+<summary><strong>Q: What are the performance characteristics of cryptographic addressing?</strong></summary>
+
+**A:** Contemporary cryptographic operations demonstrate exceptional performance characteristics. Ed25519 signature verification requires approximately 0.1ms on standard hardware. For cached resolution scenarios, UDNA can outperform traditional DNS resolution combined with TLS handshake protocols. The architecture incorporates performance optimization as a fundamental design principle.
+
+</details>
+
+<details>
+<summary><strong>Q: Which organizations support UDNA architectural development?</strong></summary>
+
+**A:** UDNA development operates as an open community initiative under W3C governance. While in early developmental phases, we engage researchers from academic institutions, engineers from leading technology organizations, and participants from decentralized identity communities. The objective encompasses broad, multi-stakeholder architectural participation.
+
+</details>
+
+<details>
+<summary><strong>Q: How can technical evaluation of UDNA commence currently?</strong></summary>
+
+**A:** Given UDNA's specification development phase, production implementations remain forthcoming. However, engagement pathways include:
+1. **Architectural experimentation** with conceptual prototypes
+2. **Specification development** participation
+3. **Proof-of-concept implementation** development
+4. **Use case analysis** within community discussions
+
+Consult the [Technical Onboarding Guide](docs/getting-started.md) for current engagement pathways.
 
 </details>
 
@@ -739,19 +739,20 @@ Check the [Getting Started](docs/getting-started.md) guide for current options.
 
 <div align="center">
 
-## 🚀 Join the Movement
+## Architectural Evolution Initiative
 
-**The internet is overdue for an architectural evolution.**
-**From location-based to identity-based.**
-**From trust delegated to trust verified.**
-**From privacy accidental to privacy designed.**
+**Digital infrastructure requires architectural evolution.**
+**From location-dependent to identity-native addressing.**
+**From delegated trust to verified cryptographic trust.**
+**From incidental privacy to architecturally embedded privacy.**
 
-[![Join W3C Group](https://img.shields.io/badge/Join%20the%20W3C%20Community%20Group-005a9c?style=for-the-badge&logo=w3c&logoColor=white)](https://www.w3.org/community/udna/)
-[![Explore Specifications](https://img.shields.io/badge/Review%20Specification%20Drafts-0066cc?style=for-the-badge&logo=gitbook&logoColor=white)](specs/)
-[![Start Contributing](https://img.shields.io/badge/Start%20Contributing%20Today-27ae60?style=for-the-badge&logo=github&logoColor=white)](CONTRIBUTING.md)
+[![W3C Community Participation](https://img.shields.io/badge/W3C%20Community%20Participation-005a9c?style=for-the-badge&logo=w3c&logoColor=white)](https://www.w3.org/community/udna/)
+[![Specification Review](https://img.shields.io/badge/Technical%20Specification%20Review-0066cc?style=for-the-badge&logo=gitbook&logoColor=white)](specs/)
+[![Architectural Contribution](https://img.shields.io/badge/Architectural%20Contribution-27ae60?style=for-the-badge&logo=github&logoColor=white)](CONTRIBUTING.md)
 
 ---
 
-
+**Universal DID-Native Addressing**  
+*Architecting the Identity-Native Internet*
 
 </div>
