@@ -3,8 +3,8 @@
 <div align="center">
 
 ![UDNA Banner](https://img.shields.io/badge/UDNA-Universal%20DID--Native%20Addressing-0066cc?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Proposed%20Standard%20(Pre--Development)-3498db?style=for-the-badge)
-![W3C](https://img.shields.io/badge/W3C-Community%20Group%20Proposal-005a9c?style=for-the-badge)
+
+
 
 **The Architecture Revolution: From Network Locations to Sovereign Identity**
 
