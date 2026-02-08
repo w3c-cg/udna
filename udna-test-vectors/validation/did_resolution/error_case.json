@@ -1,0 +1,103 @@
+{
+  "category": "did_resolution",
+  "count": 4,
+  "testType": "error_case",
+  "vectors": [
+    {
+      "expectedError": {
+        "code": "INVALID_DID_SYNTAX",
+        "httpStatus": 400,
+        "message": "DID resolution failed: INVALID_DID_SYNTAX"
+      },
+      "input": {
+        "did": "did:invalid:format"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "DID resolution error test: invalid_did_syntax",
+        "id": "did-error-invalid_did_syntax-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "recovery": {
+        "retry": false,
+        "suggestedAction": "Check DID syntax and method support"
+      },
+      "testType": "error_case"
+    },
+    {
+      "expectedError": {
+        "code": "NOT_FOUND",
+        "httpStatus": 404,
+        "message": "DID resolution failed: NOT_FOUND"
+      },
+      "input": {
+        "did": "did:key:z6Mknonexistent123456789"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "DID resolution error test: nonexistent_did",
+        "id": "did-error-nonexistent_did-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "recovery": {
+        "retry": false,
+        "suggestedAction": "Check DID syntax and method support"
+      },
+      "testType": "error_case"
+    },
+    {
+      "expectedError": {
+        "code": "UNSUPPORTED_DID_METHOD",
+        "httpStatus": 404,
+        "message": "DID resolution failed: UNSUPPORTED_DID_METHOD"
+      },
+      "input": {
+        "did": "did:unsupported:test"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "DID resolution error test: unsupported_method",
+        "id": "did-error-unsupported_method-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "recovery": {
+        "retry": false,
+        "suggestedAction": "Check DID syntax and method support"
+      },
+      "testType": "error_case"
+    },
+    {
+      "expectedError": {
+        "code": "INVALID_DID",
+        "httpStatus": 400,
+        "message": "DID resolution failed: INVALID_DID"
+      },
+      "input": {
+        "did": "did:key:"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "DID resolution error test: malformed_did",
+        "id": "did-error-malformed_did-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "recovery": {
+        "retry": false,
+        "suggestedAction": "Check DID syntax and method support"
+      },
+      "testType": "error_case"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "category": "interoperability",
+  "count": 5,
+  "testType": "unknown",
+  "vectors": [
+    {
+      "compatibilityMatrix": {
+        "addressing": "Bidirectional",
+        "authentication": "Delegated or mapped",
+        "discovery": "Protocol-specific discovery + UDNA resolution",
+        "messaging": "Unidirectional or bidirectional"
+      },
+      "integrationPoints": {
+        "authentication": "DID-based signatures",
+        "gateway": "HTTP/HTTPS bridge",
+        "method": "UDNA addresses in ActivityStreams objects"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Interoperability with ActivityPub",
+        "id": "interop-activitypub-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "targetProtocol": "ActivityPub",
+      "testScenarios": [
+        {
+          "description": "Resolve ActivityPub identifier to UDNA address",
+          "expected": "UDNA address + endpoint information",
+          "input": "ActivityPub identifier",
+          "name": "address_resolution"
+        },
+        {
+          "description": "Route message from UDNA to ActivityPub",
+          "expected": "ActivityPub formatted message delivered",
+          "input": "UDNA message",
+          "name": "message_routing"
+        },
+        {
+          "description": "Cross-protocol authentication",
+          "expected": "ActivityPub authenticated session",
+          "input": "UDNA DID authentication",
+          "name": "authentication"
+        }
+      ]
+    },
+    {
+      "compatibilityMatrix": {
+        "addressing": "Bidirectional",
+        "authentication": "Delegated or mapped",
+        "discovery": "Protocol-specific discovery + UDNA resolution",
+        "messaging": "Unidirectional or bidirectional"
+      },
+      "integrationPoints": {
+        "authentication": "Cross-signed device keys",
+        "gateway": "Application Service bridge",
+        "method": "UDNA addresses as Matrix user IDs"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Interoperability with Matrix",
+        "id": "interop-matrix-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "targetProtocol": "Matrix",
+      "testScenarios": [
+        {
+          "description": "Resolve Matrix identifier to UDNA address",
+          "expected": "UDNA address + endpoint information",
+          "input": "Matrix identifier",
+          "name": "address_resolution"
+        },
+        {
+          "description": "Route message from UDNA to Matrix",
+          "expected": "Matrix formatted message delivered",
+          "input": "UDNA message",
+          "name": "message_routing"
+        },
+        {
+          "description": "Cross-protocol authentication",
+          "expected": "Matrix authenticated session",
+          "input": "UDNA DID authentication",
+          "name": "authentication"
+        }
+      ]
+    },
+    {
+      "compatibilityMatrix": {
+        "addressing": "Bidirectional",
+        "authentication": "Delegated or mapped",
+        "discovery": "Protocol-specific discovery + UDNA resolution",
+        "messaging": "Unidirectional or bidirectional"
+      },
+      "integrationPoints": {
+        "authentication": "DID-based WebID-TLS",
+        "gateway": "WebID-DID mapping",
+        "method": "UDNA addresses for Solid Pod access"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Interoperability with Solid",
+        "id": "interop-solid-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "targetProtocol": "Solid",
+      "testScenarios": [
+        {
+          "description": "Resolve Solid identifier to UDNA address",
+          "expected": "UDNA address + endpoint information",
+          "input": "Solid identifier",
+          "name": "address_resolution"
+        },
+        {
+          "description": "Route message from UDNA to Solid",
+          "expected": "Solid formatted message delivered",
+          "input": "UDNA message",
+          "name": "message_routing"
+        },
+        {
+          "description": "Cross-protocol authentication",
+          "expected": "Solid authenticated session",
+          "input": "UDNA DID authentication",
+          "name": "authentication"
+        }
+      ]
+    },
+    {
+      "compatibilityMatrix": {
+        "addressing": "Bidirectional",
+        "authentication": "Delegated or mapped",
+        "discovery": "Protocol-specific discovery + UDNA resolution",
+        "messaging": "Unidirectional or bidirectional"
+      },
+      "integrationPoints": {
+        "authentication": "Cross-protocol auth delegation",
+        "gateway": "Dual-stack implementation",
+        "method": "Protocol bridge/gateway"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Interoperability with IPFS",
+        "id": "interop-ipfs-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "targetProtocol": "IPFS",
+      "testScenarios": [
+        {
+          "description": "Resolve IPFS identifier to UDNA address",
+          "expected": "UDNA address + endpoint information",
+          "input": "IPFS identifier",
+          "name": "address_resolution"
+        },
+        {
+          "description": "Route message from UDNA to IPFS",
+          "expected": "IPFS formatted message delivered",
+          "input": "UDNA message",
+          "name": "message_routing"
+        },
+        {
+          "description": "Cross-protocol authentication",
+          "expected": "IPFS authenticated session",
+          "input": "UDNA DID authentication",
+          "name": "authentication"
+        }
+      ]
+    },
+    {
+      "compatibilityMatrix": {
+        "addressing": "Bidirectional",
+        "authentication": "Delegated or mapped",
+        "discovery": "Protocol-specific discovery + UDNA resolution",
+        "messaging": "Unidirectional or bidirectional"
+      },
+      "integrationPoints": {
+        "authentication": "Cross-protocol auth delegation",
+        "gateway": "Dual-stack implementation",
+        "method": "Protocol bridge/gateway"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Interoperability with DIDComm",
+        "id": "interop-didcomm-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "targetProtocol": "DIDComm",
+      "testScenarios": [
+        {
+          "description": "Resolve DIDComm identifier to UDNA address",
+          "expected": "UDNA address + endpoint information",
+          "input": "DIDComm identifier",
+          "name": "address_resolution"
+        },
+        {
+          "description": "Route message from UDNA to DIDComm",
+          "expected": "DIDComm formatted message delivered",
+          "input": "UDNA message",
+          "name": "message_routing"
+        },
+        {
+          "description": "Cross-protocol authentication",
+          "expected": "DIDComm authenticated session",
+          "input": "UDNA DID authentication",
+          "name": "authentication"
+        }
+      ]
+    }
+  ]
+}

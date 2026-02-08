@@ -1,0 +1,287 @@
+{
+  "category": "cryptography",
+  "count": 10,
+  "testType": "signature_generation",
+  "vectors": [
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "9ed2f65f0fd8cedf23077cf96f6d853066b9d63027a8c19cdb7028ef15113931124fd0fbd104f564cf54b644389fcf712c4705607bdf0ab710b2bfcd05c11ed4",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "iMdodgMG4fdHYL5kkbrgMxENDwtgULidHNNV0trMCTQhvMEMy9ARSSJxDbmz4cta9iuTv3nGsMUUCvXA1t1Ypqt8eoYeSB68gWwdm3JUpQHIrHxJjfHrIXJSLgZsKyDL12H945JmEz+U21e9HNFGNji3/m51ysE6ql8/4F7Msg==",
+        "privateKey": "2fb3fe70105a6d7acc03590d92c61a8e873945a5449ddc61385de460e787a2fc",
+        "publicKey": "767b850a01028de60b310cc2bdd42636e5e60a99edf3d17df3ed6cbd6180b630"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 0",
+        "id": "crypto-ed25519-0000",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "464f7d2d9038610fcd7fbdcd61f4c3544da5a3018dceecc9f6e774e0cde0ade200a6e84890587fcd2265457ef1950fd1c04b319b99a752d9e0850138804434b9",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "TCpt4VLCFb5eh/8ncJBGnGVbreOwCvv1vwc6gmeJecgvas4n9fHoTy0wWOigOp6X63dh+WWm5HFB4ustF7I/a+fBhHM7fdq/5m8UVeLZ7insUN2SP54/QhKBRzcZRt7nCwhSfFB8ZXqG1euZDHYGqHtfJaPfQc/hVQ1XEuSAjnjxJ0HdSQfU4N3CUamHV9b8TO7c5Km8E9FbdwVHnaXLQfkXwq+Fm1q1K7yAHY+y47NmdB42b5C7GryuX8x7xF0aMH7L7ypwydqEfciWj0xbbAuIXCck1R9jVFnjcoXOqMr0bWeeFW4Bo5gNJggjXBPw5bJZnCNNI+3XUwmLPYpC390kYhexbMZ0baTPhqufTAmykYtd7Q5/3jZxuBsziX4EWRjiUWz+P7NWwNqUppyooHGd9ggKWPqV6b3StuypJhvpvwwsyagdBSaXcHkUqMGSZf6eDZDQXcW7kyDHMHHZgSjZajl/8ih97RVt4UKk7KNDgWTmMfTX30FuwhvO7wDma9w58kLajS9GB8Qp7ew0OexeHh/Ok9h4E/SmJHHzhI0jPNrnj1z5sFFPU+QBACr6RTl7vdcNXtr9Q8/NCT4Ejxz/w4jjiHaAeC1t+g+7VEZhBfUWR2jy6eVcjb1+A8oCwenENjh9aLmApAJQUm3dPaWLrqbb1/KSYoz06Y6p4K5AzzVROnGFh8unly1qHDAV/ecQ13KBgXxOUszjrArquQ7m+Ly0WxknhiCxOY3UyevubxCHpQ5Mi691+B1ecSiEnWq/eRkl11PPedE/u7MbEiBxxj/G+RQi6UL2ZXL7eN93vE5Dgg0AskqI6zpyaoHPiWqRqkCoD/v/tJYYcv366U3Us2j8NaQKvVD3LNo4sqiWW6qrUQ9xNjFKgnTov5jL2Y/wC5opJBgoedB2tqg9GWnHzQocy2UvT5cOTFSPVy6jQLTNT4t01yU60l1tngIIfHBka21mzvghKMzrViZUofBTHTRbh/9YFzw+tWFHrXgLNdWDqXQrVwoJV8fmA2j49JRlM6KJyR6vWVeUyjw6VA9M8n4iU9XmMY0OXlO//xV1GMIqi8kZPAeLzLeZBw4nMBdHZ3cjXbd5rPhOVEHUtwHjUquoPKjYrchK2Md5Shbu0f6UtZ8axOdcLydgkwKfOiR96s8s6Te/a+QDBG5fXUoW4JTWP+Mwzk+GAF6PQDbd5uWMDTu5LQ14tHWL7iU92Qy5gidxbnr36LtSg+rUBcqEwvvZe1i9j4XJ5dFknJoGOC2QDajTGIXTuLVwuskuhKn2zGRnjeP2TVH4",
+        "privateKey": "c8883306f7a1545d1abe45b7d888779ffcaf10a370b79f1e802822a3e1d726b1",
+        "publicKey": "6ed4edc4063447035f987d1fb9eb5d68e37e33ea37e0e570973d135843d3d55f"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 1",
+        "id": "crypto-ed25519-0001",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "0b65d57f08807e53d769ce8c2959e53dbe72375a35314a48cd2f7e72236666ef48f63d07366361873a8395982910cca139733f18a440bd9dd9c93ade01be9695",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "JnlsqU8LVilkI3DkVhKCcxvoxjIE1zBqBw85gYFHhF3ty05W0Ql1pdeXcPJzkmfTnmWxHQwB0rMJhheVOPKmKLPePLNTVm121O5iC9FMgy5nB5q68qdaKdJbkLaBSd1fhpZ9s/75uqtCxUNJfkTRSlJRcS5DhkEAd6Lr2wdsk2hInVs3iD7UXlkTtYtjiKVmAooBnQSMAd4cV2IkrTJtS+QW9u/+4bu8POHR0tyZPz47vP7onbqyOrV0D70NZgkuFEs8tocUBPfxsEnVRcsc4ZiItxSbZjmMlCkwgPO5fzw+ld8ODE3WGUe+IPy3PpHCPwfPx4D1JmazulYiTXYz06Wuf5VuNpcM2++aFrlnwHkNxiGGm2q44Gv1d7IwG/3mBjRPWGhtb0Cwd+l640xTE7jBl0BpxbIEXoWky0W6IcwVzw33wbsYmhZN8Ks6WOvED/eRE26HO392RIvjnfyxel19hJjH7AvdaD2EvElYmAcQHwBZIM/yrsrG5QEykM/dp9WQcmoR/6EBbcSwdG0qBiZfk/CW5w2navRy2ZrjPH0mLbKg+sl9lrt+KxTjenDgPiUe5+SJqMpAkTB0YJRuA8UeU44I88k8SftJU1ubyNKQiOyYkiJjWXgzj/z0Y77SRTNZM+P5rDuBU5iPvaurv72p0aO8HXbVkWoubwjCWU6VedqClyQIJlqgQKMClBtFUbIMz8HLL6y2+mtWsjmfvwonrb9bDkgKq8x4bbCwLN/ME5pLqfiKhSrbz/W09kIPpiXBIoJ/2i2wgAsqbJdXG0kHBn/gA16xcab0rvzoaXB4JAd9O1M9zUCj8ZqWDIyoVIizttSJ8RT2CV2/igJ0QPgRmAY9mNiQjlqKQLjW6VAkE8+5lpgtQua121CNznBUDGhmI4V33kXD7xksUrB7cUyDLGJ/9Qo1eRMAv20ZT3MDeMlJXqCaVKQ339KY1jxxCt8+5gblgaGcFgCi/oG0F+KxDZaeh/XFSCysN8HwffOL+wjWm8WG5kXCTV6+xv+JzlskCCGoZxOdD0z4x6AndCQtE0xyLWu/TDXNguxQXPjE2FfnWjMx7rDHY3FMHc5GEF5H27PQjy0ihYW6rnAA7zcRv68kGALYOB4YqNPevK+cw0FihX0lRo+f1Dn+XONraNXMGleAOpzB83OmXrd9U5QT3v/w3pIdVdujS6DxUP7RCDUSyDLeMeqBkb5OIWhnGq4V1shQLzwmFoBsoNg/IOzU+VJfWiBlqyrMMuQIcigpjAuniGdFpfkCkwOju7odDI5MTEFY6n0hr4HHDkk1ZqTOAz3r7BqX9Daw4tq4116gRxpaJ+1NFaIIOD9mcT8rYyjgsLU=",
+        "privateKey": "b37c7cddfa40a116ac0cbc86b5a66257b9c3fd0d466c493feb8036c18ebddfc6",
+        "publicKey": "f6d9fc23ba726b5c034024f0140a9447172be10fe1dbd6c9a9001af7665dce6d"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 2",
+        "id": "crypto-ed25519-0002",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "04e0934357c8d8a079ed141889b55dc606118adab3d97780603267d660eb9e6358151090f6bbe596ecc8b8658e8455635666bd7e9df455abf2115dfd9fa7b29c",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "7i5UXRVJie8hSfCoRXcgqje4liys/OqmUgAYl5ONgLg60NvnsJxYb9aeC75XHoXS/1Qk0/RdcynhSEAaR9tErYsqeCfRqnVEIvrVsRbWgz+bcK/b65eniplF5kQLdOkoUlP0w31cfThuQEDD0mdVhaH4pemE6MDYX2Zel9sH3eGWv9asatQkhHcfkvSl2Pm8NAhEw8LDhsxm30hCCy/b1PysDw1lIiWBDatjQF+95sdE6fQJJ/s+ui6EZolJKmTux2pY8TnK2GDwbHzJ7+7ak7jiy9uU6K1Na7ydOrowHdY0s8OWq0SqRRo+nmRAstHrYKAKKvXr8HVnp01d0L1cgwiOUOx40ilWPyIU9B/AYgz6w262F0zkXdKd2T1NZdXRTO1dU3Sj0PB4+pvuHEo0tfNhd/sK1k+d0r1RX2LU7C5gW1jEVSUd2MI8zKgzGXEz9DAzh6LqEYkYZChManoQDdUrxbvD7/R2A4Z/Ohfo8KFewTZlOLPtfc/+y++LCp++diFUKrLa2+8Zq/eXx25O1j03sk5b02ClRFSinmRkKKgA95atxpWDQfYiwOMwq2X4ktogTFXIOUI5tJaRVHxyREl0xvi8BQ7T+f4P6kjiGbqA1QSu/uLND/3iqwVEYyvDh5AbB7gYKFy8vyDvzOy3CW+vwfPJd+lTWvUJ+vap6uO60+5Muie05I0iC7ovyDV2aPW9XhdMliMabQwJ1amRmVgXh+fUy8rons7GD55hNCWwyW4DyT/XTLuDA0l15a/r2wl64jgRUUurp81FQbgt2tZabz3oXVq8sES6nc89bteEbbIbR+8bGSZLdBy+9zx26QCbX7HH3LRsisg3PsD8o5byalVy/PcF1F+u7XH5JD0hOoH9FqgdQ/DXiNo1da44al0+UqsL1nmg9R2K0oWCdCL1VEhupQGuHKIVIiynjWxzqJ74nKOF44gsATaINx9kB1wF4MpQBz33DRuVOnJSodMNJZDbfop43FowSjlYEkYJ2LlpuARzl57yGhZ+CNAVzh3WeEJdLGpWwl/Jf/aJyObwF+2sbFWGrsILghaCnepwqqYHkjcXQYsT9wRzB6B0GrLJRehJaxThgMCK43tKj8vPuUD9E9JjPFPPWtppM7pGfKgW5SuoJylIxloVtgPAku2OyNj5pxgnz/4cOv7ni9Q+hIzJVZeraF+fDLQ=",
+        "privateKey": "6185f5ea4295d14c8c290779013005d7f23ab2925cb02a5e41e20ede4c63b8ef",
+        "publicKey": "3de4b19f69162f9b525124353804b2110806b13a02c9d00da0dd58b4513cbb87"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 3",
+        "id": "crypto-ed25519-0003",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "4436f869f166b25e2662b81aeef89c20a128c5b761c5c107b00fe0493ca9ecf6edaa41d91b150e0c128321c0e08ec96b8f06beda7a39711962f91e61d5e5d4f6",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "G6Zhd+x6BaPxTm0PndcDZHJ92knP3lxhNKW0s603z6opNdN0gPRcKBJyk1Z8NtU0/YqbVh8x41lEeJu9zEcBjYMHzF1kx4Gmj2qef6OiKdrUcVmZCRk84O+GKsMgdV1+QqTrV7ogzZqfyGG2ZhMQzXCTkulac9gP88/qTss2OZNs0nD2vepf+yzvUg2T+Xjb5n6bXcCqqNw2MR8cCGrJixOgzXDhyzeyJ8Kg9h98oy9NVhC8DaiZZSfHi6w4Lf5y7o1KNcKAtWthfvKQU8ueDm2Zcv6FwoG1axVPg5TWWN3Yh3k7Y/s485STIkV8Q3myH4Ur/xk0HaHWxrDuGAibvaLnOXpEF9EYXmw+bhqNeusoYcy+5Mjkok7hfSUq4C4r/Jn9GlRgQgUA23eFdQVRZxelvtKJ8xfFOrfF74eyr2ufHWwA/Z6aymVyGU5enP7kE2h6/FNoIgOKBoUAZqKDc1DpZmwtPaJ0lDgoerz5Csi/PxbrBMOY0RjOKkoAHNr2Q78EK2VVR8fvs155TG8x",
+        "privateKey": "258caeddf9375ce3e4ca5e265deb8b89ed459d2125f256a1d6d983bcc92a734d",
+        "publicKey": "c88a42554161fba992a6d91cbab5864d437cd39db94ac29e513730fdb33c5bb6"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 4",
+        "id": "crypto-ed25519-0004",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "40af15eec46efdc3f7aa62b5360c3bde7ef3f797a21101e48761b2c7bd9403d30f27cfa38fbc18e0ee50f252e00d03aa6ed5942ac43b1671be6666feb7994f36",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "xMzJApnjVFW5DaiyUkR4kX7AmHSaU1YeTbbOabaZEaFFHsdAxhpC+v0GyioSpHCosrfyGdGjDTj2D7cyWq8WwOmO",
+        "privateKey": "8bff3dbc4de8ada6d711dad95161ba2e67c9cb23763955f35911e182f225c931",
+        "publicKey": "364fd78770357c2d3d06d1b6e31fd9217c15b46c11326d581a46a29ff833a9dc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 5",
+        "id": "crypto-ed25519-0005",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "41c6c4cce1a72817a90a6882a85c089dfeb1663e1671c151e5fcdbadd676d6f61b8423580859bc9b168bda736cfe0ed9e899b4f06e48c3a16206989dd2ebd15e",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "65ufNRPSY1Xv/QjXptzSNfCwlI+CrkOiIFER9eNPtTg/ydLeiRXnsjLIu4XQkAgpzZhjZUrpQid4G9uXSrMPncQwHOWLCZT6mogxiUqjhSZLrwA4nH+sms7sW1a+77Ld/oZWcqAekXPw4Ii2fX/FYtP4Jc3YuLvLD0D+HBNCgu/8YivtAWT30tyCwY2q2r9z17KxLGGKV/2ovxaproIU/umkfcPUS74CzIvqt5YlJ/REDBbKFrzyjnCO1h+1RrhhFDEgvrpQFBSLhFzurgF9x6vdLyfPR3U5exxqPXOSlU08q9X//2Q6YXYvKD4YJxMz6dN+jITyR+VFWYCUrrLyanxT1zWCvRvxh1n/fSpBwz3DcwNX8RPOltT69rFXTjOmaLgts2/e2g0PD4KaSL2VZmvT1JHJVmVaaI/RYYLCF9CCrxQ7mZ+ABWFL50H55i+WOi4DZCbt5PlPx4r429FWE16XDNJm0MycYl8Wi6vYpS/eLBwg/P/jb+7F95WVseq/CTTjdDyPP/A2KrP2FK+cd+hoKZzXnPPXi69pR0xhspoU/8OInwn4uudJFygZ0lAeyE/ozPk1rd37HomUrD4yY6uLCLcCrT/86Sn19ukv9IEuTx809PkmvWnJ7up8p95MxmEthONn/FCyZF4R0TqXdZyay9uhvF007JHnNFH4W58MnLchLkaXqMFs4qbkrb/LEAoYpLv8y2q9dlUeT5cuVBkzd3Hs+vQgul5vvukXftfBTOQTbPZmbMaZzpdKYOnwXSK65ve/vDcpHup6SJtw9SbVeYzOkQdD5DENN6OxdoQGHfQGMivXFN+ivsYFcIGNxy3YynRCzXnLwnVsQ/z64tMnS9qj7EzgaJn03LkafFnayumWbq1Dx+afNQvtR/6kekIe31w/nBwpMCUuBcEzsxnZnEwwV6c1cS2lgmRpWQpZAUOlOQVI/7D4NAU=",
+        "privateKey": "c6f6a47512d4d00c0cef8107bc80c4f8ced8593fc22f74afbafa4d450d010e77",
+        "publicKey": "6454d271eb69da85ce76cfd377310f3e8c7ad775a68d412181e9f628834cc535"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 6",
+        "id": "crypto-ed25519-0006",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "9c7ab8a0fa6cbf08f7b3a796bab5ffd8904e658bdd0ad8642b3ce7f9adbfd01626ba51e8f0d8f4265e928d2091eb2808138a8798bbac3d6e8a5e3a3cbbe7da92",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "JOWW2DAa4atcJuMf2RepxjHCSd5s/GLYavACdQYYJpt49A21hFb6fFJ0zpSz31CSmWwyYt5zbN6pngDOT+UDjA8khBnsqzzEOcr0POxI2w4zADNWbkyUOOEZawgIbEhnjnRgk+O9y5zqIgqaCn2jVWTnJ6l4aKOeIQAcBjUDzRePDDTuYQAN974qhp9wt5X1MHfK0ZTYz5kYyuBRaMEDjNVe8ToiTLIHqWbO4+gSTnMjg5PYLliJOKCFXWezCdMsZK4ILjvuYNyjJVwcGjqAIj/D7uQNp0qogvk+gw0KI8ujuvhD6/PNCZ7HXpb4dah0kkxKigtPDh6rrkxsto9Fk1Hsjyw/XfnPdF8/dYgHgm3zUMoBN7qq10ccfTr9zLlIK4ull2QZrNCADRPNzVVdiQiIxmtyQMscDLLQOfUIVRnJZJM/uCP0UqCjlMEvLZe6euiGgE2lCTOcLK4OQUXtiaGfmF7vM6d7ElzbSqK0l6qsdA5Ed9qB1II7Uu5NlVBb4Ux8cD52szXjAC378EKmbklkd5X1+sYZRodnyxim",
+        "privateKey": "db4cf195bb1d27283d041ad7134bcec0d58f3b2ae2843faf5826ea38a84a363d",
+        "publicKey": "a32bf693b1caa0517224d87e80782c530b956d102e89efbbeefb03fdb8a96dff"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.648536+00:00",
+        "description": "Ed25519 signature test 7",
+        "id": "crypto-ed25519-0007",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "cf9fddeed573d1274fb54361da7b0a0c7dfebde9dfe157574ea96d7211dae74e841f7ec537f82bebe1c7a75ccc022b93c9c682fc226b4101bc6866b671b518e7",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "bJFy/Na2F9Qn7owx0uAU61UOvCyh/c22ICK0tXPSvCQe82QMMXjIlZBH9/mRkrSyuWVSey7rcD0cEb/2xsumPmhbSJZPGxs8wfrS5KN8Pg05edWawoX5H5FRMkxdQpaHHu1k1YO12iNSTtF/259sWZOvQ2HfF/OV1gnLk0m+bJ6v7i7+rMCu5NdMzPuW4lPt2//laQfM8/ENT0UuGFq8B4CSjpIIIBloqw43l6kg+OvkiHVlcGP30LJUtsTfQBtDrI9ERThLhRAoiJXhWOPJDqhKxOsoQYaWQwKZrgjwHKJDPJ5PWcEfahZ4oS5NM6EtL1EHIZ2zURHPQ1+W9XVCDeZzfJBKQ/Kx+oLNdtzBIDglaYyQLQwaUsa07HffhxkK8+4XH1VQyI1K34VItrekgHdtGW6Kar7u2wrfUG2gmczHB3dvfbDKIlYvl053mv64UUtFQtnpD/p155JQxacQbH1KqT4qWQyJtuFRafGNEbKwx1xoVOSB97b0vSaS3Nj8gZzfFiZNInyFixlwizRwDX6zCYtrKaPcxK954UMEY7nw+kvMkg9j5fBzJhwxmwzbHGSDiYAIv/Uufq26yZLTq4O8unmM28+V3VJnF66oThlb5rw=",
+        "privateKey": "f6a550e37513b8920a24b99028ed646f10d79ac626884cde89e16d053e37199c",
+        "publicKey": "af2a46abc9625703a193678d192c35559bcee8baaefdd0bccce24b952dd84dec"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "Ed25519 signature test 8",
+        "id": "crypto-ed25519-0008",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "expectedOutputs": {
+        "signature": "74e0171f656d957d39a824ed069b083abe8591f4b4377f3ea97ca51e4cac4695c7c46e9947fdbf728b685101794b5ec48900992bf1f0beecffea69fdddf285be",
+        "verificationResult": true
+      },
+      "inputs": {
+        "message": "FiDccYKQdIjbiA//jQHmzI9BDRcLsEcBNX6oLMEt6HgGyWR4QaVKSpYwMajs7fr3oQ6bS1a0iarU7dJ4oCZIs6kO4EUaBBsEz58VwaI=",
+        "privateKey": "86e6abf2b0cfa3dcdd7b42de862c963d09850e914fc72820d715173e68fd0d40",
+        "publicKey": "bb7a00a156f170e1b868535aa69a27528fb90cd3e21dd408b3684d582b5ff4fe"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "Ed25519 signature test 9",
+        "id": "crypto-ed25519-0009",
+        "specReference": "RFC 8032",
+        "version": "1.0.0"
+      },
+      "testType": "signature_generation",
+      "validationRules": [
+        {
+          "description": "Signature must verify with correct public key",
+          "rule": "signature_verification"
+        }
+      ]
+    }
+  ]
+}

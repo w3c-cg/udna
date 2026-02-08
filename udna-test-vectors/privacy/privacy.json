@@ -1,0 +1,1853 @@
+{
+  "metadata": {
+    "category": "privacy",
+    "generated": "2026-02-08T12:18:37.743538+00:00",
+    "hash": "59c34e0f81e535a56fe21773a89f2da4eeefb07c70efda89e7bcf93e36a5969e",
+    "vectorCount": 35
+  },
+  "vectors": [
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-0",
+          "derivationPath": "m/44'/1234'/0'/0'",
+          "did": "did:key:z6Mkt3nkmqxv7o5q4rnirrcuxdatr24bogozhoy44iayphm7lndn",
+          "publicKey": "9edaa642f5fbbb0e45a88c454b8c138eb81719d93bb1ce201879d9f5b46daaae",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-0",
+          "derivationPath": "m/44'/1234'/0'/1'",
+          "did": "did:key:z6Mkz6d3ldftnkt4arbumzjeh5fpyyxxqwoehzsthpgz2blgsjvk",
+          "publicKey": "cf87b58cb36aa7c04434665243f4afc62f7859c43e6533bcd9d0566926aacb06",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-0",
+          "derivationPath": "m/44'/1234'/0'/2'",
+          "did": "did:key:z6Mk2n4zy3bo56ls2qusmj4gzt6rzpy3wakxr4ojyhtvu7jy5hki",
+          "publicKey": "d3799c6c2eef972d429262786ccfd1cbf1bb01578f1c9c1e75a7d38e9d48e669",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-0",
+          "derivationPath": "m/44'/1234'/0'/3'",
+          "did": "did:key:z6Mkz2ohktyl3sd23kaqby6ci5dprovmv32c6yyzhpeegk2njhfb",
+          "publicKey": "ce9c754f0bdc87ada8100e3c24746f8baacaef42f63193bc8432b4d49ca1a548",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-0",
+          "derivationPath": "m/44'/1234'/0'/4'",
+          "did": "did:key:z6Mkwqwctecz7m7l4pvsuyljuumqq5a3qctdrv2xvvxm5v7xibv5",
+          "publicKey": "b42c299059fb3ebe3eb2a6169a51908741b80a638d757ad6eced7f7406bd06e9",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 0",
+        "id": "privacy-pairwise-0000",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkqqrfdcxxwq3heusmarwg2xyaaljbpqfc2ksauvwcntptc7ok",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "8422518af7b43672524c046c6d5f0002d217c0a2d2a40a56c26cdf317dca4634"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-1",
+          "derivationPath": "m/44'/1234'/1'/0'",
+          "did": "did:key:z6Mkxxijmkanczuic4bpf4fmamqsfb7tprbk4rsefggh4in6iojj",
+          "publicKey": "bdd096280d166881702f2f0ac03212287f37c42ae4644298c7e21be439297340",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-1",
+          "derivationPath": "m/44'/1234'/1'/1'",
+          "did": "did:key:z6Mkfd4qmebndoar7mjtk2riu6d2hxkwnzozgosxpc6ibofm343m",
+          "publicKey": "28f906102d1b811fb13356a28a787a3dd566e5d933a5778bc80b8acdf36c586d",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-1",
+          "derivationPath": "m/44'/1234'/1'/2'",
+          "did": "did:key:z6Mk3b2nqdzniib6sp3oqmrpk3pa2226fswvef2dnwusj6cchwc2",
+          "publicKey": "d874d80f2d4203e93f6e8322f56de0d6b5e2cad5217436da924f8423d85aed39",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-1",
+          "derivationPath": "m/44'/1234'/1'/3'",
+          "did": "did:key:z6Mkc464dp3j6spa2pl3xndcdwbgngfbmqgk4wnqc33veyqecto5",
+          "publicKey": "173dc1bf69f49e0d3d7bbb4621d826698a1640cae59b016f752620414dddd189",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-1",
+          "derivationPath": "m/44'/1234'/1'/4'",
+          "did": "did:key:z6Mk53qgwka7wzdlv3azu4tr4y7ufcmr6vnns2b2trlva4ct4y5b",
+          "publicKey": "eee06b281fb646baec19a7271e63f428991f55ad9683a9c57507053e63a1b542",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 1",
+        "id": "privacy-pairwise-0001",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkub6ctxmjowp2cia3xwc2ozf22a643zix3v2o6moaithjk3nv",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "a07c29dd89759fa1201bbd85a764bad03dcde517dd74ef31c044ce956db5259d"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-2",
+          "derivationPath": "m/44'/1234'/2'/0'",
+          "did": "did:key:z6Mkzon4f3dwqtcob5477w725sd5ozztqkbxu74dkha2qrx3hm7q",
+          "publicKey": "cb9bc2ec7684c4e0f79ffdbfaec87d7673382837a7f8351c1a846fb3b3f03241",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-2",
+          "derivationPath": "m/44'/1234'/2'/1'",
+          "did": "did:key:z6Mka36dq6gevt7s5p2fqg3kq23fcrntvnhneljua43brncr6gve",
+          "publicKey": "06fc3878c4acff2ebf4581b6a86b65145b3ab4ed22d34073618b451f1aa42d21",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-2",
+          "derivationPath": "m/44'/1234'/2'/2'",
+          "did": "did:key:z6Mkftovkmeriperti3ebqygcswcm444vnui6dtep2u7grzd6sru",
+          "publicKey": "2cdd55309143c919a3640c30614ac26739cab688f0e647ea9f34723f4a341583",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-2",
+          "derivationPath": "m/44'/1234'/2'/3'",
+          "did": "did:key:z6Mkverx6ac62fbgafyjrp4z5aejoxtxiw2uswrxhgxmc4ewqfwj",
+          "publicKey": "a9237f005ed1426017098bf99e808975e7745b5495a3739aec17096816c97c7a",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-2",
+          "derivationPath": "m/44'/1234'/2'/4'",
+          "did": "did:key:z6Mk7pd3tlbpusold42twytg3pubhaic4gd3776dxset5cwxq3z3",
+          "publicKey": "fbc7b9ac2fa49cb1f353b6266dbe8138102e187bfffc3bc893e8ad786f3b8fb8",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 2",
+        "id": "privacy-pairwise-0002",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkl4nlbzmwe55ym67fs25mvqs2rtrqwxvciedhjv4terivzrde",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "5f1ab0e596277b867be596bacac25a8ce30b5ea2410674d79324515cc464cc73"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-3",
+          "derivationPath": "m/44'/1234'/3'/0'",
+          "did": "did:key:z6Mkwacfslgdtbkqboqc6i7mzt55bljmigcjpu4thgjlp7cmgpan",
+          "publicKey": "b004592cc3985500ba02f23ecccfbd0ad2c418497d3933992b7fc4c33c0d0b90",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-3",
+          "derivationPath": "m/44'/1234'/3'/1'",
+          "did": "did:key:z6Mkktambe5kevh3sbj7dykib2basxtmx6x52z64m4tgqs7r3md3",
+          "publicKey": "54c0c093aa254fb9053f1e1480e82095e6cbfafdd67dc6726684bf1db07b1211",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-3",
+          "derivationPath": "m/44'/1234'/3'/2'",
+          "did": "did:key:z6Mkkcun34h5xh5ccl3bzqwbqcf4cixq3hykr5sqlrwx4dkzhyra",
+          "publicKey": "50a8ddf0fdb9fa212f61cc2c1808bc122f0d9f0a8f6505c6d7e0d593e22090f2",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-3",
+          "derivationPath": "m/44'/1234'/3'/3'",
+          "did": "did:key:z6Mk6sb2v4fl5cpzpdbh725gdrzb5ubhxcfwby26zls7j6d3kysb",
+          "publicKey": "f483aaf0abe89f978c27feba61c721ed027b88b60e35ecae5f4f87b56241016e",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-3",
+          "derivationPath": "m/44'/1234'/3'/4'",
+          "did": "did:key:z6Mke4evkyanafynqmct6vufdsf2mcetrj5fyeb674wqmogfqrv2",
+          "publicKey": "270955600d0170d83053f56851c8ba608938a7a5c103eff2d0638c5846bae0dc",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 3",
+        "id": "privacy-pairwise-0003",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mksh5qved75oyyjpvea5iiblq3szh3z6dkpbl75dz5lqctp6je",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "91fb0a907febb184bea4075080ae1b964fbcf86a7857fe8f3d5c0537f924693d"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-4",
+          "derivationPath": "m/44'/1234'/4'/0'",
+          "did": "did:key:z6Mkvuats2x64d3bdhlav26ivbh25eqqkosyyq4ttdtt42r6hpzm",
+          "publicKey": "ad01396afee0f6119d60aebc8a84fae921053a58c439398e73e6a3e3bf2c52a8",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-4",
+          "derivationPath": "m/44'/1234'/4'/1'",
+          "did": "did:key:z6Mk6h6m3wcygpoelf2ckbwtxbjjskkkaag4hicmqodtosynyvzt",
+          "publicKey": "f1fccdd85833dc459742506d3b85299294a000dc3a04c8387374b0dc5733d6e9",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-4",
+          "derivationPath": "m/44'/1234'/4'/2'",
+          "did": "did:key:z6Mk2xkk2ee4sgrdlsg57ryzc4ui7qyuqhlnh7mia52qzqn4bhdh",
+          "publicKey": "d5d4ad109c91a235c8ddfc71917288fc31481d6d3fd8807750cc1bc09c67a3fb",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-4",
+          "derivationPath": "m/44'/1234'/4'/3'",
+          "did": "did:key:z6Mkjhvkl26yz4r7xaqlpkfo5lyjaumfspc54mlknxfscuhboedd",
+          "publicKey": "49eaa5ebd8cf23fb820b7a8aeeaf090518593c5de316a6dcb2150e1710633c91",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-4",
+          "derivationPath": "m/44'/1234'/4'/4'",
+          "did": "did:key:z6Mkpyckq2jlfqrgcl7wcezff5lbe3n33kfevs3ps6hpxs3hqqp4",
+          "publicKey": "7e04a8692b2c22612ff6113252f56126dbbda8a4acb6f978efbcb67841fc287a",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 4",
+        "id": "privacy-pairwise-0004",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkanm4qpo54mm42uwgzjkirmbvnaqexyefhuhp7jw4vpot7zx2",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "0359c83ddde319cd52c6ca5488b03568204be0853d0effa6dcabdd3fe6fa5196"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-5",
+          "derivationPath": "m/44'/1234'/5'/0'",
+          "did": "did:key:z6Mk5zbbx7ajjpz3lhksxv25vbztwi35647gl2mwqqx6inahtokx",
+          "publicKey": "ee421bfc094bf3b59d52bd75da8733b237df73e65e996842fe434079b95747ea",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-5",
+          "derivationPath": "m/44'/1234'/5'/1'",
+          "did": "did:key:z6Mke322ik2bkkslzzkegorbhejq7nbu7wrcsv4lj4vfwuybx5vm",
+          "publicKey": "26f5a42b4152a4bce54433a2139130fb434fda229578b4f2a5b5301bf6acf478",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-5",
+          "derivationPath": "m/44'/1234'/5'/2'",
+          "did": "did:key:z6Mk5cndlnzxzwhxnnsej5vomkjnqzubtvqogcqrg66inzet2vl2",
+          "publicKey": "e89a35b737cd8f76b6444f6ae6292d866819d60e30a1137bc86e493d557a8d21",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-5",
+          "derivationPath": "m/44'/1234'/5'/3'",
+          "did": "did:key:z6Mk7qajspcjheqfa5k2vjshhbga3rmk5czcr72pgygtqriybo3n",
+          "publicKey": "fc00993c49392050755aaa647384c0dc58ae8b228ff4f360d3845180bb6dea32",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-5",
+          "derivationPath": "m/44'/1234'/5'/4'",
+          "did": "did:key:z6Mkuor3nurogxqkrhrucmtrvmckzb3qkww356ptfdoir3zg7udp",
+          "publicKey": "a3a3b6d22e35e0a89e3413271ab04ac877055adbef9f328dc88ef26fd06fe3fb",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 5",
+        "id": "privacy-pairwise-0005",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkeo4h2qjvtuc3hpbv6xm264tr4bq37sdi7c4tyoiblqxsw56e",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "23b87d41359d05b3bc35f5d9af7271e061bfc868f8b93c39015c2f2b77c4880e"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-6",
+          "derivationPath": "m/44'/1234'/6'/0'",
+          "did": "did:key:z6Mkmccbfzgsp4m7shfss5sqrjsf76j3pngx3w3xzjabqhpalwby",
+          "publicKey": "608412e4d27f19f91cb2976508a645ff93b7b4d7ddb77ca40181de05d8383762",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-6",
+          "derivationPath": "m/44'/1234'/6'/1'",
+          "did": "did:key:z6Mkd4aluolnaldscxerjozcgzuh6ip7lcumzwilpzd63zwr2ks3",
+          "publicKey": "1f00ba396d02c7215c914bb2236687f21ff58a8ccd90b7e47ede6d1d2a5be7d7",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-6",
+          "derivationPath": "m/44'/1234'/6'/2'",
+          "did": "did:key:z6Mkh4cewhe5rdnewovoj2rstlolmeadnpag3za6xjr7bnn5zugx",
+          "publicKey": "3f044b1c9d88da4b3aae4ea329adcb610036bc06de41eba63f0b5bdcd0d78e5f",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-6",
+          "derivationPath": "m/44'/1234'/6'/3'",
+          "did": "did:key:z6Mkr55jdlep2xguh6hxb6eufqr2ymvrur7hmjitk5mrjv2tfvib",
+          "publicKey": "8f7a91ac8fd5cd43f8f70f8942c23ac32b1a47e762513575914d7532d5014677",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-6",
+          "derivationPath": "m/44'/1234'/6'/4'",
+          "did": "did:key:z6Mklqf7bgha7v6gbebbybonnqre2m7tuqow64p57a273pooyy45",
+          "publicKey": "5c0bf098e0fd7c609021c05cd6c224d33f3a41d6f71fdf835fdbdcec639ddd5e",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 6",
+        "id": "privacy-pairwise-0006",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkusoombwwetgy4iovx6zzxe37x6cy33qtqg6i2xnbzialbojr",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "a49ce606d624cd8e21d5bfb39b937fbf858dee1381bc8d5da1ca00b0b931640a"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-7",
+          "derivationPath": "m/44'/1234'/7'/0'",
+          "did": "did:key:z6Mku7qebcf7dkgzhsmr5acrlfygtboie3oru7vba54fdmju4nzy",
+          "publicKey": "a7e04088bf1a8d93c991e805159706985c826dd1a7ea1077851b134e3738779f",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-7",
+          "derivationPath": "m/44'/1234'/7'/1'",
+          "did": "did:key:z6Mktmwx2vy6zybohpuehieb4xdaclbzbccedds3opvhrbnatxjs",
+          "publicKey": "9b2d7d571ece02e3be843a081e5c6012c390884418e5b73ea7885a09dd329b67",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-7",
+          "derivationPath": "m/44'/1234'/7'/2'",
+          "did": "did:key:z6Mk5zewcgwsvremvpcgnefqfzv42kuw2i45k24mvfst72l6cw6o",
+          "publicKey": "ee49611ad2ac48cabc46690b02e6bcd2a96d239d56b8ca9653fe97e15bce739c",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-7",
+          "derivationPath": "m/44'/1234'/7'/3'",
+          "did": "did:key:z6Mkznwg3eatfe6nkzeb3u4y45ijocbvoamp7td2vmordxpwbkh4",
+          "publicKey": "cb6c6d9013293cd56481dd398e7509708357018ffcc7aab1d11ddf60a8fc77c8",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-7",
+          "derivationPath": "m/44'/1234'/7'/4'",
+          "did": "did:key:z6Mkc7mtzcmj225v7zuyxyx6smgl2w4wfbdxvyki5y3hq6erzrnk",
+          "publicKey": "17d93c8989d6bb5fe698be2fe930cbd5b9628477ae148ee36787891cc5aa9891",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 7",
+        "id": "privacy-pairwise-0007",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkcp2rcjkjd44qffwr7ydehdnmu2wsaapuqkeom42y3iomvoki",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "13f51125491f390296d1fe06438daca6ad2001f48288e67358da1ccab9482e70"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-8",
+          "derivationPath": "m/44'/1234'/8'/0'",
+          "did": "did:key:z6Mknlawdgcc2wbhpt4se6jvpn55m5yhqrffkmponw3zhq3tsmvz",
+          "publicKey": "6ac1619842d58277cf92279357b7bd67707844a5531ee6db793c373932b99fef",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-8",
+          "derivationPath": "m/44'/1234'/8'/1'",
+          "did": "did:key:z6Mkpdbn5fpsuzgoga2hdkf677a5a2jdye3ihxgb4t3fk3ttyjxq",
+          "publicKey": "78c2de95f2a64ce303471a8beffc1d06923c13683dcc1e4f6556e73c26f0dd72",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-8",
+          "derivationPath": "m/44'/1234'/8'/2'",
+          "did": "did:key:z6Mkb5z66geevrwsl4c5cbpdeob3stggcayt54wkbrhaekiut3u2",
+          "publicKey": "0f73ef1884ac6d25f05d105e32383b94cc610313ef2ca0c4e0229149ee9a7e5e",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-8",
+          "derivationPath": "m/44'/1234'/8'/3'",
+          "did": "did:key:z6Mknbrxjidqhdy5ygj2mnsbehqrki3xjihziewd2nlebxlrmsvi",
+          "publicKey": "686374a07038f1dc193a6364121e11523774a0f9412c3d35640dd7164aa8b42d",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-8",
+          "derivationPath": "m/44'/1234'/8'/4'",
+          "did": "did:key:z6Mkeba6szrc6axshohk4s5gsp6lzatzmocqp2cccyhlngoea7fo",
+          "publicKey": "2041e96622f02f23b8eae4ba693fcbc8279638507e842160eb699c407cae75a9",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Pairwise DID derivation test 8",
+        "id": "privacy-pairwise-0008",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkqppcnggkk2munymku2hren2qwpid4dzw66rqp5lpqvy3uelc",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "83de2698ca569946e18aa68f123750b3d03e0f36f7a307f56f8571ba1162963a"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-9",
+          "derivationPath": "m/44'/1234'/9'/0'",
+          "did": "did:key:z6Mky6txyo27iln54zajjd4g526xdjxqrkyynxezxxq7ci2zxnmp",
+          "publicKey": "c7a77c3b5f42dbde640948f86eebd71a6f08ab186dc99bde1f12359bb58f772c",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-9",
+          "derivationPath": "m/44'/1234'/9'/1'",
+          "did": "did:key:z6Mk2xioot4rg6oxh57l5gzlpftjxo6jzy2n46tzzqkgbaxj44uc",
+          "publicKey": "d5d0e74f91379d73f7ebe9b2b79669bbbc9ce34de7a79cc146082e9e7282e3c9",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-9",
+          "derivationPath": "m/44'/1234'/9'/2'",
+          "did": "did:key:z6Mkee4m6v27hbosuhquvl7xu3zyjodcleafuoxp77p3qfqeeq7w",
+          "publicKey": "2138cf575f385d2a1e14aaff7a6f384b86259005a3aefffdfb81604243f61956",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-9",
+          "derivationPath": "m/44'/1234'/9'/3'",
+          "did": "did:key:z6Mktnhnvilvkq2nr5cvwy65tfi3yvnsniyrk3tdvmwt5nk7hxai",
+          "publicKey": "9b4edaa1755434d8f455b63dd9951bc55b26a31156e63ab2d3eb55f3dc08a75f",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-9",
+          "derivationPath": "m/44'/1234'/9'/4'",
+          "did": "did:key:z6Mk3b6xmrvbgh7ho4ukdcg773dq7ige2sn5bkjvlybasecqyuql",
+          "publicKey": "d87d7646a131fe77728a188dffec70fa0c4d49bd0a9355e02091050c520bf332",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Pairwise DID derivation test 9",
+        "id": "privacy-pairwise-0009",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mk6hpq4xexwz6bsdbfolfnqkps6ea4d5bsduoxokuoak7kkrs3",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "f1df0e5c97b67c190c2572cad829f2f101c1f4321d1d772a8e02bea5465bae8a"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-10",
+          "derivationPath": "m/44'/1234'/10'/0'",
+          "did": "did:key:z6Mk5dn4siojtl23jsou62fqryuvz33eyvsli6itltgr5wlf4igk",
+          "publicKey": "e8dbc921c99af5b4c9d4f68b08e295cef64c564b479135ccd1ed965e20ca7104",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-10",
+          "derivationPath": "m/44'/1234'/10'/1'",
+          "did": "did:key:z6Mk2uwy4jgj5btdnoepphop2co5nc67ddvqtd6ryf3chg33po7w",
+          "publicKey": "d52d8e24c9e86636b88f79dcfd09dd68bdf18eb098fd1c176239b7b7bbf689d2",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-10",
+          "derivationPath": "m/44'/1234'/10'/2'",
+          "did": "did:key:z6Mkjscrxptks3l7hpk66ym6sqaftyiaovcutc35vt7e3yc7gktt",
+          "publicKey": "4c851bbe6a96d7f3bd5ef619e940059e1007545498b7dacfe4de05f32a737575",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-10",
+          "derivationPath": "m/44'/1234'/10'/3'",
+          "did": "did:key:z6Mkbx4cxb5vo77eswbwqm56j5f2fkozb5om362jnmhkgfziy5o3",
+          "publicKey": "0df82b87b577fe495836833be4f4ba2a9d90f5ccdfb496b0ea31728c75db3e95",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-10",
+          "derivationPath": "m/44'/1234'/10'/4'",
+          "did": "did:key:z6Mkxre53hadhswcn36frf2uzizvj2lypjcwqsgcav2ktgrhb66r",
+          "publicKey": "bc49dd9c033cac26efc589754ca3354e9787a456848c20574a99a270fbd11b6c",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Pairwise DID derivation test 10",
+        "id": "privacy-pairwise-0010",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkn3fuzp2hj3cudpdty3bvaoha6duwgyokybhpvcddhmqyzkkj",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "6ecb4cbf474ec541bc73c6c35038e0f0e96361cac04efa88633b218ca94976a7"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-11",
+          "derivationPath": "m/44'/1234'/11'/0'",
+          "did": "did:key:z6Mk7txfy5jccwsnbqoy3x7te27bynu7p4aq3u5ane3vxo2oe3bq",
+          "publicKey": "fcee5c752215a4d0c1d8ddff326be1c369f7f010dd3a069375bbb4e26c3096a0",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-11",
+          "derivationPath": "m/44'/1234'/11'/1'",
+          "did": "did:key:z6Mkrign7vgglxdfmgjjodmrhwqs2q7eoew5g3wkvwqe2ofmzshu",
+          "publicKey": "8a0cdfd4c65dc656192970d913da12d43e4712dd36ecaada04d38accc8f4b291",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-11",
+          "derivationPath": "m/44'/1234'/11'/2'",
+          "did": "did:key:z6Mkj74tbkqvxnlb4o7rvgajtupyzziu6befp52vz6odzkw6j4v7",
+          "publicKey": "4ff930aa15bb561e3bf1a98099d1f8ce514f04857f755cf9c3caade4f2bfe46e",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-11",
+          "derivationPath": "m/44'/1234'/11'/3'",
+          "did": "did:key:z6Mkzu5weciqvnqfey4qlispusffsjpjm3ndnj4k76l3qjjoihqj",
+          "publicKey": "cd3b620910ab605263905a24fa48a5925e966da36a78aff97b8252e41e09ecda",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-11",
+          "derivationPath": "m/44'/1234'/11'/4'",
+          "did": "did:key:z6Mkjjorjc2kd5zx7r7ugvyxy6b6cc2qnuntxnlbiuczbhsmw6v5",
+          "publicKey": "4a5d148b4a1f737fc7f435717c783e10b506d1b3bb5614505909e4cb7abd7c42",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Pairwise DID derivation test 11",
+        "id": "privacy-pairwise-0011",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mketdfkwzztv5qere5v4swcgpm4ok5v4rcnorzjprztuitknbw",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "24c6555b399d7b02449daf256119ece395daf2226ba394be399d113534364648"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-12",
+          "derivationPath": "m/44'/1234'/12'/0'",
+          "did": "did:key:z6Mktt233o7y52a5ae4oukirozjgzrdmjgu2wpsitgjdm64dccst",
+          "publicKey": "9cf5bdbbf8ee81d0138ea291176526cc46c49a9ab3e489992367b8310a53185b",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-12",
+          "derivationPath": "m/44'/1234'/12'/1'",
+          "did": "did:key:z6Mk2nozhcnehyenwkv73dyp2gsk2ksqmrjdyoltbmfkho4i2yij",
+          "publicKey": "d35d9389a43e08db2abfd8f0fd1a4ad2a5064523c39730b0aa3bb88d6109add3",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-12",
+          "derivationPath": "m/44'/1234'/12'/2'",
+          "did": "did:key:z6Mkf3q3nfjo7rvj6aqttxemqgeyl5ijwkfn4rhtmde64nep3ane",
+          "publicKey": "2ee1b6952efc6a9f02139dc8c818985f509b28ade44f360c9ee348fd81a4008f",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-12",
+          "derivationPath": "m/44'/1234'/12'/3'",
+          "did": "did:key:z6Mkmwmsdnwrdimh6snall6utconhokrnmmi27t2qkmhewl43xa3",
+          "publicKey": "659921b6d11a187f49a05afd4989cd3b9516b188d7e7a829872597cddc1be507",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-12",
+          "derivationPath": "m/44'/1234'/12'/4'",
+          "did": "did:key:z6Mknthccpfvk3kbbtywa2ojiqzfjbiuoexhv6zgfjocw5fe36sv",
+          "publicKey": "6cce213cb556d410cf16069c94432548514712e7afb262a5c2b74a4dfa557fa5",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Pairwise DID derivation test 12",
+        "id": "privacy-pairwise-0012",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mka2phynqainhdph4w4ly7gocuhmtif7q2z353stunz7t644jf",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "069e7c3600434e379f96e2f1f338543b2682fe1acefbb94e8dcfe7ee71255bc5"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-13",
+          "derivationPath": "m/44'/1234'/13'/0'",
+          "did": "did:key:z6Mklrkswupx6drxlx46fra5c3jiqxlmrwzk5imamjqtxi443kwz",
+          "publicKey": "5c552b51f7f0e375df9e2c41d16d2885d6c8db2aea18062613ba39cdaad9d560",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-13",
+          "derivationPath": "m/44'/1234'/13'/1'",
+          "did": "did:key:z6Mkucyogetfy4ghcfbwdegccxalq7edopct4fj25bkzkjnywqxl",
+          "publicKey": "a0b0e31265c70c711436190c215c0b87c8373c53e153ae8559525b8b42ebd32b",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-13",
+          "derivationPath": "m/44'/1234'/13'/2'",
+          "did": "did:key:z6Mkat7k5zjdly6kni5odxwcp2tahxdlzl6qzhr6jlgk2xbuoxek",
+          "publicKey": "04feaee5235e3ca6a3ae1dec27ea603dc6bcafd0c9e3e4accad5c3475c8a5878",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-13",
+          "derivationPath": "m/44'/1234'/13'/3'",
+          "did": "did:key:z6Mke7nqd7otvvbcr5utlahy2jlbmsirnzi6tc4hujctvjze4azy",
+          "publicKey": "27db01fdd3ad4228f693580f8d2561649116e51e98b87a2453aa724e033864cd",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-13",
+          "derivationPath": "m/44'/1234'/13'/4'",
+          "did": "did:key:z6Mk67kgch5krswbvagzniimcqe72e3gprnfbgdzpjkvdwb3gq2r",
+          "publicKey": "f7d4611faa8cac1a80d96a10c1409fd13667c5a5098797a5551d83b34351a224",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Pairwise DID derivation test 13",
+        "id": "privacy-pairwise-0013",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkwsgra75cjdhddpxqiasymdfamabpdnocddscp3mdajwdreg7",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "b48d107fa248ce31bef04025860ca06002f1b5c218e427ed83026c3890dfd9ae"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicProperties": {
+        "compartmentalization": "Breach of one context doesn't compromise others",
+        "derivationAlgorithm": "BLAKE2b-KDF",
+        "recovery": "With root key, all derived identities can be regenerated",
+        "unlinkability": "Without root key, cannot link derived identities"
+      },
+      "derivedIdentities": [
+        {
+          "context": "chat-with-alice-14",
+          "derivationPath": "m/44'/1234'/14'/0'",
+          "did": "did:key:z6Mkvstib7i6kelfopvdnz43uqva7chjynhefbqpn5awbw2yjq23",
+          "publicKey": "aca680fd1e5116573ea36e79ba42a0f88e9c34e42860f6f4160db584c35be8c9",
+          "purpose": "social_chat"
+        },
+        {
+          "context": "project-bob-14",
+          "derivationPath": "m/44'/1234'/14'/1'",
+          "did": "did:key:z6Mkzezxaik526xkrb5k6efzwmw2fq5hgwf5vbcxn2r3az6lqvhu",
+          "publicKey": "c93370215dd7aea887aaf10b9b32da2c3a7358bda84576ea3b067cb854f411aa",
+          "purpose": "work_collaboration"
+        },
+        {
+          "context": "banking-carol-14",
+          "derivationPath": "m/44'/1234'/14'/2'",
+          "did": "did:key:z6Mkywpmnh7ldtqinf7m7iwm4nikdubriyyrw6i2rbpxbbkwdtiw",
+          "publicKey": "c59ec69feb1ce08697ecfa2cce350a1d03146311b791a885f7085561cd1696d9",
+          "purpose": "financial"
+        },
+        {
+          "context": "medical-dave-14",
+          "derivationPath": "m/44'/1234'/14'/3'",
+          "did": "did:key:z6Mkwcmnodyl5e4risl45hzwtygnqhpog7xbcqxvgdaewnojfxue",
+          "publicKey": "b098d70f0be93914497ce9f369e0cd81dee37ee1142f530c04b35c92de84dd19",
+          "purpose": "health"
+        },
+        {
+          "context": "store-eve-14",
+          "derivationPath": "m/44'/1234'/14'/4'",
+          "did": "did:key:z6Mkqp2d3i2bkqvfogmf4yjgnb372sp6q3homknbq6dbp6czcfzk",
+          "publicKey": "83f43da341542a571985e61266877fd49fe86cee629a1878617f8591172a4f9f",
+          "purpose": "shopping"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Pairwise DID derivation test 14",
+        "id": "privacy-pairwise-0014",
+        "specReference": "UDNA Privacy Considerations \u00a78",
+        "version": "1.0.0"
+      },
+      "privacyGuarantees": {
+        "crossContextUnlinkability": true,
+        "forwardPrivacy": true,
+        "selectiveDisclosure": true
+      },
+      "privacyProperty": "Unlinkability",
+      "rootIdentity": {
+        "did": "did:key:z6Mkb4up4v4sii7hp7ou5gnvegccph4ibqebicrnayakbjwuqcky",
+        "masterSeed": "Securely stored offline",
+        "publicKey": "0f28fe5792423e77fdd4e99b52184279f880c08140a2d0600a0a6d480958b545"
+      },
+      "testScenario": {
+        "advantage": "Negligible (\u22642^-128)",
+        "adversaryCapability": "Passive observer of all derived identities",
+        "adversaryGoal": "Link two derived identities to same root",
+        "adversaryKnowledge": "Does not possess root private key",
+        "expectedSuccessProbability": 0.5
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 0",
+        "id": "privacy-forward-secrecy-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "ephemeralKeys": [
+          "Alice_X25519_eph",
+          "Bob_X25519_eph"
+        ],
+        "longTermKeys": [
+          "Alice_Ed25519",
+          "Bob_Ed25519"
+        ],
+        "name": "ephemeral_key_exchange",
+        "properties": [
+          "PFS",
+          "Key confirmation"
+        ],
+        "sharedSecret": "Derived via X25519"
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 1",
+        "id": "privacy-forward-secrecy-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "algorithm": "Double Ratchet",
+        "messageKeys": "Derived per message",
+        "name": "ratcheting",
+        "properties": [
+          "Forward secrecy",
+          "Future secrecy",
+          "Break-in recovery"
+        ]
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 2",
+        "id": "privacy-forward-secrecy-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "ephemeralKeys": [
+          "Alice_X25519_eph",
+          "Bob_X25519_eph"
+        ],
+        "longTermKeys": [
+          "Alice_Ed25519",
+          "Bob_Ed25519"
+        ],
+        "name": "ephemeral_key_exchange",
+        "properties": [
+          "PFS",
+          "Key confirmation"
+        ],
+        "sharedSecret": "Derived via X25519"
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 3",
+        "id": "privacy-forward-secrecy-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "algorithm": "Double Ratchet",
+        "messageKeys": "Derived per message",
+        "name": "ratcheting",
+        "properties": [
+          "Forward secrecy",
+          "Future secrecy",
+          "Break-in recovery"
+        ]
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 4",
+        "id": "privacy-forward-secrecy-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "ephemeralKeys": [
+          "Alice_X25519_eph",
+          "Bob_X25519_eph"
+        ],
+        "longTermKeys": [
+          "Alice_Ed25519",
+          "Bob_Ed25519"
+        ],
+        "name": "ephemeral_key_exchange",
+        "properties": [
+          "PFS",
+          "Key confirmation"
+        ],
+        "sharedSecret": "Derived via X25519"
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 5",
+        "id": "privacy-forward-secrecy-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "algorithm": "Double Ratchet",
+        "messageKeys": "Derived per message",
+        "name": "ratcheting",
+        "properties": [
+          "Forward secrecy",
+          "Future secrecy",
+          "Break-in recovery"
+        ]
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 6",
+        "id": "privacy-forward-secrecy-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "ephemeralKeys": [
+          "Alice_X25519_eph",
+          "Bob_X25519_eph"
+        ],
+        "longTermKeys": [
+          "Alice_Ed25519",
+          "Bob_Ed25519"
+        ],
+        "name": "ephemeral_key_exchange",
+        "properties": [
+          "PFS",
+          "Key confirmation"
+        ],
+        "sharedSecret": "Derived via X25519"
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 7",
+        "id": "privacy-forward-secrecy-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "algorithm": "Double Ratchet",
+        "messageKeys": "Derived per message",
+        "name": "ratcheting",
+        "properties": [
+          "Forward secrecy",
+          "Future secrecy",
+          "Break-in recovery"
+        ]
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 8",
+        "id": "privacy-forward-secrecy-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "ephemeralKeys": [
+          "Alice_X25519_eph",
+          "Bob_X25519_eph"
+        ],
+        "longTermKeys": [
+          "Alice_Ed25519",
+          "Bob_Ed25519"
+        ],
+        "name": "ephemeral_key_exchange",
+        "properties": [
+          "PFS",
+          "Key confirmation"
+        ],
+        "sharedSecret": "Derived via X25519"
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "cryptographicMechanisms": [
+        "Ephemeral Diffie-Hellman (X25519)",
+        "Key derivation function (HKDF)",
+        "Message authentication (Poly1305)"
+      ],
+      "formalProperties": [
+        "Perfect forward secrecy (PFS)",
+        "Post-compromise security",
+        "Deniability"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Forward secrecy test 9",
+        "id": "privacy-forward-secrecy-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "privacyProperty": "Forward Secrecy",
+      "scenario": {
+        "algorithm": "Double Ratchet",
+        "messageKeys": "Derived per message",
+        "name": "ratcheting",
+        "properties": [
+          "Forward secrecy",
+          "Future secrecy",
+          "Break-in recovery"
+        ]
+      },
+      "securityGuarantees": {
+        "compromiseOfEphemeralKey": "Only affects current session",
+        "compromiseOfLongTermKeys": "Does not reveal past session keys",
+        "compromiseOfSessionKey": "Does not reveal other session keys",
+        "futureSessionSecurity": "Unaffected by past compromises"
+      }
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "layers": 3,
+        "name": "onion_routing",
+        "properties": [
+          "Each relay sees only next hop",
+          "Final destination hidden"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 0",
+        "id": "privacy-metadata-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "onion_routing"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "cover_traffic",
+        "properties": [
+          "Constant transmission rate",
+          "Indistinguishable from real traffic"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 1",
+        "id": "privacy-metadata-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "cover_traffic"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "padding",
+        "properties": [
+          "Fixed message sizes",
+          "Random padding patterns"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 2",
+        "id": "privacy-metadata-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "padding"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "timing_obfuscation",
+        "properties": [
+          "Random delays",
+          "Message reordering"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 3",
+        "id": "privacy-metadata-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "timing_obfuscation"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "layers": 3,
+        "name": "onion_routing",
+        "properties": [
+          "Each relay sees only next hop",
+          "Final destination hidden"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 4",
+        "id": "privacy-metadata-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "onion_routing"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "cover_traffic",
+        "properties": [
+          "Constant transmission rate",
+          "Indistinguishable from real traffic"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 5",
+        "id": "privacy-metadata-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "cover_traffic"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "padding",
+        "properties": [
+          "Fixed message sizes",
+          "Random padding patterns"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 6",
+        "id": "privacy-metadata-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "padding"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "timing_obfuscation",
+        "properties": [
+          "Random delays",
+          "Message reordering"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 7",
+        "id": "privacy-metadata-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "timing_obfuscation"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "layers": 3,
+        "name": "onion_routing",
+        "properties": [
+          "Each relay sees only next hop",
+          "Final destination hidden"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 8",
+        "id": "privacy-metadata-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "onion_routing"
+    },
+    {
+      "adversaryModel": {
+        "capability": "Global passive adversary",
+        "goal": "Correlate communications, identify participants",
+        "observation": "Timing, size, origin, destination"
+      },
+      "implementation": {
+        "name": "cover_traffic",
+        "properties": [
+          "Constant transmission rate",
+          "Indistinguishable from real traffic"
+        ]
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "privacy",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Metadata protection test 9",
+        "id": "privacy-metadata-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "performanceTradeoff": {
+        "bandwidth": "Increased 1.5-2x",
+        "computation": "Minimal",
+        "latency": "Increased 2-3x"
+      },
+      "privacyProperty": "Metadata Protection",
+      "protectionLevel": {
+        "anonymity": "High",
+        "undetectability": "Medium",
+        "unlinkability": "High"
+      },
+      "technique": "cover_traffic"
+    }
+  ]
+}

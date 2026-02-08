@@ -1,0 +1,497 @@
+{
+  "category": "interoperability",
+  "count": 10,
+  "testType": "cross_did_communication",
+  "vectors": [
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 0",
+        "id": "interop-cross-did-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:key DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:key and did:web",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:key:ad8a50a326f4a60a261ff02fade334e3",
+          "didMethod": "did:key"
+        },
+        "bob": {
+          "did": "did:web:142ec7949274cca58ff2ddf35bf2f39b",
+          "didMethod": "did:web"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 1",
+        "id": "interop-cross-did-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:web DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:web and did:ion",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:web:d6d9f27294f2e5d044e1f94f76ce2403",
+          "didMethod": "did:web"
+        },
+        "bob": {
+          "did": "did:ion:8f20a283f45ac5122b67198cbe060628",
+          "didMethod": "did:ion"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 2",
+        "id": "interop-cross-did-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:ion DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:ion and did:ethr",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:ion:c0100f538a326e4c653a24f4b7a4b25b",
+          "didMethod": "did:ion"
+        },
+        "bob": {
+          "did": "did:ethr:8c9053363d0926e8d6e14f2cac60d5fb",
+          "didMethod": "did:ethr"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 3",
+        "id": "interop-cross-did-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:ethr DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:ethr and did:btcr",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:ethr:94018a822828c4c932be017d466d5a57",
+          "didMethod": "did:ethr"
+        },
+        "bob": {
+          "did": "did:btcr:b9896be0536741253ef03352b8da582d",
+          "didMethod": "did:btcr"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 4",
+        "id": "interop-cross-did-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:btcr DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:btcr and did:key",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:btcr:5044a4573415766fde1dcdcaac139025",
+          "didMethod": "did:btcr"
+        },
+        "bob": {
+          "did": "did:key:9cfdfdaf9b6830c4fdbc3dd77ad5b315",
+          "didMethod": "did:key"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 5",
+        "id": "interop-cross-did-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:key DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:key and did:web",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:key:101b5e2908b8f5bcbed879089140c078",
+          "didMethod": "did:key"
+        },
+        "bob": {
+          "did": "did:web:106140c93e0d4e8728a0ed2c08758dd5",
+          "didMethod": "did:web"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 6",
+        "id": "interop-cross-did-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:web DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:web and did:ion",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:web:8344d42209d7d3bcc94457be6543a233",
+          "didMethod": "did:web"
+        },
+        "bob": {
+          "did": "did:ion:a8c818ea654a7d8c295435dc1195009a",
+          "didMethod": "did:ion"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 7",
+        "id": "interop-cross-did-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:ion DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:ion and did:ethr",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:ion:89602cf0297b7049f1cc80bcf15bd596",
+          "didMethod": "did:ion"
+        },
+        "bob": {
+          "did": "did:ethr:eda64b6c0b9807349eee29083192d654",
+          "didMethod": "did:ethr"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 8",
+        "id": "interop-cross-did-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:ethr DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:ethr and did:btcr",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:ethr:fd25102d718ad7d71e52a461047c3415",
+          "didMethod": "did:ethr"
+        },
+        "bob": {
+          "did": "did:btcr:ef6d72c49f7cd1085b29083a43452878",
+          "didMethod": "did:btcr"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    },
+    {
+      "challenges": [
+        "Different key formats",
+        "Different resolution mechanisms",
+        "Different proof formats"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "interoperability",
+        "creationTimestamp": "2026-02-08T12:18:37.659537+00:00",
+        "description": "Cross-DID method interoperability test 9",
+        "id": "interop-cross-did-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "operations": [
+        {
+          "description": "Resolve did:btcr DID to document",
+          "expected": "Valid DID document with verification methods",
+          "name": "did_resolution"
+        },
+        {
+          "description": "Establish session between did:btcr and did:key",
+          "expected": "Secure session established",
+          "name": "key_agreement"
+        },
+        {
+          "description": "Exchange signed messages",
+          "expected": "Messages delivered and verified",
+          "name": "message_exchange"
+        }
+      ],
+      "participants": {
+        "alice": {
+          "did": "did:btcr:22e7a665e144fb15de2352e8fbabe912",
+          "didMethod": "did:btcr"
+        },
+        "bob": {
+          "did": "did:key:45823a302bdb76593caf19ad00153d50",
+          "didMethod": "did:key"
+        }
+      },
+      "solutions": [
+        "Common verification method types",
+        "Standardized resolution protocol",
+        "Signature suite interoperability"
+      ],
+      "testType": "cross_did_communication"
+    }
+  ]
+}

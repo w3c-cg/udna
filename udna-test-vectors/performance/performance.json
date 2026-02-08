@@ -1,0 +1,1390 @@
+{
+  "metadata": {
+    "category": "performance",
+    "generated": "2026-02-08T12:18:37.754535+00:00",
+    "hash": "d23db69bd4299ad5a8c37b249d496879238a6bfbcb5927015399cf522382b0a2",
+    "vectorCount": 35
+  },
+  "vectors": [
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 1000,
+        "unit": "\u03bcs"
+      },
+      "category": "cryptography",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: Ed25519 signature",
+        "id": "performance-ed25519-signature-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 1000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "Ed25519 signature",
+      "performanceTargets": {
+        "excellent": "<100\u03bcs",
+        "minimum": "<1000\u03bcs",
+        "target": "<500\u03bcs",
+        "throughput": ">=1,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 1000,
+        "unit": "\u03bcs"
+      },
+      "category": "cryptography",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: Ed25519 verification",
+        "id": "performance-ed25519-verification-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 1000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "Ed25519 verification",
+      "performanceTargets": {
+        "excellent": "<200\u03bcs",
+        "minimum": "<1500\u03bcs",
+        "target": "<800\u03bcs",
+        "throughput": ">=1,249,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 10000,
+        "unit": "ns"
+      },
+      "category": "cryptography",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: BLAKE2b 256 hash",
+        "id": "performance-blake2b-256-hash-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 10000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 1000
+      },
+      "operation": "BLAKE2b 256 hash",
+      "performanceTargets": {
+        "excellent": "<50ns",
+        "minimum": "<500ns",
+        "target": "<200ns",
+        "throughput": ">=49,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 100,
+        "unit": "\u03bcs"
+      },
+      "category": "cryptography",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: X25519 key exchange",
+        "id": "performance-x25519-key-exchange-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 100,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "X25519 key exchange",
+      "performanceTargets": {
+        "excellent": "<500\u03bcs",
+        "minimum": "<5000\u03bcs",
+        "target": "<2000\u03bcs",
+        "throughput": ">=49,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 10000,
+        "unit": "\u03bcs"
+      },
+      "category": "resolution",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: DID resolution cached",
+        "id": "performance-did-resolution-cached-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 10000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 1000
+      },
+      "operation": "DID resolution cached",
+      "performanceTargets": {
+        "excellent": "<10\u03bcs",
+        "minimum": "<100\u03bcs",
+        "target": "<50\u03bcs",
+        "throughput": ">=199,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 100,
+        "unit": "ms"
+      },
+      "category": "resolution",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: DID resolution uncached",
+        "id": "performance-did-resolution-uncached-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 100,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "DID resolution uncached",
+      "performanceTargets": {
+        "excellent": "<50ms",
+        "minimum": "<500ms",
+        "target": "<200ms",
+        "throughput": ">=499.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 100000,
+        "unit": "ns"
+      },
+      "category": "protocol",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: UDNA address parsing",
+        "id": "performance-udna-address-parsing-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 100000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 10000
+      },
+      "operation": "UDNA address parsing",
+      "performanceTargets": {
+        "excellent": "<100ns",
+        "minimum": "<1000ns",
+        "target": "<500ns",
+        "throughput": ">=199,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 10000,
+        "unit": "\u03bcs"
+      },
+      "category": "protocol",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.657567+00:00",
+        "description": "Performance benchmark: Message validation",
+        "id": "performance-message-validation-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 10000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 1000
+      },
+      "operation": "Message validation",
+      "performanceTargets": {
+        "excellent": "<100\u03bcs",
+        "minimum": "<1000\u03bcs",
+        "target": "<500\u03bcs",
+        "throughput": ">=19,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 1000,
+        "unit": "ms"
+      },
+      "category": "network",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: DHT lookup",
+        "id": "performance-dht-lookup-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 1000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "DHT lookup",
+      "performanceTargets": {
+        "excellent": "<100ms",
+        "minimum": "<1000ms",
+        "target": "<500ms",
+        "throughput": ">=2,000.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 100,
+        "unit": "ms"
+      },
+      "category": "protocol",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: Session establishment",
+        "id": "performance-session-establishment-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 100,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "Session establishment",
+      "performanceTargets": {
+        "excellent": "<200ms",
+        "minimum": "<2000ms",
+        "target": "<1000ms",
+        "throughput": ">=100.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 5000,
+        "unit": "\u03bcs"
+      },
+      "category": "privacy",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: Key derivation",
+        "id": "performance-key-derivation-0010",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 5000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 500
+      },
+      "operation": "Key derivation",
+      "performanceTargets": {
+        "excellent": "<50\u03bcs",
+        "minimum": "<500\u03bcs",
+        "target": "<200\u03bcs",
+        "throughput": ">=24,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 5000,
+        "unit": "\u03bcs"
+      },
+      "category": "security",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: Signature verification",
+        "id": "performance-signature-verification-0011",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 5000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 500
+      },
+      "operation": "Signature verification",
+      "performanceTargets": {
+        "excellent": "<100\u03bcs",
+        "minimum": "<1000\u03bcs",
+        "target": "<500\u03bcs",
+        "throughput": ">=9,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 10000,
+        "unit": "ns"
+      },
+      "category": "cryptography",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: Encryption ChaCha20",
+        "id": "performance-encryption-chacha20-0012",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 10000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 1000
+      },
+      "operation": "Encryption ChaCha20",
+      "performanceTargets": {
+        "excellent": "<100ns",
+        "minimum": "<1000ns",
+        "target": "<500ns",
+        "throughput": ">=19,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 10000,
+        "unit": "ns"
+      },
+      "category": "cryptography",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: Decryption ChaCha20",
+        "id": "performance-decryption-chacha20-0013",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 10000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 1000
+      },
+      "operation": "Decryption ChaCha20",
+      "performanceTargets": {
+        "excellent": "<100ns",
+        "minimum": "<1000ns",
+        "target": "<500ns",
+        "throughput": ">=19,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "benchmark": {
+        "environment": {
+          "cpu": "x86_64, 2.5GHz",
+          "memory": "16GB",
+          "network": "localhost",
+          "os": "Linux 5.x"
+        },
+        "iterations": 1000,
+        "unit": "\u03bcs"
+      },
+      "category": "network",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Performance benchmark: Routing table update",
+        "id": "performance-routing-table-update-0014",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "methodology": {
+        "gc": "Disabled during measurement",
+        "measurementIterations": 1000,
+        "statistics": [
+          "mean",
+          "p50",
+          "p95",
+          "p99",
+          "stddev"
+        ],
+        "warmupIterations": 100
+      },
+      "operation": "Routing table update",
+      "performanceTargets": {
+        "excellent": "<50\u03bcs",
+        "minimum": "<500\u03bcs",
+        "target": "<200\u03bcs",
+        "throughput": ">=4,999,999.0 ops/sec"
+      },
+      "scalability": {
+        "memoryUsage": "Constant per operation",
+        "networkScaling": "O(log n) for DHT operations",
+        "threadScaling": "Linear up to CPU cores"
+      }
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 0",
+        "id": "performance-scalability-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "DHT",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 1",
+        "id": "performance-scalability-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Resolver",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 2",
+        "id": "performance-scalability-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Session Manager",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 3",
+        "id": "performance-scalability-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Message Router",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 4",
+        "id": "performance-scalability-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "DHT",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 5",
+        "id": "performance-scalability-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Resolver",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 6",
+        "id": "performance-scalability-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Session Manager",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 7",
+        "id": "performance-scalability-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Message Router",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 8",
+        "id": "performance-scalability-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "DHT",
+      "testType": "scalability"
+    },
+    {
+      "bottlenecks": [
+        "Network I/O",
+        "CPU for cryptographic operations",
+        "Memory bandwidth",
+        "Disk I/O (for persistence)"
+      ],
+      "expectedBehavior": {
+        "latency": "O(log n) for lookup operations",
+        "memory": "O(n) for active connections, O(log n) for routing state",
+        "throughput": "Linear with resources until bottleneck"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Scalability test 9",
+        "id": "performance-scalability-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationStrategies": [
+        "Connection pooling",
+        "Request batching",
+        "Result caching",
+        "Async I/O",
+        "Load balancing"
+      ],
+      "scalingFactors": [
+        "10",
+        "100",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "systemComponent": "Resolver",
+      "testType": "scalability"
+    },
+    {
+      "component": "Node Process",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 0",
+        "id": "performance-resources-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "N/A",
+        "fileDescriptors": "100-1000",
+        "memory": "50-100MB",
+        "networkConnections": "N/A",
+        "threads": "4-8"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "DHT Routing",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 1",
+        "id": "performance-resources-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Low",
+        "fileDescriptors": "N/A",
+        "memory": "10MB per 1000 nodes",
+        "networkConnections": "Medium",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Session Cache",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 2",
+        "id": "performance-resources-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Negligible",
+        "fileDescriptors": "N/A",
+        "memory": "1KB per session",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Crypto Engine",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 3",
+        "id": "performance-resources-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "High during ops",
+        "fileDescriptors": "N/A",
+        "memory": "5-10MB",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Node Process",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 4",
+        "id": "performance-resources-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "N/A",
+        "fileDescriptors": "100-1000",
+        "memory": "50-100MB",
+        "networkConnections": "N/A",
+        "threads": "4-8"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "DHT Routing",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 5",
+        "id": "performance-resources-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Low",
+        "fileDescriptors": "N/A",
+        "memory": "10MB per 1000 nodes",
+        "networkConnections": "Medium",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Session Cache",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 6",
+        "id": "performance-resources-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Negligible",
+        "fileDescriptors": "N/A",
+        "memory": "1KB per session",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Crypto Engine",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 7",
+        "id": "performance-resources-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "High during ops",
+        "fileDescriptors": "N/A",
+        "memory": "5-10MB",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Node Process",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 8",
+        "id": "performance-resources-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "N/A",
+        "fileDescriptors": "100-1000",
+        "memory": "50-100MB",
+        "networkConnections": "N/A",
+        "threads": "4-8"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "DHT Routing",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 9",
+        "id": "performance-resources-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Low",
+        "fileDescriptors": "N/A",
+        "memory": "10MB per 1000 nodes",
+        "networkConnections": "Medium",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    }
+  ]
+}

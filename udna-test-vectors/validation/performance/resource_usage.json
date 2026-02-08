@@ -1,0 +1,317 @@
+{
+  "category": "performance",
+  "count": 10,
+  "testType": "resource_usage",
+  "vectors": [
+    {
+      "component": "Node Process",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 0",
+        "id": "performance-resources-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "N/A",
+        "fileDescriptors": "100-1000",
+        "memory": "50-100MB",
+        "networkConnections": "N/A",
+        "threads": "4-8"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "DHT Routing",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 1",
+        "id": "performance-resources-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Low",
+        "fileDescriptors": "N/A",
+        "memory": "10MB per 1000 nodes",
+        "networkConnections": "Medium",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Session Cache",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 2",
+        "id": "performance-resources-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Negligible",
+        "fileDescriptors": "N/A",
+        "memory": "1KB per session",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Crypto Engine",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 3",
+        "id": "performance-resources-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "High during ops",
+        "fileDescriptors": "N/A",
+        "memory": "5-10MB",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Node Process",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 4",
+        "id": "performance-resources-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "N/A",
+        "fileDescriptors": "100-1000",
+        "memory": "50-100MB",
+        "networkConnections": "N/A",
+        "threads": "4-8"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "DHT Routing",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 5",
+        "id": "performance-resources-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Low",
+        "fileDescriptors": "N/A",
+        "memory": "10MB per 1000 nodes",
+        "networkConnections": "Medium",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Session Cache",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 6",
+        "id": "performance-resources-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Negligible",
+        "fileDescriptors": "N/A",
+        "memory": "1KB per session",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Crypto Engine",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 7",
+        "id": "performance-resources-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "High during ops",
+        "fileDescriptors": "N/A",
+        "memory": "5-10MB",
+        "networkConnections": "N/A",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "Node Process",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 8",
+        "id": "performance-resources-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "N/A",
+        "fileDescriptors": "100-1000",
+        "memory": "50-100MB",
+        "networkConnections": "N/A",
+        "threads": "4-8"
+      },
+      "testType": "resource_usage"
+    },
+    {
+      "component": "DHT Routing",
+      "measurementMethod": {
+        "duration": "24 hours sustained load",
+        "loadPattern": "Realistic traffic mix",
+        "tool": "perf, valgrind, /proc"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "performance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "Resource usage test 9",
+        "id": "performance-resources-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "optimizationGuidelines": [
+        "Memory pooling for frequent allocations",
+        "Connection reuse",
+        "Lazy initialization",
+        "Background cleanup"
+      ],
+      "resourceTargets": {
+        "cpu": "Low",
+        "fileDescriptors": "N/A",
+        "memory": "10MB per 1000 nodes",
+        "networkConnections": "Medium",
+        "threads": "N/A"
+      },
+      "testType": "resource_usage"
+    }
+  ]
+}

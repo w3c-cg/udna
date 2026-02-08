@@ -1,0 +1,517 @@
+{
+  "category": "network",
+  "count": 15,
+  "testType": "xor_distance",
+  "vectors": [
+    {
+      "distances": {
+        "d(A,B)": "3750325c2cfa5d6ecaaca84d6db2dd07cec52fca2a18d114e2780a75499bc367",
+        "d(A,C)": "78ee2ac9a7185bf42b82550e13704c648c7b0d07c4cb6afe7e505e9cc22e2187",
+        "d(B,A)": "3750325c2cfa5d6ecaaca84d6db2dd07cec52fca2a18d114e2780a75499bc367",
+        "d(B,C)": "4fbe18958be2069ae12efd437ec2916342be22cdeed3bbea9c2854e98bb5e2e0"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 0",
+        "id": "network-xor-0000",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "46819a1cac8b25dac0630c570b96a58ec8c3ffa7d502ae6e37bce4b04eca8519",
+        "nodeB": "71d1a840807178b40acfa41a662478890606d06dff1a7f7ad5c4eec50751467e",
+        "nodeC": "3e6fb0d50b937e2eebe1595918e6e9ea44b8f2a011c9c49049ecba2c8ce4a49e"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "f6bfa4e5edbc1fb59beb7bb17b3223df3bb829a3f5d9de0836ffabcd72e1d1ae",
+        "d(A,C)": "4d47e0cb98ec52057937fa1e5009ff8e42c6e00a2170facb89492f0b2d7d479a",
+        "d(B,A)": "f6bfa4e5edbc1fb59beb7bb17b3223df3bb829a3f5d9de0836ffabcd72e1d1ae",
+        "d(B,C)": "bbf8442e75504db0e2dc81af2b3bdc51797ec9a9d4a924c3bfb684c65f9c9634"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 1",
+        "id": "network-xor-0001",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "b121d49c77e53559a4b3b73b62a775cee34041f83b82961353f66b1489dedb7a",
+        "nodeB": "479e70799a592aec3f58cc8a19955611d8f8685bce5b481b6509c0d9fb3f0ad4",
+        "nodeC": "fc663457ef09675cdd844d2532ae8a40a186a1f21af26cd8dabf441fa4a39ce0"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "1640dc2c21b5e29807c4e1470861801ea6afe4dd3aa436cb16b43218625e2565",
+        "d(A,C)": "dc1e9bb63e51dc52b9e2c0c7e73d3fbb0bfb26fff2b0a29b43e19df115cc34b0",
+        "d(B,A)": "1640dc2c21b5e29807c4e1470861801ea6afe4dd3aa436cb16b43218625e2565",
+        "d(B,C)": "ca5e479a1fe43ecabe262180ef5cbfa5ad54c222c81494505555afe9779211d5"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 2",
+        "id": "network-xor-0002",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "7c71c9de24c5c39af8e29b03f48531da5489d66e99f2b429dbdf070309373e71",
+        "nodeB": "6a3115f205702102ff267a44fce4b1c4f22632b3a35682e2cd6b351b6b691b14",
+        "nodeC": "a06f52681a941fc841005bc413b80e615f72f0916b4216b2983e9af21cfb0ac1"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "a9769bbd82c767b77123c0db6b3acf1e5d1bd97a53c68462191abfbab65ca15f",
+        "d(A,C)": "4c2bea34b1b9ca4875a6738e0463de3273abc05956f93b9f10f74cfe43a68c3d",
+        "d(B,A)": "a9769bbd82c767b77123c0db6b3acf1e5d1bd97a53c68462191abfbab65ca15f",
+        "d(B,C)": "e55d7189337eadff0485b3556f59112c2eb01923053fbffd09edf344f5fa2d62"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 3",
+        "id": "network-xor-0003",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "653109162f1b423ed39c0bffb606b0d6965f1f7025de6110593ae59555ceb0a0",
+        "nodeB": "cc4792abaddc2589a2bfcb24dd3c7fc8cb44c60a7618e57240205a2fe39211ff",
+        "nodeC": "291ae3229ea28876a63a7871b2656ee4e5f4df2973275a8f49cda96b16683c9d"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "ca7ee5036f3f2be0b54d40a73c8f505dfe1ed47dece64c770b18c64ef3e44ec4",
+        "d(A,C)": "986f727bcadccd729f8419f1137e5c65af798a62e04c90d1433d65dca261d935",
+        "d(B,A)": "ca7ee5036f3f2be0b54d40a73c8f505dfe1ed47dece64c770b18c64ef3e44ec4",
+        "d(B,C)": "52119778a5e3e6922ac959562ff10c3851675e1f0caadca64825a392518597f1"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 4",
+        "id": "network-xor-0004",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "beed5bdf7c8279886e6656b81b2dce6ee5bc824eecfcfe345ee42999816d64b7",
+        "nodeB": "7493bedc13bd5268db2b161f27a29e331ba25633001ab24355fcefd772892a73",
+        "nodeC": "268229a4b65eb4faf1e24f490853920b4ac5082c0cb06ee51dd94c45230cbd82"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "64ac5eef743d97285d0c05bd3b62c5606f3f1700f38e968f6ebb72a4c9b0f146",
+        "d(A,C)": "96354bb723fd1a0ff25aca1809fd6e89dbd222c8cf16e978caef712ef26563a3",
+        "d(B,A)": "64ac5eef743d97285d0c05bd3b62c5606f3f1700f38e968f6ebb72a4c9b0f146",
+        "d(B,C)": "f299155857c08d27af56cfa5329fabe9b4ed35c83c987ff7a454038a3bd592e5"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 5",
+        "id": "network-xor-0005",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "a84eb09dbbc661d118ab4a332df6b459b1aaabf22419db7837ed6a46957cbdc2",
+        "nodeB": "cce2ee72cffbf6f945a74f8e16947139de95bcf2d7974df7595618e25ccc4c84",
+        "nodeC": "3e7bfb2a983b7bdeeaf1802b240bdad06a78893aeb0f3200fd021b686719de61"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "e90e844f57cc935bfbdf7b22f0495053dc3e45133819e172d3bdc054ba832d08",
+        "d(A,C)": "566aed76a766524e5c5db92cafd8a5c0a94407d96b3951f7eb67278d13c83c3a",
+        "d(B,A)": "e90e844f57cc935bfbdf7b22f0495053dc3e45133819e172d3bdc054ba832d08",
+        "d(B,C)": "bf646939f0aac115a782c20e5f91f593757a42ca5320b08538dae7d9a94b1132"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 6",
+        "id": "network-xor-0006",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "8b91938dad59340cbccd7cb59a3b3b1a9968507f412a8342c36203c4f1f952e7",
+        "nodeB": "629f17c2fa95a757471207976a726b494556156c7933623010dfc3904b7a7fef",
+        "nodeC": "ddfb7efb0a3f6642e090c59935e39eda302c57a62a13d2b528052449e2316edd"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "a5116ea9b961b4960b63ab42f116bc1dbf8ddaf01af42723f5fe5dea092d64e5",
+        "d(A,C)": "abaeda1d99ca76ce24b9a0c53ee6c7f25390c54cedcd81428d4c5665053008af",
+        "d(B,A)": "a5116ea9b961b4960b63ab42f116bc1dbf8ddaf01af42723f5fe5dea092d64e5",
+        "d(B,C)": "0ebfb4b420abc2582fda0b87cff07befec1d1fbcf739a66178b20b8f0c1d6c4a"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 7",
+        "id": "network-xor-0007",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "d7e482053dfa28733e038f3cef7ae890f99f65989cba7fd404e20e392fed1a08",
+        "nodeB": "72f5ecac849b9ce53560247e1e6c548d4612bf68864e58f7f11c53d326c07eed",
+        "nodeC": "7c4a5818a4305ebd1aba2ff9d19c2f62aa0fa0d47177fe9689ae585c2add12a7"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "bb3b287e660ea40cf1751c1ae50a73e48c1aee7b086e22a817079d88658b91e1",
+        "d(A,C)": "8af64326e2aefc2e2c84bbd8d1116b840c6fef66579d89780948ad372cc562f6",
+        "d(B,A)": "bb3b287e660ea40cf1751c1ae50a73e48c1aee7b086e22a817079d88658b91e1",
+        "d(B,C)": "31cd6b5884a05822ddf1a7c2341b18608075011d5ff3abd01e4f30bf494ef317"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 8",
+        "id": "network-xor-0008",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "16035b28200841d3b5419f9c7bc98be3e1fd18a097ac92004c7fab5968c6f874",
+        "nodeB": "ad3873564606e5df443483869ec3f8076de7f6db9fc2b0a85b7836d10d4d6995",
+        "nodeC": "9cf5180ec2a6bdfd99c52444aad8e067ed92f7c6c0311b784537066e44039a82"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "c810775dab20f16f01df11e90a7562c61acab883ae387525058bbc1b7747a945",
+        "d(A,C)": "d1c6d0ed573acd095fdbccd42f13c4e005dce0da0fd99cab8f45696bcad875ba",
+        "d(B,A)": "c810775dab20f16f01df11e90a7562c61acab883ae387525058bbc1b7747a945",
+        "d(B,C)": "19d6a7b0fc1a3c665e04dd3d2566a6261f165859a1e1e98e8aced570bd9fdcff"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 9",
+        "id": "network-xor-0009",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "4ab054f629382b2d4d4325cb6f47ec71b4fc1deadf0a83fa06b042259a408e8e",
+        "nodeB": "82a023ab8218da424c9c342265328eb7ae36a5697132f6df033bfe3eed0727cb",
+        "nodeC": "9b76841b7e02e6241298e91f40542891b120fd30d0d31f5189f52b4e5098fb34"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "e417a9fa568900547e327d4a1ca26c242a2821c0e28bba19d10d5a3c787b70c2",
+        "d(A,C)": "40e0a229eac4d41e4fb3af48e98e2c763b18625e4a9e1806a29c2fd6c76e3818",
+        "d(B,A)": "e417a9fa568900547e327d4a1ca26c242a2821c0e28bba19d10d5a3c787b70c2",
+        "d(B,C)": "a4f70bd3bc4dd44a3181d202f52c40521130439ea815a21f739175eabf1548da"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 10",
+        "id": "network-xor-0010",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "380561a3b2e2bbd3b07ccec97890e72d924747c16dc1ba606b62066d44f3c74d",
+        "nodeB": "dc12c859e46bbb87ce4eb38364328b09b86f66018f4a0079ba6f5c513c88b78f",
+        "nodeC": "78e5c38a58266fcdffcf6181911ecb5ba95f259f275fa266c9fe29bb839dff55"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "5c6c47a63ad95be0cb40c5b6fafe8a5b304c8a935e336491f8c44397e17c8395",
+        "d(A,C)": "44d6e5029cfc57f22c986df8cc8fbccd8af1f044b8f94bbf6a1ed096e95b0d8d",
+        "d(B,A)": "5c6c47a63ad95be0cb40c5b6fafe8a5b304c8a935e336491f8c44397e17c8395",
+        "d(B,C)": "18baa2a4a6250c12e7d8a84e36713696babd7ad7e6ca2f2e92da930108278e18"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 11",
+        "id": "network-xor-0011",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "e051019c507bd453280902181105e3b57120b219319f539436aa03bad90d8c5d",
+        "nodeB": "bc3d463a6aa28fb3e349c7aeebfb69ee416c388a6fac3705ce6e402d38710fc8",
+        "nodeC": "a487e49ecc8783a104916fe0dd8a5f78fbd1425d8966182b5cb4d32c305681d0"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "13eef0c2a3a1cf864cf9f52b9dedcf6dbd89c38d80a58fe8aa2c2ae0a58eee58",
+        "d(A,C)": "059a90ea6bec262a16a1f69c2a71f0e776a68f3724fdf183febe81d170fedad8",
+        "d(B,A)": "13eef0c2a3a1cf864cf9f52b9dedcf6dbd89c38d80a58fe8aa2c2ae0a58eee58",
+        "d(B,C)": "16746028c84de9ac5a5803b7b79c3f8acb2f4cbaa4587e6b5492ab31d5703480"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 12",
+        "id": "network-xor-0012",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "44a45bdb10028999c63fa64313b3b19bf40328f9b4b0ac4e25033cac6fcf6c8d",
+        "nodeB": "574aab19b3a3461f8ac653688e5e7ef6498aeb74341523a68f2f164cca4182d5",
+        "nodeC": "413ecb317beeafb3d09e50df39c2417c82a5a7ce904d5dcddbbdbd7d1f31b655"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "43b21ea4270a980e3d896cb57833ddda4820cb05d7649f2f27c9ce651b9d635c",
+        "d(A,C)": "5cac4d944c0cd278abc155948a6504d56805af1438c74091bd6da9df98cde65c",
+        "d(B,A)": "43b21ea4270a980e3d896cb57833ddda4820cb05d7649f2f27c9ce651b9d635c",
+        "d(B,C)": "1f1e53306b064a7696483921f256d90f20256411efa3dfbe9aa467ba83508500"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 13",
+        "id": "network-xor-0013",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "930e774b0ac75cf3273bc8e2304270bba2c27d8896f611a11eb1c49e906535fc",
+        "nodeB": "d0bc69ef2dcdc4fd1ab2a4574871ad61eae2b68d41928e8e39780afb8bf856a0",
+        "nodeC": "cfa23adf46cb8e8b8cfa9d76ba27746ecac7d29cae315130a3dc6d4108a8d3a0"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "910654b2d302b2593675a11959d7189dc740a32a815b504f37b5bd71ff99101a",
+        "d(A,C)": "08314b5661c9745e09ae7d7e9fc2d2a13075a2a3227b3e37e45592d0a1d0bb3a",
+        "d(B,A)": "910654b2d302b2593675a11959d7189dc740a32a815b504f37b5bd71ff99101a",
+        "d(B,C)": "99371fe4b2cbc6073fdbdc67c615ca3cf7350189a3206e78d3e02fa15e49ab20"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 14",
+        "id": "network-xor-0014",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "f6a45cf65cf224f56a91252129e113371fdecd60660d07612ab7091a61db556d",
+        "nodeB": "67a208448ff096ac5ce4843870360baad89e6e4ae756572e1d02b46b9e424577",
+        "nodeC": "fe9517a03d3b50ab633f585fb623c1962fab6fc344763956cee29bcac00bee57"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    }
+  ]
+}
