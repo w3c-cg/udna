@@ -113,13 +113,6 @@ These vectors are designed for:
 5. **Compliance Checking** - Verify W3C and IETF standards compliance
 6. **Privacy Assessment** - Validate privacy properties and guarantees
 
-## Contributing
-
-To regenerate test vectors with a specific seed:
-
-```bash
-python test.py --seed "your-seed-here" --output-dir ./new-vectors
-```
 
 ## License
 
