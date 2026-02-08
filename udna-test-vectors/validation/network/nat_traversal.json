@@ -1,0 +1,327 @@
+{
+  "category": "network",
+  "count": 10,
+  "testType": "nat_traversal",
+  "vectors": [
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 0",
+        "id": "network-nat-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "FULL_CONE",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 1",
+        "id": "network-nat-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "RESTRICTED_CONE",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 2",
+        "id": "network-nat-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "PORT_RESTRICTED",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 3",
+        "id": "network-nat-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "SYMMETRIC",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.65,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 4",
+        "id": "network-nat-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "FULL_CONE",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 5",
+        "id": "network-nat-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "RESTRICTED_CONE",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 6",
+        "id": "network-nat-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "PORT_RESTRICTED",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 7",
+        "id": "network-nat-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "SYMMETRIC",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.65,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 8",
+        "id": "network-nat-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "FULL_CONE",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 9",
+        "id": "network-nat-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "RESTRICTED_CONE",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    }
+  ]
+}

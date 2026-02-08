@@ -1,0 +1,397 @@
+{
+  "category": "network",
+  "count": 15,
+  "testType": "node_id_derivation",
+  "vectors": [
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "e776afb67a8f30c066fa55238f02fb0ad031dd3c1cc6b7709c1b216966a4c6ae",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "6491bc4dda602fb8fea56be43991212e42a2b372257158f9bb4cdfb27b2394fa"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 0",
+        "id": "network-nodeid-0000",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "b16689594cefa7bff932dab517a573153859c5d5b99293ac9c9020918da2643e",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "d51243e48bef9c6192b754ae2c10f2881ae5036aed54d60ee0321a3f52f4ad78"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 1",
+        "id": "network-nodeid-0001",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "be7586c0043463e5df81efb1e5d979f8b9b6af9b98322fdf9d91c2946579761b",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "3bed83f44467eec437fcfd9dbfd58bbe5ba5a71f1424be7ae1516e7fe7d4577b"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 2",
+        "id": "network-nodeid-0002",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "2128edf3d1de1e8c8fbe206e5eefc2766eb01350cbbc1894dc6e65acabe7f5b8",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "e7671371c3111ad02bfbfa69fd5638546879745bd8d24e03b5ace69e37cad89b"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 3",
+        "id": "network-nodeid-0003",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "5c7c85f124c2510c08b497ff60c8c16dbd9a4ac9820dcefb9fe84a6992bdae76",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "bf045424d8301061b4df9e6b7db3c034393637168e8a240ffb0e82a8775115ce"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 4",
+        "id": "network-nodeid-0004",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "a358aa06caacd6e38c23dc6bd3650c8abb29077d42fbb523bb5d07981b6b9a78",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "13ad2730000c8a363222505e535e4727f3c7cf4ae495c6f7e28cbbc033267a72"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 5",
+        "id": "network-nodeid-0005",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "6af173a54c8e7e9b0c853bfc5bba2f5166450608d057cf2eb4e69ca55844b845",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "4943ca4215210b0184b59d310726e9c1433255fb5d25901ba14c1367baab96a4"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 6",
+        "id": "network-nodeid-0006",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "3ed5dbd96191e8b162beba060b70f737729fb6649b7d4059280cc4687656228a",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "94325e1596c32941d94211fe48defb4be05eaa2bf9d4cd7b5d82324a5419ec6d"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 7",
+        "id": "network-nodeid-0007",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "2b6b58edcdf71d31d5ad396c417116619b4eef334f8c74213b324aff52c0607c",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "a62d99b994ec6596d8f69a4df16404066fefcf0efe7383a613d33c3845dcaf1d"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 8",
+        "id": "network-nodeid-0008",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "99c770e70898d7c0bb0274b057ae79caa8f8da6e9f9a68a2595d6505a48207cb",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "a181743d1ddba665875a962afb00b887088eddd5ac0884f469ac725d773d66a9"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 9",
+        "id": "network-nodeid-0009",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "e0c0f21b471714ac4da9a9cfbf337596aeb0a475b5b029681d1a718217f0aa57",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "4ed5e4838a3a282d3703fd52805fbea3c664594d9c7c8d352034e6d96412e49a"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 10",
+        "id": "network-nodeid-0010",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "9b8957d34aa31fbffb29663c59051383805658c3767f654c98a784cf867b4b11",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "4450ff36b00f98e0742a9d0693111e303a9bdc0686c87fa2fae83dfbde71f609"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 11",
+        "id": "network-nodeid-0011",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "7e46d8aada52ea0d8069fb027d41db7670192f792d4d2f89e170acbec639d4b5",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "192e625ef24d64e0dd6f801103f4448f69eb399399b47482d85bafdb2fed9aaf"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 12",
+        "id": "network-nodeid-0012",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "a02bf20eadd040df23cdb97e2d9ea347723efa4adfe6c4928bc4a63b109cbe15",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "e7f1c0707d8e46ba32eb131e828b088548dcdf793f0552da2a101b84ebdd8465"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "DHT Node ID derivation test 13",
+        "id": "network-nodeid-0013",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "a8d3bb5891e888a10ce0dcfcff7496e80273bf8d72e3bd9a7fe2d0b5cff61bd8",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "f1a279d4ee19224214b5c45a4b73f1615770ffd69fe6964c092bba496afcb093"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "DHT Node ID derivation test 14",
+        "id": "network-nodeid-0014",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    }
+  ]
+}

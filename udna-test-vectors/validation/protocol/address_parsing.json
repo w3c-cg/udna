@@ -1,0 +1,732 @@
+{
+  "category": "protocol",
+  "count": 25,
+  "testType": "address_parsing",
+  "vectors": [
+    {
+      "expected": {
+        "did": "did:key:z6Mkadantj7gfwyzmjblxd4hc4bbigiyppdaew5aewybgjnen6nj",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkadantj7gfwyzmjblxd4hc4bbigiyppdaew5aewybgjnen6nj",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkadantj7gfwyzmjblxd4hc4bbigiyppdaew5aewybgjnen6nj"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "Basic UDNA address",
+        "id": "protocol-address-0000",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkrnds7boltsmlfk2iiebmyh6hz7tkwbsy4drxq3ed3obhagwv",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkrnds7boltsmlfk2iiebmyh6hz7tkwbsy4drxq3ed3obhagwv/service/messaging",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkrnds7boltsmlfk2iiebmyh6hz7tkwbsy4drxq3ed3obhagwv/service/messaging"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With service path",
+        "id": "protocol-address-0001",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkf4xlcfolvirmey6tdlkjjiufphp7me2sv2cidluzu7aqy76f",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkf4xlcfolvirmey6tdlkjjiufphp7me2sv2cidluzu7aqy76f/api/v1/data",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkf4xlcfolvirmey6tdlkjjiufphp7me2sv2cidluzu7aqy76f/api/v1/data"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With API path",
+        "id": "protocol-address-0002",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkepa2zpm6vxvqo2r4p23wwazymdvy6sanxfgk5c4iocon7guc",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": true,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkepa2zpm6vxvqo2r4p23wwazymdvy6sanxfgk5c4iocon7guc?timeout=5000",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkepa2zpm6vxvqo2r4p23wwazymdvy6sanxfgk5c4iocon7guc?timeout=5000"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With query parameter",
+        "id": "protocol-address-0003",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mk4vagjw5mkgp5lpm2gs6p45kz33p6pktewcoypacxluud3g5i",
+        "facet": null,
+        "hasFragment": true,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mk4vagjw5mkgp5lpm2gs6p45kz33p6pktewcoypacxluud3g5i#section",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mk4vagjw5mkgp5lpm2gs6p45kz33p6pktewcoypacxluud3g5i#section"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With fragment",
+        "id": "protocol-address-0004",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkqvhz4l5gbx7qghbhrjuworqzzunulceruhbjn2htaqn6uxjn",
+        "facet": null,
+        "hasFragment": true,
+        "hasPath": true,
+        "hasQuery": true,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkqvhz4l5gbx7qghbhrjuworqzzunulceruhbjn2htaqn6uxjn/path/to/resource?param=value#section",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkqvhz4l5gbx7qghbhrjuworqzzunulceruhbjn2htaqn6uxjn/path/to/resource?param=value#section"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "Complex address",
+        "id": "protocol-address-0005",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkw5qef3c6wp5g7jo5zlk7qdnvp3xfupu62yago22z27djs744",
+        "facet": 1,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkw5qef3c6wp5g7jo5zlk7qdnvp3xfupu62yago22z27djs744:1",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkw5qef3c6wp5g7jo5zlk7qdnvp3xfupu62yago22z27djs744:1"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With facet identifier",
+        "id": "protocol-address-0006",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkgl6licvn5depweo2ndwq6rbut2dqs3s22l6kxm42kkbwlnez",
+        "facet": 2,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkgl6licvn5depweo2ndwq6rbut2dqs3s22l6kxm42kkbwlnez:2/storage/files",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkgl6licvn5depweo2ndwq6rbut2dqs3s22l6kxm42kkbwlnez:2/storage/files"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With facet and path",
+        "id": "protocol-address-0007",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkutpa6s6vyuajghwtdqoma2j5zzqiaiwth7xviradi7g44g63",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkutpa6s6vyuajghwtdqoma2j5zzqiaiwth7xviradi7g44g63",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkutpa6s6vyuajghwtdqoma2j5zzqiaiwth7xviradi7g44g63"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "Basic UDNA address",
+        "id": "protocol-address-0008",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkoadiduqzuzgeuelxf3r4afvm66h3wzhrszwj2arharxkfjvq",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkoadiduqzuzgeuelxf3r4afvm66h3wzhrszwj2arharxkfjvq/service/messaging",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkoadiduqzuzgeuelxf3r4afvm66h3wzhrszwj2arharxkfjvq/service/messaging"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With service path",
+        "id": "protocol-address-0009",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkxeaxoa5wljs2dil5lwumuvcf5wjoqkmfr3i47t2z2i4tueh7",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkxeaxoa5wljs2dil5lwumuvcf5wjoqkmfr3i47t2z2i4tueh7/api/v1/data",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkxeaxoa5wljs2dil5lwumuvcf5wjoqkmfr3i47t2z2i4tueh7/api/v1/data"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With API path",
+        "id": "protocol-address-0010",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkt2tc4jzu7lqfuyoeiyl76zgiqsqdyzanjockasv4geky3lbw",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": true,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkt2tc4jzu7lqfuyoeiyl76zgiqsqdyzanjockasv4geky3lbw?timeout=5000",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkt2tc4jzu7lqfuyoeiyl76zgiqsqdyzanjockasv4geky3lbw?timeout=5000"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With query parameter",
+        "id": "protocol-address-0011",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mksnzwixgmcbwyhgpshj3lezkbvgkznpyrhkthpkehhgdagf6d",
+        "facet": null,
+        "hasFragment": true,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mksnzwixgmcbwyhgpshj3lezkbvgkznpyrhkthpkehhgdagf6d#section",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mksnzwixgmcbwyhgpshj3lezkbvgkznpyrhkthpkehhgdagf6d#section"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With fragment",
+        "id": "protocol-address-0012",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mk7hymopsfqavtzynfyr7mtivnqzgexguj5br4eat6cdr6jozz",
+        "facet": null,
+        "hasFragment": true,
+        "hasPath": true,
+        "hasQuery": true,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mk7hymopsfqavtzynfyr7mtivnqzgexguj5br4eat6cdr6jozz/path/to/resource?param=value#section",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mk7hymopsfqavtzynfyr7mtivnqzgexguj5br4eat6cdr6jozz/path/to/resource?param=value#section"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "Complex address",
+        "id": "protocol-address-0013",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkjredce2x5i3gnrfl33sdgr5u7f2d7ix5pawxsgf5hjgi4d7f",
+        "facet": 1,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkjredce2x5i3gnrfl33sdgr5u7f2d7ix5pawxsgf5hjgi4d7f:1",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkjredce2x5i3gnrfl33sdgr5u7f2d7ix5pawxsgf5hjgi4d7f:1"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "With facet identifier",
+        "id": "protocol-address-0014",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mknixciv65tsz4362ec5yahc7vuuvqcwlhvk25fcfww2dqxugl",
+        "facet": 2,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mknixciv65tsz4362ec5yahc7vuuvqcwlhvk25fcfww2dqxugl:2/storage/files",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mknixciv65tsz4362ec5yahc7vuuvqcwlhvk25fcfww2dqxugl:2/storage/files"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With facet and path",
+        "id": "protocol-address-0015",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkjxqdo5actq2476zz2dkne2if23alcxyxjf7k6jboq6442onj",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkjxqdo5actq2476zz2dkne2if23alcxyxjf7k6jboq6442onj",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkjxqdo5actq2476zz2dkne2if23alcxyxjf7k6jboq6442onj"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "Basic UDNA address",
+        "id": "protocol-address-0016",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkyhrbjhvxhjvou7twpwr6dvabgo5hlfzmdgzz6trwc6k7pew2",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkyhrbjhvxhjvou7twpwr6dvabgo5hlfzmdgzz6trwc6k7pew2/service/messaging",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkyhrbjhvxhjvou7twpwr6dvabgo5hlfzmdgzz6trwc6k7pew2/service/messaging"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With service path",
+        "id": "protocol-address-0017",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mk6aao7adiiz2cf7wlob6noadayqb5qhtzjkirs44m3epf7ebj",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mk6aao7adiiz2cf7wlob6noadayqb5qhtzjkirs44m3epf7ebj/api/v1/data",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mk6aao7adiiz2cf7wlob6noadayqb5qhtzjkirs44m3epf7ebj/api/v1/data"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With API path",
+        "id": "protocol-address-0018",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mk6ti4ogxg4sihbutmb6n66cyx4oyhmymqwr4nmskn43ut2l3j",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": true,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mk6ti4ogxg4sihbutmb6n66cyx4oyhmymqwr4nmskn43ut2l3j?timeout=5000",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mk6ti4ogxg4sihbutmb6n66cyx4oyhmymqwr4nmskn43ut2l3j?timeout=5000"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With query parameter",
+        "id": "protocol-address-0019",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkmrknm6xgcu46tttq6cik77sofzn4itukr2ntiiyct3q4unyn",
+        "facet": null,
+        "hasFragment": true,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkmrknm6xgcu46tttq6cik77sofzn4itukr2ntiiyct3q4unyn#section",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkmrknm6xgcu46tttq6cik77sofzn4itukr2ntiiyct3q4unyn#section"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With fragment",
+        "id": "protocol-address-0020",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mk6qi4zzab3sz3g6x7prmj3622az7cafidb66zbynd56wbbb2b",
+        "facet": null,
+        "hasFragment": true,
+        "hasPath": true,
+        "hasQuery": true,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mk6qi4zzab3sz3g6x7prmj3622az7cafidb66zbynd56wbbb2b/path/to/resource?param=value#section",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mk6qi4zzab3sz3g6x7prmj3622az7cafidb66zbynd56wbbb2b/path/to/resource?param=value#section"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "Complex address",
+        "id": "protocol-address-0021",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mknrzsdn3y5ebwkwptrpwe6svcnnqpkp2bhcpvb26yjnpooiys",
+        "facet": 1,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mknrzsdn3y5ebwkwptrpwe6svcnnqpkp2bhcpvb26yjnpooiys:1",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mknrzsdn3y5ebwkwptrpwe6svcnnqpkp2bhcpvb26yjnpooiys:1"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With facet identifier",
+        "id": "protocol-address-0022",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkffujm6bgahqpoudmuxstszik36zygrf5aa2llaj4phmkocib",
+        "facet": 2,
+        "hasFragment": false,
+        "hasPath": true,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkffujm6bgahqpoudmuxstszik36zygrf5aa2llaj4phmkocib:2/storage/files",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkffujm6bgahqpoudmuxstszik36zygrf5aa2llaj4phmkocib:2/storage/files"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "With facet and path",
+        "id": "protocol-address-0023",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    },
+    {
+      "expected": {
+        "did": "did:key:z6Mkulj26heussph4kqjpvc2skhatxnmk5nnxuyxvk4qa4czmli4",
+        "facet": null,
+        "hasFragment": false,
+        "hasPath": false,
+        "hasQuery": false,
+        "isValid": true,
+        "normalized": "udna://did:key:z6mkulj26heussph4kqjpvc2skhatxnmk5nnxuyxvk4qa4czmli4",
+        "scheme": "udna"
+      },
+      "input": {
+        "address": "udna://did:key:z6Mkulj26heussph4kqjpvc2skhatxnmk5nnxuyxvk4qa4czmli4"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "Basic UDNA address",
+        "id": "protocol-address-0024",
+        "specReference": "UDNA Addressing Specification \u00a73.1",
+        "version": "1.0.0"
+      },
+      "testType": "address_parsing",
+      "validation": {
+        "errorMessage": "Invalid UDNA address format",
+        "regex": "^udna://did:[a-z0-9]+:[a-zA-Z0-9._:%-]+(?::\\d+)?(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
+      }
+    }
+  ]
+}

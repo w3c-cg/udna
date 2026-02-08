@@ -1,0 +1,1148 @@
+{
+  "category": "protocol",
+  "count": 25,
+  "testType": "message_format",
+  "vectors": [
+    {
+      "expected": {
+        "signature": "dec952d7331384ef01623a829c4c0bca3ae77e0e7d59a3838e548e84e315a1db788cc4850184979ab9d7370ac7d64483407abeb8fc29f5b7e0810f07fbd72c66",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 0 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mk46c65acb45f27e1470adfba9c52e1067",
+          "id": "urn:uuid:16ca3471ca1e3cacc47579f37c8fc0f9",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk7d81d97394b8514a1c0e31a0abcaea93"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "text message format test 0",
+        "id": "protocol-message-text-0000",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "26b0fa15f0b5d3a6d64510c0f339b4c181befe8481d9802b9563524647cbf607226471d6961009533813ccb9c0b77142c740fa6875ac32290b81ea95cfa5de5c",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "action": "create",
+            "metadata": {
+              "author": "alice",
+              "timestamp": "2026-02-08T12:18:37.652568+00:00"
+            },
+            "resource": "/documents/doc-1"
+          },
+          "contentType": "application/json",
+          "from": "did:key:z6Mke646a820b6731756bacbc95b15919953",
+          "id": "urn:uuid:bb308f903fecd196e74eea2d1081355a",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk5b301b3afca9382198594910799b1796"
+        }
+      },
+      "messageType": "json",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "json message format test 1",
+        "id": "protocol-message-json-0001",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "c2d38993616796681d2d40a3d70a4e3c890f1d75a0e4f6ac73cb1ed72489eab883604dd93c01e7372badabbc17ac7386372241a2102519c4ca5ccdd5c385bdc8",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "7hYMIr0H2S0/8tuUiw1VvSnubC/dgzSx9VmzfuWDbxgKDsKuZrlEWYDbE86sRIlSETyog7WePZbSXvaMEFFYYNJM7Jxo0oBWKN77BAB3to3Q4Ey2nc0NrNV+C2YMzh5uJ23j0Moz0nRs8uLfqIbHQwhwkObq040M0/TDiXM5nQI=",
+          "contentType": "application/octet-stream",
+          "from": "did:key:z6Mkc0273303995cdf375c37deb341f36683",
+          "id": "urn:uuid:677af4578fc4c12ad7d91bfc8932260e",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk2c49c2f05e6b800f8672681607715947"
+        }
+      },
+      "messageType": "binary",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "binary message format test 2",
+        "id": "protocol-message-binary-0002",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "e675ebb3c15ffd48cc48557d1878aa06692e99442c989831ba291b593643f8b7aee982e6a532b1b183c4e8a1af1fdf41cdced35973f015b7a8dc35244d94f5f2",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "id": "urn:uuid:fb6860e7c72e28d8c168e1ac24abb186",
+            "timestamp": "2026-02-08T12:18:37.652568+00:00",
+            "type": "ping"
+          },
+          "contentType": "application/x-udna-control",
+          "from": "did:key:z6Mkc95b41716113ff45899a2f11063d6b9f",
+          "id": "urn:uuid:fb6860e7c72e28d8c168e1ac24abb186",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk35ada072df4fd09c60ce561a4bb9fcc9"
+        }
+      },
+      "messageType": "control",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "control message format test 3",
+        "id": "protocol-message-control-0003",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "3fe9f11227f435ec6487b4aa9b12130b60d94580d5b9b57f720b9f5dd49e85b7c4db33acc85b671695212382883224dbdb76b96480adbfc11619ab7d298693db",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 4 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mk9eb68918baa97247409bec6d73d39c82",
+          "id": "urn:uuid:4ae4b2642c88b68d7f5aa678d7cef931",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mkad2432f2d6ad02219d5fbcec93ed2de4"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "text message format test 4",
+        "id": "protocol-message-text-0004",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "184d30f9d6ca9310d51e1dbc3abe10afa2eaddeda91fa33ca44e4217588d330c837a348b5e848eee4e2f19038fb65ccdf90fceaadfe3a4e62136d0192a2e2fa2",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "action": "create",
+            "metadata": {
+              "author": "alice",
+              "timestamp": "2026-02-08T12:18:37.652568+00:00"
+            },
+            "resource": "/documents/doc-5"
+          },
+          "contentType": "application/json",
+          "from": "did:key:z6Mk7c7d05815676abaa51370fbc9086a571",
+          "id": "urn:uuid:e51baecc2d4caa9373ef08dc6e97cfe9",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mkd639815d02b48b2fa0c488da257e2e7d"
+        }
+      },
+      "messageType": "json",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "json message format test 5",
+        "id": "protocol-message-json-0005",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "a4bb1f8e2b77d93a2fef2466f0c0a37f66224f444a543259d9d47517096bacbfdc2393e1946658c082fac8e0c2494d2af2273618f3449b481b00c9a84538e45f",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "3HsynyatsDI2LMMh0WZcwCUoseSujKJEHIKr7Yl7lqhoWRG7Xj3+JuQVubKBKl5H9l2FI6kgAmpi6JfWD10kCgw02rc4fKKMn2IWmMn+N9QPSY7TMxxjE3AznamA/x8U0yHfRKtAiykzsnT0TZP3HRJsJd3yesYriEaLuwWJ3Kg=",
+          "contentType": "application/octet-stream",
+          "from": "did:key:z6Mkbd27f7023dfbab301b256d81973fbd73",
+          "id": "urn:uuid:0933c5058f8d5c6174d45548a9bd6bc1",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mkcedf370ba97df0fbd2abb43fdb0be7b8"
+        }
+      },
+      "messageType": "binary",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "binary message format test 6",
+        "id": "protocol-message-binary-0006",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "57e98a5639a528888beae7aa2a879bd07e1eac70bd1d5e14d1ca2840f36e4c83ec8500c74dedb9bb97d93b01ab0aecf37a0442dbaedeb1b7ab673d917994627f",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "id": "urn:uuid:6f7d75f59d491c02aa96515eb7b4a314",
+            "timestamp": "2026-02-08T12:18:37.652568+00:00",
+            "type": "ping"
+          },
+          "contentType": "application/x-udna-control",
+          "from": "did:key:z6Mkdb4c2bbbd9932c796ff60c783ac1aeca",
+          "id": "urn:uuid:6f7d75f59d491c02aa96515eb7b4a314",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk3bb796692adc486398aa3f0eafb15ad8"
+        }
+      },
+      "messageType": "control",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "control message format test 7",
+        "id": "protocol-message-control-0007",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "4d62eee5f2077914c81720d683617673d2b9b3032418c4cd07456ce8d19e8a3a74e5db8febb29067375caa00c0edc5eb367cbf59605039e39fd5cdad7a3a8c77",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 8 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mkf2122186b1e6394e41fdd0a5e82faa96",
+          "id": "urn:uuid:aa42a14ea5bc80882a32b9ed6897c9e1",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mkff096504ad3f81045e552f28bcebfe22"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "text message format test 8",
+        "id": "protocol-message-text-0008",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "58f71e52f05469663367513d29ca71948b4d5874c66b245aefa501c9688e545bc83cfe1e122d3732383ff7752fb0fe0283c60a6b25d57bd777ad929def440921",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "action": "create",
+            "metadata": {
+              "author": "alice",
+              "timestamp": "2026-02-08T12:18:37.652568+00:00"
+            },
+            "resource": "/documents/doc-9"
+          },
+          "contentType": "application/json",
+          "from": "did:key:z6Mk23ede06217466667465d83c19b7deda8",
+          "id": "urn:uuid:b5585a3f5269c8f0a9b929466a3d7206",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk94832c3a99388b5c019ac218ccfbc6d2"
+        }
+      },
+      "messageType": "json",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "json message format test 9",
+        "id": "protocol-message-json-0009",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "f0149b452c981a9fae4b64720c73e348d4c78e4f823fb97b756b885000f06b3eb4c709ee7dc69e6c022ce4a00301639f693984a6d3c62e5f99b88a9fc8ce5de5",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "LPgLLbI2D8s1LPt1B5e/ABnrmfIk1pEmmZ8vSAdGmUdZ2ln+ag+ghMkV+WAKgH4tOihcd55fYj14WCTGSE0k8M5NDEzqjeiVkgWzy1qcaW3VywJs42UxrCEudMzXMRp3JtEbjCJyAmNCyUzjeoaQT+NfsdVGIaa2xhB4UPWivew=",
+          "contentType": "application/octet-stream",
+          "from": "did:key:z6Mk9d67e4e1ae7872e5cf5daf5f0cd566d2",
+          "id": "urn:uuid:324e5716bcede5c73c22504ce3ec1573",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk18d379c7b2b7b34137e94e458ef3e281"
+        }
+      },
+      "messageType": "binary",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "binary message format test 10",
+        "id": "protocol-message-binary-0010",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "7fc1225a1d2372037dba495d07ddfaeb0282211f6d33cb310b56e4ee7ee9f8a83c42f84ba0577a4b1b989461c6fdeae4ab3ed861369d08899869ac75894d5b96",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "id": "urn:uuid:03597554baefba4f5fe858c573d4a6b1",
+            "timestamp": "2026-02-08T12:18:37.652568+00:00",
+            "type": "ping"
+          },
+          "contentType": "application/x-udna-control",
+          "from": "did:key:z6Mk47c94affd193a6580e0ea5cdf1b58c02",
+          "id": "urn:uuid:03597554baefba4f5fe858c573d4a6b1",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mkc0977140754e146b0ee1614c8e4773c5"
+        }
+      },
+      "messageType": "control",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "control message format test 11",
+        "id": "protocol-message-control-0011",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "928902cc5f40d7f00c07aec71355b7a318c1c70c965851fd3631f6ede1e777e684c3c2658efb32f9c4fb9f3118b7d07dce6cb287d7aa522184aaeda390c767ee",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 12 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mk70272aa0f6887864fade366348f2821b",
+          "id": "urn:uuid:92d26aa93d118c2f6e951bcacce5bc70",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mkddffd84f58406a208747fd075bd9e15c"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "text message format test 12",
+        "id": "protocol-message-text-0012",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "27fd0332c25013a050f28d5171caf478d465fffba967f264280d807f44d5099b3f1b4b6c874b1eea15776d27700ad601c4e92969f5f8bd23eb896286574ba5b9",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "action": "create",
+            "metadata": {
+              "author": "alice",
+              "timestamp": "2026-02-08T12:18:37.652568+00:00"
+            },
+            "resource": "/documents/doc-13"
+          },
+          "contentType": "application/json",
+          "from": "did:key:z6Mk380b0a7a7171fc09464138b4afe0b816",
+          "id": "urn:uuid:6b8ee6ad34189133ae979dfe9337f28b",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk69325a4e90dc0de1aeb0bda2ab58b3aa"
+        }
+      },
+      "messageType": "json",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "json message format test 13",
+        "id": "protocol-message-json-0013",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "24f15e3c98df1b19cab7b7ec34d224045c483878efcac93fc96dce184a514830b2e71f90efa94f80e5f7505cd2149cee389799d37facc83ace019602e34c2b5b",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "diX23gfNCNaqm6BLKOVEXFWjZZ8WlnpfbtUnxVuLm2T5DpPnY0mjUZ8mTEJBVFZ+JndGkizh+041eOVgYPt4MQ4SwSl5Xt64Qol8Na/JUpPsC56EbqA7SVdst6n64rXwYK7JngJIschJzvEZVVlUCGd5RwVDnrnNWc3WFQecvSA=",
+          "contentType": "application/octet-stream",
+          "from": "did:key:z6Mk231e370181e49656d0fa3171a8e7a69d",
+          "id": "urn:uuid:05e0d574f3311d407ac41129cd67e1b0",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk33babeacb7673ee1ca779383a5698e65"
+        }
+      },
+      "messageType": "binary",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "binary message format test 14",
+        "id": "protocol-message-binary-0014",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "728972f3d4443508e46857824631d5b51f8a1ce77d0fb85d173c2a08c686e0e6aebbd781a61d020bbdf09e62ead8d96196f28027ed9f6f8f225bbd88343ec4ca",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "id": "urn:uuid:c70b1acfdde18e9616adba859efbe6c3",
+            "timestamp": "2026-02-08T12:18:37.652568+00:00",
+            "type": "ping"
+          },
+          "contentType": "application/x-udna-control",
+          "from": "did:key:z6Mk3f8c54c171799d1f2f6e7a9e6d941bbf",
+          "id": "urn:uuid:c70b1acfdde18e9616adba859efbe6c3",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk704b6f10efe119d9a0d50f4d4e81a833"
+        }
+      },
+      "messageType": "control",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "control message format test 15",
+        "id": "protocol-message-control-0015",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "7f68863aadaebd43c9b7ac12ba8c0bf1d2bcc168d615c96efaacddc336e76d7b6aefd8564d871329ae7b2b68c0e79874f8b44990ee28c5afd4452ed6167ada2d",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 16 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mke96df589bbaae08467c56712931eac3c",
+          "id": "urn:uuid:9ce6e8ec5f553bbbfe26cf02724268ca",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk5feacea9c97b1980661740894fd56bda"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "text message format test 16",
+        "id": "protocol-message-text-0016",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "2e90121d9c8aac62657b7d500a84732e13c64901966acf83d3bdc325a8e3c9be0d18def9bba24b48558d138c0030a7e3054138597e52fe20595cbcd920af9d19",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "action": "create",
+            "metadata": {
+              "author": "alice",
+              "timestamp": "2026-02-08T12:18:37.652568+00:00"
+            },
+            "resource": "/documents/doc-17"
+          },
+          "contentType": "application/json",
+          "from": "did:key:z6Mkab1d7c55bdae0821e71b482285d97669",
+          "id": "urn:uuid:36ed3547017bf8d16667473a80dbaec2",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk1e6eee26fea17c53c529d979eef2d75f"
+        }
+      },
+      "messageType": "json",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "json message format test 17",
+        "id": "protocol-message-json-0017",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "c3b4437a986ce549da3dcd0c6eeaa26faaa0a4b126fac6034deec300af60d78a56719d6cd23ff8cdc0c7b37fbb053d9a162a10627dcff27add4519b067b5b203",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "p5ZeDcIjPYGyMrX4ZhcNVwCvBuZyt5IqE0JTzXq9uk3jOz4Zd7iedNK/MEhK70CX4ZyvhwD5By+l1gFyVKL04hmgFlmttA7uuVEtc5/FhIcv/ccWAimNurfNpy0nd7IiLXTNnN6wSxzLZRQcV+AVUFzJZIO+xwXBTALrXY7G7+0=",
+          "contentType": "application/octet-stream",
+          "from": "did:key:z6Mk44dccc9792a5a655ed9a45e0fadbf9f3",
+          "id": "urn:uuid:a8a64ae994dc9e13375dc3ffa5b27ccf",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk9018c2cf2eb9e83f2e5cdacaa506afb4"
+        }
+      },
+      "messageType": "binary",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "binary message format test 18",
+        "id": "protocol-message-binary-0018",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "c3e7a093f406619b6495bf5e48fb5b2e79d5d3567b484e271b691c92b87f9983abefabeb2b26364e9c022ddd2fe90ddaea50c9a0c157cb7845016555339e8001",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "id": "urn:uuid:d23fa818e8e4511a839e620ac9d8a192",
+            "timestamp": "2026-02-08T12:18:37.652568+00:00",
+            "type": "ping"
+          },
+          "contentType": "application/x-udna-control",
+          "from": "did:key:z6Mk550cfb910ec51b190be21e00a7683b3e",
+          "id": "urn:uuid:d23fa818e8e4511a839e620ac9d8a192",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk91f45c83883e652b1d2a9f04a8d6ad84"
+        }
+      },
+      "messageType": "control",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.652568+00:00",
+        "description": "control message format test 19",
+        "id": "protocol-message-control-0019",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "c35e43666775e926b31d8982edca73ed6c8a6e7bbb2512058a0c40164c44b005de7e32dbebe545f53df91616a8da5cc9a943de1b63b4f25292e7fc8915de1ff8",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 20 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mk54dd2a5741a0ba1fe38275c90d6adb84",
+          "id": "urn:uuid:020df298d6891c1c45b4b8454bcac924",
+          "timestamp": "2026-02-08T12:18:37.652568+00:00",
+          "to": "did:key:z6Mk01277c64889549947167d890e53bb5e3"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "text message format test 20",
+        "id": "protocol-message-text-0020",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "415106e9fe37700d361ffdd174f471bdaa7dc1e974c8d4f1a38ddbcb4b651b1bb36b31cf8b513599af29af55baa2f0e3f04bc2f31c83dca742f534a9f7fd1466",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "action": "create",
+            "metadata": {
+              "author": "alice",
+              "timestamp": "2026-02-08T12:18:37.653570+00:00"
+            },
+            "resource": "/documents/doc-21"
+          },
+          "contentType": "application/json",
+          "from": "did:key:z6Mk47071d266c19b9ef55c4569cf5fd6ca1",
+          "id": "urn:uuid:d9ab2e58ea6baa4c9e692c767c88d4ba",
+          "timestamp": "2026-02-08T12:18:37.653570+00:00",
+          "to": "did:key:z6Mk4ca220cd23031fcc4e21a1fb28b5aba6"
+        }
+      },
+      "messageType": "json",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "json message format test 21",
+        "id": "protocol-message-json-0021",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "aff183ed2e8e831b018508a9e7e12a7be37391b86721c85c8cb5fb3501a12a96058824518d3853dbdd7babf5c91327dccfec75eaf19af45652c902e04be2d382",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "eoPTx4XvTXeRxr4kocwr/2WUKZU5t+mssnxQRMGk6P1uuNBkgIN6Kpbldsf7eRiGjTTbRP8/1Q9zlHJrNSDVFol6Tt0WpNd1vJpgJRDW7LRuukMu96nfm8/GQ8fZex+oYYX24WgcWTb6hT9WWwX6uMaVwft8giKcM74h1xUksbI=",
+          "contentType": "application/octet-stream",
+          "from": "did:key:z6Mk22d9c46aa4294106246ef5ec15065edc",
+          "id": "urn:uuid:442c1745c0d7b3dc574073cc102cc9d5",
+          "timestamp": "2026-02-08T12:18:37.653570+00:00",
+          "to": "did:key:z6Mk8f451d95d07fde0eda35c70ac247c936"
+        }
+      },
+      "messageType": "binary",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "binary message format test 22",
+        "id": "protocol-message-binary-0022",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "daf7c74f8e110a41e9d14738529704e6d5295b6aae5217838e235380a10f662a480fe3e6836d7bdff4ab41114dfdd8e1f136c4bbbd7f3069291f097a46382f8b",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": {
+            "id": "urn:uuid:b8796afb6a27baa1ddcf1f1cb78a6d40",
+            "timestamp": "2026-02-08T12:18:37.653570+00:00",
+            "type": "ping"
+          },
+          "contentType": "application/x-udna-control",
+          "from": "did:key:z6Mk96bc6251f34371b6445e7941b739dcbf",
+          "id": "urn:uuid:b8796afb6a27baa1ddcf1f1cb78a6d40",
+          "timestamp": "2026-02-08T12:18:37.653570+00:00",
+          "to": "did:key:z6Mk8f3a152fb917c79d5d4f4a469a699f9f"
+        }
+      },
+      "messageType": "control",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "control message format test 23",
+        "id": "protocol-message-control-0023",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    },
+    {
+      "expected": {
+        "signature": "c33004d6c6fc5ddfac10a3551f6bee05b313d800513fbe7424a6729aae994ee8d3e999e0355aa81a030bc84347bbf77b78834654261d0dffda4c90c955a4708d",
+        "validation": {
+          "requiredFields": [
+            "@type",
+            "id",
+            "from",
+            "to",
+            "timestamp"
+          ],
+          "schemaValid": true,
+          "timestampFreshness": "\u2264 5 minutes"
+        }
+      },
+      "input": {
+        "message": {
+          "@type": "https://schema.udna.dev/Message",
+          "body": "Test message 24 - Hello UDNA!",
+          "contentType": "text/plain",
+          "from": "did:key:z6Mk9f2b2629fd85a7dd57ba663e3ccc2973",
+          "id": "urn:uuid:6b086b1316fca83491cdc87bd05c0cc5",
+          "timestamp": "2026-02-08T12:18:37.653570+00:00",
+          "to": "did:key:z6Mke8ea78f1450070baf8b095a15f5a5e4e"
+        }
+      },
+      "messageType": "text",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "text message format test 24",
+        "id": "protocol-message-text-0024",
+        "specReference": "UDNA Messaging Specification \u00a74.2",
+        "version": "1.0.0"
+      },
+      "security": {
+        "encrypted": false,
+        "replayProtected": true,
+        "signed": true
+      },
+      "testType": "message_format"
+    }
+  ]
+}

@@ -1,0 +1,677 @@
+{
+  "category": "protocol",
+  "count": 10,
+  "testType": "session_establishment",
+  "vectors": [
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mkbbafd3bd318c853dc9f949d65d878f9b",
+          "message": {
+            "nonce": "84993e46665f6e5518ca1102e518f40b",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mkcae5a6e283cc89da38d0e8dd9fb7ad5d"
+        },
+        {
+          "from": "did:key:z6Mkcae5a6e283cc89da38d0e8dd9fb7ad5d",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "6a906d41a36d056c82b3c039e5fe3f1a3ffbcc174ccc2bbc55dd1eb9586e4709",
+            "nonce": "c37ef93d0b27fc5ee7269a26a1c835ba",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mkbbafd3bd318c853dc9f949d65d878f9b"
+        },
+        {
+          "from": "did:key:z6Mkbbafd3bd318c853dc9f949d65d878f9b",
+          "message": {
+            "keys": {
+              "authentication": "1cae23add99993ecc8c17a645b8d7da0f8d0a5dd65adb81c6b1fbbfdf1d062aa",
+              "encryption": "50de26f6159a218dd55c668e140bd4c78c0746a6818196382ecf9bbd38928964"
+            },
+            "sessionId": "session-a7bbfb589ec96e75",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mkcae5a6e283cc89da38d0e8dd9fb7ad5d"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 0",
+        "id": "protocol-session-0000",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mkbbafd3bd318c853dc9f949d65d878f9b",
+        "responder": "did:key:z6Mkcae5a6e283cc89da38d0e8dd9fb7ad5d"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mkcd45a1a7aed7eb0adff648168e081359",
+          "message": {
+            "nonce": "38126ec4d24d54a908517355aca40555",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk1ecbaa17ef077f1613b9349f5e65cf7b"
+        },
+        {
+          "from": "did:key:z6Mk1ecbaa17ef077f1613b9349f5e65cf7b",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "672544c56c37d06650b9f4e8d56f0dda85128ed8506e1ee2f49bb2abe4c9b2a0",
+            "nonce": "c354ccdf7c7ef8545b4405329a0eccce",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mkcd45a1a7aed7eb0adff648168e081359"
+        },
+        {
+          "from": "did:key:z6Mkcd45a1a7aed7eb0adff648168e081359",
+          "message": {
+            "keys": {
+              "authentication": "036e3a2dbf2742fa2431961c83f878ccd5d80467d0744689594261a9d3aa2155",
+              "encryption": "e857b4c7fac10887a3bc63d5d1b85441eac352f23fe80edcccf4fda6c9bd981b"
+            },
+            "sessionId": "session-e64fea0532a650be",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk1ecbaa17ef077f1613b9349f5e65cf7b"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 1",
+        "id": "protocol-session-0001",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mkcd45a1a7aed7eb0adff648168e081359",
+        "responder": "did:key:z6Mk1ecbaa17ef077f1613b9349f5e65cf7b"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mkc42b5081d3e1d1b67be5edb0362adf34",
+          "message": {
+            "nonce": "0d3061c728a122b5cb37ee462a60dc74",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk3add3188fd5dbe42ee6fb7b714086f7f"
+        },
+        {
+          "from": "did:key:z6Mk3add3188fd5dbe42ee6fb7b714086f7f",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "eadd1cc2962167ffbb97255546673f1a403f0e2b4060b395496a387f4795c782",
+            "nonce": "4b82d7ace40d6bd3e71892c0de4fb6bd",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mkc42b5081d3e1d1b67be5edb0362adf34"
+        },
+        {
+          "from": "did:key:z6Mkc42b5081d3e1d1b67be5edb0362adf34",
+          "message": {
+            "keys": {
+              "authentication": "51fd8652d4feb72204ffc24c6636dd275e6eb1b92f25bded4bc3120973a33299",
+              "encryption": "8b3f2ece84e4fa35eac5f91dc13422debceeeac9243709ed2f7c7ccd6f0fac56"
+            },
+            "sessionId": "session-0ccc1408c85761ae",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk3add3188fd5dbe42ee6fb7b714086f7f"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 2",
+        "id": "protocol-session-0002",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mkc42b5081d3e1d1b67be5edb0362adf34",
+        "responder": "did:key:z6Mk3add3188fd5dbe42ee6fb7b714086f7f"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk4ec43e0e3eb788e20a3fea1c29b62944",
+          "message": {
+            "nonce": "079c594c0993007e45cf25e2f10beba4",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mka9e1853c96e1c0136882737334b9e865"
+        },
+        {
+          "from": "did:key:z6Mka9e1853c96e1c0136882737334b9e865",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "718b9a8b2ee5facb975921da4ebd9bfa19271f9617c3a0448647aead66c63901",
+            "nonce": "39ff734668a845c238395c3549c87110",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk4ec43e0e3eb788e20a3fea1c29b62944"
+        },
+        {
+          "from": "did:key:z6Mk4ec43e0e3eb788e20a3fea1c29b62944",
+          "message": {
+            "keys": {
+              "authentication": "f74e244de466da8fc62fbb477ca2b254c3dc712f1fa53ea23a97d7906e341f0a",
+              "encryption": "e586d9c1c2ac2d13619c57f4e47b6ad38f4ec30a47a4cb1569b7e4df941490bf"
+            },
+            "sessionId": "session-9dcbd9155fc2fd97",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mka9e1853c96e1c0136882737334b9e865"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 3",
+        "id": "protocol-session-0003",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk4ec43e0e3eb788e20a3fea1c29b62944",
+        "responder": "did:key:z6Mka9e1853c96e1c0136882737334b9e865"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk956f394d7e7fac610749a888833529df",
+          "message": {
+            "nonce": "2be83a8e0d7894aa5e6d4facdb902e90",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk78d1f22e3c8875f49845750bf9f6f576"
+        },
+        {
+          "from": "did:key:z6Mk78d1f22e3c8875f49845750bf9f6f576",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "339842b351ea599f19bd2c220779338fde2533e8f8838ef7925c6a864a166097",
+            "nonce": "62cf33bd6af5b5b87845f53911233b91",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk956f394d7e7fac610749a888833529df"
+        },
+        {
+          "from": "did:key:z6Mk956f394d7e7fac610749a888833529df",
+          "message": {
+            "keys": {
+              "authentication": "c444ffac1e49298079dcf4ff6dec2199442e5577cc4eb0b1044732c6b6b741d9",
+              "encryption": "1bb49c77c64cbba7165015cde552f6f8e2418ca8b7ee776065edbdc9e2343b5c"
+            },
+            "sessionId": "session-0b513cb831718436",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk78d1f22e3c8875f49845750bf9f6f576"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 4",
+        "id": "protocol-session-0004",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk956f394d7e7fac610749a888833529df",
+        "responder": "did:key:z6Mk78d1f22e3c8875f49845750bf9f6f576"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk924922701d8af517cc91ee173258f20b",
+          "message": {
+            "nonce": "97394d3d043f8f285b6b52d5305b7509",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk8e535417133e199b5c8dc2f03067bb7e"
+        },
+        {
+          "from": "did:key:z6Mk8e535417133e199b5c8dc2f03067bb7e",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "45d8c371e369ed39dbe880e1571dfdc28ce9045f0728d91133e7814841a01850",
+            "nonce": "808482800968d64dfbf9a57575583fcf",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk924922701d8af517cc91ee173258f20b"
+        },
+        {
+          "from": "did:key:z6Mk924922701d8af517cc91ee173258f20b",
+          "message": {
+            "keys": {
+              "authentication": "82e3edd86bd8ecbcc726519d2ce8d6172686f3805427689019b2362f8662096e",
+              "encryption": "91155ed085e845cc6256c12ec3f6288ed27e7560e6e6e990d30bf5b2623947b3"
+            },
+            "sessionId": "session-749300c06933f18a",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk8e535417133e199b5c8dc2f03067bb7e"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 5",
+        "id": "protocol-session-0005",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk924922701d8af517cc91ee173258f20b",
+        "responder": "did:key:z6Mk8e535417133e199b5c8dc2f03067bb7e"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk9912f6b81973f0905f0b66619a12d0b8",
+          "message": {
+            "nonce": "02670ebb647a1c753c7b2b8187969e8f",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk12abfa828535cacafcf49de3a75eff90"
+        },
+        {
+          "from": "did:key:z6Mk12abfa828535cacafcf49de3a75eff90",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "b2dc81ab93de4ec64df084dafd71e9545e6898eb86c8a948895064d648ee0bce",
+            "nonce": "765932694771bce714cf52f7bdc498a2",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk9912f6b81973f0905f0b66619a12d0b8"
+        },
+        {
+          "from": "did:key:z6Mk9912f6b81973f0905f0b66619a12d0b8",
+          "message": {
+            "keys": {
+              "authentication": "ae968c5b551bea2381e8e3f34e1bd1b16818b6f16636f60bc18577f8ee336ca2",
+              "encryption": "355961a0a98dee99f45c887212c95135499a5aa6c59f676aac16f56987864903"
+            },
+            "sessionId": "session-11fde7781e62d83a",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk12abfa828535cacafcf49de3a75eff90"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 6",
+        "id": "protocol-session-0006",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk9912f6b81973f0905f0b66619a12d0b8",
+        "responder": "did:key:z6Mk12abfa828535cacafcf49de3a75eff90"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk7171f7ce8e141f9835df5eb07fc66b2a",
+          "message": {
+            "nonce": "b5a9ce72df74b805521f61a0302dec21",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk249b5170384f9e20f805d74c22ba710d"
+        },
+        {
+          "from": "did:key:z6Mk249b5170384f9e20f805d74c22ba710d",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "0a5c822af481257ad7cd51fc324b1d9177aa435b93843372d22c412b76742c53",
+            "nonce": "fa4643e36fba76c839e16ae2e680c032",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk7171f7ce8e141f9835df5eb07fc66b2a"
+        },
+        {
+          "from": "did:key:z6Mk7171f7ce8e141f9835df5eb07fc66b2a",
+          "message": {
+            "keys": {
+              "authentication": "af2cd0d22478e4f0d129f0670305aa9838ed6c27834e5aeba8b580014d721e9a",
+              "encryption": "1c4ff813c3fd7b18dccd92ddc8dddd14699031e9944bd1e00de8349dd55c78e9"
+            },
+            "sessionId": "session-0c6fa96db9895aa9",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk249b5170384f9e20f805d74c22ba710d"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 7",
+        "id": "protocol-session-0007",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk7171f7ce8e141f9835df5eb07fc66b2a",
+        "responder": "did:key:z6Mk249b5170384f9e20f805d74c22ba710d"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk3fb8bb7dcb7946aed80daac3c5cda7a4",
+          "message": {
+            "nonce": "9a65c1791b05fe1e6c08eed77149e35e",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk8b41ea74f882ee7a768231cc2d8ae01c"
+        },
+        {
+          "from": "did:key:z6Mk8b41ea74f882ee7a768231cc2d8ae01c",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "2def6c4e4b3541ebd7b2c6dc66099272fb34c6d1992936de5761cdea447ae803",
+            "nonce": "9c372797603484f88a1a08d0d2eb3525",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk3fb8bb7dcb7946aed80daac3c5cda7a4"
+        },
+        {
+          "from": "did:key:z6Mk3fb8bb7dcb7946aed80daac3c5cda7a4",
+          "message": {
+            "keys": {
+              "authentication": "957ff12a5423d015913b1cbe15a4ca3f7cf1a981e938b4ed73868bde586dcda4",
+              "encryption": "8dd66a650d653a228cc1ea54ce8ac22f420888963fc30331023c4b7a957399a2"
+            },
+            "sessionId": "session-90703f820356532e",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk8b41ea74f882ee7a768231cc2d8ae01c"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 8",
+        "id": "protocol-session-0008",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk3fb8bb7dcb7946aed80daac3c5cda7a4",
+        "responder": "did:key:z6Mk8b41ea74f882ee7a768231cc2d8ae01c"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    },
+    {
+      "expectedOutcome": {
+        "forwardSecrecy": true,
+        "mutualAuthentication": true,
+        "sessionEstablished": true,
+        "sessionLifetime": "24 hours"
+      },
+      "flow": [
+        {
+          "from": "did:key:z6Mk088dca3c9e322a31f4756c175a0edcfc",
+          "message": {
+            "nonce": "dd76ebeab5d6987641575b565cfaa2fe",
+            "supportedCrypto": [
+              "Ed25519",
+              "X25519"
+            ],
+            "type": "session_init",
+            "version": "1.0"
+          },
+          "name": "initiator_hello",
+          "to": "did:key:z6Mk3425da6c6c5582be26c82df933dfec62"
+        },
+        {
+          "from": "did:key:z6Mk3425da6c6c5582be26c82df933dfec62",
+          "message": {
+            "chosenCrypto": "Ed25519",
+            "ephemeralKey": "49219a36eb5596ea585e17d66e611e5b918e58dc3d28b9a706720f46d9fad330",
+            "nonce": "bd9a767263d31ddd5295662fe7510d4c",
+            "type": "session_accept"
+          },
+          "name": "responder_hello",
+          "to": "did:key:z6Mk088dca3c9e322a31f4756c175a0edcfc"
+        },
+        {
+          "from": "did:key:z6Mk088dca3c9e322a31f4756c175a0edcfc",
+          "message": {
+            "keys": {
+              "authentication": "de7c2a01a6687b9682b5871d344619aaf61448557f6d4efdeb0cf155dff24e6b",
+              "encryption": "002e9ccc39792b7fff2e5378b536dabecc03363c5e75927707b8b9ec2f2a1d87"
+            },
+            "sessionId": "session-b1a1535bb75e2aab",
+            "type": "session_established"
+          },
+          "name": "handshake_complete",
+          "to": "did:key:z6Mk3425da6c6c5582be26c82df933dfec62"
+        }
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "protocol",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "Session establishment test 9",
+        "id": "protocol-session-0009",
+        "specReference": "UDNA Session Specification \u00a75.1",
+        "version": "1.0.0"
+      },
+      "participants": {
+        "initiator": "did:key:z6Mk088dca3c9e322a31f4756c175a0edcfc",
+        "responder": "did:key:z6Mk3425da6c6c5582be26c82df933dfec62"
+      },
+      "securityProperties": {
+        "identityBinding": true,
+        "keyConfirmation": true,
+        "replayProtection": "nonce-based"
+      },
+      "testType": "session_establishment"
+    }
+  ]
+}

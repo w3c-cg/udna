@@ -1,0 +1,83 @@
+{
+  "@context": "https://www.w3.org/ns/td",
+  "@type": "TestSuite",
+  "authors": [
+    "UDNA W3C Community Group",
+    "Sirraya Labs"
+  ],
+  "categories": {
+    "compliance": {
+      "file": "compliance.json",
+      "hash": "e9394efb596d844ae999c108dc788ddde23cf0856a300dd190e3f127b9b50d1b",
+      "vector_count": 8
+    },
+    "cryptography": {
+      "file": "cryptography.json",
+      "hash": "71f1fe5fcb1da2628b616dbb28ded755d63c1b83a207adafec57e255cd77a888",
+      "vector_count": 35
+    },
+    "did_resolution": {
+      "file": "did_resolution.json",
+      "hash": "a03443665eb5399ef14d794dc864dfe2cdd747adf13929522f8c06eb370641f3",
+      "vector_count": 24
+    },
+    "interoperability": {
+      "file": "interoperability.json",
+      "hash": "8dd77317ca9c8650f635c30a333e5cf096d138d97252b9404c1fc44f44937b80",
+      "vector_count": 15
+    },
+    "network": {
+      "file": "network.json",
+      "hash": "293425d97695b173801aaaa59eda6f6f1e716fdfd29116f5568a8c7f2fa280c3",
+      "vector_count": 50
+    },
+    "performance": {
+      "file": "performance.json",
+      "hash": "d23db69bd4299ad5a8c37b249d496879238a6bfbcb5927015399cf522382b0a2",
+      "vector_count": 35
+    },
+    "privacy": {
+      "file": "privacy.json",
+      "hash": "59c34e0f81e535a56fe21773a89f2da4eeefb07c70efda89e7bcf93e36a5969e",
+      "vector_count": 35
+    },
+    "protocol": {
+      "file": "protocol.json",
+      "hash": "e3f11de459a3464da93928c35622660e1d10fe9427dc9a74300d9ff53cb0b1f3",
+      "vector_count": 60
+    },
+    "security": {
+      "file": "security.json",
+      "hash": "90b2617e953b3831efbeed65d7eb9d4578cfb0a0619a3ecf46911a44724212c2",
+      "vector_count": 18
+    }
+  },
+  "conformsTo": [
+    "https://www.w3.org/TR/test-metadata/",
+    "https://www.w3.org/TR/json-ld/",
+    "https://www.w3.org/TR/did-core/",
+    "RFC 8032 (Ed25519)",
+    "RFC 8439 (ChaCha20-Poly1305)"
+  ],
+  "created": "2026-02-08T12:18:37.648536+00:00",
+  "description": "Enterprise-grade test vectors for UDNA specification verification",
+  "fileStructure": {
+    "categories": "category/*.json",
+    "mainIndex": "index.json",
+    "summary": "summary.json",
+    "validation": "validation/*.json"
+  },
+  "generation": {
+    "seed": "0e0fafea4007530abdf491fc9a8fe052a3367819489b0fd7c768604c0e6c10d1",
+    "time_seconds": 0.011001110076904297,
+    "timestamp": "2026-02-08T12:18:37.659537+00:00",
+    "total_vectors": 280
+  },
+  "generator": "UDNA Test Vector Generator v2.0.0",
+  "license": "W3C Software and Document License",
+  "name": "UDNA Comprehensive Test Vectors",
+  "purpose": "Implementation verification, conformance testing, security validation",
+  "seed": "0e0fafea4007530abdf491fc9a8fe052a3367819489b0fd7c768604c0e6c10d1",
+  "specification": "UDNA Specification v1.0-draft",
+  "version": "2.0.0"
+}

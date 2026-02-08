@@ -1,0 +1,656 @@
+{
+  "metadata": {
+    "category": "security",
+    "generated": "2026-02-08T12:18:37.735560+00:00",
+    "hash": "90b2617e953b3831efbeed65d7eb9d4578cfb0a0619a3ecf46911a44724212c2",
+    "vectorCount": 18
+  },
+  "vectors": [
+    {
+      "attackType": "replay_attack",
+      "attackVector": {
+        "legitimate": {
+          "message": "Transfer 100 tokens to Alice",
+          "nonce": "d931566ff73012b4e1ad2da4768a15d2",
+          "timestamp": "2026-02-08T12:18:37.655567+00:00"
+        },
+        "malicious": {
+          "message": "Transfer 100 tokens to Alice",
+          "nonce": "REUSED_NONCE",
+          "timestamp": "2026-02-08T12:18:37.655567+00:00"
+        }
+      },
+      "defenseMechanism": "Nonce/timestamp validation, replay cache",
+      "description": "Attempt to reuse a valid message",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Attempt to reuse a valid message",
+        "id": "security-replay_attack-0000",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "attackType": "signature_forgery",
+      "attackVector": {
+        "original": {
+          "message": "Approve document v1.0",
+          "signature": "9444bfdf1900b4c352af5e22de8b0575e445dd3b877d68c53f0a9f2a120beb2efaa991303c5e7e1b020990cff1313f99ab12d6bc40ebd046950df9e6b8a3a936"
+        },
+        "tampered": {
+          "message": "Approve document v2.0",
+          "signature": "4daf3dbb60db4d72cc310c9bdefbf7debb923385c31ca16913dd011a53c47c08c2f93beafae64233b8c93af0a07bd84913896e4e97eded37e0a07cb310bcdae6"
+        }
+      },
+      "defenseMechanism": "Strict signature verification, Ed25519",
+      "description": "Modify signature without invalidating",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Modify signature without invalidating",
+        "id": "security-signature_forgery-0001",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "attackType": "key_recovery",
+      "attackVector": {
+        "attack_vector": "Specific to key_recovery",
+        "parameters": {
+          "complexity": "Medium",
+          "requirements": "Network access"
+        }
+      },
+      "defenseMechanism": "Ed25519 deterministic signatures",
+      "description": "Attempt to recover private key from signatures",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Attempt to recover private key from signatures",
+        "id": "security-key_recovery-0002",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "attackType": "timing_attack",
+      "attackVector": {
+        "attack_vector": "Specific to timing_attack",
+        "parameters": {
+          "complexity": "Medium",
+          "requirements": "Network access"
+        }
+      },
+      "defenseMechanism": "Constant-time operations",
+      "description": "Side-channel attack via timing differences",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Side-channel attack via timing differences",
+        "id": "security-timing_attack-0003",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "attackType": "ddos_amplification",
+      "attackVector": {
+        "attack_vector": "Specific to ddos_amplification",
+        "parameters": {
+          "complexity": "Medium",
+          "requirements": "Network access"
+        }
+      },
+      "defenseMechanism": "Request/response size limits, rate limiting",
+      "description": "Use protocol for DDoS amplification",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Use protocol for DDoS amplification",
+        "id": "security-ddos_amplification-0004",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "attackType": "eclipse_attack",
+      "attackVector": {
+        "attack_vector": "Specific to eclipse_attack",
+        "parameters": {
+          "complexity": "Medium",
+          "requirements": "Network access"
+        }
+      },
+      "defenseMechanism": "Diverse routing tables, random walk discovery",
+      "description": "Isolate node in DHT by controlling neighbors",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Isolate node in DHT by controlling neighbors",
+        "id": "security-eclipse_attack-0005",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "attackType": "sybil_attack",
+      "attackVector": {
+        "attack_vector": "Specific to sybil_attack",
+        "parameters": {
+          "complexity": "Medium",
+          "requirements": "Network access"
+        }
+      },
+      "defenseMechanism": "Proof-of-work, cryptographic identity binding",
+      "description": "Create many fake identities to control network",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Create many fake identities to control network",
+        "id": "security-sybil_attack-0006",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "attackType": "man_in_the_middle",
+      "attackVector": {
+        "attack_vector": "Specific to man_in_the_middle",
+        "parameters": {
+          "complexity": "Medium",
+          "requirements": "Network access"
+        }
+      },
+      "defenseMechanism": "End-to-end encryption, certificate pinning",
+      "description": "Intercept and modify communications",
+      "detectionMethods": [
+        "Anomaly detection",
+        "Signature-based detection",
+        "Behavioral analysis"
+      ],
+      "expectedResult": "ATTACK_DETECTED_AND_BLOCKED",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Intercept and modify communications",
+        "id": "security-man_in_the_middle-0007",
+        "specReference": "UDNA Security Considerations \u00a77",
+        "version": "1.0.0"
+      },
+      "mitigations": [
+        "Input validation",
+        "Cryptographic verification",
+        "Rate limiting",
+        "Monitoring and alerting"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 0",
+        "id": "security-crypto-validation-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": true,
+        "message": "56616c6964206d657373616765",
+        "name": "valid_signature",
+        "publicKey": "ee6a24d836b17e9b7c1f87dab52ce58f9cddbcdc1bc2a1c657e6a4f105b89f9d",
+        "signature": "59ab75b26eb5acccd3c6648a44682805c163b40ba28174a2ffa473915a7c91cb68d349f0b091c30bea960e186b11e0da86930339d0b8cf8e03643289026751eb"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 1",
+        "id": "security-crypto-validation-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "error": "INVALID_SIGNATURE_LENGTH",
+        "expected": false,
+        "message": "54657374",
+        "name": "invalid_signature_format",
+        "publicKey": "978c065fa91e34ad4a8c1a90475b8698bde8c4efd9d516474f1f5251b4444eff",
+        "signature": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 2",
+        "id": "security-crypto-validation-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": false,
+        "message": "54616d7065726564206d657373616765",
+        "name": "tampered_message",
+        "originalMessage": "4f726967696e616c206d657373616765",
+        "publicKey": "6d74a0721e729738cfbe09379e3eef71c1c515c5e2d01c13e0cefc6a607dcaf6",
+        "signature": "c06bc494f9187ff7b7709d6ef7372861edbb06b1619bbd0210a5d23ee4a3e325c9240465dfa199705239bf839857b36ff0358c16151a2ab0c9c37985df34c055"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 3",
+        "id": "security-crypto-validation-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": true,
+        "message": "56616c6964206d657373616765",
+        "name": "valid_signature",
+        "publicKey": "2e82ad4e3a15f7d4821f65e2b7382a6669b86e59d2b42311869779d09af49de5",
+        "signature": "ab24fa7dee8252bfbd720363d4d5645299e8cc7e813c9759dc1cfcaaf482333a012aa0a7571fbde4b6a7b1ce05e698bf141766e06c644447be3ac0f40598d75c"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 4",
+        "id": "security-crypto-validation-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "error": "INVALID_SIGNATURE_LENGTH",
+        "expected": false,
+        "message": "54657374",
+        "name": "invalid_signature_format",
+        "publicKey": "f270d299141b264703b0556c16fdb6197ddc0d3af8a5d1654fbe81fd383dd5e7",
+        "signature": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 5",
+        "id": "security-crypto-validation-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": false,
+        "message": "54616d7065726564206d657373616765",
+        "name": "tampered_message",
+        "originalMessage": "4f726967696e616c206d657373616765",
+        "publicKey": "211efb42511167ac9b5cf78593da46cf1d1bfa12d0047f974b32d438a264d50c",
+        "signature": "20b0fc613a6356f9346484c71dec91d97162cd7242e347f2321cc9dba152b135c7f9854604a5dde777ac116e118087278f1d668b65b44fe7aada8b35c1a33098"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 6",
+        "id": "security-crypto-validation-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": true,
+        "message": "56616c6964206d657373616765",
+        "name": "valid_signature",
+        "publicKey": "5a282ac11d9bc2cc5523c3973bdc3df26052395510cce8033a006b242831781f",
+        "signature": "4971386970e65178e0c69e1e0b122c0e4fad23dcb4b027e3377cc102ba523f845036dec94dec46ceadeea5b6dc0757b05b9a719c1488a577fa8e080b7ca133bb"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Cryptographic validation test 7",
+        "id": "security-crypto-validation-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "error": "INVALID_SIGNATURE_LENGTH",
+        "expected": false,
+        "message": "54657374",
+        "name": "invalid_signature_format",
+        "publicKey": "c55800ab6a2ffe79b4eff666486a3b1c0ac26c0566eb049502a3f2df5df5d326",
+        "signature": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Cryptographic validation test 8",
+        "id": "security-crypto-validation-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": false,
+        "message": "54616d7065726564206d657373616765",
+        "name": "tampered_message",
+        "originalMessage": "4f726967696e616c206d657373616765",
+        "publicKey": "9000c7959c4fd473a597082394e7c5f21b22ae0ee9a95fc05274212a0e259bad",
+        "signature": "adafc7466d948999e08c22b94bf59165757259b34132107bded5ef358a5dca014f0bcf09970fb250e0775c532c74483dfb846fdcb7acb8feece5e8ca0f6d084d"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    },
+    {
+      "algorithm": "Ed25519",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "security",
+        "creationTimestamp": "2026-02-08T12:18:37.656567+00:00",
+        "description": "Cryptographic validation test 9",
+        "id": "security-crypto-validation-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "testCases": {
+        "expected": true,
+        "message": "56616c6964206d657373616765",
+        "name": "valid_signature",
+        "publicKey": "2c0bf3b4d7fabc329bd39f20c8dafed1179854452fc2fe14ca9dcd99ad907695",
+        "signature": "8ebc2653f77d27b0ff12aca2fb32ca883d7f1c243970d3868e944d037725566c4714a33cdaf2050d9bb6023cf9b066e3fe70312d21e936547a3d6ec292da8243"
+      },
+      "testType": "cryptographic_validation",
+      "validationRules": [
+        {
+          "error": "INVALID_SIGNATURE_LENGTH",
+          "required": 64,
+          "rule": "signature_length"
+        },
+        {
+          "error": "INVALID_PUBLIC_KEY",
+          "required": 32,
+          "rule": "public_key_length"
+        },
+        {
+          "description": "RFC 8032 compliant",
+          "rule": "signature_format"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3487 @@
+{
+  "category": "did_resolution",
+  "count": 20,
+  "testType": "unknown",
+  "vectors": [
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+            "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1",
+            "publicKeyMultibase": "z25c7cb9d8c0a135dcb59f7fd140da81311af79bc31dc2cb879756f9ea385c13b",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:key resolution test 0",
+        "id": "did-resolution-did-key-0000",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+                  "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1",
+                  "publicKeyMultibase": "z25c7cb9d8c0a135dcb59f7fd140da81311af79bc31dc2cb879756f9ea385c13b",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+                  "id": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f#key-1",
+                  "publicKeyMultibase": "z25c7cb9d8c0a135dcb59f7fd140da81311af79bc31dc2cb879756f9ea385c13b",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkexd4xhmmbijv3s2z676ridnicmi266n4ghoczodzovxz5i4f",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "25c7cb9d8c0a135dcb59f7fd140da81311af79bc31dc2cb879756f9ea385c13b"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/01aca605826cc2a34b15aa30f1176967:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/01aca605826cc2a34b15aa30f1176967:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+            "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1",
+            "publicKeyMultibase": "z8aeec59fa8c4fe08e2a5dcd5905941c646c80b9c8fe2ed081b8e82bf75c29518",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:web resolution test 1",
+        "id": "did-resolution-did-web-0001",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/01aca605826cc2a34b15aa30f1176967:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/01aca605826cc2a34b15aa30f1176967:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+                  "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1",
+                  "publicKeyMultibase": "z8aeec59fa8c4fe08e2a5dcd5905941c646c80b9c8fe2ed081b8e82bf75c29518",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/01aca605826cc2a34b15aa30f1176967:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/01aca605826cc2a34b15aa30f1176967:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+                  "id": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967#key-1",
+                  "publicKeyMultibase": "z8aeec59fa8c4fe08e2a5dcd5905941c646c80b9c8fe2ed081b8e82bf75c29518",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/01aca605826cc2a34b15aa30f1176967",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "8aeec59fa8c4fe08e2a5dcd5905941c646c80b9c8fe2ed081b8e82bf75c29518"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1"
+        ],
+        "authentication": [
+          "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#messaging",
+            "serviceEndpoint": "udna://did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#storage",
+            "serviceEndpoint": "udna://did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+            "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1",
+            "publicKeyMultibase": "z8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:scp",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:scp resolution test 2",
+        "id": "did-resolution-did-scp-0002",
+        "specReference": "https://spec.udna.dev/did-method-scp",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1"
+              ],
+              "authentication": [
+                "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#messaging",
+                  "serviceEndpoint": "udna://did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#storage",
+                  "serviceEndpoint": "udna://did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+                  "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1",
+                  "publicKeyMultibase": "z8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:scp",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1"
+              ],
+              "authentication": [
+                "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#messaging",
+                  "serviceEndpoint": "udna://did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#storage",
+                  "serviceEndpoint": "udna://did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+                  "id": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695#key-1",
+                  "publicKeyMultibase": "z8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:scp:8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "8bdd95ed94c9a53def79a6885ab4b0b2c69513f5bd4370b4859131f01fede695"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+            "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1",
+            "publicKeyMultibase": "z0198a4153fb5932e400eeba5756d59065e142c9c21e485afea715bc95d97720a",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:key resolution test 3",
+        "id": "did-resolution-did-key-0003",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+                  "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1",
+                  "publicKeyMultibase": "z0198a4153fb5932e400eeba5756d59065e142c9c21e485afea715bc95d97720a",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+                  "id": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx#key-1",
+                  "publicKeyMultibase": "z0198a4153fb5932e400eeba5756d59065e142c9c21e485afea715bc95d97720a",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkagmkifj7wwjs4qao5osxk3kzazpbile4ehsill7kofn4sxmx",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "0198a4153fb5932e400eeba5756d59065e142c9c21e485afea715bc95d97720a"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+            "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1",
+            "publicKeyMultibase": "z87a30562b62c1a216a0e62f21e3518fb9b22be88e5fadc0b67f6fef7d7c1ac50",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:web resolution test 4",
+        "id": "did-resolution-did-web-0004",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+                  "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1",
+                  "publicKeyMultibase": "z87a30562b62c1a216a0e62f21e3518fb9b22be88e5fadc0b67f6fef7d7c1ac50",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+                  "id": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828#key-1",
+                  "publicKeyMultibase": "z87a30562b62c1a216a0e62f21e3518fb9b22be88e5fadc0b67f6fef7d7c1ac50",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/ef8d2e453be92f887f41bc7837e3d828",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "87a30562b62c1a216a0e62f21e3518fb9b22be88e5fadc0b67f6fef7d7c1ac50"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1"
+        ],
+        "authentication": [
+          "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#messaging",
+            "serviceEndpoint": "udna://did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#storage",
+            "serviceEndpoint": "udna://did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+            "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1",
+            "publicKeyMultibase": "z5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:scp",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:scp resolution test 5",
+        "id": "did-resolution-did-scp-0005",
+        "specReference": "https://spec.udna.dev/did-method-scp",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1"
+              ],
+              "authentication": [
+                "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#messaging",
+                  "serviceEndpoint": "udna://did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#storage",
+                  "serviceEndpoint": "udna://did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+                  "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1",
+                  "publicKeyMultibase": "z5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:scp",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1"
+              ],
+              "authentication": [
+                "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#messaging",
+                  "serviceEndpoint": "udna://did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#storage",
+                  "serviceEndpoint": "udna://did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+                  "id": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa#key-1",
+                  "publicKeyMultibase": "z5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:scp:5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "5e55e5502a7151400647025b9623984bc530c214895addceaf3cd235fcce21fa"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+            "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1",
+            "publicKeyMultibase": "za40ff5ef26b596e8db37228c7bf4f27a0c515920162ac3566be6461b0703aaf8",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:key resolution test 6",
+        "id": "did-resolution-did-key-0006",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+                  "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1",
+                  "publicKeyMultibase": "za40ff5ef26b596e8db37228c7bf4f27a0c515920162ac3566be6461b0703aaf8",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+                  "id": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd#key-1",
+                  "publicKeyMultibase": "za40ff5ef26b596e8db37228c7bf4f27a0c515920162ac3566be6461b0703aaf8",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkuqh7l3zgwwlorwzxekghx5hspigfcwjacyvmgvtl4zdbwbyd",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "a40ff5ef26b596e8db37228c7bf4f27a0c515920162ac3566be6461b0703aaf8"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+            "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1",
+            "publicKeyMultibase": "z49684e8e18319a9695b4503f990b7ee8e885ad9e5237b5ba62dcdf638a04dc08",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:web resolution test 7",
+        "id": "did-resolution-did-web-0007",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+                  "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1",
+                  "publicKeyMultibase": "z49684e8e18319a9695b4503f990b7ee8e885ad9e5237b5ba62dcdf638a04dc08",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+                  "id": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b#key-1",
+                  "publicKeyMultibase": "z49684e8e18319a9695b4503f990b7ee8e885ad9e5237b5ba62dcdf638a04dc08",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/5d6be1c6da94cdf34709fa564f6ba53b",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "49684e8e18319a9695b4503f990b7ee8e885ad9e5237b5ba62dcdf638a04dc08"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1"
+        ],
+        "authentication": [
+          "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#messaging",
+            "serviceEndpoint": "udna://did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#storage",
+            "serviceEndpoint": "udna://did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+            "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1",
+            "publicKeyMultibase": "z9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:scp",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:scp resolution test 8",
+        "id": "did-resolution-did-scp-0008",
+        "specReference": "https://spec.udna.dev/did-method-scp",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1"
+              ],
+              "authentication": [
+                "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#messaging",
+                  "serviceEndpoint": "udna://did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#storage",
+                  "serviceEndpoint": "udna://did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+                  "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1",
+                  "publicKeyMultibase": "z9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:scp",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1"
+              ],
+              "authentication": [
+                "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#messaging",
+                  "serviceEndpoint": "udna://did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#storage",
+                  "serviceEndpoint": "udna://did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+                  "id": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3#key-1",
+                  "publicKeyMultibase": "z9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:scp:9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "9bee8da954b2dabed5c4f4ccd6df85991e345e1d8a4a339ebef94c4a39bdd7a3"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.650568+00:00",
+        "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.650568+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+            "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1",
+            "publicKeyMultibase": "z75f01eae0555065f69feea5d48a93b06769554439e67b35a1486d82ec71d743e",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:key resolution test 9",
+        "id": "did-resolution-did-key-0009",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+                  "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1",
+                  "publicKeyMultibase": "z75f01eae0555065f69feea5d48a93b06769554439e67b35a1486d82ec71d743e",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "updated": "2026-02-08T12:18:37.650568+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.650568+00:00",
+              "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.650568+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+                  "id": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5#key-1",
+                  "publicKeyMultibase": "z75f01eae0555065f69feea5d48a93b06769554439e67b35a1486d82ec71d743e",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkoxyb5lqfkudf62p65jourkj3az3jkvcdtzt3gwquq3mc5ry5",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "75f01eae0555065f69feea5d48a93b06769554439e67b35a1486d82ec71d743e"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+            "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1",
+            "publicKeyMultibase": "z4bba456bd51675285c3437bf214e237e9da7c7c217f4487750966e9c18cc77d4",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "did:web resolution test 10",
+        "id": "did-resolution-did-web-0010",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+                  "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1",
+                  "publicKeyMultibase": "z4bba456bd51675285c3437bf214e237e9da7c7c217f4487750966e9c18cc77d4",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.650568+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+                  "id": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e#key-1",
+                  "publicKeyMultibase": "z4bba456bd51675285c3437bf214e237e9da7c7c217f4487750966e9c18cc77d4",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/d61f24c3a556b364245f1c8a5732329e",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "4bba456bd51675285c3437bf214e237e9da7c7c217f4487750966e9c18cc77d4"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1"
+        ],
+        "authentication": [
+          "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#messaging",
+            "serviceEndpoint": "udna://did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#storage",
+            "serviceEndpoint": "udna://did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+            "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1",
+            "publicKeyMultibase": "zf22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:scp",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:scp resolution test 11",
+        "id": "did-resolution-did-scp-0011",
+        "specReference": "https://spec.udna.dev/did-method-scp",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1"
+              ],
+              "authentication": [
+                "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#messaging",
+                  "serviceEndpoint": "udna://did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#storage",
+                  "serviceEndpoint": "udna://did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+                  "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1",
+                  "publicKeyMultibase": "zf22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:scp",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1"
+              ],
+              "authentication": [
+                "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#messaging",
+                  "serviceEndpoint": "udna://did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#storage",
+                  "serviceEndpoint": "udna://did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+                  "id": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a#key-1",
+                  "publicKeyMultibase": "zf22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:scp:f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "f22d0f684c1b3e1e70efa83e7b33abd09f80ef15a9f4891f88c9ce4c2e548d4a"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+            "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1",
+            "publicKeyMultibase": "z93bfa7e890b1ffbd487148e4ee08ce22b3022526df4881e082d14f2624ce5201",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:key resolution test 12",
+        "id": "did-resolution-did-key-0012",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+                  "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1",
+                  "publicKeyMultibase": "z93bfa7e890b1ffbd487148e4ee08ce22b3022526df4881e082d14f2624ce5201",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+                  "id": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo#key-1",
+                  "publicKeyMultibase": "z93bfa7e890b1ffbd487148e4ee08ce22b3022526df4881e082d14f2624ce5201",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkso72p2eqwh732sdrjdso4cgoekzqejjg35eidyec2fhsmjgo",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "93bfa7e890b1ffbd487148e4ee08ce22b3022526df4881e082d14f2624ce5201"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/91c06e4633902b6ebbe76897f898012c:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/91c06e4633902b6ebbe76897f898012c:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+            "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1",
+            "publicKeyMultibase": "zcce1bd5b6650dba534ff5bd65876a6056cafc894542c8c2119d899613c77a218",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:web resolution test 13",
+        "id": "did-resolution-did-web-0013",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/91c06e4633902b6ebbe76897f898012c:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/91c06e4633902b6ebbe76897f898012c:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+                  "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1",
+                  "publicKeyMultibase": "zcce1bd5b6650dba534ff5bd65876a6056cafc894542c8c2119d899613c77a218",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/91c06e4633902b6ebbe76897f898012c:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/91c06e4633902b6ebbe76897f898012c:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+                  "id": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c#key-1",
+                  "publicKeyMultibase": "zcce1bd5b6650dba534ff5bd65876a6056cafc894542c8c2119d899613c77a218",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/91c06e4633902b6ebbe76897f898012c",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "cce1bd5b6650dba534ff5bd65876a6056cafc894542c8c2119d899613c77a218"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1"
+        ],
+        "authentication": [
+          "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#messaging",
+            "serviceEndpoint": "udna://did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#storage",
+            "serviceEndpoint": "udna://did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+            "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1",
+            "publicKeyMultibase": "zdbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:scp",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:scp resolution test 14",
+        "id": "did-resolution-did-scp-0014",
+        "specReference": "https://spec.udna.dev/did-method-scp",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1"
+              ],
+              "authentication": [
+                "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#messaging",
+                  "serviceEndpoint": "udna://did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#storage",
+                  "serviceEndpoint": "udna://did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+                  "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1",
+                  "publicKeyMultibase": "zdbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:scp",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1"
+              ],
+              "authentication": [
+                "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#messaging",
+                  "serviceEndpoint": "udna://did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#storage",
+                  "serviceEndpoint": "udna://did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+                  "id": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6#key-1",
+                  "publicKeyMultibase": "zdbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:scp:dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "dbaa875cbdeac72568b1706f14c5c84e35f3001db1ff30eb4261599c211d16d6"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+            "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1",
+            "publicKeyMultibase": "z2cb1aff3cc74b40a9603d379f2d016d05f501aa88d8b72391cc9c8c37fbb6ce2",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:key resolution test 15",
+        "id": "did-resolution-did-key-0015",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+                  "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1",
+                  "publicKeyMultibase": "z2cb1aff3cc74b40a9603d379f2d016d05f501aa88d8b72391cc9c8c37fbb6ce2",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+                  "id": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753#key-1",
+                  "publicKeyMultibase": "z2cb1aff3cc74b40a9603d379f2d016d05f501aa88d8b72391cc9c8c37fbb6ce2",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkfsy2746mos2avfqd2n47fuaw2bpvagvirwfxeoi4zhemg753",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "2cb1aff3cc74b40a9603d379f2d016d05f501aa88d8b72391cc9c8c37fbb6ce2"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/47161314e885641411a78a3711521381#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/47161314e885641411a78a3711521381#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:web:example.com:users/47161314e885641411a78a3711521381",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/47161314e885641411a78a3711521381#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/47161314e885641411a78a3711521381:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/47161314e885641411a78a3711521381#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/47161314e885641411a78a3711521381:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/47161314e885641411a78a3711521381",
+            "id": "did:web:example.com:users/47161314e885641411a78a3711521381#key-1",
+            "publicKeyMultibase": "zdf1314f3ea4ce99ba278b78ded7f3e9ecbdd521724e4249985efc6dac3d84e23",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:web resolution test 16",
+        "id": "did-resolution-did-web-0016",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/47161314e885641411a78a3711521381#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/47161314e885641411a78a3711521381#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/47161314e885641411a78a3711521381",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/47161314e885641411a78a3711521381#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/47161314e885641411a78a3711521381:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/47161314e885641411a78a3711521381#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/47161314e885641411a78a3711521381:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/47161314e885641411a78a3711521381",
+                  "id": "did:web:example.com:users/47161314e885641411a78a3711521381#key-1",
+                  "publicKeyMultibase": "zdf1314f3ea4ce99ba278b78ded7f3e9ecbdd521724e4249985efc6dac3d84e23",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/47161314e885641411a78a3711521381",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/47161314e885641411a78a3711521381#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/47161314e885641411a78a3711521381#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/47161314e885641411a78a3711521381",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/47161314e885641411a78a3711521381#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/47161314e885641411a78a3711521381:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/47161314e885641411a78a3711521381#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/47161314e885641411a78a3711521381:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/47161314e885641411a78a3711521381",
+                  "id": "did:web:example.com:users/47161314e885641411a78a3711521381#key-1",
+                  "publicKeyMultibase": "zdf1314f3ea4ce99ba278b78ded7f3e9ecbdd521724e4249985efc6dac3d84e23",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/47161314e885641411a78a3711521381",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "df1314f3ea4ce99ba278b78ded7f3e9ecbdd521724e4249985efc6dac3d84e23"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1"
+        ],
+        "authentication": [
+          "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#messaging",
+            "serviceEndpoint": "udna://did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#storage",
+            "serviceEndpoint": "udna://did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+            "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1",
+            "publicKeyMultibase": "zf150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:scp",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:scp resolution test 17",
+        "id": "did-resolution-did-scp-0017",
+        "specReference": "https://spec.udna.dev/did-method-scp",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1"
+              ],
+              "authentication": [
+                "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#messaging",
+                  "serviceEndpoint": "udna://did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#storage",
+                  "serviceEndpoint": "udna://did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+                  "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1",
+                  "publicKeyMultibase": "zf150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:scp",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1"
+              ],
+              "authentication": [
+                "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#messaging",
+                  "serviceEndpoint": "udna://did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#storage",
+                  "serviceEndpoint": "udna://did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+                  "id": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278#key-1",
+                  "publicKeyMultibase": "zf150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:scp:f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "f150aa63dea76bd53a35239cf972af6afa1ef733288a7143da585c4a133da278"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1"
+        ],
+        "authentication": [
+          "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#messaging",
+            "serviceEndpoint": "udna://did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#storage",
+            "serviceEndpoint": "udna://did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+            "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1",
+            "publicKeyMultibase": "z197fdbcd848af33de731510aa63e919892aba56c5d54dbd98dc904337415b553",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:key",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:key resolution test 18",
+        "id": "did-resolution-did-key-0018",
+        "specReference": "https://w3c-ccg.github.io/did-method-key/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+                  "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1",
+                  "publicKeyMultibase": "z197fdbcd848af33de731510aa63e919892aba56c5d54dbd98dc904337415b553",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:key",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1"
+              ],
+              "authentication": [
+                "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#messaging",
+                  "serviceEndpoint": "udna://did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#storage",
+                  "serviceEndpoint": "udna://did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+                  "id": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av#key-1",
+                  "publicKeyMultibase": "z197fdbcd848af33de731510aa63e919892aba56c5d54dbd98dc904337415b553",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:key:z6Mkdf75xtmerlzt3zzrkefkmpurtcjkxjlmlvknxwmnzecdg5av",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "197fdbcd848af33de731510aa63e919892aba56c5d54dbd98dc904337415b553"
+    },
+    {
+      "didDocument": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "assertionMethod": [
+          "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1"
+        ],
+        "authentication": [
+          "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1"
+        ],
+        "created": "2026-02-08T12:18:37.651567+00:00",
+        "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+        "keyAgreement": [],
+        "service": [
+          {
+            "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#messaging",
+            "serviceEndpoint": "udna://did:web:example.com:users/b672a616485e7e3881724549fcba0597:1",
+            "type": "MessagingService"
+          },
+          {
+            "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#storage",
+            "serviceEndpoint": "udna://did:web:example.com:users/b672a616485e7e3881724549fcba0597:2",
+            "type": "StorageService"
+          }
+        ],
+        "updated": "2026-02-08T12:18:37.651567+00:00",
+        "verificationMethod": [
+          {
+            "controller": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+            "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1",
+            "publicKeyMultibase": "z44c36f07a394a1bec48556be5b36ffdcda97c8de4b87a76e276b6b0c37a25793",
+            "type": "Ed25519VerificationKey2020"
+          }
+        ]
+      },
+      "didMethod": "did:web",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "did_resolution",
+        "creationTimestamp": "2026-02-08T12:18:37.651567+00:00",
+        "description": "did:web resolution test 19",
+        "id": "did-resolution-did-web-0019",
+        "specReference": "https://w3c-ccg.github.io/did-method-web/",
+        "version": "1.0.0"
+      },
+      "testCases": [
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/b672a616485e7e3881724549fcba0597:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/b672a616485e7e3881724549fcba0597:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+                  "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1",
+                  "publicKeyMultibase": "z44c36f07a394a1bec48556be5b36ffdcda97c8de4b87a76e276b6b0c37a25793",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "didDocumentMetadata": {
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "updated": "2026-02-08T12:18:37.651567+00:00"
+            },
+            "resolutionMetadata": {
+              "contentType": "application/did+ld+json",
+              "didMethod": "did:web",
+              "duration": "<200ms",
+              "retrieved": "2026-02-08T12:18:37.651567+00:00"
+            }
+          },
+          "input": {
+            "accept": "application/did+ld+json",
+            "did": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+            "noCache": false
+          },
+          "name": "successful_resolution"
+        },
+        {
+          "expected": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                "https://w3id.org/security/suites/ed25519-2020/v1"
+              ],
+              "assertionMethod": [
+                "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1"
+              ],
+              "authentication": [
+                "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1"
+              ],
+              "created": "2026-02-08T12:18:37.651567+00:00",
+              "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+              "keyAgreement": [],
+              "service": [
+                {
+                  "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#messaging",
+                  "serviceEndpoint": "udna://did:web:example.com:users/b672a616485e7e3881724549fcba0597:1",
+                  "type": "MessagingService"
+                },
+                {
+                  "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#storage",
+                  "serviceEndpoint": "udna://did:web:example.com:users/b672a616485e7e3881724549fcba0597:2",
+                  "type": "StorageService"
+                }
+              ],
+              "updated": "2026-02-08T12:18:37.651567+00:00",
+              "verificationMethod": [
+                {
+                  "controller": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+                  "id": "did:web:example.com:users/b672a616485e7e3881724549fcba0597#key-1",
+                  "publicKeyMultibase": "z44c36f07a394a1bec48556be5b36ffdcda97c8de4b87a76e276b6b0c37a25793",
+                  "type": "Ed25519VerificationKey2020"
+                }
+              ]
+            },
+            "resolutionMetadata": {
+              "cache": "disabled",
+              "contentType": "application/did+json"
+            }
+          },
+          "input": {
+            "accept": "application/did+json",
+            "did": "did:web:example.com:users/b672a616485e7e3881724549fcba0597",
+            "noCache": true,
+            "versionId": "latest"
+          },
+          "name": "resolution_with_options"
+        }
+      ],
+      "validationRules": [
+        {
+          "error": "INVALID_DID_SYNTAX",
+          "regex": "^did:[a-z0-9]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$",
+          "rule": "did_syntax_validation"
+        },
+        {
+          "error": "INVALID_DOCUMENT_STRUCTURE",
+          "required_fields": [
+            "@context",
+            "id",
+            "verificationMethod"
+          ],
+          "rule": "document_structure"
+        }
+      ],
+      "verificationKey": "44c36f07a394a1bec48556be5b36ffdcda97c8de4b87a76e276b6b0c37a25793"
+    }
+  ]
+}

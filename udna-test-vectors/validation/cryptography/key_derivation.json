@@ -1,0 +1,267 @@
+{
+  "category": "cryptography",
+  "count": 10,
+  "testType": "key_derivation",
+  "vectors": [
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "df745457865123e5fb55cc05b1a1f31bd5bffaf6518ce95329d94c5e5bb7d2f5"
+      },
+      "inputs": {
+        "ikm": "8a0a293833b0b2da1efc16fc3a02cb7dcedbc7041e459aef9e303bbd92e53fd0",
+        "info": "dWRuYS1jb250ZXh0LTA=",
+        "keyLength": 32,
+        "salt": "125cb2ad4006ac86acb01a391163275f"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "Key derivation test 0",
+        "id": "crypto-kdf-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "23efc908556d33980c6facf35bd5cf89e6aa2e84ef01fe5226b60249cbb2ecc6"
+      },
+      "inputs": {
+        "ikm": "d0cfa3c0d80ee77f86265b509a673fef4dfd4dedf78e51e4d049c267e3fec52c",
+        "info": "dWRuYS1jb250ZXh0LTE=",
+        "keyLength": 32,
+        "salt": "1bd285f37ee81ba864417a7c8b2bdecb"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "Key derivation test 1",
+        "id": "crypto-kdf-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "579a732b864a5a60623dc602bd3a1ca50aec77cc1499a2b6a91d6efad50007ec"
+      },
+      "inputs": {
+        "ikm": "16428663db77987b1119f04634c3916241e45c0fc2f949bc179fb94b984c625c",
+        "info": "dWRuYS1jb250ZXh0LTI=",
+        "keyLength": 32,
+        "salt": "ae78979cf617a87861f7f3f1e9ef1d99"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 2",
+        "id": "crypto-kdf-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "ab5600a49821579f20abdc186db91b120f5e098bd03a607393d366e6a52e120f"
+      },
+      "inputs": {
+        "ikm": "8c688c20cc84d69efe5dea716d1155858a32b3f766b188b6b51307a29fd71231",
+        "info": "dWRuYS1jb250ZXh0LTM=",
+        "keyLength": 32,
+        "salt": "f825f13cb0db15c200ccdf11da17badf"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 3",
+        "id": "crypto-kdf-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "0c2396f55988e6f1190254748491d91de47ad1dccb5e28b114946c7f35035dbc"
+      },
+      "inputs": {
+        "ikm": "f2a9fa6a79f882502e34e5a09696a5be3a3d6bf29cd40902146ad0a4a928b393",
+        "info": "dWRuYS1jb250ZXh0LTQ=",
+        "keyLength": 32,
+        "salt": "f969f2927b362b8d668d4e080bc6540a"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 4",
+        "id": "crypto-kdf-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "6c8388b5f5e85a9d6b4288d79c88d9cad403f7665164ed54c9c33963acf2cb93"
+      },
+      "inputs": {
+        "ikm": "f7acf207128583ecd2518fc1d41fd611f5c7e0a992a9bd41d4fb32c7fee134e8",
+        "info": "dWRuYS1jb250ZXh0LTU=",
+        "keyLength": 32,
+        "salt": "f468751303402040c9a294137d8450a2"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 5",
+        "id": "crypto-kdf-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "b408415e7ce463f6252170dd51d6e963b35ee5f5cc079e372bc079d3201830e6"
+      },
+      "inputs": {
+        "ikm": "f6dbcf20eb19b748c1b3fe4ec31eccfb314d53b5c14e16d948edd681e7748e1d",
+        "info": "dWRuYS1jb250ZXh0LTY=",
+        "keyLength": 32,
+        "salt": "657c7c463a357ea4a18ddfade34de0bf"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 6",
+        "id": "crypto-kdf-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "50fbc0304d3a9acf1fc130bfbb7d34b47777e7abb6128a37116d3453b64148af"
+      },
+      "inputs": {
+        "ikm": "7525e9567a0586a028f946a29cc81202c50d380408b599828fbe7495f3e751cd",
+        "info": "dWRuYS1jb250ZXh0LTc=",
+        "keyLength": 32,
+        "salt": "e6ca6c836084459926c5f420fb92a6f6"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 7",
+        "id": "crypto-kdf-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "216e4434ab9d3ca03c12638ed406e6f358eba439454c501c1b42295f1a19f50c"
+      },
+      "inputs": {
+        "ikm": "c1b389a9b1cd4fd5e0f9e6a0f9d25c0b584f4674eecca74858f72cf929ab3f49",
+        "info": "dWRuYS1jb250ZXh0LTg=",
+        "keyLength": 32,
+        "salt": "bf5ec9e91abff88c9aa9c68ffab78456"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 8",
+        "id": "crypto-kdf-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    },
+    {
+      "algorithm": "HKDF-BLAKE2b",
+      "expectedOutputs": {
+        "derivedKey": "a67213d621f67ec53d21179cc5e4e3b9f854c066e221b9859227b0b44cb37e45"
+      },
+      "inputs": {
+        "ikm": "f449fe4c3441ac85a346cb98839df72f2fd677fecf900926484aca2dc760d7a4",
+        "info": "dWRuYS1jb250ZXh0LTk=",
+        "keyLength": 32,
+        "salt": "e258c2b1f12243c4c25956f31a9ccb25"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.650568+00:00",
+        "description": "Key derivation test 9",
+        "id": "crypto-kdf-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "securityProperties": {
+        "extractThenExpand": true,
+        "randomOracle": false
+      },
+      "testType": "key_derivation"
+    }
+  ]
+}

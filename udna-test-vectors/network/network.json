@@ -1,0 +1,2070 @@
+{
+  "metadata": {
+    "category": "network",
+    "generated": "2026-02-08T12:18:37.719536+00:00",
+    "hash": "293425d97695b173801aaaa59eda6f6f1e716fdfd29116f5568a8c7f2fa280c3",
+    "vectorCount": 50
+  },
+  "vectors": [
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "e776afb67a8f30c066fa55238f02fb0ad031dd3c1cc6b7709c1b216966a4c6ae",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "6491bc4dda602fb8fea56be43991212e42a2b372257158f9bb4cdfb27b2394fa"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 0",
+        "id": "network-nodeid-0000",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "b16689594cefa7bff932dab517a573153859c5d5b99293ac9c9020918da2643e",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "d51243e48bef9c6192b754ae2c10f2881ae5036aed54d60ee0321a3f52f4ad78"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 1",
+        "id": "network-nodeid-0001",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "be7586c0043463e5df81efb1e5d979f8b9b6af9b98322fdf9d91c2946579761b",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "3bed83f44467eec437fcfd9dbfd58bbe5ba5a71f1424be7ae1516e7fe7d4577b"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 2",
+        "id": "network-nodeid-0002",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "2128edf3d1de1e8c8fbe206e5eefc2766eb01350cbbc1894dc6e65acabe7f5b8",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "e7671371c3111ad02bfbfa69fd5638546879745bd8d24e03b5ace69e37cad89b"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 3",
+        "id": "network-nodeid-0003",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "5c7c85f124c2510c08b497ff60c8c16dbd9a4ac9820dcefb9fe84a6992bdae76",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "bf045424d8301061b4df9e6b7db3c034393637168e8a240ffb0e82a8775115ce"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 4",
+        "id": "network-nodeid-0004",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "a358aa06caacd6e38c23dc6bd3650c8abb29077d42fbb523bb5d07981b6b9a78",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "13ad2730000c8a363222505e535e4727f3c7cf4ae495c6f7e28cbbc033267a72"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 5",
+        "id": "network-nodeid-0005",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "6af173a54c8e7e9b0c853bfc5bba2f5166450608d057cf2eb4e69ca55844b845",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "4943ca4215210b0184b59d310726e9c1433255fb5d25901ba14c1367baab96a4"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 6",
+        "id": "network-nodeid-0006",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "3ed5dbd96191e8b162beba060b70f737729fb6649b7d4059280cc4687656228a",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "94325e1596c32941d94211fe48defb4be05eaa2bf9d4cd7b5d82324a5419ec6d"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 7",
+        "id": "network-nodeid-0007",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "2b6b58edcdf71d31d5ad396c417116619b4eef334f8c74213b324aff52c0607c",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "a62d99b994ec6596d8f69a4df16404066fefcf0efe7383a613d33c3845dcaf1d"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 8",
+        "id": "network-nodeid-0008",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "99c770e70898d7c0bb0274b057ae79caa8f8da6e9f9a68a2595d6505a48207cb",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "a181743d1ddba665875a962afb00b887088eddd5ac0884f469ac725d773d66a9"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 9",
+        "id": "network-nodeid-0009",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "e0c0f21b471714ac4da9a9cfbf337596aeb0a475b5b029681d1a718217f0aa57",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "4ed5e4838a3a282d3703fd52805fbea3c664594d9c7c8d352034e6d96412e49a"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 10",
+        "id": "network-nodeid-0010",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "9b8957d34aa31fbffb29663c59051383805658c3767f654c98a784cf867b4b11",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "4450ff36b00f98e0742a9d0693111e303a9bdc0686c87fa2fae83dfbde71f609"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 11",
+        "id": "network-nodeid-0011",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "7e46d8aada52ea0d8069fb027d41db7670192f792d4d2f89e170acbec639d4b5",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "192e625ef24d64e0dd6f801103f4448f69eb399399b47482d85bafdb2fed9aaf"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.653570+00:00",
+        "description": "DHT Node ID derivation test 12",
+        "id": "network-nodeid-0012",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "a02bf20eadd040df23cdb97e2d9ea347723efa4adfe6c4928bc4a63b109cbe15",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "e7f1c0707d8e46ba32eb131e828b088548dcdf793f0552da2a101b84ebdd8465"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "DHT Node ID derivation test 13",
+        "id": "network-nodeid-0013",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutput": {
+        "nodeId": "a8d3bb5891e888a10ce0dcfcff7496e80273bf8d72e3bd9a7fe2d0b5cff61bd8",
+        "nodeIdLength": 256,
+        "properties": {
+          "collisionResistant": true,
+          "cryptographicBinding": true,
+          "uniformDistribution": true
+        }
+      },
+      "input": {
+        "keyType": "Ed25519",
+        "publicKey": "f1a279d4ee19224214b5c45a4b73f1615770ffd69fe6964c092bba496afcb093"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "DHT Node ID derivation test 14",
+        "id": "network-nodeid-0014",
+        "specReference": "UDNA Network Specification \u00a76.2",
+        "version": "1.0.0"
+      },
+      "testType": "node_id_derivation"
+    },
+    {
+      "distances": {
+        "d(A,B)": "3750325c2cfa5d6ecaaca84d6db2dd07cec52fca2a18d114e2780a75499bc367",
+        "d(A,C)": "78ee2ac9a7185bf42b82550e13704c648c7b0d07c4cb6afe7e505e9cc22e2187",
+        "d(B,A)": "3750325c2cfa5d6ecaaca84d6db2dd07cec52fca2a18d114e2780a75499bc367",
+        "d(B,C)": "4fbe18958be2069ae12efd437ec2916342be22cdeed3bbea9c2854e98bb5e2e0"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 0",
+        "id": "network-xor-0000",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "46819a1cac8b25dac0630c570b96a58ec8c3ffa7d502ae6e37bce4b04eca8519",
+        "nodeB": "71d1a840807178b40acfa41a662478890606d06dff1a7f7ad5c4eec50751467e",
+        "nodeC": "3e6fb0d50b937e2eebe1595918e6e9ea44b8f2a011c9c49049ecba2c8ce4a49e"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "f6bfa4e5edbc1fb59beb7bb17b3223df3bb829a3f5d9de0836ffabcd72e1d1ae",
+        "d(A,C)": "4d47e0cb98ec52057937fa1e5009ff8e42c6e00a2170facb89492f0b2d7d479a",
+        "d(B,A)": "f6bfa4e5edbc1fb59beb7bb17b3223df3bb829a3f5d9de0836ffabcd72e1d1ae",
+        "d(B,C)": "bbf8442e75504db0e2dc81af2b3bdc51797ec9a9d4a924c3bfb684c65f9c9634"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 1",
+        "id": "network-xor-0001",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "b121d49c77e53559a4b3b73b62a775cee34041f83b82961353f66b1489dedb7a",
+        "nodeB": "479e70799a592aec3f58cc8a19955611d8f8685bce5b481b6509c0d9fb3f0ad4",
+        "nodeC": "fc663457ef09675cdd844d2532ae8a40a186a1f21af26cd8dabf441fa4a39ce0"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "1640dc2c21b5e29807c4e1470861801ea6afe4dd3aa436cb16b43218625e2565",
+        "d(A,C)": "dc1e9bb63e51dc52b9e2c0c7e73d3fbb0bfb26fff2b0a29b43e19df115cc34b0",
+        "d(B,A)": "1640dc2c21b5e29807c4e1470861801ea6afe4dd3aa436cb16b43218625e2565",
+        "d(B,C)": "ca5e479a1fe43ecabe262180ef5cbfa5ad54c222c81494505555afe9779211d5"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 2",
+        "id": "network-xor-0002",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "7c71c9de24c5c39af8e29b03f48531da5489d66e99f2b429dbdf070309373e71",
+        "nodeB": "6a3115f205702102ff267a44fce4b1c4f22632b3a35682e2cd6b351b6b691b14",
+        "nodeC": "a06f52681a941fc841005bc413b80e615f72f0916b4216b2983e9af21cfb0ac1"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "a9769bbd82c767b77123c0db6b3acf1e5d1bd97a53c68462191abfbab65ca15f",
+        "d(A,C)": "4c2bea34b1b9ca4875a6738e0463de3273abc05956f93b9f10f74cfe43a68c3d",
+        "d(B,A)": "a9769bbd82c767b77123c0db6b3acf1e5d1bd97a53c68462191abfbab65ca15f",
+        "d(B,C)": "e55d7189337eadff0485b3556f59112c2eb01923053fbffd09edf344f5fa2d62"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 3",
+        "id": "network-xor-0003",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "653109162f1b423ed39c0bffb606b0d6965f1f7025de6110593ae59555ceb0a0",
+        "nodeB": "cc4792abaddc2589a2bfcb24dd3c7fc8cb44c60a7618e57240205a2fe39211ff",
+        "nodeC": "291ae3229ea28876a63a7871b2656ee4e5f4df2973275a8f49cda96b16683c9d"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "ca7ee5036f3f2be0b54d40a73c8f505dfe1ed47dece64c770b18c64ef3e44ec4",
+        "d(A,C)": "986f727bcadccd729f8419f1137e5c65af798a62e04c90d1433d65dca261d935",
+        "d(B,A)": "ca7ee5036f3f2be0b54d40a73c8f505dfe1ed47dece64c770b18c64ef3e44ec4",
+        "d(B,C)": "52119778a5e3e6922ac959562ff10c3851675e1f0caadca64825a392518597f1"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 4",
+        "id": "network-xor-0004",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "beed5bdf7c8279886e6656b81b2dce6ee5bc824eecfcfe345ee42999816d64b7",
+        "nodeB": "7493bedc13bd5268db2b161f27a29e331ba25633001ab24355fcefd772892a73",
+        "nodeC": "268229a4b65eb4faf1e24f490853920b4ac5082c0cb06ee51dd94c45230cbd82"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "64ac5eef743d97285d0c05bd3b62c5606f3f1700f38e968f6ebb72a4c9b0f146",
+        "d(A,C)": "96354bb723fd1a0ff25aca1809fd6e89dbd222c8cf16e978caef712ef26563a3",
+        "d(B,A)": "64ac5eef743d97285d0c05bd3b62c5606f3f1700f38e968f6ebb72a4c9b0f146",
+        "d(B,C)": "f299155857c08d27af56cfa5329fabe9b4ed35c83c987ff7a454038a3bd592e5"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 5",
+        "id": "network-xor-0005",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "a84eb09dbbc661d118ab4a332df6b459b1aaabf22419db7837ed6a46957cbdc2",
+        "nodeB": "cce2ee72cffbf6f945a74f8e16947139de95bcf2d7974df7595618e25ccc4c84",
+        "nodeC": "3e7bfb2a983b7bdeeaf1802b240bdad06a78893aeb0f3200fd021b686719de61"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "e90e844f57cc935bfbdf7b22f0495053dc3e45133819e172d3bdc054ba832d08",
+        "d(A,C)": "566aed76a766524e5c5db92cafd8a5c0a94407d96b3951f7eb67278d13c83c3a",
+        "d(B,A)": "e90e844f57cc935bfbdf7b22f0495053dc3e45133819e172d3bdc054ba832d08",
+        "d(B,C)": "bf646939f0aac115a782c20e5f91f593757a42ca5320b08538dae7d9a94b1132"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 6",
+        "id": "network-xor-0006",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "8b91938dad59340cbccd7cb59a3b3b1a9968507f412a8342c36203c4f1f952e7",
+        "nodeB": "629f17c2fa95a757471207976a726b494556156c7933623010dfc3904b7a7fef",
+        "nodeC": "ddfb7efb0a3f6642e090c59935e39eda302c57a62a13d2b528052449e2316edd"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "a5116ea9b961b4960b63ab42f116bc1dbf8ddaf01af42723f5fe5dea092d64e5",
+        "d(A,C)": "abaeda1d99ca76ce24b9a0c53ee6c7f25390c54cedcd81428d4c5665053008af",
+        "d(B,A)": "a5116ea9b961b4960b63ab42f116bc1dbf8ddaf01af42723f5fe5dea092d64e5",
+        "d(B,C)": "0ebfb4b420abc2582fda0b87cff07befec1d1fbcf739a66178b20b8f0c1d6c4a"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 7",
+        "id": "network-xor-0007",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "d7e482053dfa28733e038f3cef7ae890f99f65989cba7fd404e20e392fed1a08",
+        "nodeB": "72f5ecac849b9ce53560247e1e6c548d4612bf68864e58f7f11c53d326c07eed",
+        "nodeC": "7c4a5818a4305ebd1aba2ff9d19c2f62aa0fa0d47177fe9689ae585c2add12a7"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "bb3b287e660ea40cf1751c1ae50a73e48c1aee7b086e22a817079d88658b91e1",
+        "d(A,C)": "8af64326e2aefc2e2c84bbd8d1116b840c6fef66579d89780948ad372cc562f6",
+        "d(B,A)": "bb3b287e660ea40cf1751c1ae50a73e48c1aee7b086e22a817079d88658b91e1",
+        "d(B,C)": "31cd6b5884a05822ddf1a7c2341b18608075011d5ff3abd01e4f30bf494ef317"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 8",
+        "id": "network-xor-0008",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "16035b28200841d3b5419f9c7bc98be3e1fd18a097ac92004c7fab5968c6f874",
+        "nodeB": "ad3873564606e5df443483869ec3f8076de7f6db9fc2b0a85b7836d10d4d6995",
+        "nodeC": "9cf5180ec2a6bdfd99c52444aad8e067ed92f7c6c0311b784537066e44039a82"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "c810775dab20f16f01df11e90a7562c61acab883ae387525058bbc1b7747a945",
+        "d(A,C)": "d1c6d0ed573acd095fdbccd42f13c4e005dce0da0fd99cab8f45696bcad875ba",
+        "d(B,A)": "c810775dab20f16f01df11e90a7562c61acab883ae387525058bbc1b7747a945",
+        "d(B,C)": "19d6a7b0fc1a3c665e04dd3d2566a6261f165859a1e1e98e8aced570bd9fdcff"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 9",
+        "id": "network-xor-0009",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "4ab054f629382b2d4d4325cb6f47ec71b4fc1deadf0a83fa06b042259a408e8e",
+        "nodeB": "82a023ab8218da424c9c342265328eb7ae36a5697132f6df033bfe3eed0727cb",
+        "nodeC": "9b76841b7e02e6241298e91f40542891b120fd30d0d31f5189f52b4e5098fb34"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "e417a9fa568900547e327d4a1ca26c242a2821c0e28bba19d10d5a3c787b70c2",
+        "d(A,C)": "40e0a229eac4d41e4fb3af48e98e2c763b18625e4a9e1806a29c2fd6c76e3818",
+        "d(B,A)": "e417a9fa568900547e327d4a1ca26c242a2821c0e28bba19d10d5a3c787b70c2",
+        "d(B,C)": "a4f70bd3bc4dd44a3181d202f52c40521130439ea815a21f739175eabf1548da"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 10",
+        "id": "network-xor-0010",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "380561a3b2e2bbd3b07ccec97890e72d924747c16dc1ba606b62066d44f3c74d",
+        "nodeB": "dc12c859e46bbb87ce4eb38364328b09b86f66018f4a0079ba6f5c513c88b78f",
+        "nodeC": "78e5c38a58266fcdffcf6181911ecb5ba95f259f275fa266c9fe29bb839dff55"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "5c6c47a63ad95be0cb40c5b6fafe8a5b304c8a935e336491f8c44397e17c8395",
+        "d(A,C)": "44d6e5029cfc57f22c986df8cc8fbccd8af1f044b8f94bbf6a1ed096e95b0d8d",
+        "d(B,A)": "5c6c47a63ad95be0cb40c5b6fafe8a5b304c8a935e336491f8c44397e17c8395",
+        "d(B,C)": "18baa2a4a6250c12e7d8a84e36713696babd7ad7e6ca2f2e92da930108278e18"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 11",
+        "id": "network-xor-0011",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "e051019c507bd453280902181105e3b57120b219319f539436aa03bad90d8c5d",
+        "nodeB": "bc3d463a6aa28fb3e349c7aeebfb69ee416c388a6fac3705ce6e402d38710fc8",
+        "nodeC": "a487e49ecc8783a104916fe0dd8a5f78fbd1425d8966182b5cb4d32c305681d0"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "13eef0c2a3a1cf864cf9f52b9dedcf6dbd89c38d80a58fe8aa2c2ae0a58eee58",
+        "d(A,C)": "059a90ea6bec262a16a1f69c2a71f0e776a68f3724fdf183febe81d170fedad8",
+        "d(B,A)": "13eef0c2a3a1cf864cf9f52b9dedcf6dbd89c38d80a58fe8aa2c2ae0a58eee58",
+        "d(B,C)": "16746028c84de9ac5a5803b7b79c3f8acb2f4cbaa4587e6b5492ab31d5703480"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 12",
+        "id": "network-xor-0012",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "44a45bdb10028999c63fa64313b3b19bf40328f9b4b0ac4e25033cac6fcf6c8d",
+        "nodeB": "574aab19b3a3461f8ac653688e5e7ef6498aeb74341523a68f2f164cca4182d5",
+        "nodeC": "413ecb317beeafb3d09e50df39c2417c82a5a7ce904d5dcddbbdbd7d1f31b655"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "43b21ea4270a980e3d896cb57833ddda4820cb05d7649f2f27c9ce651b9d635c",
+        "d(A,C)": "5cac4d944c0cd278abc155948a6504d56805af1438c74091bd6da9df98cde65c",
+        "d(B,A)": "43b21ea4270a980e3d896cb57833ddda4820cb05d7649f2f27c9ce651b9d635c",
+        "d(B,C)": "1f1e53306b064a7696483921f256d90f20256411efa3dfbe9aa467ba83508500"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 13",
+        "id": "network-xor-0013",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "930e774b0ac75cf3273bc8e2304270bba2c27d8896f611a11eb1c49e906535fc",
+        "nodeB": "d0bc69ef2dcdc4fd1ab2a4574871ad61eae2b68d41928e8e39780afb8bf856a0",
+        "nodeC": "cfa23adf46cb8e8b8cfa9d76ba27746ecac7d29cae315130a3dc6d4108a8d3a0"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "distances": {
+        "d(A,B)": "910654b2d302b2593675a11959d7189dc740a32a815b504f37b5bd71ff99101a",
+        "d(A,C)": "08314b5661c9745e09ae7d7e9fc2d2a13075a2a3227b3e37e45592d0a1d0bb3a",
+        "d(B,A)": "910654b2d302b2593675a11959d7189dc740a32a815b504f37b5bd71ff99101a",
+        "d(B,C)": "99371fe4b2cbc6073fdbdc67c615ca3cf7350189a3206e78d3e02fa15e49ab20"
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Kademlia XOR distance test 14",
+        "id": "network-xor-0014",
+        "specReference": "Kademlia: A Peer-to-peer Information System",
+        "version": "1.0.0"
+      },
+      "nodes": {
+        "nodeA": "f6a45cf65cf224f56a91252129e113371fdecd60660d07612ab7091a61db556d",
+        "nodeB": "67a208448ff096ac5ce4843870360baad89e6e4ae756572e1d02b46b9e424577",
+        "nodeC": "fe9517a03d3b50ab633f585fb623c1962fab6fc344763956cee29bcac00bee57"
+      },
+      "properties": {
+        "metricSpace": true,
+        "reflexive": true,
+        "symmetric": true,
+        "triangleInequality": true
+      },
+      "routingImplications": {
+        "buckets": "256-bit space divided into k-buckets",
+        "closeness": "Lower XOR distance = closer in DHT",
+        "lookupComplexity": "O(log n)"
+      },
+      "testType": "xor_distance"
+    },
+    {
+      "candidateNodes": [
+        "085f21a0a7c941065ddda2b5b55596066484e19dac498fefb0b81770891e470f",
+        "48f31555dc73a3633dbb3454831d1cf7e3a413e1b6dd3021d8074327a370533e",
+        "452f42dc4b43257aae535fd0bf792269bfc725c5e9083a933da0b6782a1a509c",
+        "3d30416cbb3423ad7c218de9786f40d4892ea3e5b8c4145fae2eb738444f7c50",
+        "e25997b4f2a43ffe17c899e2e83c85ab5c9d51cce765db81116e76218949e451",
+        "224da57a6f63a854346ba593a492d89310ee21f56c243613a3c2ea1166346bbc",
+        "e6d0bd621ef6fb96ffe60124a4c61aa448841c71022f57eb494c9c0a33c632b8",
+        "d285f23d106ac582f34f34e3c1f2125270d353bce1cd65c3cb12d4fa8d679f9b"
+      ],
+      "distances": [
+        {
+          "distance": "e9b7083222a927dc5265f68367e200d07f9ab83af7061cf104c1e8d3fad36a7a",
+          "nodeId": "085f21a0a7c941065ddda2b5b55596066484e19dac498fefb0b81770891e470f",
+          "numericDistance": 105712283298373825043184835426342640092895527955766200974799485498158776281722
+        },
+        {
+          "distance": "a91b3cc75913c5b93203606251aa8a21f8ba4a46ed92a33f6c7ebc84d0bd7e4b",
+          "nodeId": "48f31555dc73a3633dbb3454831d1cf7e3a413e1b6dd3021d8074327a370533e",
+          "numericDistance": 76488995760512158043228822578348842406460404178601312571831665057198170275403
+        },
+        {
+          "distance": "a4c76b4ece2343a0a1eb0be66dceb4bfa4d97c62b247a98d89d949db59d77de9",
+          "nodeId": "452f42dc4b43257aae535fd0bf792269bfc725c5e9083a933da0b6782a1a509c",
+          "numericDistance": 74531650344990371724642203497488199835399085750135538892798496368853536701929
+        },
+        {
+          "distance": "dcd868fe3e5445777399d9dfaad8d6029230fa42e38b87411a57489b37825125",
+          "nodeId": "3d30416cbb3423ad7c218de9786f40d4892ea3e5b8c4145fae2eb738444f7c50",
+          "numericDistance": 99891190290321285439906687645565297213125143770949586141663502205389197431077
+        },
+        {
+          "distance": "03b1be2677c459241870cdd43a8b137d4783086bbc2a489fa5178982fa84c924",
+          "nodeId": "e25997b4f2a43ffe17c899e2e83c85ab5c9d51cce765db81116e76218949e451",
+          "numericDistance": 1670982845112372426228069542592393205664475054249234224273988721951467948324
+        },
+        {
+          "distance": "c3a58ce8ea03ce8e3bd3f1a576254e450bf07852376ba50d17bb15b215f946c9",
+          "nodeId": "224da57a6f63a854346ba593a492d89310ee21f56c243613a3c2ea1166346bbc",
+          "numericDistance": 88493507763266198905971040908177005426454628049134234893140069970051442755273
+        },
+        {
+          "distance": "073894f09b969d4cf05e551276718c72539a45d65960c4f5fd3563a9400b1fcd",
+          "nodeId": "e6d0bd621ef6fb96ffe60124a4c61aa448841c71022f57eb494c9c0a33c632b8",
+          "numericDistance": 3266161320942343762416432678429706311941480824566637519726572339807000403917
+        },
+        {
+          "distance": "336ddbaf950aa358fcf760d5134584846bcd0a1bba82f6dd7f6b2b59feaab2ee",
+          "nodeId": "d285f23d106ac582f34f34e3c1f2125270d353bce1cd65c3cb12d4fa8d679f9b",
+          "numericDistance": 23262057823943951293292730788037485214922949383433977193877463472365242069742
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "e25997b4f2a43ffe17c899e2e83c85ab5c9d51cce765db81116e76218949e451",
+          "e6d0bd621ef6fb96ffe60124a4c61aa448841c71022f57eb494c9c0a33c632b8",
+          "d285f23d106ac582f34f34e3c1f2125270d353bce1cd65c3cb12d4fa8d679f9b"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "e1e82992856066da0fb85436d2b796d61b1e59a75b4f931eb479ffa373cd2d75",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Routing table operation test 0",
+        "id": "network-routing-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "e25997b4f2a43ffe17c899e2e83c85ab5c9d51cce765db81116e76218949e451",
+        "e6d0bd621ef6fb96ffe60124a4c61aa448841c71022f57eb494c9c0a33c632b8",
+        "d285f23d106ac582f34f34e3c1f2125270d353bce1cd65c3cb12d4fa8d679f9b",
+        "452f42dc4b43257aae535fd0bf792269bfc725c5e9083a933da0b6782a1a509c",
+        "48f31555dc73a3633dbb3454831d1cf7e3a413e1b6dd3021d8074327a370533e",
+        "224da57a6f63a854346ba593a492d89310ee21f56c243613a3c2ea1166346bbc",
+        "3d30416cbb3423ad7c218de9786f40d4892ea3e5b8c4145fae2eb738444f7c50",
+        "085f21a0a7c941065ddda2b5b55596066484e19dac498fefb0b81770891e470f"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "3fc7ec8496faf94b6e067542b50b586c6c2fd7d0c07ad4f2f1b57c4da2593e44",
+        "a2e8aaa5e66a59bcca9aa1fb8e1d325860bc06b18fcbac6ac0a35e75dcb175d4",
+        "c3364512c83c3dfff84a3f764dd5cdb41a3c8f047bad76fe8a270bcfe32e749c",
+        "2df7747f64d9fe625635c862a673e9a6e365df3a3d760ef81fc15626eaa514f6",
+        "e05807e47406a37c60302500e2b72a1fee3e0599e32673a8ab55872d9da06c1d",
+        "12e034bb643c666f6fcb13926d8d6b7792d52853227975e3524edb2f7fda7f15",
+        "a5f5e11d6956398568055095d764b0496cb062f395604ad49d76685c83ff4736",
+        "369b489f9747608af1adb69cb55a8150ffb2f83f0b8777cb6979947e37d59533"
+      ],
+      "distances": [
+        {
+          "distance": "b4f3e7282bba9986bf441620029debf0a011ace772129a7d52a0eb42a4e42a01",
+          "nodeId": "3fc7ec8496faf94b6e067542b50b586c6c2fd7d0c07ad4f2f1b57c4da2593e44",
+          "numericDistance": 81847251968138263816553206375392115386754743464883466782237808626091409287681
+        },
+        {
+          "distance": "29dca1095b2a39711bd8c299398b81c4ac827d863da3e2e563b6c97ada0c6191",
+          "nodeId": "a2e8aaa5e66a59bcca9aa1fb8e1d325860bc06b18fcbac6ac0a35e75dcb175d4",
+          "numericDistance": 18934644579567308406094546251163221082714576156694332274155180397712389202321
+        },
+        {
+          "distance": "48024ebe757c5d3229085c14fa437e28d602f433c9c5387129329cc0e59360d9",
+          "nodeId": "c3364512c83c3dfff84a3f764dd5cdb41a3c8f047bad76fe8a270bcfe32e749c",
+          "numericDistance": 32570602263102351680732955887301764972625631028756128991150234174542205640921
+        },
+        {
+          "distance": "a6c37fd3d9999eaf8777ab0011e55a3a2f5ba40d8f1e4077bcd4c129ec1800b3",
+          "nodeId": "2df7747f64d9fe625635c862a673e9a6e365df3a3d760ef81fc15626eaa514f6",
+          "numericDistance": 75429350275704757424046449033297289136132436440662425618215771532491891409075
+        },
+        {
+          "distance": "6b6c0c48c946c3b1b17246625521998322007eae514e3d27084010229b1d7858",
+          "nodeId": "e05807e47406a37c60302500e2b72a1fee3e0599e32673a8ab55872d9da06c1d",
+          "numericDistance": 48588379064674772008601921738374535827738824058447906695232264981117455399000
+        },
+        {
+          "distance": "99d43f17d97c06a2be8970f0da1bd8eb5eeb536490113b6cf15b4c2079676b50",
+          "nodeId": "12e034bb643c666f6fcb13926d8d6b7792d52853227975e3524edb2f7fda7f15",
+          "numericDistance": 69578872863975184645518143527037240470858011614360915232180561608123280223056
+        },
+        {
+          "distance": "2ec1eab1d4165948b94733f760f203d5a08e19c42708045b3e63ff5385425373",
+          "nodeId": "a5f5e11d6956398568055095d764b0496cb062f395604ad49d76685c83ff4736",
+          "numericDistance": 21149012321223590701151652079326812416533653960350134133031676081849273308019
+        },
+        {
+          "distance": "bdaf43332a07004720efd5fe02cc32cc338c8308b9ef3944ca6c037131688176",
+          "nodeId": "369b489f9747608af1adb69cb55a8150ffb2f83f0b8777cb6979947e37d59533",
+          "numericDistance": 85796790414962075982228277592640272130385385790667204546017438914553473171830
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "a2e8aaa5e66a59bcca9aa1fb8e1d325860bc06b18fcbac6ac0a35e75dcb175d4",
+          "a5f5e11d6956398568055095d764b0496cb062f395604ad49d76685c83ff4736",
+          "c3364512c83c3dfff84a3f764dd5cdb41a3c8f047bad76fe8a270bcfe32e749c"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "8b340bacbd4060cdd1426362b796b39ccc3e7b37b2684e8fa315970f06bd1445",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Routing table operation test 1",
+        "id": "network-routing-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "a2e8aaa5e66a59bcca9aa1fb8e1d325860bc06b18fcbac6ac0a35e75dcb175d4",
+        "a5f5e11d6956398568055095d764b0496cb062f395604ad49d76685c83ff4736",
+        "c3364512c83c3dfff84a3f764dd5cdb41a3c8f047bad76fe8a270bcfe32e749c",
+        "e05807e47406a37c60302500e2b72a1fee3e0599e32673a8ab55872d9da06c1d",
+        "12e034bb643c666f6fcb13926d8d6b7792d52853227975e3524edb2f7fda7f15",
+        "2df7747f64d9fe625635c862a673e9a6e365df3a3d760ef81fc15626eaa514f6",
+        "3fc7ec8496faf94b6e067542b50b586c6c2fd7d0c07ad4f2f1b57c4da2593e44",
+        "369b489f9747608af1adb69cb55a8150ffb2f83f0b8777cb6979947e37d59533"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "42b12b1a7e47e59e44645019263a53a2dff6bf2320888540710928c649d3da01",
+        "0e97a332e44352789f34bba153baafc901d4e241af23692aff92ef273649c1ed",
+        "fff5e2dbc93b80506416e1e81d9812bf674732a43ba72f6d35129bdc5e294133",
+        "6ebe2e396dc605c06bf554644270e02990f3a4b1b573e19213b41383d21706c1",
+        "549850e9692616a391a291fb6f1164732711f0039f26a9f8cb208581dc310930",
+        "65d92276e7c5d907c5e183b64565471256173fad97257e364233df14b89c99fb",
+        "44a35f50e6ecdba7c4b36ba53d192bdd40168e342f45dc58c395cbd565d4f492",
+        "6bca9296e943aaceeda5e9b91ae0f48f80f6c205ec9a04bba1876c7d591c85ba"
+      ],
+      "distances": [
+        {
+          "distance": "73fe7386ac1e690e5a9f128dfe811ad178b1e4cf4bb56689869b57da461a9d24",
+          "nodeId": "42b12b1a7e47e59e44645019263a53a2dff6bf2320888540710928c649d3da01",
+          "numericDistance": 52465554073118302865435569811523404756862751193963953980023864766671269567780
+        },
+        {
+          "distance": "3fd8fbae361adee881cff9358b01e6baa693b9adc41e8ae30800903b398086c8",
+          "nodeId": "0e97a332e44352789f34bba153baafc901d4e241af23692aff92ef273649c1ed",
+          "numericDistance": 28879085461799595727872479472057701175180698974306896914032865937481353168584
+        },
+        {
+          "distance": "cebaba471b620cc07aeda37cc5235bccc0006948509acca4c280e4c051e00616",
+          "nodeId": "fff5e2dbc93b80506416e1e81d9812bf674732a43ba72f6d35129bdc5e294133",
+          "numericDistance": 93506366004062139130946829065129061360202411218428557636868588722523161495062
+        },
+        {
+          "distance": "5ff176a5bf9f8950750e16f09acba95a37b4ff5dde4e025be4266c9fddde41e4",
+          "nodeId": "6ebe2e396dc605c06bf554644270e02990f3a4b1b573e19213b41383d21706c1",
+          "numericDistance": 43396349632662296055676177417996815768056574930282937445331423540263239172580
+        },
+        {
+          "distance": "65d70875bb7f9a338f59d36fb7aa2d008056abeff41b4a313cb2fa9dd3f84e15",
+          "nodeId": "549850e9692616a391a291fb6f1164732711f0039f26a9f8cb208581dc310930",
+          "numericDistance": 46063528213867683341522404601223420272267529835340917568678436509741064146453
+        },
+        {
+          "distance": "54967aea359c5597db1ac1229dde0e61f1506441fc189dffb5a1a008b755dede",
+          "nodeId": "65d92276e7c5d907c5e183b64565471256173fad97257e364233df14b89c99fb",
+          "numericDistance": 38260154668038826513946112002492999485701567182563131294756667708902808608478
+        },
+        {
+          "distance": "75ec07cc34b55737da482931e5a262aee751d5d844783f913407b4c96a1db3b7",
+          "nodeId": "44a35f50e6ecdba7c4b36ba53d192bdd40168e342f45dc58c395cbd565d4f492",
+          "numericDistance": 53337633009134252176324075457229864499664193406406913058453738604560144774071
+        },
+        {
+          "distance": "5a85ca0a3b1a265ef35eab2dc25bbdfc27b199e987a7e7725615136156d5c29f",
+          "nodeId": "6bca9296e943aaceeda5e9b91ae0f48f80f6c205ec9a04bba1876c7d591c85ba",
+          "numericDistance": 40944541460695201082553329694261617507970617138757848497056898299005624500895
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "0e97a332e44352789f34bba153baafc901d4e241af23692aff92ef273649c1ed",
+          "65d92276e7c5d907c5e183b64565471256173fad97257e364233df14b89c99fb",
+          "6bca9296e943aaceeda5e9b91ae0f48f80f6c205ec9a04bba1876c7d591c85ba"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "314f589cd2598c901efb4294d8bb4973a7475bec6b3de3c9f7927f1c0fc94725",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Routing table operation test 2",
+        "id": "network-routing-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "0e97a332e44352789f34bba153baafc901d4e241af23692aff92ef273649c1ed",
+        "65d92276e7c5d907c5e183b64565471256173fad97257e364233df14b89c99fb",
+        "6bca9296e943aaceeda5e9b91ae0f48f80f6c205ec9a04bba1876c7d591c85ba",
+        "6ebe2e396dc605c06bf554644270e02990f3a4b1b573e19213b41383d21706c1",
+        "549850e9692616a391a291fb6f1164732711f0039f26a9f8cb208581dc310930",
+        "42b12b1a7e47e59e44645019263a53a2dff6bf2320888540710928c649d3da01",
+        "44a35f50e6ecdba7c4b36ba53d192bdd40168e342f45dc58c395cbd565d4f492",
+        "fff5e2dbc93b80506416e1e81d9812bf674732a43ba72f6d35129bdc5e294133"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "121ff3cabcdcd8403ae0742c4e10e4b291c7ebbdd64452809975df6d708eff2e",
+        "a4f08b44bb1616c24184dfeb03c18d5995c29dfa974dacff4087b2b4cbafcd19",
+        "8c0b513f6a897a5a2f8cb74e1c2f33d9fc1db2924ee5f75133ee76bd5fc024ad",
+        "1cd33a8cf26ffb1ac326e9ec559ab7572a6c4f71113893be0154623002e3371d",
+        "815d06d04ff118fd0de78e773b5a1f1afb6f75cc7e96500ec0e9d658188c9f2e",
+        "84a7f9db78a33caf908b779e97d0bcda1bf1c9e7ac3e0bfc0d4949a42baae333",
+        "df1023771e33f5c35bbe1b99cb68f9eb445d494c3f76c07595793765ac8ce345",
+        "8d9bfcc407930a8281416e4f0d83504eb660ee0005f4ed81054d86e1a68d481b"
+      ],
+      "distances": [
+        {
+          "distance": "3061be0de449aec440e40c86b6376fc4390014127bb7e674ae166addabba5223",
+          "nodeId": "121ff3cabcdcd8403ae0742c4e10e4b291c7ebbdd64452809975df6d708eff2e",
+          "numericDistance": 21883712603607000599691979440396618084867893341610847406673980506338076807715
+        },
+        {
+          "distance": "868ec683e38360463b80a741fbe6062f3d0562553abe180b77e40704109b6014",
+          "nodeId": "a4f08b44bb1616c24184dfeb03c18d5995c29dfa974dacff4087b2b4cbafcd19",
+          "numericDistance": 60862184094845839735113110445530369652640718179820966435918453457240287043604
+        },
+        {
+          "distance": "ae751cf8321c0cde5588cfe4e408b8af54da4d3de31643a5048dc30d84f489a0",
+          "nodeId": "8c0b513f6a897a5a2f8cb74e1c2f33d9fc1db2924ee5f75133ee76bd5fc024ad",
+          "numericDistance": 78909356700309059926863889002274743459853059784289593798272793989961777187232
+        },
+        {
+          "distance": "3ead774baafa8d9eb9229146adbd3c2182abb0debccb274a3637d780d9d79a10",
+          "nodeId": "1cd33a8cf26ffb1ac326e9ec559ab7572a6c4f71113893be0154623002e3371d",
+          "numericDistance": 28349884502186605874625807268624171314976136533509072895715679732387112524304
+        },
+        {
+          "distance": "a3234b1717646e7977e3f6ddc37d946c53a88a63d365e4faf78a63e8c3b83223",
+          "nodeId": "815d06d04ff118fd0de78e773b5a1f1afb6f75cc7e96500ec0e9d658188c9f2e",
+          "numericDistance": 73789352219857945241099756477311909969617133859928967851696635771758354903587
+        },
+        {
+          "distance": "a6d9b41c20364a2bea8f0f346ff737acb336364801cdbf083a2afc14f09e4e3e",
+          "nodeId": "84a7f9db78a33caf908b779e97d0bcda1bf1c9e7ac3e0bfc0d4949a42baae333",
+          "numericDistance": 75468581750492385685190720371476003156453552808186566894910625961435572620862
+        },
+        {
+          "distance": "fd6e6eb046a6834721ba6333334f729dec9ab6e392857481a21a82d577b84e48",
+          "nodeId": "df1023771e33f5c35bbe1b99cb68f9eb445d494c3f76c07595793765ac8ce345",
+          "numericDistance": 114630267813181138726547261218889462212611833981417432018156046150742008417864
+        },
+        {
+          "distance": "afe5b1035f067c06fb4516e5f5a4db381ea711afa8075975322e33517db9e516",
+          "nodeId": "8d9bfcc407930a8281416e4f0d83504eb660ee0005f4ed81054d86e1a68d481b",
+          "numericDistance": 79560578179896425177538731115622112368838833444325723381336903767119867012374
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "121ff3cabcdcd8403ae0742c4e10e4b291c7ebbdd64452809975df6d708eff2e",
+          "1cd33a8cf26ffb1ac326e9ec559ab7572a6c4f71113893be0154623002e3371d",
+          "a4f08b44bb1616c24184dfeb03c18d5995c29dfa974dacff4087b2b4cbafcd19"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "227e4dc7589576847a0478aaf8278b76a8c7ffafadf3b4f43763b5b0db34ad0d",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Routing table operation test 3",
+        "id": "network-routing-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "121ff3cabcdcd8403ae0742c4e10e4b291c7ebbdd64452809975df6d708eff2e",
+        "1cd33a8cf26ffb1ac326e9ec559ab7572a6c4f71113893be0154623002e3371d",
+        "a4f08b44bb1616c24184dfeb03c18d5995c29dfa974dacff4087b2b4cbafcd19",
+        "815d06d04ff118fd0de78e773b5a1f1afb6f75cc7e96500ec0e9d658188c9f2e",
+        "84a7f9db78a33caf908b779e97d0bcda1bf1c9e7ac3e0bfc0d4949a42baae333",
+        "8c0b513f6a897a5a2f8cb74e1c2f33d9fc1db2924ee5f75133ee76bd5fc024ad",
+        "8d9bfcc407930a8281416e4f0d83504eb660ee0005f4ed81054d86e1a68d481b",
+        "df1023771e33f5c35bbe1b99cb68f9eb445d494c3f76c07595793765ac8ce345"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "387a928699b77bd857cb11a908ab04ec11683e91de4e8915399467a33ce88823",
+        "ab80d0c83aee32357fb4f2a69579bff172497b52b0b947f10005ea4da1a4e12c",
+        "91b149bd95b43b4d453f8bf528ade1c1540b4f88aae1517c38aa46a4dfcb1e52",
+        "b16dbd5ea399a3739cee726b711627b8533c8be567777c4adeb260c8f833e443",
+        "222f25a3c9ae2a23006f9be9504ede565fc0d7250522f17269ecb2bf5f91b917",
+        "53bbf33a58e04dc32c113ff5dde0dc90591c6cc293466b40fc1d672247f9431f",
+        "4c3e77ad6ba19904708cd1b6c74f7a7f68b55edd612a6ae5143b61aeb0331f39",
+        "55933b1a06d494b77a665a891d77dc27dd560b8ebf6212cbbca4bd5a16851b23"
+      ],
+      "distances": [
+        {
+          "distance": "d676fa699dc7b150cd7e68bf99f78d83c6d9a311599b52ada356d29e9ad4a0b3",
+          "nodeId": "387a928699b77bd857cb11a908ab04ec11683e91de4e8915399467a33ce88823",
+          "numericDistance": 97005165834460132733477110466643273404717248718144869623327479434578452848819
+        },
+        {
+          "distance": "458cb8273e9ef8bde5018bb00425369ea5f8e6d2376c9c499ac75f700798c9bc",
+          "nodeId": "ab80d0c83aee32357fb4f2a69579bff172497b52b0b947f10005ea4da1a4e12c",
+          "numericDistance": 31458216120674843312600017827952344089774350457352740812930963269832664467900
+        },
+        {
+          "distance": "7fbd215291c4f1c5df8af2e3b9f168ae83bad2082d348ac4a268f39979f736c2",
+          "nodeId": "91b149bd95b43b4d453f8bf528ade1c1540b4f88aae1517c38aa46a4dfcb1e52",
+          "numericDistance": 57777895849014317286049352276150408483612188246640192069983044533238002824898
+        },
+        {
+          "distance": "5f61d5b1a7e969fb065b0b7de04aaed7848d1665e0a2a7f24470d5f55e0fccd3",
+          "nodeId": "b16dbd5ea399a3739cee726b711627b8533c8be567777c4adeb260c8f833e443",
+          "numericDistance": 43142579642259410304501375481112412898869124389136947145687205755197154381011
+        },
+        {
+          "distance": "cc234d4ccddee0ab9adae2ffc112573988714aa582f72acaf32e0782f9ad9187",
+          "nodeId": "222f25a3c9ae2a23006f9be9504ede565fc0d7250522f17269ecb2bf5f91b917",
+          "numericDistance": 92334194263358942582842696130437388192611786361455109079326901381857108922759
+        },
+        {
+          "distance": "bdb79bd55c90874bb6a446e34cbc55ff8eadf1421493b0f866dfd21fe1c56b8f",
+          "nodeId": "53bbf33a58e04dc32c113ff5dde0dc90591c6cc293466b40fc1d672247f9431f",
+          "numericDistance": 85811536917992370784813129697832122612775124119070060466538599759257371241359
+        },
+        {
+          "distance": "a2321f426fd1538cea39a8a05613f310bf04c35de6ffb15d8ef9d493160f37a9",
+          "nodeId": "4c3e77ad6ba19904708cd1b6c74f7a7f68b55edd612a6ae5143b61aeb0331f39",
+          "numericDistance": 73363239568997080921102298851762185087415914673243595600869937192815360423849
+        },
+        {
+          "distance": "bb9f53f502a45e3fe0d3239f8c2b55480ae7960e38b7c97326660867b0b933b3",
+          "nodeId": "55933b1a06d494b77a665a891d77dc27dd560b8ebf6212cbbca4bd5a16851b23",
+          "numericDistance": 84864010818782536526250009663551533871773184758953493244446630647836400235443
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "ab80d0c83aee32357fb4f2a69579bff172497b52b0b947f10005ea4da1a4e12c",
+          "b16dbd5ea399a3739cee726b711627b8533c8be567777c4adeb260c8f833e443",
+          "91b149bd95b43b4d453f8bf528ade1c1540b4f88aae1517c38aa46a4dfcb1e52"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "ee0c68ef0470ca889ab57916915c896fd7b19d8087d5dbb89ac2b53da63c2890",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Routing table operation test 4",
+        "id": "network-routing-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "ab80d0c83aee32357fb4f2a69579bff172497b52b0b947f10005ea4da1a4e12c",
+        "b16dbd5ea399a3739cee726b711627b8533c8be567777c4adeb260c8f833e443",
+        "91b149bd95b43b4d453f8bf528ade1c1540b4f88aae1517c38aa46a4dfcb1e52",
+        "4c3e77ad6ba19904708cd1b6c74f7a7f68b55edd612a6ae5143b61aeb0331f39",
+        "55933b1a06d494b77a665a891d77dc27dd560b8ebf6212cbbca4bd5a16851b23",
+        "53bbf33a58e04dc32c113ff5dde0dc90591c6cc293466b40fc1d672247f9431f",
+        "222f25a3c9ae2a23006f9be9504ede565fc0d7250522f17269ecb2bf5f91b917",
+        "387a928699b77bd857cb11a908ab04ec11683e91de4e8915399467a33ce88823"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "357a0e30dce840642fdad69c60623e591990a7fe5ece01a66324e1f4e7a0ba2b",
+        "3869473174b18bc244cf77ef14993bec0a8cd3b11b98e60d122793535a48262e",
+        "2583d4966b721709d64d9c02ff80934baf0707a2057f0996c8593145c88242b8",
+        "43a78fea764cb0eb5cad9b0d8a5898fe5c7d3896527e99a7a1eae2070b7abb1c",
+        "e3dd5daab2d46191dc2ca15ffd262efda79b41f2d2590179104858839161ad37",
+        "fb3965e68cd677cdc32799ae9857644502b9ca7b17f3a41b665dacfd576b8e82",
+        "e9cea98c84181f74ee656457a628f52f1ff7bafe39899a8b66fe6382d67b3059",
+        "251a2849cb56a3792c170c5b9a75cb9958ae9d633f1b1facfb68aa2c81ed634e"
+      ],
+      "distances": [
+        {
+          "distance": "eac1744b012c6f9f41f09008fd25760675e8eab983fa6377689852737829d78e",
+          "nodeId": "357a0e30dce840642fdad69c60623e591990a7fe5ece01a66324e1f4e7a0ba2b",
+          "numericDistance": 106183010676682383008262772746964873488143050399894824499139310636947720492942
+        },
+        {
+          "distance": "e7d23d4aa975a4392ae5317b89de73b366f49ef6c6ac84dc199b20d4c5c14b8b",
+          "nodeId": "3869473174b18bc244cf77ef14993bec0a8cd3b11b98e60d122793535a48262e",
+          "numericDistance": 104855728925747376213962408384201982523502920323200747274350195903374792149899
+        },
+        {
+          "distance": "fa38aeedb6b638f2b867da9662c7db14c37f4ae5d84b6b47c3e582c2570b2f1d",
+          "nodeId": "2583d4966b721709d64d9c02ff80934baf0707a2057f0996c8593145c88242b8",
+          "numericDistance": 113178362894057687341734585107788368359988617304599719975798228887206598749981
+        },
+        {
+          "distance": "9c1cf591ab889f103287dd99171fd0a1300575d18f4afb76aa56518094f3d6b9",
+          "nodeId": "43a78fea764cb0eb5cad9b0d8a5898fe5c7d3896527e99a7a1eae2070b7abb1c",
+          "numericDistance": 70611970951915186407531467711488563588827363399001070583963736033859386726073
+        },
+        {
+          "distance": "3c6627d16f104e6ab206e7cb606166a2cbe30cb50f6d63a81bf4eb040ee8c092",
+          "nodeId": "e3dd5daab2d46191dc2ca15ffd262efda79b41f2d2590179104858839161ad37",
+          "numericDistance": 27319264130036129174832950408048731254582527996703905449841917829569523007634
+        },
+        {
+          "distance": "24821f9d51125836ad0ddf3a05102c1a6ec1873ccac7c6ca6de11f7ac8e2e327",
+          "nodeId": "fb3965e68cd677cdc32799ae9857644502b9ca7b17f3a41b665dacfd576b8e82",
+          "numericDistance": 16513170862804999343829099062587688656414196772878810207814399912760446214951
+        },
+        {
+          "distance": "3675d3f759dc308f804f22c33b6fbd70738ff7b9e4bdf85a6d42d00549f25dfc",
+          "nodeId": "e9cea98c84181f74ee656457a628f52f1ff7bafe39899a8b66fe6382d67b3059",
+          "numericDistance": 24633077867124830276839987585027255643499865743388851235948752585483309178364
+        },
+        {
+          "distance": "faa1523216928c82423d4acf073283c634d6d024e22f7d7df0d419ab1e640eeb",
+          "nodeId": "251a2849cb56a3792c170c5b9a75cb9958ae9d633f1b1facfb68aa2c81ed634e",
+          "numericDistance": 113363241816820844276180600234960659930257461089654834411053456711341480087275
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "fb3965e68cd677cdc32799ae9857644502b9ca7b17f3a41b665dacfd576b8e82",
+          "e9cea98c84181f74ee656457a628f52f1ff7bafe39899a8b66fe6382d67b3059",
+          "e3dd5daab2d46191dc2ca15ffd262efda79b41f2d2590179104858839161ad37"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "dfbb7a7bddc42ffb6e2a46949d47485f6c784d47dd3462d10bbcb3879f896da5",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.654537+00:00",
+        "description": "Routing table operation test 5",
+        "id": "network-routing-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "fb3965e68cd677cdc32799ae9857644502b9ca7b17f3a41b665dacfd576b8e82",
+        "e9cea98c84181f74ee656457a628f52f1ff7bafe39899a8b66fe6382d67b3059",
+        "e3dd5daab2d46191dc2ca15ffd262efda79b41f2d2590179104858839161ad37",
+        "43a78fea764cb0eb5cad9b0d8a5898fe5c7d3896527e99a7a1eae2070b7abb1c",
+        "3869473174b18bc244cf77ef14993bec0a8cd3b11b98e60d122793535a48262e",
+        "357a0e30dce840642fdad69c60623e591990a7fe5ece01a66324e1f4e7a0ba2b",
+        "2583d4966b721709d64d9c02ff80934baf0707a2057f0996c8593145c88242b8",
+        "251a2849cb56a3792c170c5b9a75cb9958ae9d633f1b1facfb68aa2c81ed634e"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "4e0ec434e80d680f73eff588259613710e15a8269fd04f192ad229e6ee9b0f51",
+        "8200a3a0c49926395b6a549287e3542e441eaabd678a8d7d57bc3cf8cd9c4b95",
+        "63f723adb1f85e541cd617fef6874a8c4c61d34e9764d3a524205ef806eb2c4f",
+        "f02dd062ea9e0a6ca97b2f69673e90ddfd6ad4abf54597679e2dd6afa53a09d6",
+        "ce0d714dc7a231995faed832945abc802e4812929d31e616898ae25b53534995",
+        "b7a30fef796e0063a145a61c71f2cce769eacb175f56234c1396934ac49d2ba0",
+        "6ca87f7acfb778a02db472810f6b9dcfab2c8196904562652728df6c4f8539e1",
+        "b1823cc59b2930bd9708402bf48f9b57369e05bba5265e045b0b40673bc3a9bd"
+      ],
+      "distances": [
+        {
+          "distance": "faba3b2fc7c54c22ed5ff179edbbaf49cd8b80b56e1357eece94e72febb1bf91",
+          "nodeId": "4e0ec434e80d680f73eff588259613710e15a8269fd04f192ad229e6ee9b0f51",
+          "numericDistance": 113407254191055640066001247249741731164372732868060010110501024460749321387921
+        },
+        {
+          "distance": "36b45cbbeb510214c5da50634fcee8168780822e9649958ab3faf231c8b6fb55",
+          "nodeId": "8200a3a0c49926395b6a549287e3542e441eaabd678a8d7d57bc3cf8cd9c4b95",
+          "numericDistance": 24743566322112138994188736596004921138924394979867820442477823964583569062741
+        },
+        {
+          "distance": "d743dcb69e307a798266130f3eaaf6b48ffffbdd66a7cb52c066903103c19c8f",
+          "nodeId": "63f723adb1f85e541cd617fef6874a8c4c61d34e9764d3a524205ef806eb2c4f",
+          "numericDistance": 97367164506308297543284420713603681432466015750766572009464985290431579397263
+        },
+        {
+          "distance": "44992f79c5562e4137cb2b98af132ce53ef4fc3804868f907a6b1866a010b916",
+          "nodeId": "f02dd062ea9e0a6ca97b2f69673e90ddfd6ad4abf54597679e2dd6afa53a09d6",
+          "numericDistance": 31027928969587027228755588346358344259832845087532177144201167131328457521430
+        },
+        {
+          "distance": "7ab98e56e86a15b4c11edcc35c7700b8edd63a016cf2fee16dcc2c925679f955",
+          "nodeId": "ce0d714dc7a231995faed832945abc802e4812929d31e616898ae25b53534995",
+          "numericDistance": 55510016625155250535718118996594327905370826065191908486752120678597785155925
+        },
+        {
+          "distance": "0317f0f456a6244e3ff5a2edb9df70dfaa74e384ae953bbbf7d05d83c1b79b60",
+          "nodeId": "b7a30fef796e0063a145a61c71f2cce769eacb175f56234c1396934ac49d2ba0",
+          "numericDistance": 1399239034715122388342042155822939475082590764988795996350352079331612138336
+        },
+        {
+          "distance": "d81c8061e07f5c8db3047670c74621f768b2a90561867a92c36e11a54aaf8921",
+          "nodeId": "6ca87f7acfb778a02db472810f6b9dcfab2c8196904562652728df6c4f8539e1",
+          "numericDistance": 97749933074088897386855871958143874113830549336001930865134984637129620949281
+        },
+        {
+          "distance": "0536c3deb4e1149009b844da3ca2276ff5002d2854e546f3bf4d8eae3ee9197d",
+          "nodeId": "b1823cc59b2930bd9708402bf48f9b57369e05bba5265e045b0b40673bc3a9bd",
+          "numericDistance": 2358325829108954137636178397824210384027460975608698737568144490169664870781
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "b7a30fef796e0063a145a61c71f2cce769eacb175f56234c1396934ac49d2ba0",
+          "b1823cc59b2930bd9708402bf48f9b57369e05bba5265e045b0b40673bc3a9bd",
+          "8200a3a0c49926395b6a549287e3542e441eaabd678a8d7d57bc3cf8cd9c4b95"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "b4b4ff1b2fc8242d9eb004f1c82dbc38c39e2893f1c318f7e446cec9052ab0c0",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Routing table operation test 6",
+        "id": "network-routing-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "b7a30fef796e0063a145a61c71f2cce769eacb175f56234c1396934ac49d2ba0",
+        "b1823cc59b2930bd9708402bf48f9b57369e05bba5265e045b0b40673bc3a9bd",
+        "8200a3a0c49926395b6a549287e3542e441eaabd678a8d7d57bc3cf8cd9c4b95",
+        "f02dd062ea9e0a6ca97b2f69673e90ddfd6ad4abf54597679e2dd6afa53a09d6",
+        "ce0d714dc7a231995faed832945abc802e4812929d31e616898ae25b53534995",
+        "63f723adb1f85e541cd617fef6874a8c4c61d34e9764d3a524205ef806eb2c4f",
+        "6ca87f7acfb778a02db472810f6b9dcfab2c8196904562652728df6c4f8539e1",
+        "4e0ec434e80d680f73eff588259613710e15a8269fd04f192ad229e6ee9b0f51"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "939bdbafb7d91df6fe4c2cf689e5c4ab1c01f1a65d6f126b98d28160e544a62e",
+        "67f8572965fda7ae74f225733cf4a7de976fc404e6b1a0e41c9063b8e1497426",
+        "178ed57a6c4d2c9d1bd9eb5e5409fb06edb0d8a698502a2c9eb2bc8413b91577",
+        "a3c4aba9d7ea44259a52c568fd320a170e41b0bfae0432a73513ce3d9c27183d",
+        "dcbc4cf778a1e0903154aa759634f7d5994b228921c097f7a08da12b6faa28af",
+        "29dfbc95088e2d2347cf0ec67b5317c432a7325be61cc71ac248152772edee4a",
+        "260f6405379ee7411d3abb5215b1e6bc0cb9bf4eb2d198195f933ffd4dfea381",
+        "3a531587e800fbe681f82c0f2409581e3512debfb8fe1f92864267c6fe6309d5"
+      ],
+      "distances": [
+        {
+          "distance": "e77b22e7ba6c9a409ee66d5a04dbb5237e0f882e8dd4a16cdabc7da636c735de",
+          "nodeId": "939bdbafb7d91df6fe4c2cf689e5c4ab1c01f1a65d6f126b98d28160e544a62e",
+          "numericDistance": 104701831118458510725232047448518835747813497838642945865967006646543770400222
+        },
+        {
+          "distance": "1318ae6168482018145864dfb1cad656f561bd8c360a13e35efe9f7e32cae7d6",
+          "nodeId": "67f8572965fda7ae74f225733cf4a7de976fc404e6b1a0e41c9063b8e1497426",
+          "numericDistance": 8637551982598059863442684016086947755818564289029118236867612768946904295382
+        },
+        {
+          "distance": "636e2c3261f8ab2b7b73aaf2d9378a8e8fbea12e48eb992bdcdc4042c03a8687",
+          "nodeId": "178ed57a6c4d2c9d1bd9eb5e5409fb06edb0d8a698502a2c9eb2bc8413b91577",
+          "numericDistance": 44973630222023175501303826235393775069719040298699593025436815484173531383431
+        },
+        {
+          "distance": "d72452e1da5fc393faf884c4700c7b9f6c4fc9377ebf81a0777d32fb4fa48bcd",
+          "nodeId": "a3c4aba9d7ea44259a52c568fd320a170e41b0bfae0432a73513ce3d9c27183d",
+          "numericDistance": 97311440971920206870042433068073506650614464353512954273928582640960639634381
+        },
+        {
+          "distance": "a85cb5bf7514672651feebd91b0a865dfb455b01f17b24f0e2e35dedbc29bb5f",
+          "nodeId": "dcbc4cf778a1e0903154aa759634f7d5994b228921c097f7a08da12b6faa28af",
+          "numericDistance": 76152362869716878526024601077702348264553794010539232484819705787248884169567
+        },
+        {
+          "distance": "5d3f45dd053baa9527654f6af66d664c50a94bd336a7741d8026e9e1a16e7dba",
+          "nodeId": "29dfbc95088e2d2347cf0ec67b5317c432a7325be61cc71ac248152772edee4a",
+          "numericDistance": 42176888462522061086960559392709860046923330493403846087225662185139847724474
+        },
+        {
+          "distance": "52ef9d4d3a2b60f77d90fafe988f97346eb7c6c6626a2b1e1dfdc33b9e7d3071",
+          "nodeId": "260f6405379ee7411d3abb5215b1e6bc0cb9bf4eb2d198195f933ffd4dfea381",
+          "numericDistance": 37513015688528175100839655431109198975010803186148066159178664077818108653681
+        },
+        {
+          "distance": "4eb3eccfe5b57c50e1526da3a9372996571ca7376845ac95c42c9b002de09a25",
+          "nodeId": "3a531587e800fbe681f82c0f2409581e3512debfb8fe1f92864267c6fe6309d5",
+          "numericDistance": 35598302231128085402679853126579210875638858211866970642997235818552516188709
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "67f8572965fda7ae74f225733cf4a7de976fc404e6b1a0e41c9063b8e1497426",
+          "3a531587e800fbe681f82c0f2409581e3512debfb8fe1f92864267c6fe6309d5",
+          "260f6405379ee7411d3abb5215b1e6bc0cb9bf4eb2d198195f933ffd4dfea381"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "74e0f9480db587b660aa41ac8d3e7188620e7988d0bbb307426efcc6d38393f0",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Routing table operation test 7",
+        "id": "network-routing-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "67f8572965fda7ae74f225733cf4a7de976fc404e6b1a0e41c9063b8e1497426",
+        "3a531587e800fbe681f82c0f2409581e3512debfb8fe1f92864267c6fe6309d5",
+        "260f6405379ee7411d3abb5215b1e6bc0cb9bf4eb2d198195f933ffd4dfea381",
+        "29dfbc95088e2d2347cf0ec67b5317c432a7325be61cc71ac248152772edee4a",
+        "178ed57a6c4d2c9d1bd9eb5e5409fb06edb0d8a698502a2c9eb2bc8413b91577",
+        "dcbc4cf778a1e0903154aa759634f7d5994b228921c097f7a08da12b6faa28af",
+        "a3c4aba9d7ea44259a52c568fd320a170e41b0bfae0432a73513ce3d9c27183d",
+        "939bdbafb7d91df6fe4c2cf689e5c4ab1c01f1a65d6f126b98d28160e544a62e"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "355ba7e845bc2251953533395614ffc348253a26f06cfdba3d063762ba85bb9e",
+        "0d629b3036c415b5dcb5339370b0da418bf31629912e43ff259b85eb0c0053c1",
+        "9e4754c6dea14e372f445e0be1eb447ae5b78c397ce2b1226e2d070ec071340c",
+        "73a10f91b7b0b7f6ff21b08aa150c3f0f3f5d70a15522977cd8a5837e1729686",
+        "61a3cee980cf636fee5342bf428b67ad46e3c5b437d53bfd3a5486676d3a3a72",
+        "2bd76b4eacb277d555877ec03c8417bb66842feac847480e7bf25bbe45a696e3",
+        "fe6c38d816bb4ec60521d8e31c34daf04e05103e8491fb25ad55325a2742a533",
+        "9246188d14e536fe71e07c9f8e3d2384f1589399b59bb6818207850b02347a51"
+      ],
+      "distances": [
+        {
+          "distance": "f54fb28738d8ea80bb162dd56286847b2806af191ccfbdb2d57133e21c380a14",
+          "nodeId": "355ba7e845bc2251953533395614ffc348253a26f06cfdba3d063762ba85bb9e",
+          "numericDistance": 110957460977447008710285312718325076210884507259818873387452498011194306071060
+        },
+        {
+          "distance": "cd768e5f4ba0dd64f2962d7f4422a1f9ebd083167d8d03f7cdec816baabde24b",
+          "nodeId": "0d629b3036c415b5dcb5339370b0da418bf31629912e43ff259b85eb0c0053c1",
+          "numericDistance": 92933604530354234431191677094750819769263570474589210594813589488608569320011
+        },
+        {
+          "distance": "5e5341a9a3c586e6016740e7d5793fc2859419069041f12a865a038e66cc8586",
+          "nodeId": "9e4754c6dea14e372f445e0be1eb447ae5b78c397ce2b1226e2d070ec071340c",
+          "numericDistance": 42664509260194335956440823634032721777321668422737761789522148522971022263686
+        },
+        {
+          "distance": "b3b51afecad47f27d102ae6695c2b84893d64235f9f1697f25fd5cb747cf270c",
+          "nodeId": "73a10f91b7b0b7f6ff21b08aa150c3f0f3f5d70a15522977cd8a5837e1729686",
+          "numericDistance": 81283985529721540083050668777466639080577844522260021765897515011139768887052
+        },
+        {
+          "distance": "a1b7db86fdababbec0705c5376191c1526c0508bdb767bf5d22382e7cb878bf8",
+          "nodeId": "61a3cee980cf636fee5342bf428b67ad46e3c5b437d53bfd3a5486676d3a3a72",
+          "numericDistance": 73147216756557764487818050047443283693491773349287683895045858488294450891768
+        },
+        {
+          "distance": "ebc37e21d1d6bf047ba4602c08166c0306a7bad524e4080693855f3ee31b2769",
+          "nodeId": "2bd76b4eacb277d555877ec03c8417bb66842feac847480e7bf25bbe45a696e3",
+          "numericDistance": 106638925126515932244859942898332929679474123700156039962200219590681129854825
+        },
+        {
+          "distance": "3e782db76bdf86172b02c60f28a6a1482e2685016832bb2d452236da81ff14b9",
+          "nodeId": "fe6c38d816bb4ec60521d8e31c34daf04e05103e8491fb25ad55325a2742a533",
+          "numericDistance": 28255733783552135425365780048884197944678853871042367202375110800213475792057
+        },
+        {
+          "distance": "52520de26981fe2f5fc36273baaf583c917b06a65938f6896a70818ba489cbdb",
+          "nodeId": "9246188d14e536fe71e07c9f8e3d2384f1589399b59bb6818207850b02347a51",
+          "numericDistance": 37234630869901393021819485968884760628078872433121319815779635516492508416987
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "fe6c38d816bb4ec60521d8e31c34daf04e05103e8491fb25ad55325a2742a533",
+          "9246188d14e536fe71e07c9f8e3d2384f1589399b59bb6818207850b02347a51",
+          "9e4754c6dea14e372f445e0be1eb447ae5b78c397ce2b1226e2d070ec071340c"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "c014156f7d64c8d12e231eec34927bb86023953feca34008e8770480a6bdb18a",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Routing table operation test 8",
+        "id": "network-routing-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "fe6c38d816bb4ec60521d8e31c34daf04e05103e8491fb25ad55325a2742a533",
+        "9246188d14e536fe71e07c9f8e3d2384f1589399b59bb6818207850b02347a51",
+        "9e4754c6dea14e372f445e0be1eb447ae5b78c397ce2b1226e2d070ec071340c",
+        "61a3cee980cf636fee5342bf428b67ad46e3c5b437d53bfd3a5486676d3a3a72",
+        "73a10f91b7b0b7f6ff21b08aa150c3f0f3f5d70a15522977cd8a5837e1729686",
+        "0d629b3036c415b5dcb5339370b0da418bf31629912e43ff259b85eb0c0053c1",
+        "2bd76b4eacb277d555877ec03c8417bb66842feac847480e7bf25bbe45a696e3",
+        "355ba7e845bc2251953533395614ffc348253a26f06cfdba3d063762ba85bb9e"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "candidateNodes": [
+        "fbb73a9317ae59f863c34597a41ae141e435a93cebb6e907e10593be4d30d038",
+        "7d3e0df2d5e71e7b968a3d06c4b7ea5efe183ee4d9bd8320cc870399f0b314ed",
+        "39186af364cdbfe325977544f01480ed0388b3940531f1ce2c631c4135743d82",
+        "e8416c47085befd220e30e77dc45c41433cc7d544815062557ce486c5f42fae7",
+        "210f02da7f7f47db6c1feab715a377a51299584df1d95d96bf8afc6a2cc5b8b7",
+        "e13f833ebe895f732adf7aef623df525f96c23f956a4703e3c14f0a563df2420",
+        "cc6430ee09e07b6d07cad0dd314cbe1b4211630f3943aa05b9ffe84712f7f208",
+        "09f9f499da77a2ad7b05f3cae42d6ed947254e145213e3114afa55ef1a2c7150"
+      ],
+      "distances": [
+        {
+          "distance": "641d21f03ec1a5a04885ecb02fb795faef75944b392137715b16e40d5dc51f2d",
+          "nodeId": "fbb73a9317ae59f863c34597a41ae141e435a93cebb6e907e10593be4d30d038",
+          "numericDistance": 45282757657830880016882004163477193773364462777507346850964156556688411139885
+        },
+        {
+          "distance": "e2941691fc88e223bdcc94214f1a9ee5f55803930b2a5d567694742ae046dbf8",
+          "nodeId": "7d3e0df2d5e71e7b968a3d06c4b7ea5efe183ee4d9bd8320cc870399f0b314ed",
+          "numericDistance": 102484352919612308830171438603862795598692649084553501852846571279692625009656
+        },
+        {
+          "distance": "a6b271904da243bb0ed1dc637bb9f45608c88ee3d7a62fb896706bf22581f297",
+          "nodeId": "39186af364cdbfe325977544f01480ed0388b3940531f1ce2c631c4135743d82",
+          "numericDistance": 75399215430098078516118529877594392248457101064840358181228729008989535335063
+        },
+        {
+          "distance": "77eb77242134138a0ba5a75057e8b0af388c40239a82d853eddd3fdf4fb735f2",
+          "nodeId": "e8416c47085befd220e30e77dc45c41433cc7d544815062557ce486c5f42fae7",
+          "numericDistance": 54241260323501697211047416238021077272167857156013867900706148001136919393778
+        },
+        {
+          "distance": "bea519b95610bb83475943909e0e031e19d9653a234e83e005998bd93c3077a2",
+          "nodeId": "210f02da7f7f47db6c1feab715a377a51299584df1d95d96bf8afc6a2cc5b8b7",
+          "numericDistance": 86231148536821590815465153772983131405123114443684795798233837945346250012578
+        },
+        {
+          "distance": "7e95985d97e6a32b0199d3c8e990819ef22c1e8e8433ae4886078716732aeb35",
+          "nodeId": "e13f833ebe895f732adf7aef623df525f96c23f956a4703e3c14f0a563df2420",
+          "numericDistance": 57255730722860331165705893529719034063731663658818712755144088696250652355381
+        },
+        {
+          "distance": "53ce2b8d208f87352c8c79fabae1caa049515e78ebd4747303ec9ff402023d1d",
+          "nodeId": "cc6430ee09e07b6d07cad0dd314cbe1b4211630f3943aa05b9ffe84712f7f208",
+          "numericDistance": 37906237507629886861095897187680671883595136778170997026780311588043818679581
+        },
+        {
+          "distance": "9653effaf3185ef550435aed6f801a624c65736380843d67f0e9225c0ad9be45",
+          "nodeId": "09f9f499da77a2ad7b05f3cae42d6ed947254e145213e3114afa55ef1a2c7150",
+          "numericDistance": 67995231876831026382596638050560168404048014120572861020506611987239705099845
+        }
+      ],
+      "expectedRoutingTable": {
+        "bucketDistribution": "Based on XOR distance prefixes",
+        "closestNodes": [
+          "cc6430ee09e07b6d07cad0dd314cbe1b4211630f3943aa05b9ffe84712f7f208",
+          "fbb73a9317ae59f863c34597a41ae141e435a93cebb6e907e10593be4d30d038",
+          "e8416c47085befd220e30e77dc45c41433cc7d544815062557ce486c5f42fae7"
+        ]
+      },
+      "kBucketSize": 20,
+      "localNode": "9faa1b63296ffc582b46a9278bad74bb0b403d77d297de76ba1377b310f5cf15",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "Routing table operation test 9",
+        "id": "network-routing-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "sortedByDistance": [
+        "cc6430ee09e07b6d07cad0dd314cbe1b4211630f3943aa05b9ffe84712f7f208",
+        "fbb73a9317ae59f863c34597a41ae141e435a93cebb6e907e10593be4d30d038",
+        "e8416c47085befd220e30e77dc45c41433cc7d544815062557ce486c5f42fae7",
+        "e13f833ebe895f732adf7aef623df525f96c23f956a4703e3c14f0a563df2420",
+        "09f9f499da77a2ad7b05f3cae42d6ed947254e145213e3114afa55ef1a2c7150",
+        "39186af364cdbfe325977544f01480ed0388b3940531f1ce2c631c4135743d82",
+        "210f02da7f7f47db6c1feab715a377a51299584df1d95d96bf8afc6a2cc5b8b7",
+        "7d3e0df2d5e71e7b968a3d06c4b7ea5efe183ee4d9bd8320cc870399f0b314ed"
+      ],
+      "testType": "routing_table"
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 0",
+        "id": "network-nat-0000",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "FULL_CONE",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 1",
+        "id": "network-nat-0001",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "RESTRICTED_CONE",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 2",
+        "id": "network-nat-0002",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "PORT_RESTRICTED",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 3",
+        "id": "network-nat-0003",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "SYMMETRIC",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.65,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 4",
+        "id": "network-nat-0004",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "FULL_CONE",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 5",
+        "id": "network-nat-0005",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "RESTRICTED_CONE",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 6",
+        "id": "network-nat-0006",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "PORT_RESTRICTED",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 7",
+        "id": "network-nat-0007",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "SYMMETRIC",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.65,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 8",
+        "id": "network-nat-0008",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": true,
+        "nodeA_NAT": "FULL_CONE",
+        "nodeB_NAT": "SYMMETRIC"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    },
+    {
+      "expectedSequence": [
+        "STUN binding discovery",
+        "Candidate exchange via signaling",
+        "Connectivity checks",
+        "NAT traversal attempt",
+        "Fallback to relay if direct fails"
+      ],
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "network",
+        "creationTimestamp": "2026-02-08T12:18:37.655567+00:00",
+        "description": "NAT traversal test 9",
+        "id": "network-nat-0009",
+        "specReference": null,
+        "version": "1.0.0"
+      },
+      "scenario": {
+        "hasRelay": true,
+        "hasSTUN": false,
+        "nodeA_NAT": "RESTRICTED_CONE",
+        "nodeB_NAT": "FULL_CONE"
+      },
+      "successProbability": 0.85,
+      "testType": "nat_traversal",
+      "traversalMethods": [
+        "UDP hole punching",
+        "TCP simultaneous open",
+        "Relay fallback",
+        "ICE (Interactive Connectivity Establishment)"
+      ]
+    }
+  ]
+}

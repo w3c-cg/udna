@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "category": "compliance",
+    "generated": "2026-02-08T12:18:37.766535+00:00",
+    "hash": "e9394efb596d844ae999c108dc788ddde23cf0856a300dd190e3f127b9b50d1b",
+    "vectorCount": 8
+  },
+  "vectors": [
+    {
+      "complianceLevel": "MUST",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "W3C DID-CORE compliance test",
+        "id": "compliance-w3c-did-core-0000",
+        "specReference": "https://www.w3.org/TR/did-core/",
+        "version": "1.0.0"
+      },
+      "sectionsTested": [
+        "\u00a73",
+        "\u00a75",
+        "\u00a77"
+      ],
+      "specification": "DID-CORE",
+      "testCases": [
+        {
+          "description": "Verify implementation meets DID-CORE section \u00a73",
+          "expected": "PASS",
+          "requirement": "DID-CORE \u00a7\u00a73",
+          "testMethod": "Conformance testing against specification"
+        },
+        {
+          "description": "Verify implementation meets DID-CORE section \u00a75",
+          "expected": "PASS",
+          "requirement": "DID-CORE \u00a7\u00a75",
+          "testMethod": "Conformance testing against specification"
+        },
+        {
+          "description": "Verify implementation meets DID-CORE section \u00a77",
+          "expected": "PASS",
+          "requirement": "DID-CORE \u00a7\u00a77",
+          "testMethod": "Conformance testing against specification"
+        }
+      ],
+      "validationMethod": {
+        "automated": true,
+        "certification": "Self-certified",
+        "manualReview": false
+      },
+      "version": "1.0"
+    },
+    {
+      "complianceLevel": "MUST",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "W3C VC-DATA-MODEL compliance test",
+        "id": "compliance-w3c-vc-data-model-0001",
+        "specReference": "https://www.w3.org/TR/vc-data-model/",
+        "version": "1.0.0"
+      },
+      "sectionsTested": [
+        "\u00a74",
+        "\u00a76"
+      ],
+      "specification": "VC-DATA-MODEL",
+      "testCases": [
+        {
+          "description": "Verify implementation meets VC-DATA-MODEL section \u00a74",
+          "expected": "PASS",
+          "requirement": "VC-DATA-MODEL \u00a7\u00a74",
+          "testMethod": "Conformance testing against specification"
+        },
+        {
+          "description": "Verify implementation meets VC-DATA-MODEL section \u00a76",
+          "expected": "PASS",
+          "requirement": "VC-DATA-MODEL \u00a7\u00a76",
+          "testMethod": "Conformance testing against specification"
+        }
+      ],
+      "validationMethod": {
+        "automated": true,
+        "certification": "Self-certified",
+        "manualReview": false
+      },
+      "version": "2.0"
+    },
+    {
+      "complianceLevel": "MUST",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "W3C DID-RESOLUTION compliance test",
+        "id": "compliance-w3c-did-resolution-0002",
+        "specReference": "https://www.w3.org/TR/did-resolution/",
+        "version": "1.0.0"
+      },
+      "sectionsTested": [
+        "\u00a72",
+        "\u00a73"
+      ],
+      "specification": "DID-RESOLUTION",
+      "testCases": [
+        {
+          "description": "Verify implementation meets DID-RESOLUTION section \u00a72",
+          "expected": "PASS",
+          "requirement": "DID-RESOLUTION \u00a7\u00a72",
+          "testMethod": "Conformance testing against specification"
+        },
+        {
+          "description": "Verify implementation meets DID-RESOLUTION section \u00a73",
+          "expected": "PASS",
+          "requirement": "DID-RESOLUTION \u00a7\u00a73",
+          "testMethod": "Conformance testing against specification"
+        }
+      ],
+      "validationMethod": {
+        "automated": true,
+        "certification": "Self-certified",
+        "manualReview": false
+      },
+      "version": "1.0"
+    },
+    {
+      "complianceLevel": "MUST",
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "W3C SECURITY-VOCAB compliance test",
+        "id": "compliance-w3c-security-vocab-0003",
+        "specReference": "https://www.w3.org/TR/security-vocab/",
+        "version": "1.0.0"
+      },
+      "sectionsTested": [
+        "\u00a73"
+      ],
+      "specification": "SECURITY-VOCAB",
+      "testCases": [
+        {
+          "description": "Verify implementation meets SECURITY-VOCAB section \u00a73",
+          "expected": "PASS",
+          "requirement": "SECURITY-VOCAB \u00a7\u00a73",
+          "testMethod": "Conformance testing against specification"
+        }
+      ],
+      "validationMethod": {
+        "automated": true,
+        "certification": "Self-certified",
+        "manualReview": false
+      },
+      "version": "1.0"
+    },
+    {
+      "cryptographicValidation": [
+        "Test vectors from RFC appendix",
+        "Boundary conditions",
+        "Error handling"
+      ],
+      "interoperability": {
+        "backwardCompatibility": true,
+        "crossImplementation": true,
+        "versionNegotiation": true
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "IETF RFC 8032 (Ed25519) compliance",
+        "id": "compliance-ietf-rfc8032-0000",
+        "specReference": "https://tools.ietf.org/html/rfc8032",
+        "version": "1.0.0"
+      },
+      "rfc": "8032",
+      "sectionsTested": [
+        "6",
+        "7"
+      ],
+      "title": "Ed25519"
+    },
+    {
+      "cryptographicValidation": [
+        "Test vectors from RFC appendix",
+        "Boundary conditions",
+        "Error handling"
+      ],
+      "interoperability": {
+        "backwardCompatibility": true,
+        "crossImplementation": true,
+        "versionNegotiation": true
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "IETF RFC 7748 (X25519) compliance",
+        "id": "compliance-ietf-rfc7748-0001",
+        "specReference": "https://tools.ietf.org/html/rfc7748",
+        "version": "1.0.0"
+      },
+      "rfc": "7748",
+      "sectionsTested": [
+        "5",
+        "6"
+      ],
+      "title": "X25519"
+    },
+    {
+      "cryptographicValidation": [
+        "Test vectors from RFC appendix",
+        "Boundary conditions",
+        "Error handling"
+      ],
+      "interoperability": {
+        "backwardCompatibility": true,
+        "crossImplementation": true,
+        "versionNegotiation": true
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "IETF RFC 8439 (ChaCha20-Poly1305) compliance",
+        "id": "compliance-ietf-rfc8439-0002",
+        "specReference": "https://tools.ietf.org/html/rfc8439",
+        "version": "1.0.0"
+      },
+      "rfc": "8439",
+      "sectionsTested": [
+        "2.5",
+        "2.6"
+      ],
+      "title": "ChaCha20-Poly1305"
+    },
+    {
+      "cryptographicValidation": [
+        "Test vectors from RFC appendix",
+        "Boundary conditions",
+        "Error handling"
+      ],
+      "interoperability": {
+        "backwardCompatibility": true,
+        "crossImplementation": true,
+        "versionNegotiation": true
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "compliance",
+        "creationTimestamp": "2026-02-08T12:18:37.658537+00:00",
+        "description": "IETF RFC 7693 (BLAKE2) compliance",
+        "id": "compliance-ietf-rfc7693-0003",
+        "specReference": "https://tools.ietf.org/html/rfc7693",
+        "version": "1.0.0"
+      },
+      "rfc": "7693",
+      "sectionsTested": [
+        "3",
+        "4"
+      ],
+      "title": "BLAKE2"
+    }
+  ]
+}

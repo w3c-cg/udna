@@ -1,0 +1,397 @@
+{
+  "category": "cryptography",
+  "count": 15,
+  "testType": "hash_computation",
+  "vectors": [
+    {
+      "algorithm": "SHA-256",
+      "expectedOutputs": {
+        "hash": "c39c4d29c1b25473725292b0f68914b68fb4b46d802e3f166f24f5cbdf236ece",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "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",
+        "dataSize": 1759
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "SHA-256 hash test 0",
+        "id": "crypto-hash-sha_256-0000",
+        "specReference": "RFC 6234",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutputs": {
+        "hash": "38de7672f01f5199f173595e15644c23ab2e51725f98322336fe6f227e43c2b1",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "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",
+        "dataSize": 1786
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-256 hash test 1",
+        "id": "crypto-hash-blake2b_256-0001",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "expectedOutputs": {
+        "hash": "408b5d619efe68411c4f61fb2f9fef90ef4755bec82bfd037603bc6dab794fe6b488f43fbc820f215f43ea4bbd980f2ee9995ab17cb87349101bcbd559114cd9",
+        "hashLength": 512
+      },
+      "inputs": {
+        "data": "LgkHYW4agB/CvirBObumwy+TmzJ0Gg2w4ZAGWFeFZu2FUY2HYCUX7yyj/Bqr5DhZsgfQR22YGUaIq5mXAenm1vMIRvttGjN0XemVzBnzJgHB7eaQoxuxXL+kgTpzZwFfE3sObMegKq29uNQKLn3uzKxnt5oGEV3J+k5BYQQEQ/1gDpeF9CM+AFsuLrtWSkwGUV1JUwjbYcIatZSiVkeR2acfOOOx2ngdnMtbC0hDtr4b2GZbQvEelymtCI+pknvXNB4jFOUp2cjjMeSHBJSkWQy1m9bNDJsTrHyx5EgiFlAMImzoY+avjLX8M+SSTFTojIcBtrvGzx8yfYSlLnt6xsdtdfnW0AWaLxzLjzgSiOrfWe/OGCYQ7QWpjpnuuKMe4fa4SnezTK0Qd3syxtShzpZyTIFHJLU9a8B0GVQh2MUCndCzdHO3p2sCbyg1qC3y9AKQNZH2RWMto+IIRheVl6clexxvbZ7yG62wqkPYIjlluTS2GAtmJeeExYkMF13gs16gpXuRcfdVbmTXHv4FegOFc/VKem1gS4+28dvVbmcK1g+9mmED8OEXsQeIGoH5Ual0cHO3GAEGept9b5lAjq8LKiF5gBO2lT5K/yVbrA9EFxAD2CzDzNnpYUu1d/HeOx+6BXpXfIwwd4xK8DIaNrQsH7Tnenev+/HSfTHnAtjcg47LQtJ7rPkABRRFcIRQEmbOxJk/7vfYTa0DzV+DdtNbWMYlGLarBzsuVRkeOJLevXHwhOEXi0jwPaVptutH9TBzs+kPw+rKCWdIfbGajaN7N6FhGrohhi33rEC3YfoptRbzvvk1y/032tW6enVTrKMzAUTALqtBCu7sLDfeXnj1724QvkSYyMakwX2bNT54mXFfZktOu2eUNIB4iBnuFUw/oG+6HIiJAJSEJFQY7u7nCMFU1c96mfIH8EwkQpSNo+ao2oR+cOPqx7SF6CQQglFW/uf68JyRRFwryj3ScvV2+0I9dIFnIxKtinq2+ZFkVKjUSFpczdJRdj+yvT45UJCu/bT4WLOXSbMToDc8KwywOgkehr6q8DLFdDysnnyAevXWeODrOoqlzfyaSHuL149mB2MYHn/NUC3SC7ZlzSoQ4/JmFadRcMj8ItUwMAs53ekNUshys/ujNTT8wKVYMDU6eDx5yVUgFAynD4+FwfJNoFNOhf3H6l4afgcng+11gjZADQPa45yoVRQ2o815AKY2F+N+rThc3QCmucsH6dyqA/e2CJ7IV68w+XmmbifYMPUYma0jr+lqi73rRedRUbr36ERwxU1vBVxpN01YwPT+A0JH2ugAbKhklrknRVE4SVmZWKy6ogLcwflosP2GumGqBIE4MWDkaRIoOkmhh7dAtIpm2uzZ1b/M4t5xSijS2CNx4ydsprvGRGwebv2wCeHODW744xVSiC0rok8Cu6AKFeuTXEXkfSlFJtfv7BhU5ragKJX0wjd70pQPotB9jy+6r9lO5lBNJHT/UpUF5+h3udxCpCmDxWK23CITI4l0Ow==",
+        "dataSize": 1138
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-512 hash test 2",
+        "id": "crypto-hash-blake2b_512-0002",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "SHA-256",
+      "expectedOutputs": {
+        "hash": "820de44ed0de4bdd429568da84249218f8368e899e541c2876ff95aea193cbe1",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "hyOoFBs1HS+aEfQJFxnqNfHIPlc0cYo9AfwAUNWYZUDFqX2R6dvLA7ERHqKkBVBEvG2lM61inIMd6A7282yy6x59EeiP5LxQtGjEA7MSXKsdasKriZD2xs3WDbabWQrOrI/xNvkfIJkJyu9yR3PGlMgpinE+iDMBKqkZeQuoTXfhQFkUGnKwQvllK0OPx8CuVUcbyAi0cD78sussJu87OCPZrY6bXJ+kkuu+/xgJurkLZODI87V1uvNMeJdNleP76yjOxZfpzSGW4eG/D7jy5TeFC5N21ykKZiRbkMvu9DKCMcxpXQV6Ko9GlUr+HJiZ4VZvISnvuvC8Rbb/qIqEXuNZjd6B5SVjIqRq4/FzDNywhjxH2Ca21WQZta0T56OtY7b0LVmBFLHOu2+2XdHn8ImVbTTytybKNXLaHXNbcA/MAtzkABzEv9LCYxvvm8lFGiCuV+EfMO4zEIf4G0L9958vzat0JFF5sYQphUswKHAy6aGM01rleQvFv+sVD2CtXEVtsMITWDC2nRqkzzcRFIsEpaCCYZjy6qlcpCmxXun2DuEBu7jOaqjojJRQIM1bkyE7yAZQEahsZQpAGNvi9907fHaV6wOZ9giIq9Fvp94z25fuEjkd9deM2YVxJ4v4IumpZmUuYO/PrQ2lRjp8o34v+bEYeT21i/19pOOv8KUXpoue+4k36YMKaD3CcJD1rAKGfj4cC8aEL625Ij825t2fP/jBwvDJ0Vb0f/iu",
+        "dataSize": 558
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "SHA-256 hash test 3",
+        "id": "crypto-hash-sha_256-0003",
+        "specReference": "RFC 6234",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutputs": {
+        "hash": "7c9201fff460d31ef464a3bf8a921a6c58da566e46f8af0640bab350355c1b76",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "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",
+        "dataSize": 2032
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-256 hash test 4",
+        "id": "crypto-hash-blake2b_256-0004",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "expectedOutputs": {
+        "hash": "c821bbd8f984a3005e78eef4b86d8fdcd4a711a30f093e0a2f1d9f4e1e46c5e18dad75ddf7c6dcaf8b45dc6ea42f2efc7a76ea331b65c2e5ab8af1520ab25759",
+        "hashLength": 512
+      },
+      "inputs": {
+        "data": "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",
+        "dataSize": 1776
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-512 hash test 5",
+        "id": "crypto-hash-blake2b_512-0005",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "SHA-256",
+      "expectedOutputs": {
+        "hash": "02427327107e8a3eef1a61889c7219f77192bbbc2b8cd9fa28e934b1247c542b",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "1Ay4esRaNCgTnhfQS1f/tzCYR6EiCv95bI2P3OgpwsOiWZaNrYhBXSF96JF+invkyAsntZpT3IWjBmyB36taWVAFSLAi3MXF+HIA+3dZZGIt4L3SHYDn4Szc1YJtG+9klpt7ImJN/pdj43n25qTILdPWeqxj0vfX7lCu1Jj/35n1qkJ9iwvpIiIWCJEfCRxuDgO6kUKEvIeBJXAzoCxoOTf2Jeeowsnjzsv4o1LMiUnBODJk4OqVPHI4ANmjYmxs+Iqgl7HqjW5P8+5GqjtB6aTVaG/5kGryVRWxKH6M3qZsVvdpzvn0JHXcwCyIk8l5jjMfSNzHP2aUjy4HBD4d0BzdqUTr+zt/8t/ZOStzYDsM6mu629kfIs6jWezam/KgRGf5vk3XsvrTd1C3cpAeLukbw3Dygd2KFWHkQx8DBll5ThByecQfhBfS2tCfT/YGzPCMVD29VKisTLZQDPuJJPXivYw/yE47mkCSIphk4hTKzpXmT9uvBQpzNDmdHqFOm0W/4e8u1Iv7ZBjLZPAYI4RCYFXMjowv6r/IvLhArJWsBBL60AjKptx2ykEqoqqKNxVT1HUiGkWGa1opEE9Y13rywyaf4Av0z3s3XGigLuwd47ewMP+eR5VykSGvm0uRtC8Aj9950KhadtLtGx5UZQwcsLqDFGegW7HyFPGPpyoIkuHTdlUmYB0YQmVr+dV1pOhFZdEtjEQN4CoyLka6xeDqcVzEpRqg46OiqkV46InVvLyT26Zv1auwZ9oMU89O8CMsWOIh07r0O6LNow6oMj3soRedBrXJYFp+RMg77Z50ksad6HcATzjJ/vDrSzaNxN8O7CRhjJYc9bFZ/fGJjTHpN1GL2QvTtx4DhHN/2Yfv7glkOfgk3qzdJhKnhbqcN1aftwbHWqzhFeHR+IZLSsTvEQTugI6YzXUsLlFW17sZ3AsIYQGmiR1NILe9fmhM/pRy11aHiCYpBCrg98tG+WqYGhzJYg7wKcRkbnDO0eDp9B/GZ1vJORo94lk/wUPYnc6yb7gYWdnuH68RQ3LL5gZ+fdMgUdI2rIhxMb7XtkMbb8EgP3QX49M7yekiZjA9hFhLRUiht2SvD0zOhs33AuiaUNo=",
+        "dataSize": 836
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "SHA-256 hash test 6",
+        "id": "crypto-hash-sha_256-0006",
+        "specReference": "RFC 6234",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutputs": {
+        "hash": "4e3e21e55b5d2cedc44c4535152cf2bb5a2fb8be60f693a1a4a03d35f4126ed0",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "N7jsg4DK3hBW/iNWfFzz0XSssH1w2sZTQjZ/L4GErfKt7FcsEzja1Xjgv7jCEfBRWiRRaQx1Jw7CeXhnz86J0zr8SjGjpqrHuE1eT9xqD2MmdJfLDJoGvFy0Llz4QvTo0ifi3EAKv0FQvk7pXNggoRWyEUAPuK/JcbCNIgPCR6Ay2ek18+TzpnJC4Ugy0u7VpWEYcmor/V0wjrTSqTNEd/K6XLKVh1kgpANIBgdfbyF6B2LiW3Tb0GOsxYJDWKRNiP6B6rKL3z5pNzToDjsybnZpFEcTXx9DSP0iSzDNh4IUVzbcITlQF47mAx+SB4oRYiXrxdd+UStgj/9xnnLMlDngAitykhcj1KDa3FAuG7e+sSyjjOIlYJ9po0MQeyJGXD6dreG/hyloPnSrTWtIpZZjpRbLMrtKZHZlXG/nzRIRdtlXpju8amEcONkSuOBNGgfC9Fs/5BqVduAlJmXeEm8M5fesTLpbgEGoxW5DW2X5+vKTlf32aaoOpDIjDKA+G5XLp8HX+5szNCT6Nc8HzluX9iTEMimqKjJZURHiDRvhdl7A40/AqKqCFr1KAG55s+qmCx4hzb0GcoyAXWmejycoAUGWENHqhJAN0MbpC3V7NemGSWAP5yLMkWg7VGu3aBXf/gMYjBK+6GAdSz5YTsSXJFkTJgQsrpKcSV8DoE62JnhFdCFaXKTFtU3HypkRBLjoGsjk/hbkleuNh1CVqaFZAVQ1xXKJO7rbEVd7aLoL5K8dVpYJiqOOUFvX1CuU4UyvEC5OyCJvFk67ezmkZXOHw9f5W6nVZxgWuukyyqQfgHOASjLlKjeMhSCf2R3LfW6TNw0+5fb1p5el3KzOHFPlg5XQowjBu9u0/GLQxa69TcnGFCvIyeHBGybp+xzRh9wye1OQRGQo/iWUhw3uAMbsczqlmj0FWRbXkZKvKF9GLxbAeml3cbWCqd9w04COR0tqqcK3C+Bsa42ZSn2u1AAa7JAtY6EO5kLpSSglULup+WWri5xxBD0+5TQyois7TcQnZ3hW0DkB/fZ9C2xnER1BNPIRes0iRXMz3+DUTWQHvYM4AjUcy4hfpPARi5Z1ptXvPqRBfUPUjjdc4IAKY6s+PdH1/siuXvFXRdD9KpV0YYMA4ZW9qDtY1Th/4FNO8SGrbPmveJb/ybDJzvvebkbwR/Nzoll9kezedlNb92l1JbRM0fNRby8SQR4po7igTXoWF9J7tXc2G6kl71xHLMJuX0BY8Y7CUuy3TIGNLeUr1xrGNxGzpwZrpe1OwKEpfoeg2y2i1sDlNTiUSv5hdImix1dVFfOo7u8Z6NrMDBxbYMQ2RY2KC5BM2yrKtnzvUqWwzOVN2VM36le77VLmEWIRqdv2kj5eyRLZ6TimkcOomyHpgElpfHCDIdaAoX+jhuslhwrCQIbQxMROaiktc6rJM7h2E4pHlQ83l6N9e2srxscihSzGio0qNP6BN7yMaiZS8zh0zLFvRSCQ0KFG8kMOIq1BKzAZqjO14ovczItwvvnDIqjCOeA9E4/LhJbrqma670WznNDX1HICXH67QJu3U0LkSLvrrv3/TjklLX0gP85haHIaOmBsQs3C6bV5QLuV5QsxCWhnhyfNbbSwJ2+zzC0v+YhWX8st4ass9XoTWFm5gaX+jO/gHBlWxwsSwQRbugTPGrUliz61pft/iNd/Z4PyYl5q/3okm4NMr6ZlkvY7/JSj1xUPXlgXsCyuANVqQUEX2Q4XgUePa6lxdolDyMti1fif0SBYlq95oKps5C/g9JCLFZ59vahNU1BZX9C0j50e4KyWyBJeZbJkj6KsqYjPjUah/IdHYnZNdom9cXTPvLCi17rcPflBNfZHQKrKhKi3acUsCNYtj/1qCRXMpFkN2ZSFv8Fg7yfhCFBdy2JZk75Joo5umtPg30zsSA==",
+        "dataSize": 1441
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-256 hash test 7",
+        "id": "crypto-hash-blake2b_256-0007",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "expectedOutputs": {
+        "hash": "14fb8c189c18d9c33687caa573d47f1e9183d3311eb545c38d4dc7e748470627fafa5a4b6531578eb0ba87636f2bc0e4767c219f03c6a5c68a33b9108ac74574",
+        "hashLength": 512
+      },
+      "inputs": {
+        "data": "3EehyO10p0XBD/wsPwpxmyZAC0Wys4TlQMOfAkSubhhiEL7NaxloKBQrIYmfHB/JJH8wUZNhuNRWqd3W5J7xaUpnJCT7tt121sbkVKgvzVE2Ru0mtI3lZICuR6nDd01/DBbISjn1rc/1C0Zqmj5WIwzYrreuZpcCOaWs4CdEdiMgKDk+QHUZRvoJsRzssNRXDUih4bJstkWOukWZgozutekPOiuQrNi7zdrR2CgaksmVROlH3hJTIznw+ZjWNtPd96zbjUPEyKJGs8213plr9Q==",
+        "dataSize": 208
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-512 hash test 8",
+        "id": "crypto-hash-blake2b_512-0008",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "SHA-256",
+      "expectedOutputs": {
+        "hash": "f2536bbe1e97a02863c03885e7846b95df62192b96a9241cd01226ce89679fde",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "52O1ckR7uLvI8kwMf2tfajA75voyQiKqDFgrqojqoPkZYCPn8eaa0AuMt2L7gwcj8xnLq/gQuQ/vHiF7lNySF0PojTKVqHPmvSDuUqR6/e/yG0ahqto3cu3BDFATej6AR5wxMGysD7HyDYn7d3OXTxHZVn+PtUCmXSmvdG8bNNcuveQa6P1+K46ZHlXjrZg0JBBeEU6IPSiompsWkT/k69QCSCw3tNILRQ+0H/uEGZOLY1YGdRtpxlCMSy7rJPh7CNg=",
+        "dataSize": 194
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "SHA-256 hash test 9",
+        "id": "crypto-hash-sha_256-0009",
+        "specReference": "RFC 6234",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutputs": {
+        "hash": "2e52bcafb4cef3328a858bfdf10e8b5fa00a36237396546cf263ae0e2a9bd71a",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "Ram/sP4opkRO+/va7jaP5VqzAqgoy5wujro1QWLPooc9evZUvoOG0DsDMxEhJo+LPsz4ixEDiqTfze9y1cvLJX465kZsZJoAj2IxZ3Q5zydMarwKsHyZSoI2b/Ez1ZlEWL13ZIkeMDYZoOSlT1z9UJYK+Vcfas2ueIzx5aa7Ff5h65BYMQIdj5jq+eGMHcx7ipDTrzRPKWtp/w49VXIllHuH60DUJr4uspJtcRPasuFC5NG5AWsfUvvTwN6quuvCR6/HofwITRHEwUg98fyuwNzRIQE3WmZ1Kb6bqvuvAidHEvgsrCcLwNwTRPFBRqetk5gI06NJyHCRsb5UBmgAXiBAgSEeGbfmr2mRv9InCBcVyZa/HOymJT/JCxz+gK5x2kxJEWefFFkP/0OUr6DFfng0cV6SroF8DE8NBvqIa6W7N9OeZC3VIfru6dWcBxx1zGtCTWZl85k0BeDF6ofQS6ZthFIzo7nRTjOY2rimGPmlYYY6389RAGAib6tVYOtpczcphhp5G88f+hYd4dCzu1FYKu0CrUicHWGXbfnAMu6g90ke7Mz/G2XLBZ9f1tYywJ1X8sTMDstL/2fqc1F/1VQshjqdTAphMMeUhPPu4mxi6zzbf31xTKVKOFC5UiM3CyKwlm+rKGGGYX8EiyyICM4EueeNMWCxnmaN4BW8dN0C+bsFU12thASxuJ4cM13Ri8vrxgkeQbwEKbWU0fF+N/V9uNRXapK+Qa8/sum5hEEEMl+CwHsmx7IllfMt3qvGFZDh0YhOJAkFBBosgUJW2itTr+z23TJl8PPGfkLxL+Txclsi/A8uNrXyeg4s4c8Hh4n9XVfKn6rzKC9gweLs7bnnb+wiUXM5HPDxlhKiHXSvqSmfhC6mq21YXZa9wyK0gVKn2TLnQWQK6rX1PVphzb4083ssFM8WCuokEr+MZhJhw1ISEIYsQQpeOq/9QxZZeSQh2unxjR6aipEHsqomI01O3ZYQLh6Nq4FmQQ3b0TrXjbZ7iiWiaxYIDe58MRb9dGiPiJ+Ty4vE3YUG4wdqqOB2vJwt6hOU1DmIQvKb+iC89vudHtZd2l3rigU+dme5FFogXpkbCmE5Q8+L70QsIZPv526lwTix69x6aZlwmpCFu1OTy5ZprBTOz+UWP14wHEEkHCWY2ZBzgeCMTVuGaWIl4b+bYpAt2pz549FgAygisiSXuODLSrslIzMAH38uimT4N8rqTXKaS+/dVPAzqshOBputdf1T0nIJ2Ryt2JcnQHzf1V02GUXZZ3ACK2gyIvMxBrTCoKf0IsZ1R59uYKuid1ftNiyJFZzJkjcH+Qz4eHeHqLz+XfrHX+xQdYzYKxApL+hAXSY1G9I+u2ESmwdnKgzA7k+Qig+HE47FJKBRE+uA2sCON5MJj2kTOg+W16DTvxT/o8eL8ZssZDLxXqQAgEHn5Jj3SkVDH7SgzEEnJuLWSTaspvcjATRDhiBdHllxiTM788R0otAVl0W3gRL0VzHLNQy0y+OmDA8qM+VVvxLz6M+ImDLJoQBlAp73ON9DYfZAXDQsKjA2I4cUxtAoLM7cqJPpaWOdgeObzmS41xW6m3XYGGQy0Oo1DVOflhoEPa7w3onOZjLv+oHrj738Ry0lL4i0rYdFoAkU+zzLsqla3pAtAlfGqKzz6fjJxQbISwKp68mk0aK92jcR6+L3F4/y3D4517T7RRFqmuctAUQAt6jVLivOzW2SgBk+EYedq92jywiG94/4+anXUZ5tG/HhTEmSJaVbOu9H5qiZAKRUEGwtQT533YA7r+tUkCvWkuPGS5KxqKHK0Bfx1jimqG7+Jet+lWfA7OiyKp455hACOjMW9uLH+mUfR6geXFcSuddED1u/lyIFRVdXOJHDdYCDEOzR2onIlfI=",
+        "dataSize": 1421
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-256 hash test 10",
+        "id": "crypto-hash-blake2b_256-0010",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "expectedOutputs": {
+        "hash": "f6568b0f5a8ee1062db3a24abf907db7324034ed6362c11903c97666484314669cc1fc1c582cb8d8f10f655957c8d6a7b3942969e1ccaa25689194d8dfad5643",
+        "hashLength": 512
+      },
+      "inputs": {
+        "data": "cl7Fy80stWeLpcj/num7zvMwRUYQljSmzHOSTwtAM3ZHYEhr6QfMyCUYKHwsZ59bZMC55YCMJ19zxOJF7UlFEwT7fQ7kdq5C7eiCu6kR8v2wGW6/mNPEbjiKHH12S/pv9DIy2xQ18lwp9JYcVS89TCDiufvuOqaPsAfVNfkYoGM832z2kE+EFZZDTrk5mdTLaBDWEOeAYlqT2sZAyCYJTXhScW0rkUlvYklx0tdaAx9VsF7b2ZNR1k5l5yyOBbcgzGXp1fU3tup3CNIWSP0rDiAfqry7YGbOupht6LPXs5X65Rr7wAeSZjo+JujS8jkCOa6hLX/oY/xYHW5vo6mJzUjLdDtjl1Df+Z4EqmoMwLh3kF75iP0wCb9N0aJmfVN0IlLCzHc8OkCZthxUExwqJjewvpNr2DHjzJDFVg4DQW5LUw0a9kfLY/68ZPYedslHhDAI4s5qFBQa04D+kyN8Ofp4h15Tax7r73pPN9z/GnEog/pOiGJhk/KMHnUjP0lbDA7pTRhl2D93Yh0TXBI+CCx1BskMEXkyEDgBAYWYuodDWVMb4I9OsxR7Q5zGQlSzFGkYSnjzr6ySeH4mM6Le+Cat8fG+zJAfWiEe2/8HVvCNk/cVm8En6Zm6Z1rOnib91/aKcIoVhnBKdGE6pAuevAhao7TDOK91ZvrZ6LRy4G2IcMwxlCpT8s8h5Zwaz/Dhzj6n/dtQDox/lvah3kr7oKeZLWUeAxQhZe8g0lZcY0b2GYn3I/XjbOg9cqIvlUuggvj+DbRfuzyC1cohEld1elZ/ltuVZPEz/lkNODtJLXBUaiPNNAJxIpKfL1ES4djtcrejhCMP6F4ogRItVstqawFw8tdpjEptjUVDQBGW6TllxZP4y/iUJr/carWWbn4L8fbBl1+747lUDrwydp3N9jB9JJ33AUGocAskX31S1Ovui5ahiHeHf63IsQOLqyDPhbGQ3c9bq7vMLFw8FA3+FVNxeDZ9FgJwarcIcxgNhSJ9wLaB8PSV75J96Iox4xptW1tMgYbA/c7Iep8nxBKMqlkn6oWjnxsEsOMJ3kbjluJqnk+2ks0tk0+r4qCb+Hdw1uHhKlJAuWTMjkuk4MksQOQj0ShlIlNQwhPFaZBKIpk3/wSTZHQEq9IismEIxuleoBoYKk384rZbnkFCgXENq/f2d9tDF+Jut4K2EdIkcH+QuF+29KWhgaM68A8uHyHyH+SOSbJg6M+BCjskKfUAmlHRsP3mR5qCNdW/r0rgywuwChwwJm0anQp1uIK5ONj4b90tqfvpWoTsMFJzq2aSRg5rFMYeaIjkGtTBUMreSxxhV34ydX6XBGIiOXCzKFRGYgSpKJsRaQYCA27NNpzZ4MpkQRHghbNPDkErb9iRbI1ii8+Sj83H9zvQ08Ud9q6NbTK+ffYY6C8/q8u2FgMAg64neTXf6nUf/alP9Ktt1vojb+om95PsvSuptjTUQNyMmEpyM6TIXx4fXpqay615LgelFam0FbCle+1vz8YMQKoH8Hvsa6oZJyYQsMTnu/hSlIaJ8No+FHTPg5NfguMJv0kyXBKm5CdMeBKHyburgyTcotU4sluDM5JzM7TWbAj2Zq+sp5um3n07+rD2QVxMqBzVc+fD523k1e2aokIhRQrKsiJMsbSnOCh0Vi0+3YY6sBop74jyliChM6re1zAN2YKmFyWvJbXOVYZ91Ks6FH+7fNkrB/BinDt8cXaXP5JIJl56uVohaoEde6Ix7Pd7VUQh4v/XaLjjaakqoRJqnGzY1PPg",
+        "dataSize": 1332
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-512 hash test 11",
+        "id": "crypto-hash-blake2b_512-0011",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "SHA-256",
+      "expectedOutputs": {
+        "hash": "d5fb4cf3d75fdfb30711ad3eb4601f35a628e6200953df7e3949bc8889fbe06b",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "k8zlDB9y0Y+v4j9BXgmGX7aRBP9KOOsmWtZcCkaIjS8rgrxjPB9wA/VXtriqaWABtd51eL3TJdW52pPYfXwOSNsT/Hz7+78mGbd9IFO2MyiK/VEuxR+ThILlFqmICBe7KJtZ8/mwEKWvF8mpPiWbdQual/ogvonoHc9ykyB5pHb2OORHs8YgakARBtUzGYjL2maHaAOdqizZ6BbXYj/Rrte6dZPJdmnxuY100MxjnBUfee+XBhKOm4D2ytRiJQGXgTnMwAVrmFp7teupbYd7MbrDXz4i7VVPhvrc0t7RKtRrXCEqVGmExlap9KRypG3RjhotVj8IS1lJkbW1Ug6NC7oU80H6h2pSngsTdglag7D8wYGrxRlC9E5hvnrLeGo1H+duTeTiH7jD6KTiKQPC7PvyE86ro8oAT466wT4BiwRzKWwzaoIWZgcYXYb+zpUzBavu07Sz5Z2ABuOu0uY3mHCy6b/6Afp0NghWnd0Qo0MqzYHLym2erPyJsP3flRyecEgwaYVu9ED2hLXTjvbH+P00r2urF0oWTTCTSqeteAIpRPxtP94BYxX2Bygc8IsmRUPu6bpXZhIzV/lsjbzmN4xWg61azKSeUYIHufTyKbyHhwqmflxs5KBkrnPaWZAGqA==",
+        "dataSize": 481
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "SHA-256 hash test 12",
+        "id": "crypto-hash-sha_256-0012",
+        "specReference": "RFC 6234",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "expectedOutputs": {
+        "hash": "8eb358dafe09aa9167db5bbe355faaace3a54076de35d7e32993bb2e6ccbbaf9",
+        "hashLength": 256
+      },
+      "inputs": {
+        "data": "mZsWT3O4zzt881c3XvNiLBgM+SC9m0EC4rAhISlrU0FiNTQtfDqKjmGaYauQnszPr/wkjQY/rjVAdeZfJ33Zo+3yTlizwJHLrNSBOYWBHTL8QRcCxRkCxHPRylVcradCEkAqMlMuT6H/zZ1t4PmQR5YqkoNRSVd0Rn2nXQVnliJ26bquPS9ViHay/gu/bsp45gg80JMUIoFRfSDyxBDkwCUBfOp9kt7WZIMG9cVHFAzADIvH//PYLp1Re1dn+l9a5ldkBTRfrpNc3feYE6Z8n7vXP+YjHpZStxIDNhB50ZMtiTF9TMqPqdYujUft/c4kOM5tt9L32L/EOYG/iHRHrPRO5H+Il3UHlxyk7PY/npFUB8CZDGnQvyCC6bhlFQfnOrJApKzvRGXTbv6MnUXCLRcH430sY5LtRDA9FclsqtYk0Fd1jEBcGTgrLKtUmu3kxvqrie895jur++cjqj+N7nMS4IJdW7NJ8L1Ud9DO6gdLAHW8E6TqUkJFptJxXhuhE2WDvc31bEBdcIxMBQN+eXNunOKqZu1M31rmom1d04eq8UIkOc2cLrYPT9dc7kWQwtmwjdovFBN3EjogwvYENkqWkpqQBZKK3m2nWdPyQjcD/wBtJEVUn08mj2NAj3TyRA3BjEyByBoXf1zn/bkFqBCGaKzN+qufZUA5LjTaq16EXfzVc3df57QCZALyTq8vx1kDwVyUWz7jzSrY75OdzS0WwBs5EqvTZa2n1RNhQwdrSnbKgntK82IRstXdtZSdVXZedjvsb6BeZpWcMeSi+zH5hFV4vuEzsbS677FZ1B2aYF+XLulN4YFkGxXUKGduXxdMxtJLSWOEy2TXFvVnyhGFfOzFwFo4raJ7ZpGc/K7OP8XLmjqIHfULeWUu5bY1+Blfff7ejOqUxIfBqB6fgEfG2zen11lYFTv6L5+QC10M1+ssH24K9oKZLJrt7McyIer8SJC1H+YptKnzoYPtHwTXFXoDLZyobymi9KAIfpoOycflTrYl2DMRp+7tyk6XzUU+rO+RlKj3qXRlQg5PQ31CP0n3SLegvIQgplp1cd78jwBXU1RuqWW6Jy3Eug9aqYMAOB9jqIuHrHLss2icg08/PqkQLGQwAl6rl8U/ocEJAPAYYcIMuA8L0hQm2XEaUjGHbf1BHmk88v91H54ifgB6HOPxDojNo/E5pxKxYcYNwUFyePfGmNvuRIkvghMCvHXRhNpQ2LC9Q6Xa1Z53XrMsmJh4onRyzu/HE9p7qVvO1IBQnGk3Spavgsgx53Q7kejlBXDlUNapsvOLBY3iVjC92eHI/ONRAZxkPQ+nyi7JgOYIVSIwiIM8X39tGl/VydY4kDdQGCO0AzEpPGc3OZApjQ8CAqFri6YbTJv2KWeO66zHt7XY4Hc/objWCxtaGKAqeUp+NPESstToCKeI5xfDE+5O81VjhKUCMoz71KrFWSykYIFko01r2ibMZZpvQGZHHfaliB2z9eHsORHDO1Oi2e7MAVMFhwpBtzhPkhIeCMmGBwIch+DL4Nwd9EwnW03i0X/VgkiGixXFIO6eP/DSj/82x+1n4FNbq0JI5hIPiFxN7veyQRCwK9c0jf7wKkxVzzTzLlAzv704f7hjOoYnncwOzx8KcV2OlRafHwzN6gUF6pPcgsAWd88COw3TZ4m2dT2jCItGn3joW+10EdSwMiiQdMpq4UcwG3clyzBshCm1IaDQAQvT0keJoRJMNWgPRIjcdy5zhns0H/5qiGF1H9b/jbUIk20IVPEn2a9/ZR4JTj/OJDLruzcYfhj0JMN3h6JJYUI6u6LlXDS9OlaV/rUybJrOOba43a/hqSnqA0If5OV9iEvBafqXTwY0b4U7O2tcNEVLD+55DvVcFE9kBizsGfrq/xmt1z7guoU4E+lmjwOdmOtowVRRqXCpCgP7v2AVKQwmQPjZMWCQIzV1U1osQF3SQQujVRLKOlRi9qzl5Hchr/DF9/Ny+Iu6iceybyHzeHLJ9eiTZrjSgSZwG6BEnKU9v4C8TIAlNti3ziFk6zVFNQ==",
+        "dataSize": 1528
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-256 hash test 13",
+        "id": "crypto-hash-blake2b_256-0013",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "expectedOutputs": {
+        "hash": "bbdd60f299527cfa51f2dcba5460d2ad84300c40ba5712f38d3c3e758bab66f5bcf5b500eb3bfaa615257d86643ab3171d6abda6999d20e42b454c63440f9e10",
+        "hashLength": 512
+      },
+      "inputs": {
+        "data": "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",
+        "dataSize": 1906
+      },
+      "metadata": {
+        "author": "UDNA W3C Community Group",
+        "category": "cryptography",
+        "creationTimestamp": "2026-02-08T12:18:37.649568+00:00",
+        "description": "BLAKE2b-512 hash test 14",
+        "id": "crypto-hash-blake2b_512-0014",
+        "specReference": "RFC 7693",
+        "version": "1.0.0"
+      },
+      "properties": {
+        "collisionResistant": true,
+        "deterministic": true,
+        "preimageResistant": true
+      },
+      "testType": "hash_computation"
+    }
+  ]
+}
