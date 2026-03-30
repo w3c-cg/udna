@@ -21,10 +21,7 @@ The current Internet architecture suffers from fundamental design limitations ro
 UDNA enables globally unique, self-sovereign, and cryptographically verifiable network addressing without reliance on centralized authorities. This approach achieves sub-50μs DID resolution, <2ms handshake latency, and provides mathematical guarantees for address integrity and non-repudiation.
 
 ## Status of This Document
-
-This document was published by the [W3C Credentials Community Group](https://www.w3.org/community/credentials/). It is not a W3C Standard nor is it on the W3C Standards Track. Please note that under the [W3C Community Contributor License Agreement (CLA)](https://www.w3.org/community/about/agreements/cla/) there is a limited opt-out and other conditions apply. Learn more about [W3C Community and Business Groups](https://www.w3.org/community/).
-
-If you wish to make comments regarding this document, please send them to [public-credentials@w3.org](mailto:public-credentials@w3.org) ([subscribe](mailto:public-credentials-request@w3.org?subject=subscribe), [archives](https://lists.w3.org/Archives/Public/public-credentials/)).
+This is a community report
 
 ## Table of Contents
 
