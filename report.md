@@ -406,4 +406,3 @@ The editors thank the W3C Credentials Community Group for their ongoing support 
 
 ---
 
-*Copyright © 2025 the Contributors to the Universal DID-Native Addressing Specification, published by the W3C Credentials Community Group under the W3C Community Contributor License Agreement (CLA). A human-readable summary is available.*
