@@ -1,9 +1,7 @@
 # DID-Enhanced Network Addressing (DENA): A Practical Framework for Identity-Aware Applications
 
 **Version 1.0 | September 2025**  
-**Author:** Amir Hameed Mir  
-**Organization:** Sirraya Labs  
-**Contact:** founder@sirraya.org
+
 
 ---
 
