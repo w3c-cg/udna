@@ -491,16 +491,6 @@
             DID Document containing public keys and service endpoints.
         </dd>
 
-        <dt><dfn data-lt="UDNA Resolver|UDNA Resolvers">UDNA Resolver</dfn></dt>
-        <dd>
-            An implementation that accepts a [=UDNA Address=], extracts the embedded DID, performs
-            [=DID Resolution=], and executes endpoint selection according to the
-            <a href="#processing-model">Processing Model</a>. A conformant resolver MUST expose a
-            resolution function with the signature:
-            <pre class="nohighlight">
-resolve(udnaURI: string) → ResolutionResult | ResolutionError
-            </pre>
-        </dd>
 
         <dt><dfn>Native Addressing</dfn></dt>
         <dd>
