@@ -68,6 +68,12 @@
                     publisher: "IETF",
                     status: "Proposed Standard"
                 },
+                "RFC9110": {
+                    title: "HTTP Semantics",
+                    href: "https://www.rfc-editor.org/rfc/rfc9110",
+                    publisher: "IETF",
+                    status: "Proposed Standard"
+                },
                 "SOLID": {
                     title: "Solid Protocol",
                     href: "https://solidproject.org/TR/protocol",
@@ -106,6 +112,51 @@
         pre {
             border-left: 4px solid #005a9c !important;
         }
+        .uml-diagram {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 1.5em;
+            margin: 2em 0;
+            text-align: center;
+            overflow-x: auto;
+        }
+        .uml-diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .uml-diagram figcaption {
+            font-style: italic;
+            margin-top: 0.75em;
+            color: #555;
+        }
+        .conformance-class {
+            background: #e8f4fd;
+            border-left: 4px solid #005a9c;
+            padding: 1em;
+            margin: 1em 0;
+        }
+        .conformance-class dt {
+            font-weight: bold;
+            color: #005a9c;
+        }
+        .test-vector {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1em;
+            margin: 1em 0;
+        }
+        .test-vector .input,
+        .test-vector .expected {
+            margin: 0.5em 0;
+        }
+        .test-vector .label {
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            width: 80px;
+        }
         #comparison-table th {
             background-color: #005a9c;
             color: #fff;
@@ -113,8 +164,20 @@
         .appendix > h2 {
             font-style: italic;
         }
+        .error-structure {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1em;
+            margin: 1em 0;
+        }
+        .validity-rule {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 0.75em 1em;
+            margin: 0.5em 0;
+        }
         @media print {
-            .note, .issue { break-inside: avoid; }
+            .note, .issue, .uml-diagram { break-inside: avoid; }
         }
     </style>
 </head>
@@ -126,12 +189,17 @@
     <p>
         <strong>Universal DID Native Addressing (UDNA)</strong> defines a lightweight, extensible addressing
         scheme that makes <a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers (DIDs)</a> native
-        to resource location and service discovery on the Web. UDNA provides a uniform <code>udna://</code> URI
-        scheme that encodes a DID and a resource path, enabling secure, cryptographically verifiable interactions
-        across decentralized systems. This specification builds on W3C Recommendations ([[DID-CORE]],
-        [[VC-DATA-MODEL]]) and the DIDComm v2 messaging protocol ([[DIDCOMM]]). It is an incubation deliverable
-        of the <strong>UDNA W3C Community Group</strong> and does not represent consensus of the broader
+        to resource location and service discovery on the Web. UDNA extends DID from identity resolution to
+        resource addressing, providing a uniform <code>udna://</code> URI scheme that encodes a DID and a resource
+        path, enabling secure, cryptographically verifiable interactions across decentralized systems.
+        This specification builds on W3C Recommendations ([[DID-CORE]], [[VC-DATA-MODEL]]) and the DIDComm v2
+        messaging protocol ([[DIDCOMM]]). It is an incubation deliverable of the
+        <strong>UDNA W3C Community Group</strong> and does not represent consensus of the broader
         W3C Membership.
+    </p>
+    <p>
+        UDNA completes the addressing stack for decentralized identity: where DNS maps names to IP addresses,
+        and DIDs map identifiers to DID Documents, UDNA maps identity to resources.
     </p>
 </section>
 
@@ -159,7 +227,156 @@
     </p>
 </section>
 
-<!-- 1. INTRODUCTION -->
+<!-- 1. ARCHITECTURE OVERVIEW -->
+<section id="architecture-overview" class="informative">
+    <h2>Architecture Overview</h2>
+
+    <p><em>This section is informative.</em></p>
+
+    <p>
+        UDNA operates as a bridge layer between URI-based resource addressing and decentralized identity
+        infrastructure. It completes the addressing stack for decentralized identity:
+    </p>
+
+    <ul>
+        <li><strong>DNS</strong> → maps names to IP addresses</li>
+        <li><strong>DIDs</strong> → map identifiers to DID Documents</li>
+        <li><strong>UDNA</strong> → maps identity to resources</li>
+    </ul>
+
+    <p>
+        The following diagrams illustrate the core resolution flow from a UDNA address
+        to a concrete resource endpoint, and the component relationships within the UDNA ecosystem.
+    </p>
+
+    <figure class="uml-diagram" id="fig-resolution-flow">
+        <figcaption>Figure 1: UDNA Resolution Flow — Sequence Diagram</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" font-family="monospace" font-size="13">
+            <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+                </marker>
+            </defs>
+
+            <!-- Participants -->
+            <rect x="30" y="20" width="120" height="40" rx="4" fill="#e8f4fd" stroke="#005a9c"/>
+            <text x="90" y="45" text-anchor="middle" font-weight="bold" fill="#005a9c">Client</text>
+
+            <rect x="300" y="20" width="200" height="40" rx="4" fill="#e8f4fd" stroke="#005a9c"/>
+            <text x="400" y="45" text-anchor="middle" font-weight="bold" fill="#005a9c">UDNA Resolver</text>
+
+            <rect x="650" y="20" width="120" height="40" rx="4" fill="#e8f4fd" stroke="#005a9c"/>
+            <text x="710" y="45" text-anchor="middle" font-weight="bold" fill="#005a9c">DID Registry</text>
+
+            <!-- Lifelines -->
+            <line x1="90" y1="60" x2="90" y2="600" stroke="#ccc" stroke-dasharray="5,5"/>
+            <line x1="400" y1="60" x2="400" y2="600" stroke="#ccc" stroke-dasharray="5,5"/>
+            <line x1="710" y1="60" x2="710" y2="600" stroke="#ccc" stroke-dasharray="5,5"/>
+
+            <!-- Activation boxes -->
+            <rect x="380" y="80" width="40" height="500" fill="#e8f4fd" stroke="#005a9c"/>
+
+            <!-- Messages -->
+            <line x1="90" y1="120" x2="380" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="235" y="112" text-anchor="middle" font-size="11" fill="#333">udna://did:web:example.com/api/data</text>
+
+            <line x1="400" y1="160" x2="708" y2="160" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="555" y="152" text-anchor="middle" font-size="11" fill="#333">GET did:web:example.com</text>
+
+            <line x1="710" y1="200" x2="402" y2="200" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="555" y="192" text-anchor="middle" font-size="11" fill="#333">DID Document + service endpoints</text>
+
+            <!-- Internal processing -->
+            <line x1="400" y1="240" x2="400" y2="280" stroke="#333" stroke-width="1.5"/>
+            <text x="420" y="265" text-anchor="start" font-size="11" fill="#666">Parse service endpoints</text>
+
+            <line x1="400" y1="280" x2="400" y2="320" stroke="#333" stroke-width="1.5"/>
+            <text x="420" y="305" text-anchor="start" font-size="11" fill="#666">Select matching service</text>
+
+            <line x1="400" y1="320" x2="400" y2="360" stroke="#333" stroke-width="1.5"/>
+            <text x="420" y="345" text-anchor="start" font-size="11" fill="#666">Construct target URL</text>
+
+            <line x1="400" y1="360" x2="400" y2="400" stroke="#333" stroke-width="1.5"/>
+            <text x="420" y="385" text-anchor="start" font-size="11" fill="#666">Validate result</text>
+
+            <!-- Return path with structured result -->
+            <rect x="200" y="420" width="180" height="45" rx="4" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+            <text x="290" y="440" text-anchor="middle" font-size="11" fill="#856404">ResolutionResult</text>
+            <text x="290" y="455" text-anchor="middle" font-size="10" fill="#856404">{ targetUrl, didDoc, ... }</text>
+            <line x1="400" y1="442" x2="380" y2="442" stroke="#333" stroke-width="1.5"/>
+            <line x1="200" y1="442" x2="92" y2="442" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- Error path -->
+            <rect x="430" y="490" width="160" height="45" rx="4" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+            <text x="510" y="510" text-anchor="middle" font-size="11" fill="#721c24">ResolutionError</text>
+            <text x="510" y="525" text-anchor="middle" font-size="10" fill="#721c24">{ error, description }</text>
+            <line x1="400" y1="512" x2="430" y2="512" stroke="#dc3545" stroke-width="1" stroke-dasharray="4,3"/>
+
+            <text x="480" y="560" text-anchor="middle" font-size="10" fill="#999">Success path →</text>
+            <text x="480" y="575" text-anchor="middle" font-size="10" fill="#999">Error path - - →</text>
+        </svg>
+    </figure>
+
+    <figure class="uml-diagram" id="fig-component-model">
+        <figcaption>Figure 2: UDNA Component Model</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="sans-serif" font-size="13">
+            <!-- DID Registry -->
+            <rect x="300" y="30" width="200" height="80" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+            <text x="400" y="58" text-anchor="middle" font-weight="bold" fill="#155724">DID Registry</text>
+            <text x="400" y="78" text-anchor="middle" font-size="11" fill="#155724">(Ledger, Web, etc.)</text>
+            <text x="400" y="95" text-anchor="middle" font-size="10" fill="#6c757d">Stores DID Documents</text>
+
+            <!-- UDNA Resolver -->
+            <rect x="280" y="180" width="240" height="120" rx="8" fill="#cce5ff" stroke="#005a9c" stroke-width="2"/>
+            <text x="400" y="208" text-anchor="middle" font-weight="bold" fill="#004085">UDNA Resolver</text>
+            <text x="400" y="230" text-anchor="middle" font-size="11" fill="#004085">Parsing → DID Resolution</text>
+            <text x="400" y="248" text-anchor="middle" font-size="11" fill="#004085">→ Service Selection</text>
+            <text x="400" y="266" text-anchor="middle" font-size="11" fill="#004085">→ URL Construction</text>
+            <text x="400" y="288" text-anchor="middle" font-size="10" fill="#6c757d">Exposes resolve(udnaURI) API</text>
+
+            <!-- Target Service -->
+            <rect x="300" y="370" width="200" height="80" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+            <text x="400" y="398" text-anchor="middle" font-weight="bold" fill="#856404">Target Service</text>
+            <text x="400" y="418" text-anchor="middle" font-size="11" fill="#856404">(HTTP, DIDComm, etc.)</text>
+            <text x="400" y="438" text-anchor="middle" font-size="10" fill="#6c757d">Receives final URL</text>
+
+            <!-- Client -->
+            <rect x="30" y="210" width="100" height="60" rx="8" fill="#e2e3e5" stroke="#6c757d" stroke-width="2"/>
+            <text x="80" y="238" text-anchor="middle" font-weight="bold" fill="#383d41">Client</text>
+            <text x="80" y="255" text-anchor="middle" font-size="10" fill="#6c757d">App / Browser</text>
+
+            <!-- Gateway -->
+            <rect x="30" y="330" width="100" height="60" rx="8" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <text x="80" y="355" text-anchor="middle" font-weight="bold" fill="#495057">Gateway</text>
+            <text x="80" y="375" text-anchor="middle" font-size="10" fill="#6c757d">(Optional)</text>
+
+            <!-- Arrows -->
+            <line x1="400" y1="110" x2="400" y2="175" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="420" y="145" text-anchor="start" font-size="10" fill="#28a745">DID Resolution</text>
+
+            <line x1="130" y1="240" x2="275" y2="240" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="200" y="232" text-anchor="middle" font-size="10" fill="#333">resolve()</text>
+
+            <line x1="400" y1="300" x2="400" y2="365" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="420" y="335" text-anchor="start" font-size="10" fill="#856404">targetUrl →</text>
+
+            <!-- Gateway path -->
+            <line x1="130" y1="360" x2="275" y2="355" stroke="#adb5bd" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+            <text x="200" y="350" text-anchor="middle" font-size="9" fill="#6c757d">via gateway</text>
+
+            <!-- Extension registry -->
+            <rect x="580" y="180" width="190" height="120" rx="8" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <text x="675" y="208" text-anchor="middle" font-weight="bold" fill="#495057">Extension Registry</text>
+            <text x="675" y="232" text-anchor="middle" font-size="10" fill="#6c757d">Batch Operations</text>
+            <text x="675" y="250" text-anchor="middle" font-size="10" fill="#6c757d">Gateway Forwarding</text>
+            <text x="675" y="268" text-anchor="middle" font-size="10" fill="#6c757d">Resource Integrity</text>
+
+            <line x1="520" y1="230" x2="575" y2="230" stroke="#adb5bd" stroke-width="1" stroke-dasharray="5,3"/>
+        </svg>
+    </figure>
+</section>
+
+<!-- 2. INTRODUCTION -->
 <section id="introduction">
     <h2>Introduction</h2>
 
@@ -171,11 +388,21 @@
         to directly locate resources, APIs, or services tied to a DID.
     </p>
     <p>
-        <strong>UDNA fills this gap.</strong> By introducing the <code>udna://</code> URI scheme and a
-        deterministic resolution mechanism, UDNA allows any entity with a DID to publish service endpoints,
-        resources, and sub-paths that can be resolved in a secure, privacy-preserving way. UDNA leverages
-        [[DID-CORE]] for identity, [[DIDCOMM]] for secure messaging, and [[VC-DATA-MODEL]] for
-        authorization policies.
+        <strong>UDNA fills this gap.</strong> UDNA extends DID from identity resolution to resource addressing.
+        By introducing the <code>udna://</code> URI scheme and a deterministic resolution mechanism, UDNA allows
+        any entity with a DID to publish service endpoints, resources, and sub-paths that can be resolved in a
+        secure, privacy-preserving way. Conceptually:
+    </p>
+
+    <ul>
+        <li><strong>DNS</strong> → maps names to IP addresses</li>
+        <li><strong>DIDs</strong> → map identifiers to DID Documents</li>
+        <li><strong>UDNA</strong> → maps identity to resources</li>
+    </ul>
+
+    <p>
+        UDNA leverages [[DID-CORE]] for identity, [[DIDCOMM]] for secure messaging, and [[VC-DATA-MODEL]]
+        for authorization policies.
     </p>
 
     <aside class="note" title="Incubation status">
@@ -203,9 +430,47 @@
         <a href="https://www.rfc-editor.org/rfc/rfc2119">BCP 14</a> [[RFC2119]] [[RFC8174]]
         when, and only when, they appear in all capitals, as shown here.
     </p>
+
+    <section id="conformance-classes">
+        <h3>Conformance Classes</h3>
+
+        <p>
+            This specification defines the following conformance classes:
+        </p>
+
+        <dl class="conformance-class">
+            <dt><dfn>UDNA Resolver</dfn></dt>
+            <dd>
+                An implementation that accepts a [=UDNA Address=] and returns a
+                [=ResolutionResult=] or [=ResolutionError=]. A conformant resolver MUST
+                implement the <a href="#processing-model">Processing Model</a> and produce
+                outputs conforming to the <a href="#resolution-result-data-model">Resolution
+                Result Data Model</a> and <a href="#error-handling">Error Handling</a> sections.
+            </dd>
+
+            <dt><dfn>UDNA Client</dfn></dt>
+            <dd>
+                An application that constructs and dereferences [=UDNA Address=]es, either by
+                using a [=UDNA Resolver=] directly or by interacting with a [=UDNA Gateway=].
+                A conformant client MUST construct UDNA addresses according to
+                <a href="#scheme-syntax"></a> and SHOULD validate [=ResolutionResult=] objects
+                against the validity rules in <a href="#result-validity"></a>.
+            </dd>
+
+            <dt><dfn>UDNA Gateway</dfn> (OPTIONAL)</dt>
+            <dd>
+                An intermediary service that exposes UDNA resolution through HTTP endpoints,
+                enabling clients without native UDNA support to dereference UDNA addresses.
+                A conformant gateway MUST NOT modify the semantics of the resolved
+                <code>targetUrl</code> and MUST preserve all path, query, and fragment components
+                from the original UDNA address. Gateways are defined further in
+                <a href="#gateway-model"></a>.
+            </dd>
+        </dl>
+    </section>
 </section>
 
-<!-- 2. TERMINOLOGY -->
+<!-- 3. TERMINOLOGY -->
 <section id="terminology">
     <h2>Terminology</h2>
 
@@ -226,12 +491,6 @@
             DID Document containing public keys and service endpoints.
         </dd>
 
-        <dt><dfn>UDNA Resolver</dfn></dt>
-        <dd>
-            An implementation that accepts a [=UDNA Address=], extracts the embedded DID, performs
-            [=DID Resolution=], and executes endpoint selection according to the algorithm in
-            <a href="#resolution-algorithm"></a>.
-        </dd>
 
         <dt><dfn>Native Addressing</dfn></dt>
         <dd>
@@ -249,12 +508,31 @@
         <dd>
             The default service entry used by UDNA resolution when no explicit service segment is present.
             Identified by <code>type: "UDNARoot"</code> or the fragment identifier <code>#udna-root</code>
-            in the DID Document.
+            in the DID Document. A DID Document MUST contain at most one UDNARoot service entry.
+        </dd>
+
+        <dt><dfn>ResolutionResult</dfn></dt>
+        <dd>
+            A structured object returned on successful resolution, containing the constructed target URL,
+            the resolved DID Document, metadata, and cryptographic verification materials. Defined in
+            <a href="#resolution-result-data-model"></a>.
+        </dd>
+
+        <dt><dfn>ResolutionError</dfn></dt>
+        <dd>
+            A structured error object returned when resolution fails. Defined in
+            <a href="#error-handling"></a>.
+        </dd>
+
+        <dt><dfn>Processing Model</dfn></dt>
+        <dd>
+            The normative sequence of steps a resolver MUST execute to transform a UDNA address into
+            a ResolutionResult or ResolutionError. Defined in <a href="#processing-model"></a>.
         </dd>
     </dl>
 </section>
 
-<!-- 3. UDNA URI SCHEME -->
+<!-- 4. UDNA URI SCHEME -->
 <section id="udna-scheme">
     <h2>UDNA URI Scheme</h2>
 
@@ -317,9 +595,15 @@ udna://did:example:123456/service/api/resource?version=1#section
     </section>
 </section>
 
-<!-- 4. RESOLUTION MODEL -->
-<section id="resolution-model">
-    <h2>Resolution Model</h2>
+<!-- 5. PROCESSING MODEL -->
+<section id="processing-model">
+    <h2>Processing Model</h2>
+
+    <p>
+        This section defines the normative processing steps that a [=UDNA Resolver=] MUST
+        execute. It is separated from the data model to enable independent evolution of
+        processing logic and output structures.
+    </p>
 
     <section id="resolution-algorithm">
         <h3>Resolution Algorithm</h3>
@@ -331,44 +615,63 @@ udna://did:example:123456/service/api/resource?version=1#section
 
         <ol>
             <li>
-                Parse the UDNA address to extract the DID string, service segment (if present),
+                <strong>Parse</strong> the UDNA address to extract the DID string, service segment (if present),
                 path, query, and fragment components per the syntax in
-                <a href="#scheme-syntax"></a>.
+                <a href="#scheme-syntax"></a>. If parsing fails, return a [=ResolutionError=] of type
+                <code>invalidUri</code>.
             </li>
             <li>
-                Resolve the DID to a DID Document using the appropriate DID method resolver, as
-                specified in [[DID-CORE]]. If resolution fails, return a resolution error of type
-                <code>notFound</code>.
+                <strong>Validate</strong> that the extracted DID string is a valid DID per [[DID-CORE]].
+                If invalid, return a [=ResolutionError=] of type <code>invalidDid</code>.
             </li>
             <li>
-                Perform service selection:
+                <strong>Resolve</strong> the DID to a DID Document using the appropriate DID method resolver, as
+                specified in [[DID-CORE]]. If the DID method is not supported, return a [=ResolutionError=]
+                of type <code>methodNotSupported</code>. If resolution fails, return a [=ResolutionError=]
+                of type <code>notFound</code>.
+            </li>
+            <li>
+                <strong>Perform service selection:</strong>
                 <ul>
                     <li>
                         If a service segment is present, locate the entry in the DID Document's
                         <code>service</code> array whose <code>id</code> fragment matches the given
-                        segment. If no match is found, return error <code>serviceNotFound</code>.
+                        segment. If no match is found, return a [=ResolutionError=] of type
+                        <code>serviceNotFound</code>.
                     </li>
                     <li>
                         If no service segment is provided, select the entry whose <code>type</code>
                         contains <code>"UDNARoot"</code> or whose <code>id</code> fragment equals
-                        <code>udna-root</code>. If neither is found, return error
+                        <code>udna-root</code>. If neither is found, return a [=ResolutionError=] of type
                         <code>defaultServiceNotFound</code>.
                     </li>
                 </ul>
             </li>
             <li>
-                Obtain the <code>serviceEndpoint</code> value from the selected service entry.
+                <strong>Obtain</strong> the <code>serviceEndpoint</code> value from the selected service entry.
                 This value MAY be a URI string, a set of URI strings, or a DIDComm endpoint object.
+                If the value is unsupported or malformed, return a [=ResolutionError=] of type
+                <code>invalidEndpoint</code>.
             </li>
             <li>
-                Construct the final target URL by appending the path, query, and fragment to the
-                resolved endpoint base URI. If the endpoint is a URI template ([[RFC6570]]),
-                template expansion MUST be applied using available context variables.
+                <strong>Construct</strong> the final target URL by appending the path, query, and fragment
+                to the resolved endpoint base URI. If the endpoint is a URI template ([[RFC6570]]),
+                template expansion MUST be applied using available context variables. If template
+                expansion fails, return a [=ResolutionError=] of type
+                <code>templateExpansionFailed</code>.
             </li>
             <li>
-                Return a resolution result containing: <code>targetUrl</code>,
-                <code>didDocument</code>, <code>didDocumentMetadata</code>, and
-                <code>verificationMethods</code> associated with the selected service.
+                <strong>Build</strong> a [=ResolutionResult=] containing: <code>targetUrl</code>,
+                <code>didDocument</code>, <code>didDocumentMetadata</code>,
+                <code>service</code>, and <code>verificationMethods</code>.
+            </li>
+            <li>
+                <strong>Validate</strong> the built ResolutionResult against the
+                <a href="#result-validity">validity rules</a>. If validation fails, return a
+                [=ResolutionError=] with an appropriate error description.
+            </li>
+            <li>
+                <strong>Return</strong> the validated [=ResolutionResult=].
             </li>
         </ol>
 
@@ -408,14 +711,571 @@ Step 3 — No service segment → select UDNARoot:
 Step 4 — Construct target URL:
   https://api.example.com/udna/app/profile#me
 
-Step 5 — Return resolution result:
+Step 5 — Build ResolutionResult (validated):
   { targetUrl: "https://api.example.com/udna/app/profile#me", ... }
             </pre>
         </aside>
     </section>
+
+    <section id="result-validity">
+        <h3>ResolutionResult Validity</h3>
+
+        <p>
+            A [=ResolutionResult=] is considered valid if and only if ALL of the following
+            conditions are satisfied:
+        </p>
+
+        <div class="validity-rule">
+            <strong>VR-1:</strong> <code>targetUrl</code> MUST be a valid absolute URI as defined
+            by [[RFC3986]].
+        </div>
+        <div class="validity-rule">
+            <strong>VR-2:</strong> <code>didDocument</code> MUST conform to the DID Document data
+            model defined in [[DID-CORE]], Section 4.
+        </div>
+        <div class="validity-rule">
+            <strong>VR-3:</strong> <code>service</code> MUST correspond to an entry present in the
+            <code>didDocument.service</code> array, matched by <code>id</code> fragment.
+        </div>
+        <div class="validity-rule">
+            <strong>VR-4:</strong> <code>didDocumentMetadata</code> MUST include the
+            <code>created</code> or <code>updated</code> timestamp fields as specified in
+            [[DID-CORE]].
+        </div>
+        <div class="validity-rule">
+            <strong>VR-5:</strong> <code>verificationMethods</code> MUST be a subset of the
+            verification methods present in the <code>didDocument</code>, filtered to those
+            relevant to the selected service or DID subject.
+        </div>
+
+        <p>
+            A resolver that produces an invalid ResolutionResult SHALL report the violation
+            as an internal error and MUST NOT return the invalid result to the caller.
+        </p>
+    </section>
 </section>
 
-<!-- 5. SECURITY AND PRIVACY -->
+<!-- 5a. RESOLUTION RESULT DATA MODEL -->
+<section id="resolution-result-data-model">
+    <h2>Resolution Result Data Model</h2>
+
+    <p>
+        Conformant [=UDNA Resolvers=] MUST return resolution results conforming to the
+        following structure. The data model extends DID Resolution metadata ([[DID-CORE]])
+        with UDNA-specific fields.
+    </p>
+
+    <section id="resolution-result-structure">
+        <h3>Structure</h3>
+
+        <pre class="json">
+{
+  "@context": "https://w3c-cg.github.io/udna/contexts/udna-v1.jsonld",
+  "type": "UDNAResolutionResult",
+  "targetUrl": "https://api.example.com/udna/app/profile#me",
+  "didDocument": {
+    "@context": "https://www.w3.org/ns/did/v1",
+    "id": "did:web:example.com",
+    "service": [ ... ]
+  },
+  "didDocumentMetadata": {
+    "created": "2025-01-01T00:00:00Z",
+    "updated": "2025-06-01T00:00:00Z",
+    "deactivated": false
+  },
+  "service": {
+    "id": "#udna-root",
+    "type": "UDNARoot",
+    "serviceEndpoint": "https://api.example.com/udna"
+  },
+  "verificationMethods": [
+    {
+      "id": "did:web:example.com#keys-1",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:web:example.com",
+      "publicKeyMultibase": "zH3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"
+    }
+  ]
+}
+        </pre>
+
+        <dl>
+            <dt><code>@context</code></dt>
+            <dd>
+                A JSON-LD context URI that defines the vocabulary for the UDNA resolution result.
+                The context is defined at
+                <a href="https://w3c-cg.github.io/udna/contexts/udna-v1.jsonld">
+                    w3c-cg.github.io/udna/contexts/udna-v1.jsonld
+                </a>.
+            </dd>
+            <dt><code>type</code></dt>
+            <dd>
+                MUST be <code>"UDNAResolutionResult"</code>.
+            </dd>
+            <dt><code>targetUrl</code></dt>
+            <dd>
+                The fully constructed URL derived from the selected service endpoint, path,
+                query, and fragment. This is the concrete resource location.
+            </dd>
+            <dt><code>didDocument</code></dt>
+            <dd>
+                The resolved DID Document per [[DID-CORE]]. MUST be present when resolution
+                succeeds.
+            </dd>
+            <dt><code>didDocumentMetadata</code></dt>
+            <dd>
+                Metadata about the DID Document resolution, including timestamps and
+                deactivation status, as defined in [[DID-CORE]].
+            </dd>
+            <dt><code>service</code></dt>
+            <dd>
+                The specific service entry selected by the resolution algorithm. This enables
+                clients to inspect service-level metadata and endpoint configuration.
+            </dd>
+            <dt><code>verificationMethods</code></dt>
+            <dd>
+                An array of verification methods from the DID Document that are associated with
+                the selected service or the DID subject. Clients MAY use these to authenticate
+                the resolved endpoint or verify responses.
+            </dd>
+        </dl>
+    </section>
+</section>
+
+<!-- 5b. ERROR HANDLING -->
+<section id="error-handling">
+    <h2>Error Handling</h2>
+
+    <p>
+        When resolution fails, a conformant [=UDNA Resolver=] MUST return a [=ResolutionError=]
+        object using the following structure:
+    </p>
+
+    <section id="error-structure">
+        <h3>Error Structure</h3>
+
+        <pre class="json">
+{
+  "error": "serviceNotFound",
+  "errorDescription": "No matching service entry found for 'api'",
+  "did": "did:web:example.com",
+  "serviceSegment": "api"
+}
+        </pre>
+
+        <dl>
+            <dt><code>error</code></dt>
+            <dd>
+                A machine-readable error code drawn from the
+                <a href="#error-codes">error codes registry</a>.
+            </dd>
+            <dt><code>errorDescription</code></dt>
+            <dd>
+                A human-readable description of the error condition.
+            </dd>
+            <dt><code>did</code></dt>
+            <dd>
+                The DID string that was being resolved when the error occurred.
+            </dd>
+            <dt><code>serviceSegment</code></dt>
+            <dd>
+                The service segment that failed to match, if applicable. MAY be omitted
+                for errors not related to service selection.
+            </dd>
+        </dl>
+    </section>
+
+    <section id="error-codes">
+        <h3>Error Codes</h3>
+
+        <table class="simple">
+            <caption>Standard UDNA Resolution Error Codes</caption>
+            <thead>
+                <tr>
+                    <th>Error Code</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>notFound</code></td>
+                    <td>The DID could not be resolved to a DID Document.</td>
+                </tr>
+                <tr>
+                    <td><code>serviceNotFound</code></td>
+                    <td>A service segment was provided but no matching service entry exists.</td>
+                </tr>
+                <tr>
+                    <td><code>defaultServiceNotFound</code></td>
+                    <td>No service segment was provided and no UDNARoot service is declared.</td>
+                </tr>
+                <tr>
+                    <td><code>invalidUri</code></td>
+                    <td>The provided UDNA address could not be parsed.</td>
+                </tr>
+                <tr>
+                    <td><code>invalidDid</code></td>
+                    <td>The DID string extracted from the UDNA address is not a valid DID.</td>
+                </tr>
+                <tr>
+                    <td><code>methodNotSupported</code></td>
+                    <td>The DID method is not supported by this resolver.</td>
+                </tr>
+                <tr>
+                    <td><code>invalidEndpoint</code></td>
+                    <td>The selected service endpoint is malformed or unsupported.</td>
+                </tr>
+                <tr>
+                    <td><code>templateExpansionFailed</code></td>
+                    <td>URI template expansion failed for the selected endpoint.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+
+<!-- 5c. CONTENT NEGOTIATION -->
+<section id="content-negotiation">
+    <h2>Content Negotiation</h2>
+
+    <p>
+        When UDNA resolution produces an HTTP-based <code>targetUrl</code>, clients MAY
+        use standard HTTP content negotiation ([[RFC9110]], Section 12) when interacting
+        with the resolved endpoint. This section defines content types relevant to UDNA
+        interactions.
+    </p>
+
+    <p>
+        Services exposed via UDNA SHOULD support the following media types:
+    </p>
+
+    <ul>
+        <li>
+            <strong><code>application/json</code></strong> — Generic JSON responses for
+            RESTful service interactions.
+        </li>
+        <li>
+            <strong><code>application/ld+json</code></strong> — JSON-LD formatted responses
+            for linked data interactions, including credential verification.
+        </li>
+        <li>
+            <strong><code>application/didcomm-envelope+json</code></strong> — DIDComm v2
+            encrypted envelopes when the resolved endpoint is a DIDComm service
+            ([[DIDCOMM]]).
+        </li>
+    </ul>
+
+    <p>
+        Clients MAY include an <code>Accept</code> header to indicate preferred content types.
+        Services SHOULD respond with an appropriate <code>Content-Type</code> header and
+        SHOULD return HTTP status <code>406 Not Acceptable</code> if unable to satisfy the
+        client's content type preferences.
+    </p>
+
+    <aside class="note" title="DIDComm vs HTTP endpoints">
+        <p>
+            UDNA does not require DIDComm. A service endpoint MAY be a plain HTTP URL.
+            However, when the endpoint type indicates DIDComm, the content negotiation
+            expectations defined in [[DIDCOMM]] take precedence.
+        </p>
+    </aside>
+</section>
+
+<!-- 5d. RESOLVER API INTERFACE -->
+<section id="resolver-api">
+    <h2>Resolver API Interface</h2>
+
+    <p>
+        To promote interoperability across implementations, a conformant [=UDNA Resolver=]
+        MUST expose at minimum the following function signature:
+    </p>
+
+    <pre class="nohighlight">
+function resolve(udnaURI: string): Promise&lt;ResolutionResult | ResolutionError&gt;;
+    </pre>
+
+    <p>Implementations MAY additionally provide:</p>
+
+    <ul>
+        <li>
+            <strong>Synchronous variant</strong> — <code>resolveSync(udnaURI): ResolutionResult | ResolutionError</code>
+            for environments where asynchronous resolution is not required.
+        </li>
+        <li>
+            <strong>Batch resolution</strong> — <code>resolveBatch(udnaURIs: string[]): Promise&lt;(ResolutionResult | ResolutionError)[]&gt;</code>
+            for resolving multiple UDNA addresses in a single operation.
+        </li>
+        <li>
+            <strong>Watch/unwatch</strong> — <code>watch(udnaURI, callback): Subscription</code>
+            for observing resolution changes over time.
+        </li>
+    </ul>
+
+    <p>
+        The canonical reference implementation in JavaScript is available at
+        <a href="https://github.com/w3c-cg/udna/tree/main/packages/resolver">github.com/w3c-cg/udna</a>.
+    </p>
+</section>
+
+<!-- 5e. GATEWAY MODEL -->
+<section id="gateway-model">
+    <h2>Gateway Model</h2>
+
+    <p>
+        UDNA resolution can be exposed through an HTTP gateway, enabling clients that do not
+        implement native UDNA resolution to dereference UDNA addresses via standard HTTP
+        requests. This pattern is similar to IPFS gateways and Solid pod access patterns.
+    </p>
+
+    <p>
+        A conformant [=UDNA Gateway=] MUST satisfy the following normative constraint:
+    </p>
+
+    <p class="validity-rule">
+        <strong>GW-1:</strong> Gateways MUST NOT modify the semantics of the resolved
+        <code>targetUrl</code>. The path, query, and fragment components from the original
+        UDNA address MUST be preserved in the final constructed URL without alteration
+        or filtering.
+    </p>
+
+    <p>
+        The canonical gateway resolution pattern is:
+    </p>
+
+    <pre class="nohighlight">
+GET https://udna-gateway.example/resolve?uri=udna://did:web:example.com/app/profile
+
+→ 302 Redirect to: https://api.example.com/udna/app/profile
+    </pre>
+
+    <p>
+        Gateways serve as a progressive adoption path, allowing existing Web infrastructure
+        to participate in UDNA resolution without native protocol support. The full gateway
+        behavior is defined in a separate extension specification ("Gateway Forwarding").
+    </p>
+</section>
+
+<!-- 5f. BROWSER INTEGRATION (INFORMATIVE) -->
+<section id="browser-integration" class="informative">
+    <h2>Browser Integration</h2>
+
+    <p><em>This section is informative.</em></p>
+
+    <p>
+        UDNA addresses are designed for eventual native support in browser environments.
+        The following integration model provides a concrete direction for browser vendors
+        and extension developers:
+    </p>
+
+    <ol>
+        <li>
+            <strong>Protocol Registration:</strong> A browser or operating system registers
+            <code>udna://</code> as a recognized URI scheme.
+        </li>
+        <li>
+            <strong>Native Resolver:</strong> The browser attempts to resolve
+            <code>udna://</code> URIs using an internal or system-configured
+            [=UDNA Resolver=].
+        </li>
+        <li>
+            <strong>Gateway Fallback:</strong> If no native resolver is available, the
+            browser falls back to a configured [=UDNA Gateway=] via HTTPS.
+        </li>
+        <li>
+            <strong>Extension Hook:</strong> Browser extensions MAY register as custom
+            protocol handlers for <code>udna://</code>, enabling user-selected resolution
+            strategies.
+        </li>
+    </ol>
+
+    <p>
+        This model ensures UDNA addresses remain resolvable even in environments without
+        native DID infrastructure, while preserving the option for fully decentralized
+        resolution when available.
+    </p>
+
+    <aside class="issue" data-number="3" title="Browser protocol handler registration">
+        <p>
+            Formal registration of the <code>udna://</code> scheme with browser vendors
+            (Chromium, WebKit, Gecko) is a prerequisite for native browser integration.
+            The CG will submit registration requests as the specification matures.
+        </p>
+    </aside>
+</section>
+
+<!-- 5g. RESOLUTION HINTS (FUTURE EXTENSION) -->
+<section id="resolution-hints" class="informative">
+    <h2>Resolution Hints</h2>
+
+    <p><em>This section is informative.</em></p>
+
+    <p>
+        Some DID methods introduce significant resolution latency. The UDNA CG is exploring
+        an OPTIONAL "resolution hints" mechanism that allows UDNA addresses to carry
+        lightweight metadata to accelerate resolution.
+    </p>
+
+    <p>
+        Resolution hints, if adopted in a future version of this specification, MUST satisfy
+        the following invariants:
+    </p>
+
+    <ul>
+        <li>Hints are OPTIONAL and MUST NOT be required for successful resolution.</li>
+        <li>Hints MUST NOT break DID method neutrality — no hint may privilege a specific DID method.</li>
+        <li>Resolvers that do not understand a hint MUST ignore it silently.</li>
+        <li>Hints MUST NOT introduce new security or privacy vulnerabilities beyond those already present in the DID method.</li>
+    </ul>
+
+    <aside class="issue" data-number="1" title="DID method resolution latency">
+        <p>
+            Some DID methods (e.g., <code>did:indy</code>, <code>did:btcr</code>) introduce
+            significant resolution latency. The CG is exploring a lightweight "resolution hints"
+            mechanism embedded in the UDNA URI to accelerate resolution without compromising
+            decentralization properties. See also <a href="#resolution-hints"></a>.
+        </p>
+    </aside>
+</section>
+
+<!-- 5h. TEST VECTORS -->
+<section id="test-vectors" class="appendix">
+    <h2>Test Vectors</h2>
+
+    <p>
+        This section provides deterministic test vectors to validate inter-implementation
+        consistency of the <a href="#processing-model">Processing Model</a>. All vectors
+        assume the DID Document specified in each case.
+    </p>
+
+    <section id="test-vector-1">
+        <h3>TV-1: Basic UDNARoot Resolution</h3>
+
+        <p><strong>Context DID Document:</strong></p>
+        <pre class="json">
+{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:web:example.com",
+  "service": [{
+    "id": "#udna-root",
+    "type": "UDNARoot",
+    "serviceEndpoint": "https://api.example.com/udna"
+  }]
+}
+        </pre>
+
+        <div class="test-vector">
+            <div class="input">
+                <span class="label">Input:</span>
+                <code>udna://did:web:example.com/app/profile</code>
+            </div>
+            <div class="expected">
+                <span class="label">Expected targetUrl:</span>
+                <code>https://api.example.com/udna/app/profile</code>
+            </div>
+        </div>
+    </section>
+
+    <section id="test-vector-2">
+        <h3>TV-2: Named Service Resolution</h3>
+
+        <p><strong>Context DID Document:</strong></p>
+        <pre class="json">
+{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:example:123",
+  "service": [
+    {
+      "id": "#udna-root",
+      "type": "UDNARoot",
+      "serviceEndpoint": "https://example.com/default"
+    },
+    {
+      "id": "#api",
+      "type": "UDNAApiService",
+      "serviceEndpoint": "https://api.example.com/v2"
+    }
+  ]
+}
+        </pre>
+
+        <div class="test-vector">
+            <div class="input">
+                <span class="label">Input:</span>
+                <code>udna://did:example:123/api/users</code>
+            </div>
+            <div class="expected">
+                <span class="label">Expected targetUrl:</span>
+                <code>https://api.example.com/v2/users</code>
+            </div>
+        </div>
+    </section>
+
+    <section id="test-vector-3">
+        <h3>TV-3: Query and Fragment Preservation</h3>
+
+        <p><strong>Context DID Document:</strong> Same as TV-1.</p>
+
+        <div class="test-vector">
+            <div class="input">
+                <span class="label">Input:</span>
+                <code>udna://did:web:example.com/docs/spec?version=1.0#section-5</code>
+            </div>
+            <div class="expected">
+                <span class="label">Expected targetUrl:</span>
+                <code>https://api.example.com/udna/docs/spec?version=1.0#section-5</code>
+            </div>
+        </div>
+    </section>
+
+    <section id="test-vector-4">
+        <h3>TV-4: Service Not Found Error</h3>
+
+        <p><strong>Context DID Document:</strong> Same as TV-2.</p>
+
+        <div class="test-vector">
+            <div class="input">
+                <span class="label">Input:</span>
+                <code>udna://did:example:123/chat/messages</code>
+            </div>
+            <div class="expected">
+                <span class="label">Expected error:</span>
+                <code>serviceNotFound</code>
+            </div>
+        </div>
+    </section>
+
+    <section id="test-vector-5">
+        <h3>TV-5: Default Service Not Found Error</h3>
+
+        <p><strong>Context DID Document:</strong></p>
+        <pre class="json">
+{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:example:456",
+  "service": [
+    {
+      "id": "#custom",
+      "type": "CustomService",
+      "serviceEndpoint": "https://custom.example.com"
+    }
+  ]
+}
+        </pre>
+
+        <div class="test-vector">
+            <div class="input">
+                <span class="label">Input:</span>
+                <code>udna://did:example:456/app</code>
+            </div>
+            <div class="expected">
+                <span class="label">Expected error:</span>
+                <code>defaultServiceNotFound</code>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- 6. SECURITY AND PRIVACY -->
 <section id="security-privacy">
     <h2>Security and Privacy Considerations</h2>
 
@@ -423,6 +1283,60 @@ Step 5 — Return resolution result:
         UDNA inherits the security properties of the underlying DID methods and DIDComm. The
         following considerations apply specifically to the UDNA addressing layer.
     </p>
+
+    <section id="threat-model">
+        <h3>Threat Model</h3>
+
+        <p>The UDNA resolution process is subject to the following threat categories:</p>
+
+        <table class="simple">
+            <caption>UDNA Threat Model Summary</caption>
+            <thead>
+                <tr>
+                    <th>Threat</th>
+                    <th>Severity</th>
+                    <th>Mitigation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Malicious DID Document injection</td>
+                    <td>High</td>
+                    <td>DID method authentication; cryptographic verification of DID Document integrity</td>
+                </tr>
+                <tr>
+                    <td>Service endpoint impersonation</td>
+                    <td>High</td>
+                    <td>Clients MUST verify endpoint ownership via DID-linked verification methods</td>
+                </tr>
+                <tr>
+                    <td>Resolver cache poisoning</td>
+                    <td>Medium</td>
+                    <td>Resolvers SHOULD respect DID Document TTL and HTTP cache-control headers</td>
+                </tr>
+                <tr>
+                    <td>Service confusion attacks</td>
+                    <td>Medium</td>
+                    <td>Resolvers MUST match service segments against exact <code>id</code> fragments</td>
+                </tr>
+                <tr>
+                    <td>Replay of stale DID Documents</td>
+                    <td>Low</td>
+                    <td>Resolvers SHOULD check <code>updated</code> and <code>deactivated</code> metadata</td>
+                </tr>
+                <tr>
+                    <td>Correlation via DID reuse</td>
+                    <td>Medium</td>
+                    <td>Clients SHOULD use pairwise DIDs where strong unlinkability is required</td>
+                </tr>
+                <tr>
+                    <td>Gateway interception</td>
+                    <td>High</td>
+                    <td>Gateways MUST NOT modify targetUrl semantics; clients SHOULD verify resolution independently when possible</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <section id="endpoint-confidentiality">
         <h3>Endpoint Confidentiality</h3>
@@ -459,18 +1373,9 @@ Step 5 — Return resolution result:
             caching policies to mitigate amplification attacks against DID method infrastructure.
         </p>
     </section>
-
-    <aside class="issue" data-number="1" title="DID method resolution latency">
-        <p>
-            Some DID methods (e.g., <code>did:indy</code>, <code>did:btcr</code>) introduce
-            significant resolution latency. The CG is exploring a lightweight "resolution hints"
-            mechanism embedded in the UDNA URI to accelerate resolution without compromising
-            decentralization properties.
-        </p>
-    </aside>
 </section>
 
-<!-- 6. EXTENSIBILITY AND VERSIONING -->
+<!-- 7. EXTENSIBILITY AND VERSIONING -->
 <section id="extensibility">
     <h2>Extensibility and Versioning</h2>
 
@@ -507,7 +1412,7 @@ Step 5 — Return resolution result:
     </p>
 </section>
 
-<!-- 7. RELATIONSHIP WITH OTHER STANDARDS -->
+<!-- 8. RELATIONSHIP WITH OTHER STANDARDS -->
 <section id="comparison-integration">
     <h2>Relationship with Other Web Standards</h2>
 
@@ -535,12 +1440,12 @@ Step 5 — Return resolution result:
             <tr>
                 <td>[[DIDCOMM]]</td>
                 <td>Secure encrypted messaging</td>
-                <td>UDNA addresses can resolve to DIDComm service endpoints for encrypted channel establishment.</td>
+                <td>UDNA addresses can resolve to DIDComm service endpoints for encrypted channel establishment. UDNA does not require DIDComm, but MAY resolve to DIDComm endpoints.</td>
             </tr>
             <tr>
                 <td>Solid (WebID) [[SOLID]]</td>
                 <td>Personal linked-data pods</td>
-                <td>UDNA can replace WebID URLs, enabling DID-based access control for Solid pods.</td>
+                <td>UDNA MAY be used as an alternative addressing mechanism alongside WebID URLs, enabling DID-based access control for Solid pods.</td>
             </tr>
             <tr>
                 <td>ActivityPub</td>
@@ -556,7 +1461,7 @@ Step 5 — Return resolution result:
     </table>
 </section>
 
-<!-- 8. INCUBATION ROADMAP -->
+<!-- 9. INCUBATION ROADMAP -->
 <section id="incubation-roadmap">
     <h2>Incubation Roadmap and Next Steps</h2>
 
@@ -567,7 +1472,8 @@ Step 5 — Return resolution result:
 
     <ul>
         <li>
-            <strong>Interoperability test suite</strong> — multi-language resolver implementations
+            <strong>Interoperability test suite</strong> — automated validation of the
+            <a href="#test-vectors">test vectors</a> against multi-language resolver implementations
             targeting JavaScript (Node.js), Rust, and Python reference libraries.
         </li>
         <li>
@@ -582,6 +1488,15 @@ Step 5 — Return resolution result:
         <li>
             <strong>Integration pilots</strong> — live integration tests with Solid pod servers
             and Matrix homeservers to validate real-world addressing patterns and performance.
+        </li>
+        <li>
+            <strong>Browser integration exploration</strong> — initial design for how browsers
+            might handle <code>udna://</code> links, including gateway fallback and extension-based
+            resolution. See <a href="#browser-integration"></a>.
+        </li>
+        <li>
+            <strong>JSON-LD context publication</strong> — finalize and publish the UDNA
+            JSON-LD context at its canonical URL.
         </li>
     </ul>
 
@@ -615,12 +1530,29 @@ const resolver = new UDNAResolver({
   }
 });
 
+// Successful resolution
 const address =
   "udna://did:key:z6MkrJVnaZkeFzdQyMZu1cgjg7k1bZZw7pf9c7Dg5bKBz5tP/api/messages";
 
 const resolved = await resolver.resolve(address);
 console.log(resolved.targetUrl);
 // → "https://didcomm.example.com/msg"
+
+// Validate the result
+if (resolved.type === 'UDNAResolutionResult') {
+  // Check validity rule VR-1
+  const url = new URL(resolved.targetUrl);
+  console.log(url.href !== ''); // true
+}
+
+// Error handling
+const invalid = "udna://did:web:unknown.example/foo";
+try {
+  await resolver.resolve(invalid);
+} catch (error) {
+  console.error(error.error);             // "notFound"
+  console.error(error.errorDescription);  // human-readable
+}
             </pre>
         </aside>
     </section>
@@ -670,12 +1602,67 @@ console.log(resolved.targetUrl);
         <dt>URI Scheme Syntax</dt>
         <dd>Defined in <a href="#scheme-syntax"></a> of this specification.</dd>
         <dt>URI Scheme Semantics</dt>
-        <dd>Defined in <a href="#resolution-model"></a> of this specification.</dd>
+        <dd>Defined in <a href="#processing-model"></a> of this specification.</dd>
         <dt>Contact</dt>
         <dd><a href="mailto:public-did-native-addr@w3.org">public-did-native-addr@w3.org</a></dd>
         <dt>References</dt>
         <dd>This document.</dd>
     </dl>
+</section>
+
+<!-- APPENDIX C — JSON-LD CONTEXT -->
+<section id="jsonld-context" class="appendix">
+    <h2>JSON-LD Context</h2>
+
+    <p>
+        The UDNA JSON-LD context is hosted at:
+    </p>
+    <p>
+        <a href="https://w3c-cg.github.io/udna/contexts/udna-v1.jsonld">
+            https://w3c-cg.github.io/udna/contexts/udna-v1.jsonld
+        </a>
+    </p>
+
+    <p>
+        The current content of the context is:
+    </p>
+
+    <pre class="json">
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "id": "@id",
+    "type": "@type",
+    "UDNAResolutionResult": {
+      "@id": "https://w3c-cg.github.io/udna/vocab#UDNAResolutionResult",
+      "@context": {
+        "@protected": true,
+        "targetUrl": {
+          "@id": "https://w3c-cg.github.io/udna/vocab#targetUrl",
+          "@type": "@id"
+        },
+        "didDocument": {
+          "@id": "https://w3c-cg.github.io/udna/vocab#didDocument",
+          "@type": "@json"
+        },
+        "didDocumentMetadata": {
+          "@id": "https://w3c-cg.github.io/udna/vocab#didDocumentMetadata",
+          "@type": "@json"
+        },
+        "service": {
+          "@id": "https://w3c-cg.github.io/udna/vocab#service",
+          "@type": "@json"
+        },
+        "verificationMethods": {
+          "@id": "https://w3c-cg.github.io/udna/vocab#verificationMethods",
+          "@container": "@set"
+        }
+      }
+    }
+  }
+}
+    </pre>
 </section>
 
 <!-- ACKNOWLEDGMENTS -->
